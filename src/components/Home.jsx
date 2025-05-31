@@ -79,15 +79,15 @@ const accordionData = [
   };
 
   return (
-    <div className="pt-7 relative overflow-hidden">
+    <div className="pt-7 relative overflow-hidden -mt-12 ">
       <motion.section
-        className="bg-gradient-to-br from-white via-gray-50 to-white min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans"
+        className="bg-gradient-to-br from-white via-gray-50 to-white min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.div
-          className="max-w-3xl w-full text-center"
+          className="max-w-3xl w-full text-center "
           variants={itemVariants}
         >
           {/* Badge */}
