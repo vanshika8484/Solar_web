@@ -5,50 +5,56 @@ const ContactForm = () => {
   return (
     <main className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10 md:gap-20 -mt-32">
       <form
-        action="#"
-        method="POST"
-        className="bg-[#f9f7ef] rounded-2xl p-8 md:w-1/2 flex flex-col gap-6"
-      >
-        <div className="flex gap-6">
-          <input
-            type="text"
-            placeholder="Your Name"
-            required
-            className="flex-1 rounded-full py-3 px-6 placeholder-gray-500 focus:outline-none"
-          />
-          <input
-            type="text"
-            placeholder="Your Bill"
-            required
-            className="flex-1 rounded-full py-3 px-6 placeholder-gray-500 focus:outline-none"
-          />
-        </div>
-        <input
-          type="text"
-          placeholder="Kab chahiye install?"
-          required
-          className="rounded-full py-3 px-6 placeholder-gray-500 focus:outline-none"
-        />
-        <input
-          type="text"
-          placeholder="Chacha se baat karni hai"
-          required
-          className="rounded-full py-3 px-6 placeholder-gray-500 focus:outline-none"
-        />
-        <textarea
-          rows={5}
-          placeholder="Your Address"
-          required
-          className="rounded-2xl py-3 px-6 placeholder-gray-500 resize-none focus:outline-none"
-        ></textarea>
-        <button
-          type="submit"
-          className="bg-[#4caf50] text-white font-bold rounded-full py-4 px-8 w-full flex items-center justify-center gap-2 hover:bg-[#449d48] transition"
-        >
-          SUBMIT NOW
-          <i className="fas fa-arrow-right"></i>
-        </button>
-      </form>
+  action="#"
+  method="POST"
+  className="bg-[#f9f7ef] rounded-2xl p-6 sm:p-8 w-full max-w-2xl mx-auto flex flex-col gap-6"
+>
+  {/* Name and Bill - Stack on mobile, side-by-side on medium+ */}
+  <div className="flex flex-col md:flex-row gap-4">
+    <input
+      type="text"
+      placeholder="Your Name"
+      required
+      className="flex-1 rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none border border-gray-300"
+    />
+    <input
+      type="text"
+      placeholder="Your Bill"
+      required
+      className="flex-1 rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none border border-gray-300"
+    />
+  </div>
+
+  <input
+    type="text"
+    placeholder="Kab chahiye install?"
+    required
+    className="rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none border border-gray-300"
+  />
+
+  <input
+    type="text"
+    placeholder="Chacha se baat karni hai"
+    required
+    className="rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none border border-gray-300"
+  />
+
+  <textarea
+    rows={4}
+    placeholder="Your Address"
+    required
+    className="rounded-2xl py-3 px-5 placeholder-gray-500 resize-none focus:outline-none border border-gray-300"
+  ></textarea>
+
+  <button
+    type="submit"
+    className="bg-[#4caf50] text-white font-bold rounded-full py-4 px-8 w-full flex items-center justify-center gap-2 hover:bg-[#449d48] transition"
+  >
+    SUBMIT NOW
+    <i className="fas fa-arrow-right"></i>
+  </button>
+</form>
+
 
       <section className="md:w-1/2 flex flex-col justify-start gap-6">
         <h2 className="flex items-center gap-2 text-[#4caf50] font-mono tracking-widest text-sm">
