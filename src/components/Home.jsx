@@ -21,6 +21,7 @@ import CustomerCarousel from "./CustomerCarousel";
 import ExactMatchPage from "./ExactMatchPage";
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
+import bg from '../Images/bg1.jpg'
 
 
 
@@ -147,7 +148,7 @@ const accordionData = [
 
           {/* Separator */}
           <motion.div
-            className="h-1.5 w-24 mx-auto mb-10 bg-gradient-to-r from-green-600 to-teal-400 rounded-full shadow-md"
+            className="h-1.5 w-24 mx-auto mb-10 bg-green-800 rounded-full shadow-md"
             variants={itemVariants}
           ></motion.div>
 
@@ -168,7 +169,7 @@ const accordionData = [
           >
             <motion.button
               type="button"
-              className="group bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-7 py-3 text-lg inline-flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-xl"
+              className="group bg-green-800 hover:bg-green-700 text-white font-semibold rounded-full px-7 py-3 text-lg inline-flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-xl"
               whileHover={buttonHover}
               whileTap={{ scale: 0.95 }}
             >
@@ -185,7 +186,7 @@ const accordionData = [
 
             {/* Circular Badge under button */}
             <motion.div
-              className="w-24 h-24 sm:w-28 sm:h-28 bg-green-600 text-white flex items-center justify-center rounded-full shadow-xl text-center text-xs sm:text-sm font-semibold leading-tight p-2 sm:p-3"
+              className="w-24 h-24 sm:w-28 sm:h-28 bg-green-800 text-white flex items-center justify-center rounded-full shadow-xl text-center text-xs sm:text-sm font-semibold leading-tight p-2 sm:p-3"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
@@ -231,7 +232,7 @@ const accordionData = [
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-       <div className="w-full h-72 md:h-96 bg-green-100 rounded-xl overflow-hidden shadow-lg">
+       <div className="w-full h-72 md:h-96 bg-green-800 rounded-xl overflow-hidden shadow-lg">
           <img
             src={solar}
             alt="Solar Panel Field"
@@ -243,10 +244,10 @@ const accordionData = [
 
     <section className="bg-white">
   <div className="max-w-6xl mx-auto px-6 py-12">
-    <h1 className="text-4xl font-extrabold text-center text-[#48ab3e] mb-8">
+    <h1 className="text-4xl font-extrabold text-center text-green-800 mb-8">
       About Solar Energy
     </h1>
-    <p className="text-center max-w-3xl mx-auto mb-12 text-[#48ab3e]text-lg">
+    <p className="text-center max-w-3xl mx-auto mb-12 text-green-800 text-lg">
       Learn about the power of solar energy, how solar panels work, and the
       many benefits this renewable energy source offers for a sustainable
       future.
@@ -256,10 +257,10 @@ const accordionData = [
       {accordionData.map(({ title, content, img }, index) => (
         <div
           key={index}
-          className="bg-white rounded-lg shadow-md overflow-hidden border border-green-200"
+          className="bg-white rounded-lg shadow-md overflow-hidden border border-green-500"
         >
           <button
-            className="w-full px-6 py-4 flex justify-between items-center text-left text-orange-400 font-semibold text-xl focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-6 py-4 flex justify-between items-center text-left text-orange-400 font-semibold text-xl focus:outline-none focus:ring-2 focus:text-green-800"
             onClick={() => toggleAccordion(index)}
             aria-expanded={activeIndex === index}
           >
@@ -273,7 +274,7 @@ const accordionData = [
             </span>
           </button>
           {activeIndex === index && (
-            <div className="px-6 pb-6 pt-2 text-[#48ab3e] flex flex-col md:flex-row items-center gap-6">
+            <div className="px-6 pb-6 pt-2 text-green-800 flex flex-col md:flex-row items-center gap-6">
               <p className="md:w-2/3">{content}</p>
               <img
                 src={img}
@@ -324,7 +325,7 @@ const accordionData = [
 
         {/* Right: Text content */}
         <div className="text-gray-800">
-          <h3 className="text-xl font-semibold text-green-600 tracking-wider uppercase mb-2">
+          <h3 className="text-xl font-semibold text-green-800 tracking-wider uppercase mb-2">
             About Us
           </h3>
           <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">

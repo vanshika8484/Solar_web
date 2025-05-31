@@ -79,7 +79,7 @@ const ContactForm = () => {
               className="font-semibold underline hover:text-[#3a8e3a]"
               href="mailto:info@example.com"
             >
-              Info@Example.Com
+             Info@divypower.in
             </a>
           </p>
         </div>

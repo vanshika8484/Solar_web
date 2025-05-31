@@ -54,12 +54,17 @@ const Projects = () => {
               className="relative overflow-hidden rounded-2xl shadow-md border bg-white p-6 hover:shadow-xl"
             >
               <SVGAccent />
-              <div className="flex items-center justify-between mb-3">
-                <div className="text-blue-500">{iconMap[project.category]}</div>
-                <span className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded-full">
-                  {project.category}
-                </span>
-              </div>
+<img
+  src={project.image}
+  alt={project.title}
+  className="rounded-xl mb-4 w-full h-48 object-cover"
+/>
+<div className="flex items-center justify-between mb-3">
+  <div className="text-blue-500">{iconMap[project.category]}</div>
+  <span className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded-full">
+    {project.category}
+  </span>
+</div>
               <h2 className="text-lg font-semibold text-gray-800 mb-2">{project.title}</h2>
               {project.kwp !== "N/A" && (
                 <p className="text-sm text-gray-500">Capacity: {project.kwp} Kwp</p>

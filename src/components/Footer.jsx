@@ -81,20 +81,20 @@ const Footer = () => {
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout.
           </p>
-          <form className="flex max-w-md shadow-lg rounded-full overflow-hidden border border-gray-300">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-grow px-6 py-3 text-gray-800 focus:outline-none"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 transition flex items-center gap-2"
-            >
-              Subscribe Now <FaArrowRight />
-            </button>
-          </form>
+          <form className="flex flex-col sm:flex-row max-w-md shadow-lg rounded-full overflow-hidden border border-gray-300 w-full">
+  <input
+    type="email"
+    placeholder="Enter your email"
+    className="flex-grow px-6 py-3 text-gray-800 focus:outline-none"
+    required
+  />
+  <button
+    type="submit"
+    className="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 sm:px-8 transition flex items-center justify-center gap-2 w-full sm:w-auto"
+  >
+    Subscribe Now <FaArrowRight />
+  </button>
+</form>
         </div>
       </div>
     </footer>

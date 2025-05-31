@@ -39,7 +39,7 @@ const SolarProducts = () => {
     <section className="bg-[#f6f5ef] py-16 px-4 ">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-green-600 text-xl font-bold uppercase tracking-widest">
+          <p className="text-green-800 text-xl font-bold uppercase tracking-widest">
             Our Product
           </p>
           <h2 className="text-4xl font-semibold text-gray-900 mt-2">
@@ -57,7 +57,7 @@ const SolarProducts = () => {
               variants={cardVariants}
               className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="w-16 h-16 rounded-full bg-green-600 flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-full bg-green-800 flex items-center justify-center mb-6">
                 {product.icon}
               </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-800">
@@ -66,7 +66,7 @@ const SolarProducts = () => {
               <ul className="space-y-2 text-gray-700 text-sm mb-6">
                 {product.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
-                    <FaCheckCircle className="text-green-600 mr-2" />
+                    <FaCheckCircle className="text-green-800 mr-2" />
                     {feature}
                   </li>
                 ))}
