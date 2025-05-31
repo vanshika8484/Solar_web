@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Package } from "lucide-react";
 
 // Animation variants
 const containerVariants = {
@@ -95,22 +96,23 @@ function Product() {
   ];
 
   return (
-    <section className="relative py-20 text-center">
+    <section className="relative py-20 text-center bg-gradient-to-br from-green-50 to-white">
       <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
 
       <div className="relative z-10">
         <motion.h1
-          className="text-4xl font-bold text-gray-800 mb-2 mt-9"
+          className="text-4xl font-bold text-black mb-2 "
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Products
+         
+         Our <span className='text-green-600'>Products</span>
         </motion.h1>
       </div>
 
       {/* Solar Solutions */}
-      <motion.section className="bg-[#121212] py-20 px-6 text-white mt-10"
+      <motion.section className="py-20 px-6 text-white "
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -121,14 +123,14 @@ function Product() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold">Solar Solutions</h2>
+          <h2 className="text-4xl text-green-800 font-bold">Solar Solutions</h2>
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {solarData.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
+              className=" text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
               variants={cardVariants}
             >
               <img src={item.image} alt={item.title} className="h-70 w-full object-cover" />
@@ -152,7 +154,7 @@ function Product() {
       </motion.section>
 
       {/* Safety Solutions */}
-      <motion.section className="bg-[#121212] py-20 px-6 text-white"
+      <motion.section className="bg-[#ffffffcd] py-20 px-6 text-white"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -163,7 +165,7 @@ function Product() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold">Safety Solutions</h2>
+          <h2 className="text-4xl text-green-800 font-bold">Safety Solutions</h2>
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

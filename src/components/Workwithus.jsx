@@ -44,7 +44,9 @@ function Workwithus() {
     <>
       <section className="bg-gradient-to-br from-green-50 to-white py-40">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Work with Us</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-12 -mt-16">Work <span className=' text-green-600'>
+            with Us
+          </span></h1>
           <p className="text-lg text-gray-600 mb-16">Meet our expert solar energy professionals</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
