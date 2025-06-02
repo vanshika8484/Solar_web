@@ -40,7 +40,9 @@ const ChatbotToggle = () => {
       {/* Auto Pop-up every 40s */}
       {showKyaPopup && (
         <div className="fixed bottom-24 right-8 bg-white text-black px-4 py-2 rounded shadow-lg z-50 border border-gray-300">
-          🤖 <strong>Kya aap jaante hai?</strong>
+          🤖 <strong>Kya aap jaante hai, ?</strong>
+          <br></br>
+          <strong>Solar Chacha ki Solar Salah</strong>
         </div>
       )}
     </>

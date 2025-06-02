@@ -91,7 +91,7 @@ function Home() {
 
   return (
 
-    <div className="pt-7 relative overflow-hidden -mt-6 ">
+    <div className="pt-7 relative overflow-hidden -mt-12 ">
 
 
 
@@ -206,119 +206,119 @@ function Home() {
             {/* Circular Badge under button */}
 
           </motion.div>
-           <motion.div
-  className="ml-auto  flex items-center justify-center"
-  initial={{ scale: 0.8, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
->
-   
-    <div className=" mt-14">
-      <div className="relative w-40 h-40">
-        <svg className="w-40 h-40" viewBox="0 0 100 100">
-          {/* Background Circle */}
-          <circle
-            cx="50"
-            cy="50"
-            r="40"
-            stroke="#efefef"
-            strokeWidth="20"
-            fill="none"
-          />
-          {/* Progress Circle (35%) */}
-          <circle
-            cx="50"
-            cy="50"
-            r="40"
-            stroke="#166534"
-            strokeWidth="20"
-            fill="none"
-            strokeDasharray="251.2"
-            strokeDashoffset="163.28"
-            strokeLinecap="round"
-            transform="rotate(-90 50 50)"
-          />
-        </svg>
+          <motion.div
+            className="ml-auto  flex items-center justify-center"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
+          >
 
-        {/* Center Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-green-800 text-[16px] font-semibold leading-tight text-center px-2">
-          <span className="text-xl font-bold">2 Lakh+</span>
-          Customers <br /> Powered
-        </div>
-      </div>
-    </div>
-</motion.div>
+            <div className=" mt-14">
+              <div className="relative w-40 h-40">
+                <svg className="w-40 h-40" viewBox="0 0 100 100">
+                  {/* Background Circle */}
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    stroke="#efefef"
+                    strokeWidth="20"
+                    fill="none"
+                  />
+                  {/* Progress Circle (35%) */}
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    stroke="#166534"
+                    strokeWidth="20"
+                    fill="none"
+                    strokeDasharray="251.2"
+                    strokeDashoffset="163.28"
+                    strokeLinecap="round"
+                    transform="rotate(-90 50 50)"
+                  />
+                </svg>
+
+                {/* Center Text */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-green-800 text-[16px] font-semibold leading-tight text-center px-2">
+                  <span className="text-xl font-bold">2 Lakh+</span>
+                  Customers <br /> Powered
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
-        
+
       </motion.section>
-      
+
 
       <Suspense fallback={<div></div>}>
         <Dashboard />
       </Suspense>
       <ChatUI />
 
-     
 
-       <section className="bg-[#f8f7f0] py-16 px-4 md:px-10 mt-11">
-        
-    <section className="bg-[#f8f7f0] py-16 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
-        {/* Left Content */}
-        <motion.div
-          className="md:w-1/2 w-full"
-          initial={{ x: -80, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex items-center gap-3 mb-3">
-            <Sun className="text-green-600 w-7 h-7" />
-            <span className="uppercase text-sm font-semibold tracking-wider text-green-700">
-              Renewable Energy
-            </span>
+
+      <section className="bg-[#f8f7f0] py-16 px-4 md:px-10 mt-11">
+
+        <section className="bg-[#f8f7f0] py-16 px-6 md:px-20">
+          <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+            {/* Left Content */}
+            <motion.div
+              className="md:w-1/2 w-full"
+              initial={{ x: -80, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <Sun className="text-green-600 w-7 h-7" />
+                <span className="uppercase text-sm font-semibold tracking-wider text-green-700">
+                  Renewable Energy
+                </span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-tight">
+                What Is <span className="text-green-700">Solar?</span>
+              </h2>
+
+              <p className="text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
+                Solar refers to anything related to the sun. In energy, it means harnessing the sun’s light and heat to generate electricity. It’s renewable, safe, and economical in the long run. With solar, you’re not only saving money—you’re saving the Earth.
+              </p>
+
+              <button className="bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-3 rounded-full transition-all shadow-md">
+                Read More +
+              </button>
+            </motion.div>
+
+            {/* Right Image */}
+            <motion.div
+              className="md:w-1/2 w-full"
+              initial={{ x: 80, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-full h-72 sm:h-96 rounded-xl overflow-hidden shadow-xl">
+                <img
+                  src={solar}
+                  alt="Solar Panel Field"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
           </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-tight">
-            What Is <span className="text-green-700">Solar?</span>
-          </h2>
-
-          <p className="text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
-            Solar refers to anything related to the sun. In energy, it means harnessing the sun’s light and heat to generate electricity. It’s renewable, safe, and economical in the long run. With solar, you’re not only saving money—you’re saving the Earth.
-          </p>
-
-          <button className="bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-3 rounded-full transition-all shadow-md">
-            Read More +
-          </button>
-        </motion.div>
-
-        {/* Right Image */}
-        <motion.div
-          className="md:w-1/2 w-full"
-          initial={{ x: 80, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="w-full h-72 sm:h-96 rounded-xl overflow-hidden shadow-xl">
-            <img
-              src={solar}
-              alt="Solar Panel Field"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </motion.div>
-      </div>
-    </section>
+        </section>
 
 
 
 
 
 
-{/* Another Layout___________>>>>>>>>>>>>>>> */}
+        {/* Another Layout___________>>>>>>>>>>>>>>> */}
 
-{/* <section className="bg-white py-20 px-6 md:px-20">
+        {/* <section className="bg-white py-20 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         {/* Left: Image with gradient overlay */}
@@ -351,7 +351,7 @@ function Home() {
             </span>
           </div> */}
 
-          {/* <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-snug">
+        {/* <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-snug">
             Powering the Future with <span className="text-green-700">Solar Energy</span>
           </h2>
 
@@ -363,52 +363,52 @@ function Home() {
             Learn More +
           </button>
         </motion.div> */}
-      {/* </div> */}
-    {/* </section> */} 
-
-    
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative">
-            {/* Left: Images and circular text */}
-            <div className="relative w-full h-full">
-              {/* Circular Text */}
+        {/* </div> */}
+        {/* </section> */}
 
 
-              {/* Image 1 */}
-              <div className="w-full rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
-                  alt="Solar Field"
-                  className="rounded-xl object-cover"
-                />
-              </div>
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative">
+          {/* Left: Images and circular text */}
+          <div className="relative w-full h-full">
+            {/* Circular Text */}
 
-              {/* Image 2 - overlayed */}
-              <div className="absolute bottom-[-40px] left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl">
-                <img
-                  src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
-                  alt="Solar Roof Work"
-                  className="rounded-xl object-cover"
-                />
-              </div>
+
+            {/* Image 1 */}
+            <div className="w-full rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
+                alt="Solar Field"
+                className="rounded-xl object-cover"
+              />
             </div>
 
-            {/* Right: Text content */}
-            <div className="text-gray-800">
-              <h3 className="text-xl font-semibold text-green-800 tracking-wider uppercase mb-2">
-                About Us
-              </h3>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-                We Believe Solar Power Should Be <span className="text-orange-600">Accessible</span>
-              </h2>
-              <p className="text-base leading-relaxed mb-4">
-                At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for over a decade as an authorized partner of Tata Power Solar. Backed by Tata’s legacy of trust, we deliver cost-effective solar solutions that prioritize energy safety, quality, and long-term performance.
-              </p>
-              <p className="text-base leading-relaxed">
-                From planning to financing, and installation to maintenance, we offer customized solar services required to meet your project’s needs. With us, you don’t just go solar, you go safe, smart, and sustainable.
-              </p>
+            {/* Image 2 - overlayed */}
+            <div className="absolute bottom-[-40px] left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl">
+              <img
+                src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
+                alt="Solar Roof Work"
+                className="rounded-xl object-cover"
+              />
             </div>
           </div>
-        </section>
+
+          {/* Right: Text content */}
+          <div className="text-gray-800">
+            <h3 className="text-xl font-semibold text-green-800 tracking-wider uppercase mb-2">
+              About Us
+            </h3>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
+              We Believe Solar Power Should Be <span className="text-orange-600">Accessible</span>
+            </h2>
+            <p className="text-base leading-relaxed mb-4">
+              At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for over a decade as an authorized partner of Tata Power Solar. Backed by Tata’s legacy of trust, we deliver cost-effective solar solutions that prioritize energy safety, quality, and long-term performance.
+            </p>
+            <p className="text-base leading-relaxed">
+              From planning to financing, and installation to maintenance, we offer customized solar services required to meet your project’s needs. With us, you don’t just go solar, you go safe, smart, and sustainable.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* <section className="bg-white">
   <div className="max-w-6xl mx-auto px-6 py-12">
@@ -472,7 +472,7 @@ function Home() {
 
 
       <section>
-       
+
       </section>
       <section>
         <SolarServices />
