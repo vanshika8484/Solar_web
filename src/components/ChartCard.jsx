@@ -62,21 +62,21 @@ const ChartCard = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="flex flex-col md:flex-row items-start md:items-center justify-between w-full h-screen p-8 rounded-xl  bg-gradient-to-br from-white via-white to-white text-black"
+      className="flex flex-col md:flex-row items-start md:items-center justify-between w-full h-screen p-8   bg-[#11592c] text-black"
     >
       {/* Labels */}
       <div className="space-y-6 mb-8 md:mb-0 md:mr-8">
         <div className="flex items-center space-x-3">
           <span className="h-4 w-4 rounded-full bg-blue-400"></span>
-          <span className="text-lg font-medium">Electricity Bill</span>
+          <span className="text-lg font-medium text-white">Electricity Bill</span>
         </div>
         <div className="flex items-center space-x-3">
           <span className="h-4 w-4 rounded-full bg-green-400"></span>
-          <span className="text-lg font-medium">CO2 Consumption</span>
+          <span className="text-lg font-medium text-white">CO2 Consumption</span>
         </div>
         <div className="flex items-center space-x-3">
           <span className="h-4 w-4 rounded-full bg-yellow-400"></span>
-          <span className="text-lg font-medium">Nature Harm</span>
+          <span className="text-lg font-medium text-white">Nature Harm</span>
         </div>
       </div>
 

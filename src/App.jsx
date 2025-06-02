@@ -15,6 +15,8 @@ import Earthing from './components/Earthing'
 import La from './components/La'
 import GasGenset from './components/GasGenset'
 import Diesel from './components/Diesel'
+import Cursor from './components/Cursor'
+import SocialIcons from './components/SocialIcons'
 
 function App() {
 
@@ -22,7 +24,10 @@ function App() {
   return (
     <>
       <Navbar2/>
+            <Cursor />
+           
 
+<SocialIcons/>
 
       <Routes>
        <Route path="/" element={<Home />} />

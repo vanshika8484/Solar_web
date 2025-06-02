@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
@@ -38,11 +40,11 @@ const FaqSection = () => {
   return (
     <section className="bg-white py-16 px-6 sm:px-10 lg:px-20">
       <div className="max-w-5xl mx-auto text-center">
-      <h4 className="text-2xl font-robotoslab font-bold text-green-500 mb-4">
-         OUR FAQ
+        <h4 className="text-2xl font-robotoslab font-bold text-green-500 mb-4">
+          OUR FAQ
         </h4>
         <h2 className="text-4xl font-robotoslab font-bold text-gray-800 mb-4">
-           Chacha Ki Free Solar Salah
+          Chacha Ki Free Solar Salah
         </h2>
         <p className="text-gray-500 text-lg mb-10">
           Jo bhi confusion ho, Chacha sab samjhayenge – ekdum desi style mein!
@@ -62,15 +64,25 @@ const FaqSection = () => {
               <span className="text-gray-800 font-medium text-base sm:text-lg">
                 {faq.question}
               </span>
-              <span className="text-2xl text-gray-500">
-                {openIndex === index ? "−" : "+"}
+              <span className="text-gray-500">
+                {openIndex === index ? <Minus size={24} /> : <Plus size={24} />}
               </span>
             </button>
-            {openIndex === index && (
-              <div className="px-6 pb-5 text-gray-600 text-sm sm:text-base">
-                {faq.answer}
-              </div>
-            )}
+
+            <AnimatePresence initial={false}>
+              {openIndex === index && (
+                <motion.div
+                  key="content"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden px-6 pb-5 text-gray-600 text-sm sm:text-base"
+                >
+                  {faq.answer}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>

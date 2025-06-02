@@ -28,18 +28,18 @@ const SolarCarousel = () => {
   }, [current]);
 
   return (
-    <div className="w-full max-w-5xl mx-auto p-6 rounded-3xl  relative overflow-hidden bg-gradient-to-br from-white via-white to-white">
+    <div className="w-full  max-w-5xl mx-auto p-6  ">
       <h2 className="text-2xl md:text-5xl font-bold text-center mb-6 text-orange-500">
-        Govt Associated, <span className="text-green-800">Working on a Greater Cause</span>
+        Govt Associated, <span className="text-white">Working on a Greater Cause</span>
       </h2>
 
-      <div className="relative w-full h-80 md:h-[28rem] mt-16 overflow-hidden rounded-xl">
+      <div className="relative w-full h-80 md:h-[28rem] mt-16 overflow-hidden ">
         <AnimatePresence>
           <motion.img
             key={solarImages[current]}
             src={solarImages[current]}
             alt="Solar Work"
-            className="object-cover w-full h-full rounded-xl"
+            className="object-cover w-full h-full rounded-sm"
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}

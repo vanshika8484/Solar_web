@@ -45,14 +45,16 @@ function StatCard({ target, label, Icon, delay }) {
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
     >
-      <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 px-6 py-8 border-t-4 border-green-500 text-center">
+      <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 px-6 py-8 border-t-4 text-center"
+        style={{ borderTopColor: "rgb(22 101 52)" }}
+      >
         <div className="flex justify-center mb-4">
-          <Icon className="h-12 w-12 text-green-600" />
+          <Icon className="h-12 w-12" style={{ color: "rgb(22 101 52)" }} />
         </div>
         <h2 className="text-3xl font-bold text-gray-900">
           {target >= 1000 ? `${(count / 1000).toFixed(0)}K+` : `${count}+`}
         </h2>
-        <p className="mt-2 text-green-700 font-medium">{label}</p>
+        <p className="mt-2 font-medium" style={{ color: "rgb(22 101 52)" }}>{label}</p>
       </div>
     </motion.div>
   );
@@ -60,7 +62,7 @@ function StatCard({ target, label, Icon, delay }) {
 
 function StatsSection() {
   return (
-    <section className="bg-white py-24 text-gray-800">
+    <section className="bg-[#f8f7f0] py-24 text-gray-800">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -69,7 +71,7 @@ function StatsSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl font-bold text-green-600 mb-4">
+          <h1 className="text-4xl font-bold mb-4" style={{ color: "rgb(22 101 52)" }}>
             Our <span className="text-orange-500">Impact</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-xl mx-auto">

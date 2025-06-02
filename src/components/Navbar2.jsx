@@ -33,10 +33,7 @@ const Navbar2 = () => {
               Nai Basti Dundaher Ghaziabad,
               Uttar Pradesh 201001</span>
           </div>
-          <div className="flex items-center gap-1">
-            <FaClock className="text-green-600" />
-            <span>Sunday – Friday: <strong>9 am – 8 pm</strong></span>
-          </div>
+          
         </div>
         <div className="hidden md:flex gap-4 text-lg">
           <FaFacebookF className="hover:text-green-600 cursor-pointer" />
@@ -81,7 +78,7 @@ const Navbar2 = () => {
             </div>
             <div className="text-sm">
               <p className="text-gray-700 font-medium">Requesting A Call:</p>
-              <p className="font-bold text-gray-900">(629) 555-0129</p>
+              <p className="font-bold text-gray-900">+91 9310259325</p>
             </div>
           </div>
 
@@ -91,10 +88,7 @@ const Navbar2 = () => {
           </button>
 
           {/* Search Toggle */}
-          <FiSearch
-            className="text-xl text-gray-700 cursor-pointer hover:text-green-600"
-            onClick={() => setShowSearch(!showSearch)}
-          />
+          
 
           {/* Mobile Hamburger */}
           <button className="md:hidden text-2xl text-gray-800" onClick={() => setIsMenuOpen(!isMenuOpen)}>
