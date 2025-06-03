@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <>
-    <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg">
+    <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol">
       <h1 className="text-4xl font-bold text-center mt-14 text-green-600 mb-10"><span className=" text-black">Our </span>Projects</h1>
 
       {/* Filter Buttons */}
@@ -75,7 +75,7 @@ const Projects = () => {
       </div>
     </section>
     <section>
-  <section className="max-w-7xl mx-auto px-6 py-16 mt-14 flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-20">
+  <section className="max-w-7xl mx-auto px-6 py-16 mt-14 flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-20 GetFontSol">
       {/* Left image */}
       <motion.div
         className="flex-shrink-0 w-full md:w-1/2"

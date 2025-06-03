@@ -3,9 +3,9 @@ import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Suspense, lazy } from "react";
 import { Sun } from "lucide-react";
-import solar from '../Images/solar.jpg'
-import solarch from '../Images/chacha.png'
-import './Home.css'
+import solar from "../Images/solar.jpg";
+import solarch from "../Images/chacha.png";
+import "./Home.css";
 
 // import { FaRobot } from "react-icons/fa";
 import { RiRobotLine } from "react-icons/ri";
@@ -25,14 +25,12 @@ import CustomerCarousel from "./CustomerCarousel";
 import ExactMatchPage from "./ExactMatchPage";
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
-import bg from '../Images/bg1.jpg'
+import bg from "../Images/bg1.jpg";
 import ChatbotPopup from "./ChatbotPopup";
 import ChatbotToggle from "./ChatbotToggle";
 import SolarSolutions from "./SolarSolutions";
-
-
-
-
+import Solarabout from "./Solarabout";
+import Hero from "./Hero";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -62,10 +60,6 @@ function Home() {
     },
   ];
 
-
-
-
-
   // Animation variants for the container
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -79,7 +73,11 @@ function Home() {
   // Animation variants for children elements
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   // Button hover animation
@@ -90,17 +88,11 @@ function Home() {
   };
 
   return (
-
-    <div className="pt-7 relative overflow-hidden -mt-12 ">
-
-
-
-
+    <div className="pt-7 relative overflow-hidden -mt-20 sm:ml-0 lg:ml-16  md:ml-16 max-w-[1150px]   ">
       <ChatbotToggle />
 
-
       <motion.section
-        className="bg-gradient-to-br from-white via-gray-50 to-white min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
+        className="bg-white min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -111,7 +103,7 @@ function Home() {
         >
           {/* Badge */}
           <motion.span
-            className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-5"
+            className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs GetfontHome mb-5 "
             variants={itemVariants}
           >
             Trusted by 23K+ users
@@ -143,25 +135,27 @@ function Home() {
 
           {/* Subheadline */}
           <motion.p
-            className="text-green-600 font-semibold text-lg mb-4"
+            className="text-green-600 GetfontHomeChat text-xl mb-4"
             variants={itemVariants}
           >
             Tired of high electricity bills?
           </motion.p>
 
           {/* Main Heading */}
-          <motion.h1 className="mb-8 tracking-tight text-center " variants={itemVariants}>
-            <div className="GetfontHome text-5xl sm:text-6xl lg:text-7xl text-black leading-snug">
+          <motion.h1
+            className="mb-8 tracking-tight text-center "
+            variants={itemVariants}
+          >
+            <div className="GetfontHome text-5xl sm:text-6xl lg:text-5xl text-black leading-snug">
               Go Solar, Save More:
             </div>
-            <div className="GetfontHome text-4xl sm:text-5xl lg:text-5xl text-gray-300 mt-4 mb-4 ">
-              Clean and Renewable Energy
+            <div className="GetfontHome text-4xl sm:text-5xl lg:text-5xl text-gray-300 mt-5 mb-4 ">
+              Clean and Renewable <span className=" text-black ">Energy</span>
             </div>
-            <div className="GetfontHome text-4xl sm:text-5xl lg:text-5xl text-black ">
+            <div className="GetfontHome text-4xl sm:text-5xl lg:text-5xl text-black mt-5">
               for a Brighter Tomorrow
             </div>
           </motion.h1>
-
 
           {/* Separator */}
           {/* <motion.div
@@ -184,10 +178,13 @@ function Home() {
             className="flex flex-col items-center space-y-6"
             variants={itemVariants}
           >
-            <motion.div className="flex flex-col items-center space-y-6" variants={itemVariants}>
+            <motion.div
+              className="flex flex-col items-center space-y-6"
+              variants={itemVariants}
+            >
               <motion.button
                 type="button"
-                className="group bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-7 py-3 text-lg inline-flex items-center gap-2 transition-all duration-300"
+                className="group bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-7 py-3 text-lg inline-flex items-center gap-2 transition-all duration-300 GetfontHomeChat"
                 whileHover={buttonHover}
                 whileTap={{ scale: 0.95 }}
               >
@@ -204,64 +201,19 @@ function Home() {
             </motion.div>
 
             {/* Circular Badge under button */}
-
           </motion.div>
-          <motion.div
-            className="ml-auto  flex items-center justify-center"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
-          >
-
-            <div className=" mt-14">
-              <div className="relative w-40 h-40">
-                <svg className="w-40 h-40" viewBox="0 0 100 100">
-                  {/* Background Circle */}
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="40"
-                    stroke="#efefef"
-                    strokeWidth="20"
-                    fill="none"
-                  />
-                  {/* Progress Circle (35%) */}
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="40"
-                    stroke="#166534"
-                    strokeWidth="20"
-                    fill="none"
-                    strokeDasharray="251.2"
-                    strokeDashoffset="163.28"
-                    strokeLinecap="round"
-                    transform="rotate(-90 50 50)"
-                  />
-                </svg>
-
-                {/* Center Text */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-green-800 text-[16px] font-semibold leading-tight text-center px-2">
-                  <span className="text-xl font-bold">2 Lakh+</span>
-                  Customers <br /> Powered
-                </div>
-              </div>
-            </div>
-          </motion.div>
+         
         </motion.div>
-
       </motion.section>
-
 
       <Suspense fallback={<div></div>}>
         <Dashboard />
       </Suspense>
       <ChatUI />
 
+      
 
-
-      <section className="bg-[#f8f7f0] py-16 px-4 md:px-10 mt-11">
-
+      <section className="bg-[#f8f7f0] py-16 px-4 md:px-10 mt-11 GetfontHomeDash">
         <section className="bg-[#f8f7f0] py-16 px-6 md:px-20">
           <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
             {/* Left Content */}
@@ -280,11 +232,14 @@ function Home() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-tight">
-                What Is <span className="text-green-700">Solar?</span>
+                What Is <span className="text-green-800">Solar?</span>
               </h2>
 
               <p className="text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
-                Solar refers to anything related to the sun. In energy, it means harnessing the sun’s light and heat to generate electricity. It’s renewable, safe, and economical in the long run. With solar, you’re not only saving money—you’re saving the Earth.
+                Solar refers to anything related to the sun. In energy, it means
+                harnessing the sun’s light and heat to generate electricity.
+                It’s renewable, safe, and economical in the long run. With
+                solar, you’re not only saving money—you’re saving the Earth.
               </p>
 
               <button className="bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-3 rounded-full transition-all shadow-md">
@@ -293,28 +248,27 @@ function Home() {
             </motion.div>
 
             {/* Right Image */}
-            <motion.div
-              className="md:w-1/2 w-full"
-              initial={{ x: 80, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-full h-72 sm:h-96 rounded-xl overflow-hidden shadow-xl">
-                <img
-                  src={solar}
-                  alt="Solar Panel Field"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
+           <motion.div
+  className="md:w-1/2 w-full"
+  initial={{ x: 80, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <div className="w-full max-w-md h-40 sm:h-48 rounded-xl overflow-hidden shadow-xl mx-auto">
+    <img
+      src={solar}
+      alt="Solar Panel Field"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</motion.div>
+
           </div>
         </section>
-
-
-
-
-
+        <section>
+        <Solarabout/>
+      </section>
 
         {/* Another Layout___________>>>>>>>>>>>>>>> */}
 
@@ -366,12 +320,10 @@ function Home() {
         {/* </div> */}
         {/* </section> */}
 
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative">
+        <div className="GetfontHomeDash max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative">
           {/* Left: Images and circular text */}
           <div className="relative w-full h-full">
             {/* Circular Text */}
-
 
             {/* Image 1 */}
             <div className="w-full rounded-xl overflow-hidden shadow-lg">
@@ -398,13 +350,21 @@ function Home() {
               About Us
             </h3>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-              We Believe Solar Power Should Be <span className="text-orange-600">Accessible</span>
+              We Believe Solar Power Should Be{" "}
+              <span className="text-orange-600">Accessible</span>
             </h2>
             <p className="text-base leading-relaxed mb-4">
-              At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for over a decade as an authorized partner of Tata Power Solar. Backed by Tata’s legacy of trust, we deliver cost-effective solar solutions that prioritize energy safety, quality, and long-term performance.
+              At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for
+              over a decade as an authorized partner of Tata Power Solar. Backed
+              by Tata’s legacy of trust, we deliver cost-effective solar
+              solutions that prioritize energy safety, quality, and long-term
+              performance.
             </p>
             <p className="text-base leading-relaxed">
-              From planning to financing, and installation to maintenance, we offer customized solar services required to meet your project’s needs. With us, you don’t just go solar, you go safe, smart, and sustainable.
+              From planning to financing, and installation to maintenance, we
+              offer customized solar services required to meet your project’s
+              needs. With us, you don’t just go solar, you go safe, smart, and
+              sustainable.
             </p>
           </div>
         </div>
@@ -461,64 +421,69 @@ function Home() {
       </section>
       <SolarSolutions />
 
-      <section >
+      <section>
         <ChartCard />
       </section>
-      <section className="bg-[#11592c] h-[800px]" >
-
-
+      <section className="bg-[#11592c] h-[800px]">
         <SolarCarousel />
       </section>
 
-
-      <section>
-
-      </section>
-      <section>
+      <section></section>
+      <section className="bg-[#f8f7f0]">
         <SolarServices />
         <SolarProduct />
       </section>
       <section>
-        <main className="max-w-7xl mx-auto px-6 py-16">
-          <section className="bg-[#4BA63F] rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10">
-            {/* Text content */}
-            <div className="text-white max-w-3xl text-center md:text-left">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 leading-snug">
-                We Are Expensive But We Are Safe
-              </h2>
-              <p className="text-base md:text-lg leading-relaxed font-normal">
-                At Divy Power, we believe that quality and safety come first. While our solutions may come at a premium, we never compromise on the integrity of our installations. Our systems are built with government-approved materials, installed by certified engineers, and designed for long-term durability. We take pride in ensuring that every solar installation is robust, reliable, and secure, giving you peace of mind that your investment will last for decades. When you choose Divy, you’re choosing safety, reliability, and performance that won’t fail you.
-              </p>
-            </div>
-
-            {/* Image */}
-            <div className="flex-shrink-0">
-              <img
-                src={solarch}
-                alt="Smiling sun emoji wearing sunglasses and orange shoes with text 'SOLAR CHACHA' above it in black bold font"
-                className="w-48 h-48 md:w-52 md:h-52 object-contain"
-                width={200}
-                height={200}
-              />
-            </div>
-          </section>
-
-
-          <SolarCostCalculator />
-          <FaqSection />
-          <SolarPortfolio />
-          <CustomerCarousel />
-          <ExactMatchPage />
-          <ContactForm />
-          <Footer />
-        </main>
-
-
+        {/* <Hero/> */}
       </section>
 
+      <main className="max-w-7xl mx-auto px-6 py-16 bg-[#f8f7f0] GetFontSol">
+        <section className="bg-green-800 rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10">
+          {/* Text content */}
+          <div className="text-white max-w-3xl text-center md:text-left">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6 leading-snug">
+              We Are Expensive But We Are Safe
+            </h2>
+            <p className="text-base md:text-lg leading-relaxed font-normal">
+              At Divy Power, we believe that quality and safety come first.
+              While our solutions may come at a premium, we never compromise on
+              the integrity of our installations. Our systems are built with
+              government-approved materials, installed by certified engineers,
+              and designed for long-term durability. We take pride in ensuring
+              that every solar installation is robust, reliable, and secure,
+              giving you peace of mind that your investment will last for
+              decades. When you choose Divy, you’re choosing safety,
+              reliability, and performance that won’t fail you.
+            </p>
+          </div>
 
+          {/* Image */}
+          <div className="flex-shrink-0">
+            <img
+              src={solarch}
+              alt="Smiling sun emoji wearing sunglasses and orange shoes with text 'SOLAR CHACHA' above it in black bold font"
+              className="w-48 h-48 md:w-52 md:h-52 object-contain"
+              width={200}
+              height={200}
+            />
+          </div>
+        </section>
+      </main>
 
+      <section className="bg-[#11592c]">
+        <SolarCostCalculator />
 
+        <FaqSection />
+      </section>
+
+      <section className="bg-[#f8f7f0]">
+        <SolarPortfolio />
+      <CustomerCarousel />
+      </section>
+
+      <ExactMatchPage />
+      <ContactForm />
+      <Footer />
     </div>
   );
 }

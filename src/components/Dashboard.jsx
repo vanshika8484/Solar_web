@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import './Home.css'
 
 function Dashboard() {
   // Variants for the entire dashboard container
@@ -14,13 +15,13 @@ function Dashboard() {
 
   return (
     <motion.div
-      className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4"
+      className="GetfontHomeDash max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4"
       variants={dashboardVariants}
       initial="hidden"
       animate="visible"
     >
       {/* Current Power */}
-      <section className="bg-gray-100 rounded-lg p-4 flex flex-col justify-between min-h-[280px]">
+      <section className="GetfontHomeDash bg-gray-100 rounded-lg p-4 flex flex-col justify-between min-h-[280px]">
         <div className="flex justify-between items-center mb-2">
           <p className="text-xs text-gray-600">Current Power, kW</p>
           <i className="fas fa-external-link-alt text-gray-600 text-xs" />

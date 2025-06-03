@@ -33,10 +33,10 @@ export default function CustomerCarousel() {
   }, []);
 
   return (
-    <main className="bg-[#181818] text-white min-h-screen py-12 px-4 ">
+    <main className="bg-[#181818] text-white min-h-screen py-12 px-4 GetFontSol">
       <h1 className="text-center text-4xl font-semibold mb-12">Customer Feedbacks</h1>
 
-      <section className="bg-[#1a1a1a] rounded-xl p-6 max-w-3xl mx-auto text-center shadow-lg border border-green-700">
+      <section className="bg-[#1a1a1a] rounded-xl p-6 max-w-3xl mx-auto text-center shadow-lg border border-green-800">
         <AnimatePresence mode="wait">
           <motion.div
             key={feedbacks[currentIndex].id}
@@ -45,7 +45,7 @@ export default function CustomerCarousel() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="text-green-500 text-3xl mb-4">
+            <div className="text-green-700 text-3xl mb-4">
               <i className="fas fa-quote-left" />
             </div>
 
@@ -53,7 +53,7 @@ export default function CustomerCarousel() {
               {feedbacks[currentIndex].text}
             </p>
 
-            <div className="text-green-500 mt-6 space-x-1 text-xl">
+            <div className="text-green-700 mt-6 space-x-1 text-xl">
               {[...Array(feedbacks[currentIndex].rating)].map((_, i) => (
                 <i className="fas fa-star" key={i} />
               ))}
@@ -62,7 +62,7 @@ export default function CustomerCarousel() {
               ))}
             </div>
 
-            <p className="mt-4 text-green-400 font-semibold text-lg">
+            <p className="mt-4 text-green-700 font-semibold text-lg">
               — {feedbacks[currentIndex].name}
             </p>
           </motion.div>
@@ -74,7 +74,7 @@ export default function CustomerCarousel() {
           <span
             key={i}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              i === currentIndex ? "bg-green-500" : "bg-gray-600"
+              i === currentIndex ? "bg-green-700" : "bg-gray-600"
             }`}
           ></span>
         ))}

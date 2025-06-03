@@ -3,7 +3,7 @@ import React from "react";
 function ChatbotPopup({ onClose }) {
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 GetfontHomeChat"
       aria-modal="true"
       role="dialog"
     >
@@ -16,7 +16,7 @@ function ChatbotPopup({ onClose }) {
           ✕
         </button>
 
-        <h2 className="text-xl font-semibold mb-4">🤖 ChatBot</h2>
+        <h2 className="text-xl GetfontHomeChat mb-4">🤖 ChatBot</h2>
         <p>Hi! How can I help you today?</p>
         {/* Add chatbot UI here */}
       </div>

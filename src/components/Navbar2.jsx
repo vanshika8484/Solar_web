@@ -25,7 +25,7 @@ const Navbar2 = () => {
   return (
     <div className="w-full sticky top-0 z-50 bg-white shadow-md">
       {/* Top Info */}
-      <div className="flex justify-between items-center px-4 md:px-8 py-2 text-sm text-gray-600 border-b">
+      {/* <div className="flex justify-between items-center px-4 md:px-8 py-2 text-sm text-gray-600 border-b">
         <div className="flex items-center gap-4 flex-wrap">
           <div className="flex items-center gap-1">
             <FaMapMarkerAlt className="text-green-600" />
@@ -41,7 +41,7 @@ const Navbar2 = () => {
           <FaTwitter className="hover:text-green-600 cursor-pointer" />
           <FaLinkedinIn className="hover:text-green-600 cursor-pointer" />
         </div>
-      </div>
+      </div> */}
 
       {/* Main Nav */}
       <div className="flex justify-between items-center px-4 md:px-8 py-4 relative">
@@ -83,9 +83,9 @@ const Navbar2 = () => {
           </div>
 
           {/* Get a Quote Button */}
-          <button className="hidden md:flex items-center bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+          {/* <button className="hidden md:flex items-center bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
             Get a quote →
-          </button>
+          </button> */}
 
           {/* Search Toggle */}
           
@@ -123,9 +123,9 @@ const Navbar2 = () => {
             {link.name}
           </NavLink>
         ))}
-        <button className="mt-4 bg-green-600 text-white px-4 py-2 rounded w-full">
+        {/* <button className="mt-4 bg-green-600 text-white px-4 py-2 rounded w-full">
           Get a quote →
-        </button>
+        </button> */}
       </div>
     </div>
   );

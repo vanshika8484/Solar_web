@@ -25,13 +25,13 @@ const teamMembers = [
 
 const ExpertTeam = () => {
   return (
-    <div className="bg-white min-h-screen py-16 px-4 -mt-10 sm:px-6 lg:px-8 font-inter">
+    <div className="bg-white min-h-screen py-16 px-4 -mt-10 sm:px-6 lg:px-8 GetFontSol">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-12">Expert Team Members</h2>
+        <h2 className="text-3xl sm:text-4xl GetFontSol mb-12">Expert Team Members</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md p-4 relative hover:shadow-lg transition-all">
-              <div className="relative rounded-lg overflow-hidden">
+            <div key={index} className="bg-white rounded-xl shadow-md p-4 relative hover:shadow-lg transition-all GetFontSol">
+              <div className="relative rounded-lg overflow-hidden GetFontSol">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -45,7 +45,7 @@ const ExpertTeam = () => {
                 </button>
               </div>
               <div className="mt-4 text-center">
-                <h3 className="text-lg font-semibold">{member.name}</h3>
+                <h3 className="text-lg GetFontSol">{member.name}</h3>
                 <p className="text-gray-500 text-sm mt-1">{member.role}</p>
               </div>
             </div>

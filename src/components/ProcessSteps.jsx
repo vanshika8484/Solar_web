@@ -43,17 +43,17 @@ const iconAnimation = {
 
 export default function ProcessSteps() {
   return (
-    <div className="bg-white  min-h-screen flex flex-col">
+    <div className="bg-white  min-h-screen flex flex-col GetFontSol">
       {/* Navbar */}
     
 
       {/* Main content */}
       <main className="flex-grow max-w-7xl mx-auto px-6 pt-16 pb-20">
-        <h1 className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight max-w-4xl mx-auto">
+        <h1 className="text-center text-4xl md:text-5xl GetFontSol text-gray-900 leading-tight max-w-4xl mx-auto">
           Quality Handyman Solution
         </h1>
 
-        <section className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-16 max-w-6xl mx-auto">
+        <section className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-16 max-w-6xl mx-auto GetFontSol">
           {steps.map(({ id, title, Icon, alt }) => (
             <div
               key={id}
@@ -75,9 +75,7 @@ export default function ProcessSteps() {
                   </React.Fragment>
                 ))}
               </h2>
-              <div className="absolute -bottom-7 left-1/2 transform -translate-x-1/2 bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-semibold text-lg select-none">
-                {id}
-              </div>
+             
               <svg
                 className="absolute bottom-0 left-0 right-0"
                 fill="none"

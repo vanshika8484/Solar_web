@@ -17,20 +17,25 @@ import GasGenset from './components/GasGenset'
 import Diesel from './components/Diesel'
 import Cursor from './components/Cursor'
 import SocialIcons from './components/SocialIcons'
+import ScrollToTop from './components/ScrollToTop'
+
+
 
 function App() {
 
 
   return (
     <>
-      <Navbar2/>
-            <Cursor />
-           
+      <Navbar2 />
+      <Cursor />
 
-<SocialIcons/>
+ 
+      <SocialIcons />
+      <ScrollToTop />
 
       <Routes>
-       <Route path="/" element={<Home />} />
+
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />

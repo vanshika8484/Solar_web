@@ -4,7 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const SolarSolutions = () => {
   return (
-    <main className="bg-[#f8f7f0] text-black max-w-[1500px] mx-auto p-6 sm:p-10">
+    <main className="bg-[#f8f7f0] text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash">
       {/* Top Section */}
       <motion.section
         className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16"
@@ -33,11 +33,11 @@ const SolarSolutions = () => {
 
           <div className="flex flex-wrap gap-x-20 gap-y-6 mb-10 max-w-[420px]">
             <div>
-              <p className="font-semibold text-[24px] text-[#4BA63F]">770</p>
+              <p className="font-semibold text-[24px] text-green-700">770 +</p>
               <p className="text-[12px] text-gray-600">Billion kWh Green Power Generated</p>
             </div>
             <div>
-              <p className="font-semibold text-[24px] text-[#4BA63F]">85,000+</p>
+              <p className="font-semibold text-[24px] text-green-700">85,000+</p>
               <p className="text-[12px] text-gray-600">Installs across Europe</p>
             </div>
           </div>
@@ -55,13 +55,13 @@ const SolarSolutions = () => {
                 key={solution}
                 aria-expanded={index === 0}
                 className={`w-full flex justify-between items-center bg-white shadow-md rounded-md px-5 py-3 text-[15px] border border-gray-200 hover:bg-[#f0fdf4] transition-all ${
-                  index === 0 ? "font-semibold border-[#4BA63F]" : "font-semibold"
+                  index === 0 ? "font-semibold text-green-700" : "font-semibold"
                 }`}
               >
                 <span>{solution}</span>
                 <i
                   className={`fas fa-arrow-up-right text-lg ${
-                    index === 0 ? "text-[#4BA63F]" : "text-gray-300"
+                    index === 0 ? "text-green-700]" : "text-gray-300"
                   }`}
                 ></i>
               </button>
@@ -95,7 +95,7 @@ const SolarSolutions = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
             >
-              <i className={`${icon} text-[#4BA63F] text-4xl mb-4`}></i>
+              <i className={`${icon} text-green-700 text-4xl mb-4`}></i>
               <p className="font-semibold text-[14px] mb-1 text-[#1f2937]">{title}</p>
               <p className="text-[12px] text-gray-600 font-semibold">{subtitle}</p>
             </motion.div>

@@ -96,7 +96,7 @@ function Product() {
   ];
 
   return (
-    <section className="relative py-20 text-center bg-gradient-to-br from-green-50 to-white">
+    <section className="relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol">
       <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
 
       <div className="relative z-10">

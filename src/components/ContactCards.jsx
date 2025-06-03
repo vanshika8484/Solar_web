@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ContactCards = () => {
   return (
-    <div className="bg-white p-6 min-h-screen flex items-center justify-center -mt-40">
+    <div className="bg-white p-6 min-h-screen flex items-center justify-center -mt-40 GetFontSol">
       <div className="max-w-7xl w-full mx-auto flex flex-col sm:flex-row gap-6">
         {/* Call Card */}
         <motion.div
@@ -23,13 +23,13 @@ const ContactCards = () => {
               <i className="fas fa-phone-alt text-white text-2xl" />
             </div>
             <div className="flex flex-col">
-              <span className="text-green-500 font-semibold text-sm mb-1">
+              <span className="text-green-500 GetFontSol text-sm mb-1">
                 Call Us For Service
               </span>
               <span className="font-extrabold text-2xl md:text-3xl tracking-tight leading-tight">
                 (+21) 25 256.21583
               </span>
-              <span className="text-gray-400 text-sm md:text-base mt-1">
+              <span className="GetFontSol text-gray-400 text-sm md:text-base mt-1">
                 Call 24/7 Anytime For Your Problem
               </span>
             </div>

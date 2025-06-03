@@ -6,6 +6,24 @@
 .GetfontHome{
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.GetfontHomeDash{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.GetfontHomeChat{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 500;
+  font-style: normal;
+}
+.GetFontSol{
+   font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   font-style: normal;
 }

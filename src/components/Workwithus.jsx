@@ -42,7 +42,7 @@ function Workwithus() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-green-50 to-white py-40">
+      <section className="bg-gradient-to-br from-green-50 to-white py-40 GetFontSol">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-12 -mt-16">Work <span className=' text-green-600'>
             with Us

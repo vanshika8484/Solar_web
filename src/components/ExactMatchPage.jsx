@@ -26,7 +26,7 @@ const logos = [
 
 export default function ExactMatchPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-[#f8f7f0] min-h-screen GetFontSol">
       {/* Black horizontal bar */}
       <div className="w-full h-8 bg-black" />
 
@@ -53,7 +53,7 @@ export default function ExactMatchPage() {
       </div>
 
       {/* Newsletter Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-12 bg-[#fafaf2] rounded-xl flex flex-col md:flex-row items-center gap-6">
+      <section className="max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-12 rounded-xl flex flex-col md:flex-row items-center gap-6">
         {/* Left */}
         <div className="flex items-center space-x-4 flex-1 w-full">
           <img
@@ -81,7 +81,7 @@ export default function ExactMatchPage() {
           />
           <button
             type="submit"
-            className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-8 py-3 flex items-center justify-center space-x-2"
+            className="w-full sm:w-auto bg-green-700 hover:bg-green-700 text-white font-semibold rounded-full px-8 py-3 flex items-center justify-center space-x-2"
           >
             <span>Subscribe</span>
             <i className="fas fa-plus" />

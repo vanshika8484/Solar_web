@@ -2,10 +2,10 @@ import React from "react";
 
 const SolarCostCalculator = () => {
   return (
-    <div className="bg-[#f9f8f0] min-h-screen">
+    <div className="bg-[#11592c] min-h-screen GetFontSol">
    
 
-      <main className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 mt-12 mb-20 grid grid-cols-1 md:grid-cols-2 gap-10 pt-11">
+      <main className="max-w-7xl  mx-auto px-6 sm:px-10 lg:px-16  mb-20 grid grid-cols-1 md:grid-cols-2 gap-10 pt-6">
         {/* Left Section */}
         <section className="relative bg-white rounded-xl px-4 py-8 sm:px-8 sm:py-12 md:px-10 md:py-14 max-w-6xl mx-auto">
   {/* Title */}
@@ -50,8 +50,8 @@ const SolarCostCalculator = () => {
 
         {/* Right Section */}
         <section className="bg-[#d9f0d6] rounded-xl px-6 py-10 sm:px-10 sm:py-14 max-w-md mx-auto md:mx-0">
-          <p className="text-green-600 text-xs uppercase tracking-widest mb-2 flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-green-600 inline-block"></span>
+          <p className="text-green-800 text-xs uppercase tracking-widest mb-2 flex items-center space-x-2">
+            <span className="w-2 h-2 rounded-full bg-green-800 inline-block"></span>
             <span>About Calculator</span>
           </p>
           <h3 className="text-3xl font-normal text-[#1e1e1e] mb-6 font-robotoslab">Solar Cost Calculator</h3>
@@ -65,7 +65,7 @@ const SolarCostCalculator = () => {
             ].map(({ id, icon, placeholder }) => (
               <div key={id}>
                 <div className="flex items-center border border-blue-300 rounded-full px-4 py-2 bg-white">
-                  <i className={`${icon} text-green-600 mr-3`}></i>
+                  <i className={`${icon} text-green-800 mr-3`}></i>
                   <input
                     id={id}
                     type="text"
@@ -84,10 +84,10 @@ const SolarCostCalculator = () => {
               </select>
             </div>
             <div className="flex items-center text-green-700 text-sm">
-              <input id="govt-subsidy" type="checkbox" className="w-4 h-4 text-green-600 border-green-600 rounded focus:ring-green-500 focus:ring-2" />
+              <input id="govt-subsidy" type="checkbox" className="w-4 h-4 text-green-800 border-green-800 rounded focus:ring-green-500 focus:ring-2" />
               <label htmlFor="govt-subsidy" className="ml-2 cursor-pointer">Govt. Subsidy Eligible?</label>
             </div>
-            <button type="submit" className="w-full bg-green-600 text-white font-bold rounded-full py-3 mt-6 hover:bg-green-700 transition-colors">
+            <button type="submit" className="w-full bg-green-800 text-white font-bold rounded-full py-3 mt-6 hover:bg-green-700 transition-colors">
               Calculate Cost
             </button>
           </form>

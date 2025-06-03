@@ -41,15 +41,15 @@ export default function SolarPortfolio() {
       : portfolioData.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="bg-white text-gray-900 min-h-screen px-4 py-10">
+    <div className="bg-[#f8f7f0] text-gray-900 min-h-screen px-4 py-10 GetFontDash">
       
 
       <div className="text-center mb-6">
         <div className="flex justify-center items-center gap-2 text-xl  tracking-widest mb-2">
-          <span className="text-green-600 text-lg">
+          <span className="text-green-800 text-lg">
             <i className="fas fa-lightbulb" />
           </span>
-          <span className="font-bold text-green-600 ">LATEST PORTFOLIO</span>
+          <span className="font-bold text-green-800 ">LATEST PORTFOLIO</span>
         </div>
         <h1 className="text-3xl font-normal">
           Embrace The Power The Sun With Solar Energy{" "}
@@ -64,7 +64,7 @@ export default function SolarPortfolio() {
             onClick={() => setSelectedCategory(cat)}
             className={`px-5 py-2 rounded-full font-semibold min-w-[80px] ${
               selectedCategory === cat
-                ? "bg-green-600 text-white"
+                ? "bg-green-800 text-white"
                 : "bg-gray-100 text-gray-800"
             }`}
           >

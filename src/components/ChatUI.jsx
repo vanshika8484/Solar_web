@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import solarg from '../Images/chacha.png'
 import didi from '../Images/didi.png'
+import './Home.css'
 
 const chatMessages = [
   {
@@ -33,7 +34,7 @@ const chatVariants = {
 
 const ChatUI = () => {
   return (
-    <div className="min-h-[300px] bg-white flex items-center justify-center px-4 py-6 sm:py-10">
+    <div className="GetfontHomeChat min-h-[300px] bg-white flex items-center justify-center px-4 py-6 sm:py-10">
   <div className="w-full max-w-4xl flex flex-col gap-y-6 sm:gap-y-10">
     {chatMessages.map((msg, index) => (
       <motion.div

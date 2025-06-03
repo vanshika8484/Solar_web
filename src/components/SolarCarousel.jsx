@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import './Home.css'
 
 const solarImages = [
   "https://images.pexels.com/photos/30285845/pexels-photo-30285845.jpeg",
@@ -28,9 +29,9 @@ const SolarCarousel = () => {
   }, [current]);
 
   return (
-    <div className="w-full  max-w-5xl mx-auto p-6  ">
-      <h2 className="text-2xl md:text-5xl font-bold text-center mb-6 text-orange-500">
-        Govt Associated, <span className="text-white">Working on a Greater Cause</span>
+    <div className="w-full  max-w-5xl mx-auto p-6 GetFontSol ">
+      <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-orange-500">
+        Govt Associated, <span className="text-white ">Working on a Greater Cause</span>
       </h2>
 
       <div className="relative w-full h-80 md:h-[28rem] mt-16 overflow-hidden ">

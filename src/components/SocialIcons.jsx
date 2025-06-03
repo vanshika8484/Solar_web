@@ -1,13 +1,13 @@
 // components/SocialIcons.jsx
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-const iconStyle = `w-10 h-10 rounded-md flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300`;
+const iconStyle = `w-10 h-10 rounded-md flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 animate-float`;
 
 const SocialIcons = () => {
   return (
     <>
       {/* Left Side Icons */}
-      <div className="fixed top-1/2 left-4 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
+      <div className="fixed top-1/2 left-4 transform -translate-y-1/2 flex lg:gap-36 md:gap-36 sm:gap-0 flex-col space-y-4 z-50">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
           className={`${iconStyle} bg-blue-600`}>
           <FaFacebookF />
@@ -23,7 +23,7 @@ const SocialIcons = () => {
       </div>
 
       {/* Right Side Icons */}
-      <div className="fixed top-1/2 right-4 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
+      <div className="fixed top-1/2 right-4 transform -translate-y-1/2 flex flex-col space-y-4 z-50 lg:gap-36 md:gap-36 sm:gap-0">
         <a href="https://github.com" target="_blank" rel="noopener noreferrer"
           className={`${iconStyle} bg-gray-800`}>
           <FaGithub />

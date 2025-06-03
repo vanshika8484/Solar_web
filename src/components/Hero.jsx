@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <main className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-20">
+    <main className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-20 bg-[#f8f7f0] GetFontSol">
       {/* Left Text Section */}
       <section className="max-w-xl flex flex-col gap-4 md:gap-6">
         <p className="text-xs font-semibold text-[#00B36A] uppercase tracking-wider">

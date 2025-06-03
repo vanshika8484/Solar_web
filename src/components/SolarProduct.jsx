@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 import { GiSolarPower, GiLightningSpanner, GiGasPump } from "react-icons/gi";
+import { Link } from "react-router-dom";
+import La from "./La";
+
 
 const products = [
   {
@@ -36,7 +39,7 @@ const cardVariants = {
 
 const SolarProducts = () => {
   return (
-    <section className="bg-[#f6f5ef] py-16 px-4 ">
+    <section className="bg-[#f6f5ef] py-16 px-4 GetFontSol ">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-green-800 text-xl font-bold uppercase tracking-widest">
@@ -71,12 +74,12 @@ const SolarProducts = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#"
-                className="text-sm text-black font-semibold underline decoration-2 underline-offset-2 hover:text-green-700"
-              >
-                Read More →
-              </a>
+              <Link
+  to={"/LA"}
+  className="mt-2 text-sm text-black font-semibold underline decoration-2 underline-offset-2 hover:text-green-700"
+>
+  Read More →
+</Link>
             </motion.div>
           ))}
         </div>
