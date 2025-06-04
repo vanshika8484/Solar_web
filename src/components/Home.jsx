@@ -31,6 +31,11 @@ import ChatbotToggle from "./ChatbotToggle";
 import SolarSolutions from "./SolarSolutions";
 import Solarabout from "./Solarabout";
 import Hero from "./Hero";
+import ChatUI1 from "./ChatUI1";
+import ChatUI3 from "./BreakTheMyth";
+import BreakTheMyth from "./BreakTheMyth";
+import Ctpage from "./Ctpage";
+import PageOne from "./PageOne";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -268,6 +273,7 @@ function Home() {
         </section>
         <section>
         <Solarabout/>
+        
       </section>
 
         {/* Another Layout___________>>>>>>>>>>>>>>> */}
@@ -424,6 +430,9 @@ function Home() {
           </div>
         </div>
 </section>
+<section className=" mt-16">
+  <PageOne/>
+</section>
       <section className=" mt-36">
       
         <ChartCard />
@@ -436,6 +445,9 @@ function Home() {
       <section className="bg-[#f8f7f0]">
         <SolarServices />
         <SolarProduct />
+      </section>
+      <section>
+        <BreakTheMyth/>
       </section>
       <section>
         {/* <Hero/> */}
@@ -472,9 +484,14 @@ function Home() {
             />
           </div>
         </section>
+
+        <section>
+          <ChatUI1/>
+        </section>
       </main>
 
       <section className="">
+       <Ctpage/>
         <SolarCostCalculator />
 
         <FaqSection />
@@ -487,6 +504,8 @@ function Home() {
 
       <ExactMatchPage />
       <ContactForm />
+     
+      
       <Footer />
     </div>
   );

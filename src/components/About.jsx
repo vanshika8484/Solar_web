@@ -5,6 +5,7 @@ import SolarCards from "./SolarCards";
 import ContactCards from "./ContactCards";
 import Footer from "./Footer";
 import CompanySection from "./CompanySection";
+import ChatUI2 from "./ChatUI2";
 
 
 const aboutUsContent = [
@@ -38,6 +39,7 @@ const aboutUsContent = [
 export default function About() {
   return (
     <div className="bg-white text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 GetfontHomeDash">
+   
       {/* Heading */}
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-center  mt-11"
@@ -48,6 +50,9 @@ export default function About() {
         About <span className="text-green-800">Us</span>
       </motion.h2>
 
+<section className=" mt-14">
+   <ChatUI2/>
+</section>
       {/* <ConstructionHome /> */}
       {/* Content Sections */}
       <div className="space-y-14 md:space-y-20 mt-32">

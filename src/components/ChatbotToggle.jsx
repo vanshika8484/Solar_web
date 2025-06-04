@@ -34,27 +34,32 @@ const ChatbotToggle = () => {
   }, []);
 
   return (
-    <>
+  <>
+    {/* Wrapper for Image and Popup side-by-side */}
+    <div className="fixed bottom-4 right-1 flex items-center space-x-3 z-50">
+
+     {showPopup && (
+        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-3 rounded-lg shadow-xl text-sm md:text-base font-semibold max-w-xs animate-float GetfontHomeChat">
+          {messages[currentMsgIndex]}
+        </div>
+      )}
       {/* Toggle Button */}
       <button
         onClick={() => setChatbotOpen(true)}
-        className="fixed bottom-3 right-1"
         title="Chat with DealXpress Assistant"
       >
         <img src={solarch} className="w-16 h-16" />
       </button>
 
-      {/* Chatbot Popup */} 
-      {chatbotOpen && <ChatbotPopup onClose={() => setChatbotOpen(false)} />}
-
       {/* Rotating Educational Notification */}
-      {showPopup && (
-        <div className="fixed bottom-24 right-8 z-50 max-w-sm bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg shadow-xl text-sm md:text-base font-semibold animate-bounce GetfontHomeChat">
-          {messages[currentMsgIndex]}
-        </div>
-      )}
-    </>
-  );
+     
+    </div>
+
+    {/* Chatbot Popup */}
+    {chatbotOpen && <ChatbotPopup onClose={() => setChatbotOpen(false)} />}
+  </>
+);
+
 };
 
 export default ChatbotToggle;
