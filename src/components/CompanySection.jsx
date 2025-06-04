@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const CompanySection = () => {
-  const [activeTab, setActiveTab] = useState("why");
+  const [activeTab, setActiveTab] = useState("mission");
 
   const contentMap = {
     mission: {
@@ -25,11 +25,11 @@ const CompanySection = () => {
   const activeContent = contentMap[activeTab];
 
   const tabStyle = (tab) =>
-    `cursor-pointer transition px-2 py-1 border-b-2 ${
-      activeTab === tab
-        ? "border-green-800 text-green-800 font-bold"
-        : "border-transparent text-black hover:text-black"
-    }`;
+  `cursor-pointer transition px-4 py-2 rounded-md text-sm font-medium ${
+    activeTab === tab
+      ? "bg-green-800 text-white shadow-md"
+      : "bg-transparent text-black hover:text-green-800"
+  }`;
 
   return (
     <section className="mt-32 GetFontSol">
@@ -40,6 +40,7 @@ const CompanySection = () => {
       <main className="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row gap-10">
         {/* Left image */}
         <div className="lg:w-1/2">
+        
           <img
             src="https://storage.googleapis.com/a1aa/image/b08acab3-6b8b-47a9-3cc6-092bfccc4ded.jpg"
             alt="Solar panels"
@@ -89,16 +90,7 @@ const CompanySection = () => {
           </AnimatePresence>
 
           {/* Play video button */}
-          <div className="flex items-center space-x-4">
-            <button
-              aria-label="Play video"
-              className="w-12 h-12 border border-green-800 rounded-full flex items-center justify-center text-green-800] hover:bg-green-800 hover:text-white transition"
-            >
-              <i className="fas fa-play text-lg ml-[2px]"></i>
-            </button>
-            <div className="border-t border-green-800 w-8"></div>
-            <span className="text-black text-sm">Play Video</span>
-          </div>
+          
         </div>
       </main>
     </section>

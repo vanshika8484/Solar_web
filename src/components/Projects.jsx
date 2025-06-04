@@ -32,9 +32,9 @@ const Projects = () => {
             key={cat}
             onClick={() => setActive(cat)}
             className={`flex items-center gap-2 px-4 py-2 rounded-full border transition duration-300 
-              ${active === cat ? "bg-blue-600 text-white" : "bg-gray-100 hover:bg-blue-100 text-gray-700"}`}
+              ${active === cat ? "bg-green-800 text-white" : "bg-gray-100 hover:bg-blue-100 text-gray-700"}`}
           >
-            {iconMap[cat]}
+           
             <span className="text-sm font-medium">{cat}</span>
           </button>
         ))}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Cursor = () => {
   const cursorRef = useRef(null);
@@ -7,8 +7,26 @@ const Cursor = () => {
   const currentX = useRef(0);
   const currentY = useRef(0);
   const animationFrame = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Detect if mobile device (using pointer coarse or user agent)
+    const checkMobile = () => {
+      // Using matchMedia pointer coarse as more reliable than UA string
+      if (
+        window.matchMedia("(pointer: coarse)").matches || 
+        /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent)
+      ) {
+        setIsMobile(true);
+      }
+    };
+
+    checkMobile();
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // Skip all cursor logic if mobile
+
     const handleMouseMove = (e) => {
       mouseX.current = e.clientX;
       mouseY.current = e.clientY;
@@ -17,7 +35,6 @@ const Cursor = () => {
     document.addEventListener("mousemove", handleMouseMove);
 
     const animate = () => {
-      // Smooth follow logic
       currentX.current += (mouseX.current - currentX.current) * 0.1;
       currentY.current += (mouseY.current - currentY.current) * 0.1;
 
@@ -28,13 +45,15 @@ const Cursor = () => {
       animationFrame.current = requestAnimationFrame(animate);
     };
 
-    animate(); // Start the animation loop
+    animate();
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       cancelAnimationFrame(animationFrame.current);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <div

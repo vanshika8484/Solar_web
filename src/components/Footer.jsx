@@ -8,61 +8,51 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-800 py-10 px-6 md:px-16 GetFontSol">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer className="bg-[#151542] text-white  py-12 px-6 md:px-20 text-sm">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Company Info */}
         <div>
-          <h3 className="text-2xl font-extrabold mb-6 text-green-800 tracking-wide">
-            DIVY POWER
-          </h3>
-          <p className="text-base font-semibold mb-4 text-gray-600">Contact Us</p>
+          <h3 className="text-2xl font-bold mb-6 text-white tracking-wide">DIVY POWER</h3>
+          <p className="text-base font-semibold mb-4 text-blue-100">Contact Us</p>
 
-          <ul className="space-y-3 text-gray-600 text-sm">
-            <li className="flex items-center gap-3 hover:text-green-600 cursor-pointer transition">
-              <FaPhoneAlt className="text-green-800" />
-              +(1) 123 456 7890
+          <ul className="space-y-3 text-blue-100">
+            <li className="flex items-center gap-3 hover:text-white transition">
+              <FaPhoneAlt className="text-white" />
+              <a href="tel:+11234567890">+(1) 123 456 7890</a>
             </li>
-            <li className="flex items-center gap-3 hover:text-green-600 cursor-pointer transition">
-              <FaPhoneAlt className="text-green-800" />
-              +(1) 098 765 4321
+            <li className="flex items-center gap-3 hover:text-white transition">
+              <FaPhoneAlt className="text-white" />
+              <a href="tel:+10987654321">+(1) 098 765 4321</a>
             </li>
             <li className="flex items-start gap-3 leading-relaxed">
-              <FaMapMarkerAlt className="text-green-800 mt-1" />
-              <address className="not-italic text-gray-500 text-sm GetFontSol">
+              <FaMapMarkerAlt className="text-white mt-1" />
+              <address className="not-italic text-blue-100 leading-snug">
                 53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar,<br />
                 Nai Basti Dundaher Ghaziabad,<br />
                 Uttar Pradesh 201001
               </address>
             </li>
-            <li className="flex items-center gap-3 hover:text-green-600 cursor-pointer transition text-sm">
-              <FaEnvelope className="text-green-800" />
-              divy@gmail.com
+            <li className="flex items-center gap-3 hover:text-white transition">
+              <FaEnvelope className="text-white" />
+              <a href="mailto:divy@gmail.com">divy@gmail.com</a>
             </li>
-            <li className="flex items-center gap-3 hover:text-green-600 cursor-pointer transition text-sm">
-              <FaEnvelope className="text-green-800" />
-              Info@divypower.in
+            <li className="flex items-center gap-3 hover:text-white transition">
+              <FaEnvelope className="text-white" />
+              <a href="mailto:Info@divypower.in">Info@divypower.in</a>
             </li>
           </ul>
         </div>
 
         {/* Useful Links */}
         <div>
-          <h4 className="text-lg font-semibold mb-6 border-b-2 border-green-800 pb-2 w-max">
-            Useful Links
-          </h4>
-          <ul className="space-y-3 text-gray-600 text-sm font-medium">
-            {[
-              "About Us",
-              "Our Service",
-              "What We Do",
-              "Our Team",
-              "Contact",
-            ].map((link) => (
+          <h4 className="text-lg font-semibold mb-6 border-b border-blue-300 pb-2 w-max">Useful Links</h4>
+          <ul className="space-y-3 text-blue-100 font-medium">
+            {["About Us", "Our Service", "What We Do", "Our Team", "Contact"].map((link) => (
               <li
                 key={link}
-                className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition"
+                className="flex items-center gap-2 hover:text-white transition"
               >
-                <FaAngleRight />
+                <FaAngleRight className="text-white" />
                 <a href="#">{link}</a>
               </li>
             ))}
@@ -71,10 +61,8 @@ const Footer = () => {
 
         {/* Our Solutions */}
         <div className="md:col-span-2">
-          <h4 className="text-lg font-semibold mb-6 border-b-2 border-green-800 pb-2 w-max">
-            Our Solutions
-          </h4>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-600 text-sm font-medium">
+          <h4 className="text-lg font-semibold mb-6 border-b border-blue-300 pb-2 w-max">Our Solutions</h4>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-blue-100 font-medium">
             {[
               "Solar Rooftop",
               "Solar Water Pump",
@@ -85,9 +73,9 @@ const Footer = () => {
             ].map((solution) => (
               <li
                 key={solution}
-                className="flex items-center gap-2 hover:text-green-600 cursor-pointer transition"
+                className="flex items-center gap-2 hover:text-white transition"
               >
-                <FaAngleRight />
+                <FaAngleRight className="text-white" />
                 <span>{solution}</span>
               </li>
             ))}

@@ -64,10 +64,16 @@ const cardVariants = {
 
 const SolarServices = () => {
   return (
-    <section className="max-w-5xl mx-auto py-12 px-6 bg-[#f8f7f0] GetFontSol">
+    <motion.section
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      viewport={{ once: true }}
+      className="max-w-5xl mx-auto py-12 px-6 bg-[#f8f7f0] GetFontSol"
+    >
       <div className="text-center mb-12">
         <h2 className="text-green-800 font-bold uppercase text-lg mb-2">Our Services</h2>
-        <h1 className="text-4xl font-extrabold text-gray-900">Unlock the Potential of the Sun with Solar Energy</h1>
+        <h1 className="text-4xl font-semibold text-gray-900">Unlock the Potential of the Sun with Solar Energy</h1>
       </div>
 
       <div className="flex flex-col space-y-8">
@@ -77,31 +83,23 @@ const SolarServices = () => {
             className="flex items-center shadow-lg rounded-3xl p-6 cursor-pointer hover:shadow-2xl group"
             variants={cardVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
             whileHover="hover"
+            viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
           >
-            {/* Number Circle */}
             <div className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-green-900 bg-transparent text-black font-bold flex items-center justify-center mr-6 text-xl select-none transition-colors duration-300 group-hover:bg-green-100">
               {index + 1}
             </div>
-
-            {/* Icon */}
-            <div className="text-green-800 mr-6">
-              {service.icon}
-            </div>
-
-            {/* Text */}
+            <div className="text-green-800 mr-6">{service.icon}</div>
             <div className="flex flex-col">
               <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
-              <a href="#" className="mt-2 text-green-800 text-sm font-medium hover:underline">
-                Read More
-              </a>
+              <a href="#" className="mt-2 text-green-800 text-sm font-medium hover:underline">Read More</a>
             </div>
           </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

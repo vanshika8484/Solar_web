@@ -62,7 +62,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="bg-[#11592c] py-16 px-6 sm:px-10 lg:px-20 GetFontSol">
+    <section className="bg-[#0e0e0e] py-16 px-6 sm:px-10 lg:px-20 GetFontSol">
       <div className="max-w-5xl mx-auto text-center">
         <h4 className="text-2xl font-robotoslab font-bold text-white mb-4">
           OUR FAQ

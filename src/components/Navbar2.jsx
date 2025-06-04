@@ -7,6 +7,7 @@ import {
 import { FiSearch } from 'react-icons/fi';
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi';
 import { GiSolarPower } from 'react-icons/gi';
+import solarlogo from '../Images/logo3.png'
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -23,7 +24,7 @@ const Navbar2 = () => {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <div className="w-full sticky top-0 z-50 bg-white shadow-md">
+    <div className="w-full sticky top-0 z-50 bg-gray-900 shadow-md">
       {/* Top Info */}
       {/* <div className="flex justify-between items-center px-4 md:px-8 py-2 text-sm text-gray-600 border-b">
         <div className="flex items-center gap-4 flex-wrap">
@@ -49,19 +50,20 @@ const Navbar2 = () => {
         <div className="flex items-center gap-2">
 
           <Link to="/" className="flex items-center gap-2">
-            <GiSolarPower className="text-yellow-500 text-3xl" />
-            <span className="text-xl font-bold text-gray-800 tracking-wide">DIVY POWER</span>
+            {/* <GiSolarPower className="text-gray-900 text-3xl" />
+            <span className="text-xl font-bold text-gray-900 tracking-wide">DIVY POWER</span> */}
+            <img src={solarlogo} className=' w-12 ' />
           </Link>
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-6 text-base font-medium text-gray-900">
+        <div className="hidden md:flex gap-6 text-base font-medium text-gray-100">
           {navLinks.map(link => (
             <NavLink
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                isActive ? 'text-green-800 font-semibold' : 'hover:text-green-800'
+                isActive ? 'text-orange-500 font-semibold' : 'hover:text-orange-500'
               }
             >
               {link.name}
@@ -77,8 +79,8 @@ const Navbar2 = () => {
               <FaPhoneAlt className="text-green-800" />
             </div>
             <div className="text-sm">
-              <p className="text-gray-700 font-medium">Requesting A Call:</p>
-              <p className="font-bold text-gray-900">+91 9310259325</p>
+              <p className="text-gray-100 font-medium">Requesting A Call:</p>
+              <p className="font-bold text-gray-100">+91 9310259325</p>
             </div>
           </div>
 
@@ -91,7 +93,7 @@ const Navbar2 = () => {
           
 
           {/* Mobile Hamburger */}
-          <button className="md:hidden text-2xl text-gray-800" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className="md:hidden text-2xl text-gray-100" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
           </button>
         </div>
@@ -110,14 +112,14 @@ const Navbar2 = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden px-6 bg-white shadow-md overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[500px] py-4' : 'max-h-0'
+        className={`md:hidden px-6 bg-gray-900 shadow-md overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[500px] py-4' : 'max-h-0'
           }`}
       >
         {navLinks.map(link => (
           <NavLink
             key={link.name}
             to={link.path}
-            className="block py-2 text-base font-medium text-gray-800 hover:text-green-600"
+            className="block py-2 text-base font-medium text-gray-100 hover:text-green-600"
             onClick={() => setIsMenuOpen(false)}
           >
             {link.name}

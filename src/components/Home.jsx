@@ -88,7 +88,7 @@ function Home() {
   };
 
   return (
-    <div className="pt-7 relative overflow-hidden -mt-20 sm:ml-0 lg:ml-16  md:ml-16 max-w-[1150px]   ">
+    <div className="pt-7 relative overflow-hidden -mt-20 sm:ml-0 lg:ml-16  md:ml-16 max-w-[1150px]  xl:ml-16 2xl:ml-32  ">
       <ChatbotToggle />
 
       <motion.section
@@ -225,7 +225,7 @@ function Home() {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-3 mb-3">
-                <Sun className="text-green-600 w-7 h-7" />
+                <Sun className="text-orange-500 w-7 h-7" />
                 <span className="uppercase text-sm font-semibold tracking-wider text-green-700">
                   Renewable Energy
                 </span>
@@ -320,54 +320,7 @@ function Home() {
         {/* </div> */}
         {/* </section> */}
 
-        <div className="GetfontHomeDash max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative">
-          {/* Left: Images and circular text */}
-          <div className="relative w-full h-full">
-            {/* Circular Text */}
-
-            {/* Image 1 */}
-            <div className="w-full rounded-xl overflow-hidden shadow-lg">
-              <img
-                src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
-                alt="Solar Field"
-                className="rounded-xl object-cover"
-              />
-            </div>
-
-            {/* Image 2 - overlayed */}
-            <div className="absolute bottom-[-40px] left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl">
-              <img
-                src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
-                alt="Solar Roof Work"
-                className="rounded-xl object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Right: Text content */}
-          <div className="text-gray-800">
-            <h3 className="text-xl font-semibold text-green-800 tracking-wider uppercase mb-2">
-              About Us
-            </h3>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-              We Believe Solar Power Should Be{" "}
-              <span className="text-orange-600">Accessible</span>
-            </h2>
-            <p className="text-base leading-relaxed mb-4">
-              At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for
-              over a decade as an authorized partner of Tata Power Solar. Backed
-              by Tata’s legacy of trust, we deliver cost-effective solar
-              solutions that prioritize energy safety, quality, and long-term
-              performance.
-            </p>
-            <p className="text-base leading-relaxed">
-              From planning to financing, and installation to maintenance, we
-              offer customized solar services required to meet your project’s
-              needs. With us, you don’t just go solar, you go safe, smart, and
-              sustainable.
-            </p>
-          </div>
-        </div>
+        
       </section>
 
       {/* <section className="bg-white">
@@ -421,7 +374,58 @@ function Home() {
       </section>
       <SolarSolutions />
 
-      <section>
+<section className="">
+  <div className="GetfontHomeDash max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative mt-14 ">
+          {/* Left: Images and circular text */}
+          <div className="relative w-full h-full">
+            {/* Circular Text */}
+
+            {/* Image 1 */}
+            <div className="w-full rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
+                alt="Solar Field"
+                className="rounded-xl object-cover"
+              />
+            </div>
+
+            {/* Image 2 - overlayed */}
+            <div className="absolute bottom-[-40px] left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl">
+              <img
+                src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
+                alt="Solar Roof Work"
+                className="rounded-xl object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right: Text content */}
+          <div className="text-gray-800 ">
+            <h3 className="text-xl font-semibold text-green-800 tracking-wider uppercase mb-2">
+              About Us
+            </h3>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
+              We Believe Solar Power Should Be{" "}
+              <span className="text-orange-600">Accessible</span>
+            </h2>
+            <p className="text-base leading-relaxed mb-4">
+              At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for
+              over a decade as an authorized partner of Tata Power Solar. Backed
+              by Tata’s legacy of trust, we deliver cost-effective solar
+              solutions that prioritize energy safety, quality, and long-term
+              performance.
+            </p>
+            <p className="text-base leading-relaxed">
+              From planning to financing, and installation to maintenance, we
+              offer customized solar services required to meet your project’s
+              needs. With us, you don’t just go solar, you go safe, smart, and
+              sustainable.
+            </p>
+          </div>
+        </div>
+</section>
+      <section className=" mt-36">
+      
         <ChartCard />
       </section>
       <section className="bg-[#11592c] h-[800px]">

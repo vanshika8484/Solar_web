@@ -1,48 +1,56 @@
 import React, { useState, useEffect } from "react";
-import { RiRobotLine } from "react-icons/ri"; // Robot icon
 import ChatbotPopup from "./ChatbotPopup";
+import solarch from '../Images/chacha.png'
+const messages = [
+  "Kya aap jaante hai? Solar se kharcha nahi, paiso ki bachat hoti hai!",
+  "Solar panels se 25 saal tak bijli ka bill lagbhag zero ho sakta hai.",
+  "Har mahine ki bijli ki bachat se 5 saal me lagat nikal jaati hai.",
+  "Solar se carbon footprint bhi kam hota hai – environment ke liye best!",
+  "Surya se bijli – free mein bijli, savings ki guarantee!",
+  "Solar chacha bolte hai: Bijli ke bill se chhutkaara paao!",
+  "Bijli ka bill kam karo, solar panel lagwao!",
+  "Government subsidy ke sath solar aur bhi sasta padta hai!",
+  "Renewable energy future ka rasta hai – solar se shuruat karo!",
+  "Apne chhat ka istemal karo – solar se kamao aur bachaao!",
+];
 
 const ChatbotToggle = () => {
   const [chatbotOpen, setChatbotOpen] = useState(false);
-  const [showKyaPopup, setShowKyaPopup] = useState(false);
+  const [currentMsgIndex, setCurrentMsgIndex] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
 
-  // ⏰ Show "Kya aap jaante hai?" popup every 40s
+  // Rotate popup every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setShowKyaPopup(true);
-    }, 4000); // 40 seconds
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 4000); // Hide after 4s
+
+      setCurrentMsgIndex((prevIndex) =>
+        prevIndex + 1 < messages.length ? prevIndex + 1 : 0
+      );
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
-
-  // Close message after 5s
-  useEffect(() => {
-    if (showKyaPopup) {
-      const timeout = setTimeout(() => setShowKyaPopup(false), 5000);
-      return () => clearTimeout(timeout);
-    }
-  }, [showKyaPopup]);
 
   return (
     <>
       {/* Toggle Button */}
       <button
         onClick={() => setChatbotOpen(true)}
-        className="fixed bottom-8 right-8 z-50 bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-lg"
+        className="fixed bottom-3 right-1"
         title="Chat with DealXpress Assistant"
       >
-        <RiRobotLine className="w-6 h-6" />
+        <img src={solarch} className="w-16 h-16" />
       </button>
 
-      {/* Chatbot Popup */}
+      {/* Chatbot Popup */} 
       {chatbotOpen && <ChatbotPopup onClose={() => setChatbotOpen(false)} />}
 
-      {/* Auto Pop-up every 40s */}
-      {showKyaPopup && (
-        <div className="fixed bottom-24 right-8 bg-white text-black px-4 py-2 rounded shadow-lg z-50 border border-gray-300 GetfontHomeChat">
-          <strong>Kya aap jaante hai, ?</strong>
-          <br></br>
-          <strong>Solar Chacha ki Solar Salah !</strong>
+      {/* Rotating Educational Notification */}
+      {showPopup && (
+        <div className="fixed bottom-24 right-8 z-50 max-w-sm bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg shadow-xl text-sm md:text-base font-semibold animate-bounce GetfontHomeChat">
+          {messages[currentMsgIndex]}
         </div>
       )}
     </>
