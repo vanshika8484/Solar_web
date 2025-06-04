@@ -470,7 +470,7 @@ function Home() {
         </section>
       </main>
 
-      <section className="bg-[#11592c]">
+      <section className="">
         <SolarCostCalculator />
 
         <FaqSection />

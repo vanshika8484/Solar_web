@@ -61,7 +61,7 @@ const Navbar2 = () => {
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                isActive ? 'text-green-600 font-semibold' : 'hover:text-green-600'
+                isActive ? 'text-green-800 font-semibold' : 'hover:text-green-800'
               }
             >
               {link.name}
@@ -73,8 +73,8 @@ const Navbar2 = () => {
         <div className="flex items-center gap-4">
           {/* Call Info */}
           <div className="hidden md:flex items-center gap-2">
-            <div className="bg-green-100 p-2 rounded-full">
-              <FaPhoneAlt className="text-green-600" />
+            <div className="bg-white p-2 rounded-full">
+              <FaPhoneAlt className="text-green-800" />
             </div>
             <div className="text-sm">
               <p className="text-gray-700 font-medium">Requesting A Call:</p>

@@ -23,7 +23,7 @@ const ContactCards = () => {
               <i className="fas fa-phone-alt text-white text-2xl" />
             </div>
             <div className="flex flex-col">
-              <span className="text-green-500 GetFontSol text-sm mb-1">
+              <span className="text-green-800 GetFontSol text-sm mb-1">
                 Call Us For Service
               </span>
               <span className="font-extrabold text-2xl md:text-3xl tracking-tight leading-tight">
@@ -38,7 +38,7 @@ const ContactCards = () => {
 
         {/* Mail Card */}
         <motion.div
-          className="relative flex-1 rounded-xl overflow-hidden min-h-[160px] bg-[#44a63c] text-white flex items-center px-6 sm:px-12"
+          className="relative flex-1 rounded-xl overflow-hidden min-h-[160px] bg-green-800 text-white flex items-center px-6 sm:px-12"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -51,7 +51,7 @@ const ContactCards = () => {
           />
           <div className="relative flex items-center gap-6 w-full z-10">
             <div className="flex-shrink-0 rounded-full bg-white w-20 h-20 flex items-center justify-center">
-              <i className="fas fa-envelope text-[#44a63c] text-2xl" />
+              <i className="fas fa-envelope text-green-800 text-2xl" />
             </div>
             <div className="flex flex-col">
               <span className="text-white font-semibold text-sm mb-1">

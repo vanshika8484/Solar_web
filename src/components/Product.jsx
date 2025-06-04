@@ -107,7 +107,7 @@ function Product() {
           transition={{ duration: 0.6 }}
         >
          
-         Our <span className='text-green-600'>Products</span>
+         Our <span className='text-green-800'>Products</span>
         </motion.h1>
       </div>
 
@@ -143,7 +143,7 @@ function Product() {
                   <p className="text-sm text-gray-700">{item.description}</p>
                 </div>
                 <div className="mt-6">
-                  <button className="flex items-center justify-center gap-2 bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
                     <Link to={item.to}>Read More</Link>
                   </button>
                 </div>
@@ -185,7 +185,7 @@ function Product() {
                   <p className="text-sm text-gray-700">{item.description}</p>
                 </div>
                 <div className="mt-6">
-                  <button className="flex items-center justify-center gap-2 bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
                     <Link to={item.to}>Read More</Link>
                   </button>
                 </div>
@@ -227,7 +227,7 @@ function Product() {
                   <p className="text-sm text-gray-700">{item.description}</p>
                 </div>
                 <div className="mt-6">
-                  <button className="flex items-center justify-center gap-2 bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
                     <Link to={item.to}>Read More</Link>
                   </button>
                 </div>

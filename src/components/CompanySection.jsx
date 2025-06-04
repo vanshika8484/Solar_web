@@ -27,14 +27,14 @@ const CompanySection = () => {
   const tabStyle = (tab) =>
     `cursor-pointer transition px-2 py-1 border-b-2 ${
       activeTab === tab
-        ? "border-green-500 text-green-600 font-bold"
-        : "border-transparent text-black hover:text-green-500"
+        ? "border-green-800 text-green-800 font-bold"
+        : "border-transparent text-black hover:text-black"
     }`;
 
   return (
     <section className="mt-32 GetFontSol">
       <h2 className="text-center GetFontSol text-3xl">
-        Our <span className="text-green-500">Company</span>
+        Our <span className="text-green-800">Company</span>
       </h2>
 
       <main className="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row gap-10">
@@ -92,11 +92,11 @@ const CompanySection = () => {
           <div className="flex items-center space-x-4">
             <button
               aria-label="Play video"
-              className="w-12 h-12 border border-[#4caf50] rounded-full flex items-center justify-center text-[#4caf50] hover:bg-[#4caf50] hover:text-white transition"
+              className="w-12 h-12 border border-green-800 rounded-full flex items-center justify-center text-green-800] hover:bg-green-800 hover:text-white transition"
             >
               <i className="fas fa-play text-lg ml-[2px]"></i>
             </button>
-            <div className="border-t border-[#4caf50] w-8"></div>
+            <div className="border-t border-green-800 w-8"></div>
             <span className="text-black text-sm">Play Video</span>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function About() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        About <span className="text-green-500">Us</span>
+        About <span className="text-green-800">Us</span>
       </motion.h2>
 
       {/* Content Sections */}

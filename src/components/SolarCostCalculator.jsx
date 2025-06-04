@@ -28,8 +28,8 @@ const SolarCostCalculator = () => {
   {/* Stats Cards */}
   <div className="mt-10 flex flex-col sm:flex-row items-center sm:justify-start gap-6 max-w-2xl mx-auto md:mx-0">
     {/* Card 1 */}
-    <div className="flex items-center space-x-3 bg-[#d9f0d6] rounded-xl px-6 py-4 w-full sm:w-auto">
-      <i className="fas fa-solar-panel text-green-600 text-2xl"></i>
+    <div className="flex items-center space-x-3  rounded-xl px-6 py-4 w-full sm:w-auto">
+      <i className="fas fa-solar-panel text-green-800 text-2xl"></i>
       <div>
         <p className="text-blue-800 font-semibold text-lg">2500+</p>
         <p className="text-gray-600 text-xs sm:text-sm">Systems Installed</p>
@@ -37,8 +37,8 @@ const SolarCostCalculator = () => {
     </div>
 
     {/* Card 2 */}
-    <div className="flex items-center space-x-3 bg-[#d9f0d6] rounded-xl px-6 py-4 w-full sm:w-auto">
-      <i className="fas fa-leaf text-green-600 text-2xl"></i>
+    <div className="flex items-center space-x-3  rounded-xl px-6 py-4 w-full sm:w-auto">
+      <i className="fas fa-leaf text-green-800 text-2xl"></i>
       <div>
         <p className="text-blue-800 font-semibold text-lg">45%</p>
         <p className="text-gray-600 text-xs sm:text-sm">Avg. Savings</p>

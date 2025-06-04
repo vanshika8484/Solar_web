@@ -65,7 +65,7 @@ export default function ProcessSteps() {
                 aria-label={alt}
                 role="img"
               >
-                <Icon className="w-12 h-12 text-green-600" />
+                <Icon className="w-12 h-12 text-green-800" />
               </motion.div>
               <h2 className="text-lg font-extrabold text-gray-900 leading-tight tracking-widest uppercase">
                 {title.split(" ").map((line, i) => (

@@ -39,7 +39,7 @@ const ExpertTeam = () => {
                 />
                 <button
                   aria-label={`Play video for ${member.name}`}
-                  className="absolute bottom-3 left-3 bg-green-600 hover:bg-green-700 text-white rounded-full p-3 shadow-md"
+                  className="absolute bottom-3 left-3 bg-green-800 hover:bg-green-700 text-white rounded-full p-3 shadow-md"
                 >
                   <i className="fas fa-play" />
                 </button>

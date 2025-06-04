@@ -6,31 +6,31 @@ import Footer from "./Footer";
 
 const services = [
   {
-    icon: <FaTools className="text-4xl text-green-600" />,
+    icon: <FaTools className="text-4xl text-green-800" />,
     title: "Installation & Commissioning (INC)",
     description:
       "Divy Power handles the complete installation and commissioning of solar systems, generators, and other power equipment.",
   },
   {
-    icon: <FaProjectDiagram className="text-4xl text-green-600" />,
+    icon: <FaProjectDiagram className="text-4xl text-green-800" />,
     title: "Engineering, Procurement, and Construction (EPC)",
     description:
       "They provide turnkey solutions for solar energy projects, including design, procurement of materials, and construction.",
   },
   {
-    icon: <FaCog className="text-4xl text-green-600" />,
+    icon: <FaCog className="text-4xl text-green-800" />,
     title: "Operations & Maintenance (O&M)",
     description:
       "Provides ongoing maintenance to ensure optimal performance of solar panels, generators, and other systems.",
   },
   {
-    icon: <FaRecycle className="text-4xl text-green-600" />,
+    icon: <FaRecycle className="text-4xl text-green-800" />,
     title: "Recycling & Sustainability",
     description:
       "Our eco-friendly approach ensures components are recycled and managed sustainably to reduce environmental impact.",
   },
   {
-    icon: <FaSolarPanel className="text-4xl text-green-600" />,
+    icon: <FaSolarPanel className="text-4xl text-green-800" />,
     title: "Customized Solar Solutions",
     description:
       "Tailored solar panel setups to meet residential, commercial, and industrial needs for clean energy generation.",
@@ -63,7 +63,7 @@ export default function Services() {
   return (
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto GetFontSol">
       <motion.h2
-        className="text-3xl sm:text-4xl mt-14 font-bold text-green-600 text-center mb-12"
+        className="text-3xl sm:text-4xl mt-14 font-bold text-green-800 text-center mb-12"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -81,7 +81,7 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
           >
-            <div className="bg-white p-4 rounded-full">
+            <div className="bg-white p-4 rounded-full text-green-800">
               {service.icon}
             </div>
             <h3 className="text-lg font-semibold text-gray-900 leading-tight">
@@ -90,7 +90,7 @@ export default function Services() {
             <p className="text-sm text-gray-600 leading-relaxed">
               {service.description}
             </p>
-            <a href="#" className="flex items-center text-sm font-medium text-green-600 hover:underline">
+            <a href="#" className="flex items-center text-sm font-medium text-green-800 hover:underline">
               Read More <span className="ml-1">→</span>
             </a>
           </motion.div>
@@ -114,7 +114,7 @@ export default function Services() {
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-md"
             >
               <svg
-                className="w-6 h-6 text-green-600"
+                className="w-6 h-6 text-green-800"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -134,7 +134,7 @@ export default function Services() {
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-500 outline-none"
+                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none"
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -142,7 +142,7 @@ export default function Services() {
                 type="email"
                 name="email"
                 placeholder="Email Address"
-                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-500 outline-none"
+                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -150,7 +150,7 @@ export default function Services() {
                 type="tel"
                 name="phone"
                 placeholder="Your Phone"
-                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-500 outline-none"
+                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none"
                 value={formData.phone}
                 onChange={handleChange}
               />
@@ -158,7 +158,7 @@ export default function Services() {
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-500 outline-none"
+                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none"
                 value={formData.subject}
                 onChange={handleChange}
               />
@@ -168,14 +168,14 @@ export default function Services() {
               name="message"
               rows="5"
               placeholder="Your Message"
-              className="w-full border border-gray-300 rounded-2xl py-3 px-5 focus:ring-2 focus:ring-green-500 outline-none mb-6"
+              className="w-full border border-gray-300 rounded-2xl py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none mb-6"
               value={formData.message}
               onChange={handleChange}
             ></textarea>
 
             <button
               type="submit"
-              className="w-full bg-green-600 text-white rounded-full py-3 font-semibold hover:bg-green-700 transition"
+              className="w-full bg-green-800 text-white rounded-full py-3 font-semibold hover:bg-green-700 transition"
             >
               SUBMIT NOW
             </button>

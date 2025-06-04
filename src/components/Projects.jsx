@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <>
     <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol">
-      <h1 className="text-4xl font-bold text-center mt-14 text-green-600 mb-10"><span className=" text-black">Our </span>Projects</h1>
+      <h1 className="text-4xl font-bold text-center mt-14 text-green-800 mb-10"><span className=" text-black">Our </span>Projects</h1>
 
       {/* Filter Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -101,7 +101,7 @@ const Projects = () => {
       >
         <div className="flex items-center space-x-2 mb-2">
           <span className="w-6 h-[2px] bg-blue-500 rounded" />
-          <span className="text-green-600 text-md font-semibold uppercase tracking-widest">
+          <span className="text-green-800 text-md font-semibold uppercase tracking-widest">
             Why Choose Us
           </span>
         </div>
@@ -119,7 +119,7 @@ const Projects = () => {
         <motion.button
           whileTap={{ scale: 0.97 }}
           whileHover={{ scale: 1.03 }}
-          className="bg-green-600 text-white text-sm font-normal rounded-full px-8 py-3 w-max hover:bg-green-700 transition"
+          className="bg-green-800 text-white text-sm font-normal rounded-full px-8 py-3 w-max hover:bg-green-700 transition"
         >
           View Details
         </motion.button>

@@ -21,7 +21,7 @@ function Contact() {
   return (
     <div className="bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6">
       <div className="max-w-7xl mx-auto GetFontSol">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-5">Get in <span className=' text-green-600'>Touch</span></h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-5">Get in <span className=' text-green-800'>Touch</span></h2>
 
         <motion.div
           className="grid md:grid-cols-2 gap-10"
@@ -34,7 +34,7 @@ function Contact() {
             className="bg-white p-8 rounded-2xl shadow-lg"
             variants={itemVariants}
           >
-            <h3 className="text-2xl font-semibold text-green-600 mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold text-green-800 mb-6">Contact Information</h3>
 
             <div className="space-y-6 text-gray-700">
               <div>
@@ -70,7 +70,7 @@ function Contact() {
             className="bg-white p-8 rounded-2xl shadow-lg"
             variants={itemVariants}
           >
-            <h3 className="text-2xl font-semibold text-green-600 mb-6">Send Us a Message</h3>
+            <h3 className="text-2xl font-semibold text-green-800 mb-6">Send Us a Message</h3>
             <form className="space-y-4">
               <input
                 type="text"
@@ -94,7 +94,7 @@ function Contact() {
               ></textarea>
               <motion.button
                 type="submit"
-                className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300"
+                className="bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300"
                 whileHover={{ scale: 1.05, boxShadow: '0 0 8px rgba(34,197,94, 0.8)' }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
