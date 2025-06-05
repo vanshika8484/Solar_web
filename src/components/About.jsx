@@ -38,7 +38,7 @@ const aboutUsContent = [
 
 export default function About() {
   return (
-    <div className="bg-white text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 GetfontHomeDash">
+    <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 GetfontHomeDash">
    
       {/* Heading */}
       <motion.h2

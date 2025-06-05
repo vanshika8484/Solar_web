@@ -19,7 +19,7 @@ function Contact() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6">
+    <div className=" max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6">
       <div className="max-w-7xl mx-auto GetFontSol">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-5">Get in <span className=' text-green-800'>Touch</span></h2>
 

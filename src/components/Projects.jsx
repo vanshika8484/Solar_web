@@ -67,7 +67,7 @@ const Projects = () => {
 </div>
               <h2 className="text-lg font-semibold text-gray-800 mb-2">{project.title}</h2>
               {project.kwp !== "N/A" && (
-                <p className="text-sm text-gray-500">Capacity: {project.kwp} Kwp</p>
+                <p className="text-sm text-gray-500"></p>
               )}
             </motion.div>
           ))}

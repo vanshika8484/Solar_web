@@ -18,6 +18,7 @@ export default {
         float: 'float 2s ease-in-out infinite',
       },
     },
+    
 
   },
   plugins: [],
