@@ -23,7 +23,7 @@ const cardData = [
 
 const SolarCards = () => {
   return (
-    <div className="bg-white min-h-screen py-16 px-6 sm:px-8 -mt-24 lg:px-12 GetFontSol">
+    <div className="bg-white min-h-screen py-16 px-6 sm:px-8 -mt-34 lg:px-12 GetFontSol">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-green-800 text-base sm:text-lg GetFontSol">
           Quality Handyman Solution

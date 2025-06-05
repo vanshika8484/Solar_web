@@ -4,7 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const SolarSolutions = () => {
   return (
-    <main className="bg-[#f8f7f0] text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash">
+    <main className="bg-[#f8f7f0] text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash -mt-10">
       {/* Top Section */}
       <motion.section
         className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16"

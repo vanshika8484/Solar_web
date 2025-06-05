@@ -69,7 +69,8 @@ const SolarServices = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="max-w-5xl mx-auto py-12 px-6 bg-[#f8f7f0] GetFontSol"
+     className="mt-60 md:mt-0 max-w-5xl mx-auto py-12 px-6 bg-[#f8f7f0] GetFontSol"
+
     >
       <div className="text-center mb-12">
         <h2 className="text-green-800 font-bold uppercase text-lg mb-2">Our Services</h2>

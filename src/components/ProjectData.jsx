@@ -14,11 +14,11 @@ export const categories = [
 
 export const iconMap = {
   Residential: <Home className="text-blue-500 w-6 h-6" />,
-  Commercial: <Building2 className="text-green-500 w-6 h-6" />,
-  "Govt Affiliates": <Landmark className="text-purple-500 w-6 h-6" />,
-  Exhibitions: <Globe className="text-yellow-500 w-6 h-6" />,
-  Stalls: <Store className="text-red-500 w-6 h-6" />,
-  All: <LayoutGrid className="text-gray-600 w-6 h-6" />,
+  Commercial: <Building2 className="text-blue-500 w-6 h-6" />,
+  "Govt Affiliates": <Landmark className="text-blue-500 w-6 h-6" />,
+  Exhibitions: <Globe className="text-blue-500 w-6 h-6" />,
+  Stalls: <Store className="text-blue-500 w-6 h-6" />,
+  All: <LayoutGrid className="text-blue-500 w-6 h-6" />,
 };
 export const projects = [
   {

@@ -62,13 +62,7 @@ function Product() {
       image: "https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg",
       to: "/LA",
     },
-    {
-      title: "Earthing",
-      description: "Divy Power provides high-quality earthing solutions to protect against shocks, fires, and equipment damage—ensuring safety for homes, businesses, and industrial setups.",
-      icon: "https://divyby.redspace.in/assets/images/updated-images/img%20earthing.png",
-      image: "https://divyby.redspace.in/assets/images/updated-images/img%20earthing.png",
-      to: "/Earthing",
-    },
+    
   ];
 
   const Genset = [
@@ -86,17 +80,11 @@ function Product() {
       image: "https://divyby.redspace.in/assets/images/updated-images/genset%201.jpg",
       to: "/Diesel/Petrol Genset",
     },
-    {
-      title: "Gas Genset",
-      description: "Our gas-powered gensets deliver reliable, low-emission backup power using natural gas or LPG—ideal for homes and businesses seeking efficient, low-maintenance energy solutions.",
-      icon: "https://divyby.redspace.in/assets/images/updated-images/gas%201.jpg",
-      image: "https://divyby.redspace.in/assets/images/updated-images/gas%201.jpg",
-      to: "/Gas-Genset",
-    },
+    
   ];
 
   return (
-    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol">
+    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol  m-16 ">
       <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
 
       <div className="relative z-10">
@@ -154,88 +142,95 @@ function Product() {
       </motion.section>
 
       {/* Safety Solutions */}
-      <motion.section className="bg-[#ffffffcd] py-20 px-6 text-white"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={containerVariants}
+    {/* Safety Solutions */}
+<motion.section className="bg-[#ffffffcd] py-20 px-6 text-white"
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  variants={containerVariants}
+>
+  <motion.div className="max-w-7xl mx-auto text-center mb-10"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    <h2 className="text-4xl text-green-800 font-bold">Safety Solutions</h2>
+  </motion.div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
+    {saftyData.map((item, index) => (
+      <motion.div
+        key={index}
+        className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
+        variants={cardVariants}
       >
-        <motion.div className="max-w-7xl mx-auto text-center mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl text-green-800 font-bold">Safety Solutions</h2>
-        </motion.div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {saftyData.map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
-              variants={cardVariants}
-            >
-              <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
-                    <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-700">{item.description}</p>
-                </div>
-                <div className="mt-6">
-                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-                    <Link to={item.to}>Read More</Link>
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
+        <div className="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
+              <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
+            </div>
+            <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+            <p className="text-sm text-gray-700">{item.description}</p>
+          </div>
+          <div className="mt-6">
+            <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+              <Link to={item.to}>Read More</Link>
+            </button>
+          </div>
         </div>
-      </motion.section>
+      </motion.div>
+    ))}
+  </div>
+</motion.section>
 
-      {/* Genset Solutions */}
-      <motion.section className="bg-[#121212] py-20 px-6 text-white"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={containerVariants}
+
+
+
+
+<motion.section className="bg-white py-20 px-6 text-white"
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  variants={containerVariants}
+>
+  <motion.div className="max-w-7xl mx-auto text-center mb-10"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    <h2 className="text-4xl text-black font-bold">Genset Solutions</h2>
+  </motion.div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
+    {Genset.map((item, index) => (
+      <motion.div
+        key={index}
+        className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
+        variants={cardVariants}
       >
-        <motion.div className="max-w-7xl mx-auto text-center mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl font-bold">Genset Solutions</h2>
-        </motion.div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {Genset.map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
-              variants={cardVariants}
-            >
-              <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
-                    <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-700">{item.description}</p>
-                </div>
-                <div className="mt-6">
-                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-                    <Link to={item.to}>Read More</Link>
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
+        <div className="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
+              <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
+            </div>
+            <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+            <p className="text-sm text-gray-900">{item.description}</p>
+          </div>
+          <div className="mt-6">
+            <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+              <Link to={item.to}>Read More</Link>
+            </button>
+          </div>
         </div>
-      </motion.section>
+      </motion.div>
+    ))}
+  </div>
+</motion.section>
+
+
+
 
       <Footer />
     </section>

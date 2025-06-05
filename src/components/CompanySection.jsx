@@ -39,7 +39,7 @@ const CompanySection = () => {
 
       <main className="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row gap-10">
         {/* Left image */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 ml-4">
         
           <img
             src="https://storage.googleapis.com/a1aa/image/b08acab3-6b8b-47a9-3cc6-092bfccc4ded.jpg"

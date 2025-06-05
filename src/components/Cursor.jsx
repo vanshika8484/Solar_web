@@ -61,10 +61,10 @@ const Cursor = () => {
       className="fixed top-0 left-0 z-[9999] pointer-events-none"
     >
       {/* Outer Circle */}
-      <div className="w-10 h-10 border-2 border-orange-500 rounded-full opacity-70 animate-pulse"></div>
+      <div className="w-6 h-6 border-2 border-orange-500 rounded-full opacity-70 animate-pulse"></div>
 
       {/* Inner Dot */}
-      <div className="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-red-600 rounded-full -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-red-600 rounded-full -translate-x-1/2 -translate-y-1/2" />
     </div>
   );
 };

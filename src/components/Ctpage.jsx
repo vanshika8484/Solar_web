@@ -39,7 +39,7 @@ export default function Ctpage() {
   };
 
   return (
-    <div className="bg-[#f8f7f0] text-white min-h-screen px-4 py-10 GetfontHomeDash">
+    <div className="bg-[#f8f7f0] text-white min-h-screen px-4 py-10 GetfontHomeDash -mt-20">
       {/* Consultation Banner */}
       <div className="max-w-5xl mx-auto bg-white text-black rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-center md:text-left">

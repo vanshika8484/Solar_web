@@ -25,7 +25,7 @@ const teamMembers = [
 
 const ExpertTeam = () => {
   return (
-    <div className="bg-white min-h-screen py-16 px-4 -mt-10 sm:px-6 lg:px-8 GetFontSol">
+    <div className="bg-white min-h-screen py-16 px-4 -mt-24 sm:px-6 lg:px-8 GetFontSol">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl GetFontSol mb-12">Expert Team Members</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">

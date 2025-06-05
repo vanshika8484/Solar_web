@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+
 const faqs = [
   {
     question: "Solar panel lagane ka fayda kya hai?",
@@ -62,24 +63,24 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="bg-[#0e0e0e] py-16 px-6 sm:px-10 lg:px-20 GetFontSol">
-      <div className="max-w-5xl mx-auto text-center">
+    <section className="bg-[#031926] py-20 px-4 sm:px-8 lg:px-32 GetfontHomeDash">
+      <div className="max-w-7xl mx-auto text-center">
         <h4 className="text-2xl font-robotoslab font-bold text-white mb-4">
           OUR FAQ
         </h4>
-        <h2 className="text-4xl font-robotoslab font-bold text-white  mb-4">
+        <h2 className="text-4xl font-robotoslab font-bold text-white mb-4">
           Chacha Ki Free Solar Salah
         </h2>
-        <p className="text-gray-100 text-lg mb-10">
-          Jo bhi confusion ho, Chacha sab samjhayenge !
+        <p className="text-gray-300 text-lg mb-12">
+          Jo bhi confusion ho, Chacha sab samjhayenge!
         </p>
       </div>
 
-      <div className="max-w-3xl mx-auto space-y-5">
+      <div className="space-y-6">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-white rounded-xl shadow-sm transition hover:shadow-md"
+            className="bg-[#052736] border border-[#0f3d4b] rounded-xl transition hover:shadow-lg"
           >
             <button
               className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none"

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ChatbotPopup from "./ChatbotPopup";
-import solarch from '../Images/chacha.png'
+import solarch from "../Images/chacha.png";
+
+// Messages
 const messages = [
-  "Kya aap jaante hai? Solar se kharcha nahi, paiso ki bachat hoti hai!",
+  "Solar se kharcha nahi, paiso ki bachat hoti hai!",
   "Solar panels se 25 saal tak bijli ka bill lagbhag zero ho sakta hai.",
   "Har mahine ki bijli ki bachat se 5 saal me lagat nikal jaati hai.",
   "Solar se carbon footprint bhi kam hota hai – environment ke liye best!",
@@ -19,7 +21,6 @@ const ChatbotToggle = () => {
   const [currentMsgIndex, setCurrentMsgIndex] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
 
-  // Rotate popup every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setShowPopup(true);
@@ -33,33 +34,27 @@ const ChatbotToggle = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
-  <>
-    {/* Wrapper for Image and Popup side-by-side */}
-    <div className="fixed bottom-4 right-1 flex items-center space-x-3 z-50">
+  return (       
+    <>
+      <div className="fixed bottom-1 right-1 flex items-center space-x-3 z-50">
+        {showPopup && (
+          <div className="animate-scaleUp bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-4 py-3 rounded-lg shadow-xl text-sm md:text-base font-medium max-w-xs">
+            <h4 className="font-bold mb-1 text-yellow-900">Kya aap jaante hai?</h4>
+            <p>{messages[currentMsgIndex]}</p>
+          </div>
+        )}
 
-     {showPopup && (
-        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-3 rounded-lg shadow-xl text-sm md:text-base font-semibold max-w-xs animate-float GetfontHomeChat">
-          {messages[currentMsgIndex]}
-        </div>
-      )}
-      {/* Toggle Button */}
-      <button
-        onClick={() => setChatbotOpen(true)}
-        title="Chat with DealXpress Assistant"
-      >
-        <img src={solarch} className="w-16 h-16" />
-      </button>
+        <button
+          onClick={() => setChatbotOpen(true)}
+          title="Chat with Solar Assistant"
+        >
+          <img src={solarch} className="w-16 h-16" alt="Solar Chatbot Icon" />
+        </button>
+      </div>
 
-      {/* Rotating Educational Notification */}
-     
-    </div>
-
-    {/* Chatbot Popup */}
-    {chatbotOpen && <ChatbotPopup onClose={() => setChatbotOpen(false)} />}
-  </>
-);
-
+      {chatbotOpen && <ChatbotPopup onClose={() => setChatbotOpen(false)} />}
+    </>
+  );
 };
 
 export default ChatbotToggle;

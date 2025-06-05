@@ -30,12 +30,6 @@ const steps = [
   },
 ];
 
-// ... your component continues
-
-
-// rest of your component remains unchanged
-
-
 const iconAnimation = {
   animate: { y: [0, -10, 0] },
   transition: { repeat: Infinity, duration: 2, ease: "easeInOut" },
@@ -43,30 +37,38 @@ const iconAnimation = {
 
 export default function ProcessSteps() {
   return (
-    <div className="bg-white  min-h-screen flex flex-col GetFontSol">
-      {/* Navbar */}
-    
-
-      {/* Main content */}
+    <div className="bg-white min-h-screen flex flex-col GetFontSol">
       <main className="flex-grow max-w-7xl mx-auto px-6 pt-16 pb-20">
         <h1 className="text-center text-4xl md:text-5xl GetFontSol text-gray-900 leading-tight max-w-4xl mx-auto">
           Quality Handyman Solution
         </h1>
 
         <section className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-16 max-w-6xl mx-auto GetFontSol">
-          {steps.map(({ id, title, Icon, alt }) => (
+          {steps.map(({ id, title, Icon }, index) => (
             <div
               key={id}
               className="relative bg-white shadow-lg py-14 px-8 flex flex-col items-center text-center rounded-xl"
             >
+              {/* Decorative top */}
+              <svg
+                className="absolute top-0 left-0 right-0"
+                fill="none"
+                height="40"
+                preserveAspectRatio="none"
+                viewBox="0 0 100 40"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 40 L50 0 L100 40 Z" fill="#E4FBE4" />
+              </svg>
+
               <motion.div
-                className="rounded-full bg-green-100 p-6 mb-8"
+                className="rounded-full bg-green-100 p-6 mb-8 z-10"
                 {...iconAnimation}
-                aria-label={alt}
-                role="img"
               >
                 <Icon className="w-12 h-12 text-green-800" />
               </motion.div>
+
               <h2 className="text-lg font-extrabold text-gray-900 leading-tight tracking-widest uppercase">
                 {title.split(" ").map((line, i) => (
                   <React.Fragment key={i}>
@@ -75,7 +77,13 @@ export default function ProcessSteps() {
                   </React.Fragment>
                 ))}
               </h2>
-             
+
+              {/* Circle with number */}
+              <div className="absolute -bottom-6 bg-green-100 border-2 border-green-800 text-green-800 w-10 h-10 flex items-center justify-center rounded-full text-sm font-bold shadow-sm">
+                {index + 1}
+              </div>
+
+              {/* Optional SVG for bottom triangle */}
               <svg
                 className="absolute bottom-0 left-0 right-0"
                 fill="none"

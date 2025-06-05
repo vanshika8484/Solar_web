@@ -53,7 +53,7 @@ export default function ExactMatchPage() {
       </div>
 
       {/* Newsletter Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-12 rounded-xl flex flex-col md:flex-row items-center gap-6">
+      <section className=" bg-green-800 max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-12 rounded-xl flex flex-col md:flex-row items-center gap-6">
         {/* Left */}
         <div className="flex items-center space-x-4 flex-1 w-full">
           <img
@@ -61,7 +61,7 @@ export default function ExactMatchPage() {
             alt="Newsletter Icon"
             className="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0"
           />
-          <p className="text-base sm:text-lg font-medium leading-tight">
+          <p className="text-base text-white sm:text-lg font-medium leading-tight">
             Subscribe your E-mail for
             <br className="sm:hidden" />
             Newsletter

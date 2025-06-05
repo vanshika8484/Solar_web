@@ -38,7 +38,7 @@ const aboutUsContent = [
 
 export default function About() {
   return (
-    <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 GetfontHomeDash">
+    <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 GetfontHomeDash ">
    
       {/* Heading */}
       <motion.h2
@@ -55,39 +55,41 @@ export default function About() {
 </section>
       {/* <ConstructionHome /> */}
       {/* Content Sections */}
-      <div className="space-y-14 md:space-y-20 mt-32">
-        {aboutUsContent.map((item, index) => (
-          <motion.div
-            key={index}
-            className={`flex flex-col md:flex-row items-center ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
-              } gap-6 md:gap-10`}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="md:w-1/2 w-full"
-              initial={{ x: 80, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-full max-w-md h-40 sm:h-48 rounded-xl overflow-hidden shadow-xl mx-auto">
-                <img
-                  src={item.img}
-                  alt="Solar Panel Field"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
+   <div className="space-y-14 md:space-y-20 mt-12">
+  {aboutUsContent.map((item, index) => (
+    <motion.div
+      key={index}
+      className={`flex flex-col md:flex-row items-center ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
+        } gap-6 md:gap-10 p-6 md:p-10 border border-gray-200 bg-[#f8f9fb] rounded-3xl shadow-md transition hover:shadow-lg`}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="md:w-1/2 w-full"
+        initial={{ x: 80, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="w-full max-w-md h-40 sm:h-48 rounded-xl overflow-hidden shadow-lg mx-auto">
+          <img
+            src={item.img}
+            alt="Solar Panel Field"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </motion.div>
 
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed md:w-3/5">
-              {item.text}
-            </p>
-          </motion.div>
-        ))}
-      </div>
+      <p className="text-gray-700 text-sm md:text-base leading-relaxed md:w-3/5">
+        {item.text}
+      </p>
+    </motion.div>
+  ))}
+</div>
+
+
       <div>
         <CompanySection />
       </div>

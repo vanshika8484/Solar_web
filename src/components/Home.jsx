@@ -218,7 +218,7 @@ function Home() {
 
       
 
-      <section className="bg-[#f8f7f0] py-16 px-4 md:px-10 mt-11 GetfontHomeDash">
+      <section className=" py-16 px-4 md:px-10  GetfontHomeDash -mt-20">
         <section className="bg-[#f8f7f0] py-16 px-6 md:px-20">
           <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
             {/* Left Content */}
@@ -381,63 +381,73 @@ function Home() {
       <SolarSolutions />
 
 <section className="">
-  <div className="GetfontHomeDash max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative mt-14 ">
-          {/* Left: Images and circular text */}
-          <div className="relative w-full h-full">
-            {/* Circular Text */}
+  <div className="GetfontHomeDash max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center relative mt-14">
+    {/* Left: Images and circular text */}
+    <div className="relative w-full h-full">
+      {/* Image 1 */}
+      <div className="w-full rounded-xl overflow-hidden shadow-lg">
+        <img
+          src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
+          alt="Solar Field"
+          className="rounded-xl object-cover w-full h-[300px] sm:h-[400px] md:h-[450px]"
+        />
+      </div>
 
-            {/* Image 1 */}
-            <div className="w-full rounded-xl overflow-hidden shadow-lg">
-              <img
-                src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
-                alt="Solar Field"
-                className="rounded-xl object-cover"
-              />
-            </div>
+      {/* Image 2 - overlayed or stacked */}
+      <div className="absolute md:bottom-[-40px] md:left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl
+                      md:block hidden
+                      ">
+        <img
+          src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
+          alt="Solar Roof Work"
+          className="rounded-xl object-cover w-full h-[200px] md:h-[250px]"
+        />
+      </div>
 
-            {/* Image 2 - overlayed */}
-            <div className="absolute bottom-[-40px] left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl">
-              <img
-                src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
-                alt="Solar Roof Work"
-                className="rounded-xl object-cover"
-              />
-            </div>
-          </div>
+      {/* On small screens, show image 2 below image 1 instead of overlay */}
+      <div className="md:hidden mt-6 w-full border-4 border-white rounded-xl overflow-hidden shadow-xl">
+        <img
+          src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
+          alt="Solar Roof Work"
+          className="rounded-xl object-cover w-full h-[200px]"
+        />
+      </div>
+    </div>
 
-          {/* Right: Text content */}
-          <div className="text-gray-800 ">
-            <h3 className="text-xl font-semibold text-green-800 tracking-wider uppercase mb-2">
-              About Us
-            </h3>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-              We Believe Solar Power Should Be{" "}
-              <span className="text-orange-600">Accessible</span>
-            </h2>
-            <p className="text-base leading-relaxed mb-4">
-              At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for
-              over a decade as an authorized partner of Tata Power Solar. Backed
-              by Tata’s legacy of trust, we deliver cost-effective solar
-              solutions that prioritize energy safety, quality, and long-term
-              performance.
-            </p>
-            <p className="text-base leading-relaxed">
-              From planning to financing, and installation to maintenance, we
-              offer customized solar services required to meet your project’s
-              needs. With us, you don’t just go solar, you go safe, smart, and
-              sustainable.
-            </p>
-          </div>
-        </div>
+    {/* Right: Text content */}
+    <div className="text-gray-800 px-2 sm:px-0">
+      <h3 className="text-xl font-semibold text-green-800 tracking-wider uppercase mb-2">
+        About Us
+      </h3>
+      <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-4">
+        We Believe Solar Power Should Be{" "}
+        <span className="text-orange-600">Accessible</span>
+      </h2>
+      <p className="text-base leading-relaxed mb-4">
+        At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for
+        over a decade as an authorized partner of Tata Power Solar. Backed
+        by Tata’s legacy of trust, we deliver cost-effective solar
+        solutions that prioritize energy safety, quality, and long-term
+        performance.
+      </p>
+      <p className="text-base leading-relaxed">
+        From planning to financing, and installation to maintenance, we
+        offer customized solar services required to meet your project’s
+        needs. With us, you don’t just go solar, you go safe, smart, and
+        sustainable.
+      </p>
+    </div>
+  </div>
 </section>
+
 <section className=" mt-16">
-  <PageOne/>
+  
 </section>
       <section className=" mt-36">
       
         <ChartCard />
       </section>
-      <section className="bg-[#11592c] h-[800px]">
+      <section className=" h-[800px]">
         <SolarCarousel />
       </section>
 
