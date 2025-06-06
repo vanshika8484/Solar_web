@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const SVGAccent = () => (
   <svg
-    className="absolute top-2 right-2 w-16 h-16 text-gray-100 opacity-20"
+    className="absolute top-2 right-2 w-16 h-16 text-gray-100 opacity-20 "
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <>
-    <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol">
+    <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol md:px-12 lg:px-20 xl:px-32 ">
       <h1 className="text-4xl font-bold text-center mt-14 text-green-800 mb-10"><span className=" text-black">Our </span>Projects</h1>
 
       {/* Filter Buttons */}
@@ -75,7 +75,7 @@ const Projects = () => {
       </div>
     </section>
     <section>
-  <section className="max-w-7xl mx-auto px-6 py-16 mt-14 flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-20 GetFontSol">
+  <section className="max-w-7xl mx-auto px-6 py-16 mt-14 flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-20 GetFontSol  md:px-12 lg:px-20 xl:px-32">
       {/* Left image */}
       <motion.div
         className="flex-shrink-0 w-full md:w-1/2"
@@ -93,7 +93,7 @@ const Projects = () => {
 
       {/* Right text content */}
       <motion.div
-        className="w-full md:w-1/2 flex flex-col justify-center"
+        className="w-full md:w-1/2 flex flex-col justify-center "
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

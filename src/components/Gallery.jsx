@@ -21,7 +21,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <main className="p-4 md:p-6 max-w-7xl mx-auto">
+    <main className="p-4 md:p-6 max-w-7xl mx-auto  md:px-12 lg:px-20 xl:px-32">
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {images.concat(images).map((image, index) => (
           <motion.div

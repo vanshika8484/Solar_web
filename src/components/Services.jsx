@@ -61,7 +61,7 @@ export default function Services() {
     console.log(formData);
   };
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 max-w-7xl max-h-screen mx-auto GetFontSol">
+    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 max-w-7xl max-h-screen mx-auto GetFontSol md:px-12 lg:px-20 xl:px-32 ">
       <motion.h2
         className="text-3xl sm:text-4xl mt-14 font-bold text-green-800 text-center mb-12"
         initial={{ opacity: 0, y: -30 }}
