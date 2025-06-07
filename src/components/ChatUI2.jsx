@@ -5,17 +5,18 @@ import didi from "../Images/didi.png";
 import "./Home.css";
 
 const chatMessages = [
-  {
-    name: "",
-    side: "left",
-    img: solarg,
-    text: "Humne 1000+ gharo mein roshni pahunchayi, bina kisi jhanjhat ke.",
-  },
+  
   {
     name: "",
     side: "right",
     img: didi,
     text: "Add trust badges – Govt. certified, 1000+ homes, 100+ commercial installs.",
+  },
+  {
+    name: "",
+    side: "left",
+    img: solarg,
+    text: "Humne 1000+ gharo mein roshni pahunchayi, bina kisi jhanjhat ke.",
   },
 ];
 
@@ -48,22 +49,8 @@ const ChatUI2 = () => {
               variants={chatVariants}
               initial="hidden"
               animate="visible"
-              className={`flex items-start ${
-                msg.side === "right" ? "flex-row-reverse" : ""
-              } gap-4 sm:gap-6`}
+              className={`flex flex-col items-${msg.side === "right" ? "end" : "start"} w-full`}
             >
-              {/* Avatar & Name */}
-              <div className="flex flex-col items-center shrink-0">
-                <img
-                  src={msg.img}
-                  alt={msg.name}
-                  className="w-20  h-20 sm:w-24 sm:h-24 object-contain rounded-full"
-                />
-                <span className="text-sm sm:text-base GetfontHomeDash  text-gray-800 mt-2">
-                  {msg.name}
-                </span>
-              </div>
-
               {/* Message Bubble */}
               <div
                 className={`text-sm sm:text-base leading-relaxed font-medium px-5 py-4 rounded-lg shadow-md max-w-full sm:max-w-[70%] border ${
@@ -73,6 +60,18 @@ const ChatUI2 = () => {
                 }`}
               >
                 {msg.text}
+              </div>
+
+              {/* Avatar & Name below bubble */}
+              <div className="flex flex-col items-center mt-3">
+                <img
+                  src={msg.img}
+                  alt={msg.name}
+                  className="w-20 h-20 sm:w-24 sm:h-24 object-contain rounded-full"
+                />
+                <span className="text-sm sm:text-base GetfontHomeDash text-gray-800 mt-2">
+                  {msg.name}
+                </span>
               </div>
             </motion.div>
           ))}

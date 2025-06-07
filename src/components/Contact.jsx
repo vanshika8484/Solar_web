@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import Loader from "../Loader";
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
-  // Variants for the contact info and form
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNo, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const { data } = await axios.post(`https://solar-4-8a9b.onrender.com/api/senddata`, {
+        name,
+        email,
+        phoneNo,
+        message,
+      });
+      toast.success('Message sent successfully!');
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+    } catch (error) {
+      toast.error('Something went wrong. Try again.');
+    }
+    setLoading(false);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -19,92 +49,88 @@ function Contact() {
   };
 
   return (
-    <div className=" max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6  md:px-12 lg:px-20 xl:px-32">
+    <div className="max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6">
+      <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-7xl mx-auto GetFontSol">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-5">Get in <span className=' text-green-800'>Touch</span></h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-5">
+          Get in <span className="text-green-800">Touch</span>
+        </h2>
 
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-2 gap-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Contact Info */}
-          <motion.div
-            className="bg-white p-8 rounded-2xl shadow-lg"
-            variants={itemVariants}
-          >
+          <motion.div className="bg-white p-8 rounded-2xl shadow-lg" variants={itemVariants}>
             <h3 className="text-2xl font-semibold text-green-800 mb-6">Contact Information</h3>
-
             <div className="space-y-6 text-gray-700">
               <div>
                 <h4 className="font-medium text-gray-900">📍 Address</h4>
-                <p>
-                  53, Ramte Ram Rd, Exta Vihar, Arjun Nagar, Nai Basti Dundahera,
-                  <br /> Ghaziabad, Uttar Pradesh 201001
-                </p>
+                <p>53, Ramte Ram Rd, Exta Vihar, Arjun Nagar, Nai Basti Dundahera, Ghaziabad, Uttar Pradesh 201001</p>
               </div>
-
               <div>
                 <h4 className="font-medium text-gray-900">📧 Email</h4>
-                <p>
-                  Divye@gmail.com
-                  <br />
-                  Info@divyPower.in
-                </p>
+                <p>Divye@gmail.com<br />Info@divyPower.in</p>
               </div>
-
               <div>
                 <h4 className="font-medium text-gray-900">📞 Phone</h4>
-                <p>
-                  +880 0184275965
-                  <br />
-                  Open 24 Hours
-                </p>
+                <p>+880 0184275965<br />Open 24 Hours</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Message Form */}
-          <motion.div
-            className="bg-white p-8 rounded-2xl shadow-lg"
-            variants={itemVariants}
-          >
+          {/* Contact Form */}
+          <motion.div className="bg-white p-8 rounded-2xl shadow-lg" variants={itemVariants}>
             <h3 className="text-2xl font-semibold text-green-800 mb-6">Send Us a Message</h3>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
                 placeholder="Your Name"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
               />
               <input
                 type="email"
                 placeholder="Email Address"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
               />
               <input
                 type="tel"
                 placeholder="Your Phone"
+                required
+                value={phoneNo}
+                onChange={(e) => setPhone(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
               />
               <textarea
                 placeholder="Your Message"
+                required
                 rows="5"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
               ></textarea>
+
               <motion.button
                 type="submit"
-                className="bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300"
+                className="bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300 flex justify-center items-center"
                 whileHover={{ scale: 1.05, boxShadow: '0 0 8px rgba(34,197,94, 0.8)' }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
-                Send Message
+                {loading ? <Loader /> : 'Send Message'}
               </motion.button>
             </form>
           </motion.div>
         </motion.div>
 
-        {/* Google Map Embed */}
+        {/* Google Map */}
         <motion.div className="mt-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.8 }}>
           <iframe
             title="map"
@@ -115,6 +141,7 @@ function Contact() {
           ></iframe>
         </motion.div>
       </div>
+
       <div className="mt-10">
         <Footer />
       </div>

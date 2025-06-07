@@ -1,52 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import solarg from "../Images/chacha.png";
+import axios from "axios";
+import Loader from "../Loader";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNo, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handelSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const { data } = await axios.post(`https://solar-4-8a9b.onrender.com/api/senddata`, {
+        name,
+        email,
+        phoneNo,
+        message,
+      });
+      toast.success("Message sent successfully!"); // Show success toast
+      console.log(data);
+    } catch (error) {
+      toast.error("Something went wrong. Try again."); // Show error toast
+      console.error(error.message);
+    }
+    setLoading(false);
+  };
+
   return (
-    <main className="bg-[#f8f7f0]  px-4 sm:px-8 md:px-16 py-20 -mt-44">
+    <main className="bg-[#f8f7f0] px-4 sm:px-8 md:px-16 py-20 -mt-44">
+      <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat">
-        
+
         {/* Left: Form */}
         <form
-          action="#"
-          method="POST"
-          className="bg-[#f8f7f0] w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8  flex flex-col gap-6"
+          onSubmit={handelSubmit}
+          className="bg-[#f8f7f0] w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8 flex flex-col gap-6"
         >
           <div className="text-center mb-4">
             <h2 className="text-2xl font-bold text-green-800">Talk to Solar Chacha</h2>
             <p className="text-gray-600 text-sm">We’ll get back to you shortly.</p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-col gap-4">
             <input
               type="text"
-              name="name"
               placeholder="Your Name"
               required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="flex-1 rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none border border-gray-300"
             />
+           
             <input
               type="email"
-              name="email"
               placeholder="Your Email"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="flex-1 rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none border border-gray-300"
             />
           </div>
 
           <input
             type="tel"
-            name="phone"
             placeholder="Your Phone Number"
             required
+            value={phoneNo}
+            onChange={(e) => setPhone(e.target.value)}
             className="rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none border border-gray-300 w-full"
           />
 
           <textarea
-            name="message"
             rows={4}
             placeholder="Your Message"
             required
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             className="rounded-2xl py-3 px-5 placeholder-gray-500 resize-none focus:outline-none border border-gray-300 w-full"
           ></textarea>
 
@@ -54,7 +88,7 @@ const ContactForm = () => {
             type="submit"
             className="bg-green-800 text-white font-bold rounded-full py-4 px-8 w-full flex items-center justify-center gap-2 hover:bg-[#449d48] transition"
           >
-            SUBMIT NOW
+            {loading ? <Loader /> : "SUBMIT NOW"}
             <i className="fas fa-arrow-right"></i>
           </button>
         </form>
@@ -88,13 +122,7 @@ const ContactForm = () => {
             </p>
           </div>
           <div className="mt-4">
-            <img
-              src={solarg}
-              alt="Solar Chacha"
-              className="max-w-[250px] w-full"
-              width={250}
-              height={250}
-            />
+            <img src={solarg} alt="Solar Chacha" className="max-w-[250px] w-full" />
           </div>
         </section>
       </div>
