@@ -27,7 +27,7 @@ const chartOptions = () => ({
   },
   stroke: {
     curve: "smooth",
-    width: 4,
+    width: 3,
   },
   xaxis: {
     labels: { show: false },
@@ -69,7 +69,7 @@ const ChartCard = () => {
         <h3 className="text-xl font-semibold text-gray-800 mb-4">{title}</h3>
 
         {/* Chart Container */}
-        <div className="w-full h-[300px] bg-gray-800 rounded-lg overflow-hidden shadow-inner relative">
+        <div className="w-full h-[200px] bg-gray-800 rounded-lg overflow-hidden shadow-inner relative">
           <div className="absolute top-3 right-3 bg-blue-500 text-white text-sm px-2 py-1 rounded-full shadow-md">
             ●
           </div>
