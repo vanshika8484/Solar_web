@@ -39,8 +39,10 @@ const ChatbotToggle = () => {
       <div className="fixed bottom-1 right-1 flex items-center space-x-3 z-50">
         {showPopup && (
           <div className="animate-scaleUp bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-4 py-3 rounded-lg shadow-xl text-sm md:text-base font-medium max-w-xs">
+          <img src={solarch} alt="Solar Cha Cha" className="w-12 h-12" />
             <h4 className="font-bold mb-1 text-yellow-900">Kya aap jaante hai?</h4>
-            <p>{messages[currentMsgIndex]}</p>
+            <p>
+            {messages[currentMsgIndex]}</p>
           </div>
         )}
 

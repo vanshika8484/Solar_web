@@ -63,7 +63,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="bg-[#031926] py-20 px-4 sm:px-8 lg:px-32 GetfontHomeDash">
+    <section className="bg-green-900 py-20 px-4 sm:px-8 lg:px-32 GetfontHomeDash">
       <div className="max-w-7xl mx-auto text-center">
         <h4 className="text-2xl font-robotoslab font-bold text-white mb-4">
           OUR FAQ
@@ -80,16 +80,16 @@ const FaqSection = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-[#052736] border border-[#0f3d4b] rounded-xl transition hover:shadow-lg"
+            className="bg-[#dedede] border border-[#d6eaf0] rounded-xl transition hover:shadow-lg"
           >
             <button
               className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none"
               onClick={() => toggleAccordion(index)}
             >
-              <span className="text-gray-100 font-medium text-base sm:text-lg">
+              <span className="text-gray-900 font-medium text-base sm:text-lg">
                 {faq.question}
               </span>
-              <span className="text-gray-100">
+              <span className="text-gray-900">
                 {openIndex === index ? <Minus size={24} /> : <Plus size={24} />}
               </span>
             </button>
@@ -102,7 +102,7 @@ const FaqSection = () => {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="overflow-hidden px-6 pb-5 text-gray-100 text-sm sm:text-base"
+                  className="overflow-hidden px-6 pb-5 text-gray-900 text-sm sm:text-base"
                 >
                   {faq.answer}
                 </motion.div>

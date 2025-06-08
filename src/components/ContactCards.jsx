@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ContactCards = () => {
   return (
-    <div className="bg-white p-6 min-h-[300px] flex items-center justify-center GetFontSol">
+    <div className="bg-white p-6 min-h-[300px] flex items-center justify-center GetFontSol -mt-14">
       <div className="max-w-7xl w-full mx-auto flex flex-col sm:flex-row gap-6">
         {/* Call Card */}
         <motion.div

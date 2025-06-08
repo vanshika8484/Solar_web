@@ -1,18 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import solarg from '../Images/chacha.png';
-import didi from '../Images/didi.png';
-import './Home.css';
+import solarg from "../Images/chacha.png";
+import didi from "../Images/didi.png";
+import "./Home.css";
 
 const chatMessages = [
- 
   {
     name: "",
     side: "right",
     img: didi,
     text: `Divy solar se apne ghar ko do Roshni, bills ko karo goodbye.\nDivy Solar – Safe, Save and Shine Forever\nWith Divy Solar:\n• Govt. Certified\n• 25-Year Warranty\n• EMI Options\n• On-Call Support`,
   },
-   {
+  {
     name: "",
     side: "left",
     img: solarg,
@@ -20,30 +19,41 @@ const chatMessages = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 const chatVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: (i) => ({
+  visible: {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.4,
       duration: 0.6,
       ease: "easeOut",
     },
-  }),
+  },
 };
 
 const ChatUI1 = () => {
   return (
-    <div className="GetfontHomeChat min-h-[300px] bg-[#f8f7f0] mt-6 flex items-center justify-center px-4 py-6 sm:py-10">
-      <div className="w-full max-w-4xl flex flex-col gap-y-10">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="GetfontHomeChat min-h-[300px] bg-[#f8f7f0] mt-6 flex items-center justify-center px-4 py-6 sm:py-10"
+    >
+      <div className="w-full max-w-4xl flex flex-col gap-y-8 sm:gap-y-10">
         {chatMessages.map((msg, index) => (
           <motion.div
             key={index}
-            custom={index}
             variants={chatVariants}
-            initial="hidden"
-            animate="visible"
             className={`flex flex-col items-${msg.side === "right" ? "end" : "start"} w-full`}
           >
             {/* Message Bubble */}
@@ -58,18 +68,25 @@ const ChatUI1 = () => {
             </div>
 
             {/* Character Image Below Message */}
-            <div className="text-center mt-3">
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="text-center mt-3"
+            >
               <img
                 src={msg.img}
                 alt={msg.name}
                 className="w-16 h-16 sm:w-32 sm:h-32 object-contain mx-auto"
               />
-              <div className="text-sm font-semibold text-gray-800 mt-2">{msg.name}</div>
-            </div>
+              <div className="text-sm font-semibold text-gray-800 mt-2">
+                {msg.name}
+              </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

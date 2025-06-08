@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { FaTools, FaSolarPanel, FaCog, FaProjectDiagram, FaRecycle } from "react-icons/fa";
   import  { useState } from "react";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
+import La from "./La";
 
 const services = [
   {
@@ -90,9 +92,9 @@ export default function Services() {
             <p className="text-sm text-gray-600 leading-relaxed">
               {service.description}
             </p>
-            <a href="#" className="flex items-center text-sm font-medium text-green-800 hover:underline">
+            <Link to="/LA" className="flex items-center text-sm font-medium text-green-800 hover:underline">
               Read More <span className="ml-1">→</span>
-            </a>
+            </Link>
           </motion.div>
         ))}
       </div>

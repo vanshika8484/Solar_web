@@ -49,9 +49,9 @@ export default function ProcessSteps() {
               key={id}
               className="relative bg-white shadow-lg py-14 px-8 flex flex-col items-center text-center rounded-xl"
             >
-              {/* Decorative top */}
+              {/* Flipped Top Decorative SVG */}
               <svg
-                className="absolute top-0 left-0 right-0"
+                className="absolute top-0 left-0 right-0 rotate-180"
                 fill="none"
                 height="40"
                 preserveAspectRatio="none"
@@ -78,12 +78,12 @@ export default function ProcessSteps() {
                 ))}
               </h2>
 
-              {/* Circle with number */}
+              {/* Step number badge */}
               <div className="absolute -bottom-6 bg-green-100 border-2 border-green-800 text-green-800 w-10 h-10 flex items-center justify-center rounded-full text-sm font-bold shadow-sm">
                 {index + 1}
               </div>
 
-              {/* Optional SVG for bottom triangle */}
+              {/* Optional Bottom Triangle */}
               <svg
                 className="absolute bottom-0 left-0 right-0"
                 fill="none"
@@ -93,7 +93,7 @@ export default function ProcessSteps() {
                 width="100%"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M0 0 L50 40 L100 0 Z" fill="white"></path>
+                <path d="M0 0 L50 40 L100 0 Z" fill="white" />
               </svg>
             </div>
           ))}

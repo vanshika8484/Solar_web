@@ -2,7 +2,7 @@ import React from "react";
 
 const SolarCostCalculator = () => {
   return (
-    <div className="bg-[#11592c] min-h-screen GetFontSol">
+    <div className="bg-green-900 min-h-screen GetFontSol">
    
 
       <main className="max-w-7xl  mx-auto px-6 sm:px-10 lg:px-16  mb-20 grid grid-cols-1 md:grid-cols-2 gap-10 pt-6">

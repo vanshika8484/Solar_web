@@ -43,6 +43,35 @@ const La = () => {
                                 At Divy Power, we prioritize safety and efficiency, delivering lightning protection solutions tailored to diverse energy needs. Our LAs not only safeguard infrastructure but also promote uninterrupted power flow, ensuring seamless operation even during storms. With our expertly designed lightning arrestors, you can trust that your electrical systems remain secure against one of nature’s most formidable threats.
                             </p>
 
+
+                            <section className="mt-6 space-y-4 text-justify">
+  <h3 className="text-xl font-semibold text-gray-800">Why Lightning Protection is a Necessity</h3>
+  <p>
+    With the increasing adoption of sensitive electronic systems and smart grid technology, even a minor lightning surge can result in significant equipment damage, data loss, or system failures. In renewable energy systems such as solar power setups, where inverters and batteries are integral components, safeguarding infrastructure becomes even more critical. Lightning Arrestors act as the first line of defense in such scenarios, absorbing and redirecting the massive electrical discharges safely to the ground.
+  </p>
+  <p>
+    The cost of lightning damage not only includes physical harm to equipment but also the associated downtime and repair costs. In industries like telecommunications, healthcare, and manufacturing, where continuity is essential, even short outages can translate to financial losses and customer dissatisfaction. A properly installed LA significantly reduces such risks by ensuring that transient overvoltages do not reach sensitive areas of the system.
+  </p>
+  <p>
+    Moreover, lightning events are becoming more frequent and severe due to changing weather patterns and climate change. Structures located on elevated terrain, open fields, or near water bodies are particularly vulnerable. Residential buildings with metal rooftops or solar panels installed on terraces are also at higher risk. Hence, incorporating high-quality lightning arrestors is not just a safety protocol but a proactive investment in long-term infrastructure resilience.
+  </p>
+
+  <h3 className="text-xl font-semibold text-gray-800">Technical Advantages of Our LAs</h3>
+  <p>
+    Our Lightning Arrestors are engineered with state-of-the-art metal oxide varistor (MOV) technology, ensuring ultra-fast response times and excellent energy absorption capacity. They are rigorously tested for thermal stability, impulse current withstand capabilities, and resistance to environmental degradation. With IP-rated enclosures, corrosion-resistant materials, and self-healing mechanisms, our LAs provide reliable protection even in challenging weather conditions such as heavy rainfall, intense heat, or humidity.
+  </p>
+  <p>
+    Each unit undergoes stringent quality checks and complies with both Indian and international safety standards, including IEC 60099 and IS/IEC 62305. Available in multiple voltage ratings and current handling capacities, our products cater to a wide variety of applications—from small-scale solar rooftops to large-scale commercial and industrial grids.
+  </p>
+
+  <h3 className="text-xl font-semibold text-gray-800">Installation & Maintenance</h3>
+  <p>
+    At Divy Power, we offer comprehensive installation services backed by expert technicians. Our team conducts site assessments to determine optimal placement and grounding conditions for the arrestor, ensuring maximum efficiency. Post-installation, we also provide regular maintenance checks to verify continuity, test discharge paths, and inspect mechanical integrity.
+  </p>
+  
+</section>
+
+
                         </section>
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
@@ -87,37 +116,33 @@ const La = () => {
                             ))}
                         </div>
 
-                        <div className="bg-white p-6 rounded shadow text-center">
-                            <img src="https://divyby.redspace.in/assets-2/images/cta/03.jpg" />
-                            <p className="text-xl font-semibold">(986)-2549.215</p>
-                            <p className="text-sm text-gray-600">Mon–Fri 7:00 am–9:00 pm</p>
-                            <p className="text-sm text-gray-600">24/7 Service Available</p>
-                            <button className="mt-4 px-4 py-2 bg-green-600 text-white rounded">Call us Now</button>
-                        </div>
+                       
 
                         <div className="bg-white p-6 rounded shadow text-sm space-y-3">
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Email:</span>
                                 <a href="mailto:info@example.com" className="text-green-700 hover:underline">
-                                    info@example.com
+                                    info@divyapower.in
                                 </a>
                             </div>
 
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Phone:</span>
                                 <a href="tel:+011234567890" className="text-green-700 hover:underline">
-                                    (+01) 123 456 7890
+                                    +91 9310259325
                                 </a>
                             </div>
 
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Address:</span>
-                                <span>1212 Paint Valley Road, East USA</span>
+                                <span>53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar,
+Nai Basti Dundaher Ghaziabad,
+Uttar Pradesh 201001</span>
                             </div>
 
                             <div className="flex items-start gap-2">
-                                <span className="font-bold text-gray-700 w-20">Hours:</span>
-                                <span>Mon–Sat: 8:00 - 18:00<br />Sunday: CLOSED</span>
+                               
+                             
                             </div>
                         </div>
 

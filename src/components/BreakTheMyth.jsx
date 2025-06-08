@@ -19,7 +19,7 @@ const BreakTheMyth = () => {
         <div className="flex flex-row items-center md:pt-28  lg:items-end gap-4">
           <button
             type="button"
-            className="bg-green-600 text-white text-base GetfontHomeDash rounded-lg px-8 py-3"
+            className="bg-[#4aab3d] text-white text-base GetfontHomeDash rounded-lg px-8 py-3"
           >
             Lagwane ke paise kahan se laayein?
           </button>

@@ -55,7 +55,7 @@ export default function About() {
 </section>
       {/* <ConstructionHome /> */}
       {/* Content Sections */}
-   <div className="space-y-14 md:space-y-20 mt-12">
+   <div className="space-y-14 md:space-y-20 -mt-4">
   {aboutUsContent.map((item, index) => (
     <motion.div
       key={index}

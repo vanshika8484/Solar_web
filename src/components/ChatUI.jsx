@@ -1,11 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import solarg from '../Images/chacha.png';
-import didi from '../Images/didi.png';
-import './Home.css';
+import solarg from "../Images/chacha.png";
+import didi from "../Images/didi.png";
+import "./Home.css";
 
 const chatMessages = [
-  
   {
     name: "",
     side: "left",
@@ -20,32 +19,50 @@ const chatMessages = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 const chatVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i) => ({
+  hidden: { opacity: 0, y: 40 },
+  visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      delay: i * 0.4,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const avatarVariants = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 const ChatUI = () => {
   return (
-    <div className="GetfontHomeChat min-h-[300px] bg-white flex items-center justify-center px-4 py-6 sm:py-10">
-      <div className="w-full max-w-4xl flex flex-col gap-y-10">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="GetfontHomeChat min-h-[300px] bg-white flex items-center justify-center px-4 py-6 sm:py-10"
+    >
+      <div className="w-full max-w-4xl flex flex-col gap-y-5">
         {chatMessages.map((msg, index) => (
           <motion.div
             key={index}
-            custom={index}
             variants={chatVariants}
-            initial="hidden"
-            animate="visible"
             className={`flex flex-col items-${msg.side === "right" ? "end" : "start"} w-full`}
           >
+            {/* Chat Bubble */}
             <div
               className={`text-[15px] sm:text-[16px] leading-relaxed font-medium px-4 py-3 sm:px-5 sm:py-4 rounded-xl max-w-[90%] sm:max-w-[70%] shadow-inner border ${
                 msg.side === "right"
@@ -56,7 +73,11 @@ const ChatUI = () => {
               {msg.text}
             </div>
 
-            <div className="text-center mt-3">
+            {/* Avatar */}
+            <motion.div
+              variants={avatarVariants}
+              className="text-center mt-3"
+            >
               <img
                 src={msg.img}
                 alt={msg.name}
@@ -65,11 +86,11 @@ const ChatUI = () => {
               <div className="text-sm font-semibold text-gray-800 mt-2">
                 {msg.name}
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

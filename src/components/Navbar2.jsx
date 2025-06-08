@@ -155,7 +155,7 @@ const Navbar2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="w-full sticky top-0 z-50 bg-white/10 backdrop-blur-md px-4 py-2">
+    <div className="w-full sticky top-0 z-50 px-4 py-2">
       <div className="max-w-7xl mx-auto flex items-center justify-between bg-[#03132B] text-white rounded-full px-5 md:px-8 py-3 shadow-md transition-all duration-300">
         
         {/* Logo Section */}

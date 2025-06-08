@@ -32,7 +32,7 @@ const ContactForm = () => {
   };
 
   return (
-    <main className="bg-[#f8f7f0] px-4 sm:px-8 md:px-16 py-20 -mt-44">
+    <main className="bg-[#f8f7f0] px-4 sm:px-8 md:px-16 py-20 -mt-96">
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat">
 
@@ -125,7 +125,45 @@ const ContactForm = () => {
             <img src={solarg} alt="Solar Chacha" className="max-w-[250px] w-full" />
           </div>
         </section>
+        
       </div>
+      <section>
+         <section className=" mt-8 bg-green-800 max-w-6xl mx-auto px-4 sm:px-8 py-10 sm:py-12 rounded-xl flex flex-col md:flex-row items-center gap-6">
+        {/* Left */}
+        <div className="flex items-center space-x-4 flex-1 w-full">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/7b3a6d02-f780-4d75-352b-f382cb430dec.jpg"
+            alt="Newsletter Icon"
+            className="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0"
+          />
+          <p className="text-base text-white sm:text-lg font-medium leading-tight">
+            Subscribe your E-mail for
+            <br className="sm:hidden" />
+            Newsletter
+          </p>
+        </div>
+
+        {/* Right */}
+        <form
+          className="flex flex-col sm:flex-row gap-4 w-full md:max-w-lg"
+          onSubmit={(e) => e.preventDefault()}
+        >
+          <input
+            type="email"
+            required
+            placeholder="Enter your email"
+            className="w-full sm:flex-grow rounded-full border border-gray-300 px-6 py-3 text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300"
+          />
+          <button
+            type="submit"
+            className="w-full sm:w-auto bg-green-700 hover:bg-green-700 text-white font-semibold rounded-full px-8 py-3 flex items-center justify-center space-x-2"
+          >
+            <span>Subscribe</span>
+            <i className="fas fa-plus" />
+          </button>
+        </form>
+      </section>
+      </section>
     </main>
   );
 };
