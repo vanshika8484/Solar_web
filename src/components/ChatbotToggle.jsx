@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import ChatbotPopup from "./ChatbotPopup";
 import solarch from "../Images/chacha.png";
 
-// Messages
 const messages = [
   "Solar se kharcha nahi, paiso ki bachat hoti hai!",
   "Solar panels se 25 saal tak bijli ka bill lagbhag zero ho sakta hai.",
@@ -34,15 +33,13 @@ const ChatbotToggle = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (       
+  return (
     <>
       <div className="fixed bottom-1 right-1 flex items-center space-x-3 z-50">
         {showPopup && (
-          <div className="animate-scaleUp bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-4 py-3 rounded-lg shadow-xl text-sm md:text-base font-medium max-w-xs">
-          <img src={solarch} alt="Solar Cha Cha" className="w-12 h-12" />
-            <h4 className="font-bold mb-1 text-yellow-900">Kya aap jaante hai?</h4>
-            <p>
-            {messages[currentMsgIndex]}</p>
+          <div className="animate-scaleUp flex items-center bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 px-4 py-3 rounded-lg shadow-xl text-sm md:text-base font-medium max-w-xs">
+            <img src={solarch} alt="Solar Chacha" className="w-10 h-10 mr-3 flex-shrink-0" />
+            <span className="whitespace-nowrap overflow-hidden text-ellipsis">{messages[currentMsgIndex]}</span>
           </div>
         )}
 
@@ -50,7 +47,7 @@ const ChatbotToggle = () => {
           onClick={() => setChatbotOpen(true)}
           title="Chat with Solar Assistant"
         >
-          <img src={solarch} className="w-16 h-16" alt="Solar Chatbot Icon" />
+          {/* <img src={solarch} className="w-16 h-16" alt="Solar Chatbot Icon" /> */}
         </button>
       </div>
 

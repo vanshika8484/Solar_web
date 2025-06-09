@@ -20,10 +20,10 @@ const GasGenset = () => {
 
                         <section>
                             <h2 className="text-2xl font-semibold mb-4">Gas Genset</h2>
-                            <p>
+                            <p className=' text-gray-500'>
                                 Our gas-powered gensets provide a dependable and environmentally friendly solution for backup power needs, ensuring uninterrupted electricity during outages. Designed to run on natural gas or LPG, these generators offer a cleaner alternative to traditional diesel-powered systems, significantly reducing emissions and promoting sustainable energy consumption. Whether for homes, businesses, or industrial setups, they deliver reliable power while maintaining efficiency
                             </p>
-                            <p className="mt-4">
+                            <p className="mt-4 text-gray-500">
                                 Efficiency is a key advantage of our gas gensets, as they provide stable and consistent energy output with optimized fuel consumption. Natural gas and LPG are readily available and cost-effective energy sources, making these gensets an economically viable option for those looking to lower operational expenses. Their ability to adapt to various applications ensures flexibility, whether for emergency backup, continuous power supply, or hybrid energy solutions.
                             </p>
                         </section>
@@ -36,10 +36,10 @@ const GasGenset = () => {
 
                         <section>
 
-                            <p>
+                            <p className=' text-gray-500'>
                                 Built with durable materials and precision engineering, our lightning arrestors are crafted to withstand extreme environmental conditions while maintaining superior functionality. Whether installed on rooftops, power grids, or industrial facilities, they provide a robust safety net against nature’s volatile forces. With proper placement and installation, these devices enhance system reliability and reduce maintenance costs.
                             </p>
-                            <p className="mt-4">
+                            <p className="mt-4 text-gray-500">
                                 At Divy Power, we prioritize safety and efficiency, delivering lightning protection solutions tailored to diverse energy needs. Our LAs not only safeguard infrastructure but also promote uninterrupted power flow, ensuring seamless operation even during storms. With our expertly designed lightning arrestors, you can trust that your electrical systems remain secure against one of nature’s most formidable threats.
                             </p>
 

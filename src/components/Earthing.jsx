@@ -46,11 +46,11 @@ const Earthing = () => {
                             variants={fadeUp}
                         >
                             <h2 className="text-2xl font-semibold mb-4">Earthing</h2>
-                            <p>
-                                At Divy Power, we understand the critical role of earthing in safeguarding electrical systems...
+                            <p className=' text-gray-500'>
+                               At Divy Power, we understand the critical role of earthing in safeguarding electrical systems. Our high-quality earthing solutions are designed to provide a safe and efficient path for electrical faults, preventing hazardous incidents such as shocks, fires, and equipment failures. With precise engineering and premium materials, we ensure that your electrical infrastructure remains secure and reliable.
                             </p>
-                            <p className="mt-4">
-                                Proper earthing is essential for homes, businesses, and industrial facilities...
+                            <p className="mt-4 text-gray-500">
+                                Proper earthing is essential for homes, businesses, and industrial facilities, helping to maintain stability in power distribution and protect appliances from sudden voltage fluctuations. Our systems effectively channel excess electricity into the ground, mitigating the risk of electrical surges and ensuring uninterrupted functionality of sensitive equipment. By implementing advanced grounding techniques, we create a safer environment for occupants and operators.
                             </p>
                         </motion.section>
 
@@ -68,11 +68,11 @@ const Earthing = () => {
                             animate="visible"
                             variants={fadeUp}
                         >
-                            <p>
-                                Meeting stringent safety and industry standards, our earthing solutions are built...
+                            <p className=' text-gray-500'>
+                               Meeting stringent safety and industry standards, our earthing solutions are built for long-term durability and efficiency. We use high-grade conductors, robust grounding rods, and expertly designed layouts to enhance conductivity and minimize resistance. Whether for residential buildings or large-scale industrial plants, our installations are tailored to provide optimal protection and compliance with regulatory requirements.
                             </p>
-                            <p className="mt-4">
-                                Beyond technical excellence, we focus on delivering cost-effective and maintenance-friendly earthing systems...
+                            <p className="mt-4 text-gray-500">
+                                Beyond technical excellence, we focus on delivering cost-effective and maintenance-friendly earthing systems. Our solutions not only enhance safety but also contribute to the longevity of electrical equipment, reducing repair costs and downtime. With Divy Power’s expertise, customers can enjoy peace of mind knowing their electrical systems are reinforced with dependable and high-performance earthing solutions.
                             </p>
                         </motion.section>
 

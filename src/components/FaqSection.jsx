@@ -4,14 +4,13 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "Solar panel lagane ka fayda kya hai?",
-    answer:
-      "Are beta, bijli ka bill to ghatega hi, saath hi environment bhi clean rahega! 25 saal tak aaram se bijli milegi, aur paisa bhi bachega!",
+    question: " What makes Divy Power different from other solar companies ?",
+    answer:"We are an authorized partner of Tata Power Solar with over a decade of experience...",
   },
   {
-    question: "Kitna kharcha aayega poore setup ka?",
+    question: " Do you provide complete solar project solutions ?",
     answer:
-      "Yeh depend karta hai tere monthly bill aur roof area pe. Par chinta mat kar, subsidy bhi milti hai Sarkar se!",
+      "Yes, from conceptual planning and feasibility studies to installation...!",
   },
   {
     question: "Sarkari subsidy kaise milti hai?",
@@ -19,39 +18,39 @@ const faqs = [
       "Online apply karna hota hai ya approved vendor ke through kaam karwana hota hai. Hum help kar denge usme bhi, tu tension na le.",
   },
   {
-    question: "Maintenance ka kya scene hai?",
+    question: "Can I get a customized solar solution for my home or business ?",
     answer:
-      "Bas hafte mein ek baar paani se dhona. Na koi fuel, na noise, bilkul shaant aur clean energy!",
+      "Absolutely! We assess your energy needs, location, and budget...",
   },
   {
-    question: "Solar system ka lifespan kitna hota hai?",
+    question: " What is included in your AMC (Annual Maintenance Contract)?",
     answer:
-      "Beta, solar panels 25-30 saal tak chal jaate hain. Inverter ko 10 saal mein replace karna pad sakta hai.",
+      "Our AMC covers regular maintenance, system health checks...",
   },
   {
-    question: "Bijli raat ko kaise milegi?",
+    question: "How safe are your solar systems?",
     answer:
-      "Battery backup ya grid connection ka jugad hota hai. Raat ko bhi light jalegi, chinta na kar!",
+      "Safety is our top priority. We include certified earthing systems...",
   },
   {
-    question: "Ghar chhota hai, fir bhi laga sakte hain?",
+    question: "What is the lifespan of a solar panel system?",
     answer:
-      "Bilkul! Chhoti space ke liye compact systems hote hain. Jitni chhat, utni bijli – simple logic!",
+      " With proper maintenance, our high-quality solar panels can last 25 years or more...",
   },
   {
-    question: "Solar lagwane mein kitna time lagta hai?",
+    question: "Do you provide gensets along with solar systems?",
     answer:
-      "Paperwork aur installation mila ke 1-2 hafte lagte hain. Speed Chacha ki guarantee hai!",
+      "Yes, we offer both gas and diesel/petrol gensets...",
   },
   {
-    question: "Kya baarish ya aandhi mein solar kaam karega?",
+    question: "How long does it take to install a solar system?",
     answer:
-      "Haan ji! Cloudy weather mein thoda kam generate karega, lekin system damage nahi hota. Full safety proof!",
+      "Installation time depends on system size, but most residential projects...",
   },
   {
-    question: "Solar se AC ya fridge bhi chalega kya?",
+    question: "Do solar systems work during cloudy weather or at night?",
     answer:
-      "Arre bilkul! Sahi capacity ka system ho to sab chalega – AC, fridge, washing machine, sab kuch!",
+      "Yes, though performance may reduce in cloudy conditions...!",
   },
 ];
 

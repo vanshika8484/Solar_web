@@ -46,11 +46,11 @@ export default function SolarPanelPage() {
                             variants={fadeUp}
                         >
                             <h2 className="text-2xl font-semibold mb-4">Solar Panel</h2>
-                            <p>
-                                Our solar panels are meticulously engineered to maximize energy conversion...
+                            <p className="text-gray-500">
+                                Our solar panels are meticulously engineered to maximize energy conversion, utilizing cutting-edge photovoltaic technology to capture and transform sunlight into electricity with exceptional efficiency. By integrating advanced materials and innovative designs, we ensure each panel operates at peak performance, delivering reliable power while minimizing environmental impact
                             </p>
-                            <p className="mt-4">
-                                Whether you're looking to power a home, a business...
+                            <p className="mt-4 text-gray-500">
+                                Whether you're looking to power a home, a business, or a large-scale industrial operation, our solar solutions are tailored to meet diverse energy needs. Residential users benefit from lower electricity bills and sustainable living, while commercial establishments and industries gain cost-effective alternatives to traditional power sources, reducing dependency on non-renewable energy.
                             </p>
                         </motion.section>
 
@@ -68,11 +68,13 @@ export default function SolarPanelPage() {
                             animate="visible"
                             variants={fadeUp}
                         >
-                            <p>
-                                Longevity and durability are at the core of our solar panel offerings...
+                            <p className=" text-gray-500">
+                                Longevity and durability are at the core of our solar panel offerings. Built to withstand harsh weather conditions and maintain consistent output over years of use, our panels provide a dependable energy solution. Their robust construction and high-quality components ensure minimal degradation, offering long-lasting power generation with minimal maintenance.
                             </p>
-                            <p className="mt-4">
-                                Beyond financial savings, adopting solar energy contributes...
+                            <p className="mt-4 text-gray-500">
+                                Beyond financial savings, adopting solar energy contributes significantly to environmental preservation. By reducing carbon emissions and reliance on fossil fuels, our panels help create a cleaner, greener future. Investing in solar is not just a smart choice for energy efficiency—it’s a commitment to sustainability and responsible energy consumption
+
+                                01
                             </p>
                         </motion.section>
 

@@ -106,17 +106,19 @@ const ContactForm = () => {
           <div className="flex flex-col gap-4 text-lg text-black">
             <p className="flex items-center justify-center md:justify-start gap-3">
               <i className="fas fa-phone-alt text-green-800"></i>
-              <a className="font-semibold underline hover:text-[#3a8e3a]" href="tel:+16295550129">
-                (629) 555-0129
+              <a className="font-semibold  hover:text-[#3a8e3a]" href="tel:+91 9310259325">
+                +91 9310259325
               </a>
             </p>
             <p className="flex items-center justify-center md:justify-start gap-3">
               <i className="fas fa-map-marker-alt text-green-800"></i>
-              6391 Elgin St. Celina, 10299
+             53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar,<br />
+              Nai Basti Dundaher Ghaziabad,<br />
+              Uttar Pradesh 201001
             </p>
             <p className="flex items-center justify-center md:justify-start gap-3">
               <i className="fas fa-envelope text-green-800"></i>
-              <a className="font-semibold underline hover:text-[#3a8e3a]" href="mailto:info@example.com">
+              <a className="font-semibold  hover:text-[#3a8e3a]" href="mailto:info@example.com">
                 info@divypower.in
               </a>
             </p>

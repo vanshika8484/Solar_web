@@ -20,10 +20,10 @@ const Diesel = () => {
 
                         <section>
                             <h2 className="text-2xl font-semibold mb-4">Diesel/Petrol Genset</h2>
-                            <p>
+                            <p className=' text-gray-500'>
                                 Our diesel and petrol gensets provide robust and high-performance power solutions for critical situations, ensuring uninterrupted electricity supply when it matters most. Designed to withstand challenging conditions, these gensets are ideal for homes, businesses, and remote locations that require dependable backup power. With advanced engineering and superior fuel efficiency, they deliver reliable energy with minimal operational costs.
                             </p>
-                            <p className="mt-4">
+                            <p className="mt-4 text-gray-500">
                                 Built for long-lasting durability, our gensets feature high-quality components that enhance their lifespan and performance. Their sturdy construction ensures consistent functionality, even in demanding environments where power stability is crucial. Whether facing extreme weather, remote operations, or emergency outages, our generators offer peace of mind by delivering power when needed.
                             </p>
                         </section>
@@ -36,10 +36,10 @@ const Diesel = () => {
 
                         <section>
 
-                            <p>
+                            <p className=' text-gray-500'>
                                 Built with durable materials and precision engineering, our lightning arrestors are crafted to withstand extreme environmental conditions while maintaining superior functionality. Whether installed on rooftops, power grids, or industrial facilities, they provide a robust safety net against nature’s volatile forces. With proper placement and installation, these devices enhance system reliability and reduce maintenance costs.
                             </p>
-                            <p className="mt-4">
+                            <p className="mt-4 text-gray-500">
                                 At Divy Power, we prioritize safety and efficiency, delivering lightning protection solutions tailored to diverse energy needs. Our LAs not only safeguard infrastructure but also promote uninterrupted power flow, ensuring seamless operation even during storms. With our expertly designed lightning arrestors, you can trust that your electrical systems remain secure against one of nature’s most formidable threats.
                             </p>
 

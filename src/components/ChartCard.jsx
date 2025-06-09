@@ -2,24 +2,8 @@ import React, { useEffect } from "react";
 import ApexCharts from "apexcharts";
 import { motion } from "framer-motion";
 
-const chartOptions = () => ({
-  series: [
-    {
-      name: "Electricity Bill",
-      data: [20, 30, 15, 40, 25, 35],
-      color: "#60A5FA",
-    },
-    {
-      name: "CO2 Consumption",
-      data: [10, 40, 25, 30, 40, 20],
-      color: "#34D399",
-    },
-    {
-      name: "Nature Harm",
-      data: [5, 20, 30, 25, 35, 15],
-      color: "#FBBF24",
-    },
-  ],
+const chartOptions = (series) => ({
+  series: series,
   chart: {
     type: "line",
     height: "100%",
@@ -51,8 +35,44 @@ const chartOptions = () => ({
 
 const ChartCard = () => {
   useEffect(() => {
-    const withoutSolar = new ApexCharts(document.querySelector("#chart-without-solar"), chartOptions());
-    const withSolar = new ApexCharts(document.querySelector("#chart-with-solar"), chartOptions());
+    const seriesWithoutSolar = [
+      {
+        name: "Electricity Bill",
+        data: [35, 45, 40, 65, 50, 80],
+        color: "#60A5FA",
+      },
+      {
+        name: "CO2 Consumption",
+        data: [20, 40, 30, 25, 40, 70],
+        color: "#34D399",
+      },
+      {
+        name: "Nature Harm",
+        data: [15, 35, 25, 30, 20, 55],
+        color: "#FBBF24",
+      },
+    ];
+
+    const seriesWithSolar = [
+      {
+        name: "Electricity Bill",
+        data: [80, 50, 65, 40, 45, 35],
+        color: "#60A5FA",
+      },
+      {
+        name: "CO2 Consumption",
+        data: [70, 40, 25, 30, 40, 20],
+        color: "#34D399",
+      },
+      {
+        name: "Nature Harm",
+        data: [55, 20, 30, 25, 35, 15],
+        color: "#FBBF24",
+      },
+    ];
+
+    const withoutSolar = new ApexCharts(document.querySelector("#chart-without-solar"), chartOptions(seriesWithoutSolar));
+    const withSolar = new ApexCharts(document.querySelector("#chart-with-solar"), chartOptions(seriesWithSolar));
 
     withoutSolar.render();
     withSolar.render();
@@ -102,7 +122,6 @@ const ChartCard = () => {
       transition={{ duration: 0.6 }}
       className="flex flex-col md:flex-row w-full h-auto p-6 md:p-12 bg-[#11592c] gap-6"
     >
-      {/* Order updated: First Without Solar, then With Solar */}
       <ChartBox title="Without Solar" chartId="chart-without-solar" />
       <ChartBox title="With Solar" chartId="chart-with-solar" />
     </motion.div>

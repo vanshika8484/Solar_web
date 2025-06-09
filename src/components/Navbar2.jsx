@@ -34,7 +34,7 @@
 //               Nai Basti Dundaher Ghaziabad,
 //               Uttar Pradesh 201001</span>
 //           </div>
-          
+
 //         </div>
 //         <div className="hidden md:flex gap-4 text-lg">
 //           <FaFacebookF className="hover:text-green-600 cursor-pointer" />
@@ -90,7 +90,7 @@
 //           </button> */}
 
 //           {/* Search Toggle */}
-          
+
 
 //           {/* Mobile Hamburger */}
 //           <button className="md:hidden text-2xl text-gray-100" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -157,17 +157,17 @@ const Navbar2 = () => {
   return (
     <div className="w-full sticky top-0 z-50 px-4 py-2">
       <div className="max-w-7xl mx-auto flex items-center justify-between bg-[#03132B] text-white rounded-full px-5 md:px-8 py-3 shadow-md transition-all duration-300">
-        
+
         {/* Logo Section */}
         <div className="flex items-center h-12">
-  <Link to="/" className="flex items-center">
-    <img
-      src={solarlogo}
-      alt="Logo"
-     className="w-12 h-12 object-contain pt-[1px]"
-    />
-  </Link>
-</div>
+          <Link to="/" className="flex items-center">
+            <img
+              src={solarlogo}
+              alt="Logo"
+              className="w-12 h-12 object-contain pt-[1px]"
+            />
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-center gap-6 text-base font-medium">
@@ -189,15 +189,16 @@ const Navbar2 = () => {
         {/* Call + Toggle Section */}
         <div className="flex items-center gap-4">
           {/* Call Info (Desktop) */}
-          <div className="hidden md:flex items-center gap-2 text-sm">
+          <a href="tel:+919310259325" className="flex items-center gap-2 ">
             <div className="bg-white p-2 rounded-full">
               <FaPhoneAlt className="text-green-800" />
             </div>
-            <div>
-              <p className="font-medium text-gray-200">Requesting A Call:</p>
-              <p className="font-bold text-white">+91 9310259325</p>
+            <div className="text-sm text-white">
+              <p className="font-medium">Requesting A Call:</p>
+              <p className="font-bold">+91 9310259325</p>
             </div>
-          </div>
+          </a>
+
 
           {/* Mobile Toggle Button */}
           <button

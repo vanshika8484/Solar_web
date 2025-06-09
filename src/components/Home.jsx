@@ -36,6 +36,7 @@ import ChatUI3 from "./BreakTheMyth";
 import BreakTheMyth from "./BreakTheMyth";
 import Ctpage from "./Ctpage";
 import PageOne from "./PageOne";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -193,7 +194,9 @@ function Home() {
                 whileHover={buttonHover}
                 whileTap={{ scale: 0.95 }}
               >
-                Get Solar Estimate
+                <Link to="/Contact">
+                  Get Solar Estimate
+                </Link>
                 <motion.span
                   className="inline-block"
                   animate={{ x: 0 }}

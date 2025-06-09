@@ -49,7 +49,7 @@ function Contact() {
   };
 
   return (
-    <div className="max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6">
+    <div className="max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6  m-16 ">
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-7xl mx-auto GetFontSol">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-5">
@@ -72,11 +72,11 @@ function Contact() {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">📧 Email</h4>
-                <p>Divye@gmail.com<br />Info@divyPower.in</p>
+                <p>Divy@gmail.com<br />Info@divyPower.in</p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">📞 Phone</h4>
-                <p>+880 0184275965<br />Open 24 Hours</p>
+                <p>+91 9310259325<br />Open 24 Hours</p>
               </div>
             </div>
           </motion.div>

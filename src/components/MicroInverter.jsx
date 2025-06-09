@@ -42,11 +42,11 @@ const MicroInverter = () => {
 
             <motion.section initial="hidden" animate="visible" variants={fadeUp}>
               <h2 className="text-2xl font-semibold mb-4">Micro Inverter</h2>
-              <p>
-                Our micro inverters are engineered to enhance the efficiency...
+              <p className=' text-gray-500'>
+               Our micro inverters are engineered to enhance the efficiency and reliability of your solar panel system, providing a cutting-edge solution for energy conversion. Unlike conventional inverters that process power for an entire solar array, micro inverters operate individually on each panel, ensuring that every module functions at peak performance. This decentralized approach eliminates energy losses caused by shading or varying panel efficiency, making them an ideal choice for maximizing solar output.
               </p>
-              <p className="mt-4">
-                By optimizing energy conversion at the panel level...
+              <p className="mt-4 text-gray-500">
+               By optimizing energy conversion at the panel level, our micro inverters significantly improve the overall productivity of your system. Even if some panels are partially shaded or experience efficiency variations, the rest continue to generate power without disruption. This makes them particularly beneficial for installations in areas with unpredictable sunlight exposure or complex roof layouts, ensuring maximum energy yield throughout the day.
               </p>
             </motion.section>
 
@@ -60,11 +60,11 @@ const MicroInverter = () => {
             />
 
             <motion.section initial="hidden" animate="visible" variants={fadeUp}>
-              <p>
-                Reliability is a core feature of our micro inverters...
+              <p className=' text-gray-500'>
+                Reliability is a core feature of our micro inverters, built with advanced technology to withstand diverse environmental conditions. Their durable design ensures long-term performance while reducing the risks associated with a single point of failure—common in traditional centralized inverter systems. With built-in monitoring capabilities, users can track real-time energy production, allowing for proactive maintenance and efficiency adjustments.
               </p>
-              <p className="mt-4">
-                Perfect for homeowners and businesses alike...
+              <p className="mt-4 text-gray-500">
+                Perfect for homeowners and businesses alike, our micro inverters offer a scalable and cost-effective solar solution. Whether you’re installing a residential system to lower electricity bills or implementing a commercial setup for sustainable energy use, micro inverters ensure the highest return on investment. Their ability to provide consistent power output, along with superior adaptability, makes them a smart choice for those looking to optimize their solar energy potential.
               </p>
             </motion.section>
 
