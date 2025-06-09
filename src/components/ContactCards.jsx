@@ -27,7 +27,7 @@ const ContactCards = () => {
                 Call Us For Service
               </span>
               <span className="font-extrabold text-2xl md:text-3xl tracking-tight leading-tight">
-                (+21) 25 256.21583
+                +91 9310259325
               </span>
               <span className="GetFontSol text-gray-400 text-sm md:text-base mt-1">
                 Call 24/7 Anytime For Your Problem
@@ -58,7 +58,7 @@ const ContactCards = () => {
                 Mail Us Anytime
               </span>
               <span className="font-extrabold text-2xl md:text-3xl tracking-tight leading-tight">
-                Info@Drill24.Com
+                Info@divypower.in
               </span>
               <span className="text-white text-sm md:text-base mt-1">
                 Mail 24/7 Anytime For Your Problem
