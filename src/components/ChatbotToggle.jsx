@@ -37,9 +37,15 @@ const ChatbotToggle = () => {
     <>
       <div className="fixed bottom-1 right-1 flex items-center space-x-3 z-50">
         {showPopup && (
-          <div className="animate-scaleUp flex items-center bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 px-4 py-3 rounded-lg shadow-xl text-sm md:text-base font-medium max-w-xs">
-            <img src={solarch} alt="Solar Chacha" className="w-10 h-10 mr-3 flex-shrink-0" />
-            <span className="whitespace-nowrap overflow-hidden text-ellipsis">{messages[currentMsgIndex]}</span>
+          <div className="animate-scaleUp flex items-center bg-green-800 border-l-4 border-orange-500 text-white px-5 py-4 rounded-xl shadow-2xl text-sm md:text-base font-semibold max-w-xs min-h-[100px]">
+            <img
+              src={solarch}
+              alt="Solar Chacha"
+              className="w-16 h-16 mr-4 flex-shrink-0"
+            />
+            <span className="whitespace-nowrap overflow-hidden text-ellipsis">
+              {messages[currentMsgIndex]}
+            </span>
           </div>
         )}
 
@@ -47,7 +53,11 @@ const ChatbotToggle = () => {
           onClick={() => setChatbotOpen(true)}
           title="Chat with Solar Assistant"
         >
-          {/* <img src={solarch} className="w-16 h-16" alt="Solar Chatbot Icon" /> */}
+          {/* <img
+            src={solarch}
+            className="w-16 h-16 hover:scale-105 transition-transform duration-300"
+            alt="Solar Chatbot Icon"
+          /> */}
         </button>
       </div>
 

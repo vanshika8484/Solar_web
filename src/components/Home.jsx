@@ -5,6 +5,7 @@ import { Suspense, lazy } from "react";
 import { Sun } from "lucide-react";
 import solar from "../Images/solar.jpg";
 import solarch from "../Images/chacha.png";
+import img1 from "../Images/Img1.png";
 import "./Home.css";
 
 // import { FaRobot } from "react-icons/fa";
@@ -109,7 +110,7 @@ function Home() {
         >
           {/* Badge */}
           <motion.span
-            className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs GetfontHome mb-5 "
+            className="inline-block bg-green-100 text-green-700 px-3 py-1  rounded-full text-xs GetfontHome "
             variants={itemVariants}
           >
             Trusted by 23K+ users
@@ -117,26 +118,15 @@ function Home() {
 
           {/* Avatar Group */}
           <motion.div
-            className="flex justify-center items-center space-x-4 mb-6"
+            className="flex justify-center items-center space-x-4 "
             variants={itemVariants}
           >
             <img
-              src="https://storage.googleapis.com/a1aa/image/4ad767a4-1ab5-47ea-69e8-87c9da967695.jpg"
+              src={img1}
               alt="User 1"
-              className="rounded-full w-14 h-14 object-cover shadow"
+              className=" w-28 h-28 object-cover"
             />
-            <div className="rounded-full w-20 h-20 p-1 bg-gray-300 flex items-center justify-center shadow">
-              <img
-                src="https://storage.googleapis.com/a1aa/image/d0d47f12-4a07-4b10-c5f3-95839086ecba.jpg"
-                alt="User 2"
-                className="rounded-full w-full h-full object-cover"
-              />
-            </div>
-            <img
-              src="https://storage.googleapis.com/a1aa/image/2a8648ad-ee33-4b97-bf7e-89ed3c278848.jpg"
-              alt="User 3"
-              className="rounded-full w-14 h-14 object-cover shadow"
-            />
+           
           </motion.div>
 
           {/* Subheadline */}

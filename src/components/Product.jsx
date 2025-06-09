@@ -143,18 +143,18 @@ function Product() {
 
       {/* Safety Solutions */}
     {/* Safety Solutions */}
-<motion.section className="bg-[#ffffffcd] py-20 px-6 text-white"
+<motion.section className="bg-[#000000] rounded-sm py-20 px-6 text-white"
   initial="hidden"
   whileInView="show"
   viewport={{ once: true }}
   variants={containerVariants}
 >
-  <motion.div className="max-w-7xl mx-auto text-center mb-10"
+  <motion.div className="max-w-7xl mx-auto text-center mb-10 "
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
   >
-    <h2 className="text-4xl text-green-800 font-bold">Safety Solutions</h2>
+    <h2 className="text-4xl  text-green-800 font-bold">Safety Solutions</h2>
   </motion.div>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">

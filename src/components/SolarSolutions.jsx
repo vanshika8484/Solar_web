@@ -33,12 +33,13 @@ const SolarSolutions = () => {
 
           <div className="flex flex-wrap gap-x-20 gap-y-6 mb-10 max-w-[420px]">
             <div>
-              <p className="font-semibold text-[24px] text-green-700">770 +</p>
-              <p className="text-[12px] text-gray-600">Billion kWh Green Power Generated</p>
+              <p className="font-semibold text-[24px] text-green-700">7220KWh</p>
+              <p className="text-[12px] text-gray-600"> system total abhi tk hmne lgaya h 
+</p>
             </div>
             <div>
-              <p className="font-semibold text-[24px] text-green-700">85,000+</p>
-              <p className="text-[12px] text-gray-600">Installs across Europe</p>
+              <p className="font-semibold text-[24px] text-green-700">15818000 KG </p>
+              <p className="text-[12px] text-gray-600">Per year hum <br/> CO2 reduce kr rhe h</p>
             </div>
           </div>
 
