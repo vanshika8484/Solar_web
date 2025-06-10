@@ -19,6 +19,7 @@ import Cursor from './components/Cursor'
 import SocialIcons from './components/SocialIcons'
 import ScrollToTop from './components/ScrollToTop'
 import NewWorkWithUs from './components/NewWorkWithUs'
+import ProjectDetails from './components/ProjectDetails'
 
 
 
@@ -50,6 +51,7 @@ function App() {
         <Route path="/LA" element={<La />} />
         <Route path="/Gas-Genset" element={<GasGenset />} />
         <Route path="/Diesel/Petrol Genset" element={<Diesel />} />
+        <Route path="/ProjectDetails" element={<ProjectDetails />} />
       </Routes>
 
     </>
