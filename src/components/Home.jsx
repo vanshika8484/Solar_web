@@ -374,22 +374,21 @@ function Home() {
       <SolarSolutions />
 
 <section className="">
-  <div className="GetfontHomeDash max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center relative mt-14">
-    {/* Left: Images and circular text */}
-    <div className="relative w-full h-full">
-      {/* Image 1 */}
-      <div className="w-full rounded-xl overflow-hidden shadow-lg">
+  <div className="GetfontHomeDash max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-stretch relative mt-14">
+    
+    {/* Left: Images */}
+    <div className="relative flex flex-col justify-center h-full">
+      {/* Main Image */}
+      <div className="w-full rounded-xl overflow-hidden shadow-lg h-full">
         <img
           src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
           alt="Solar Field"
-          className="rounded-xl object-cover w-full h-[300px] sm:h-[400px] md:h-[450px]"
+          className="rounded-xl object-cover w-full h-full min-h-[400px]"
         />
       </div>
 
-      {/* Image 2 - overlayed or stacked */}
-      <div className="absolute md:bottom-[-40px] md:left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl
-                      md:block hidden
-                      ">
+      {/* Stacked Image for large screens */}
+      <div className="absolute md:bottom-[-40px] md:left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl md:block hidden">
         <img
           src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
           alt="Solar Roof Work"
@@ -397,7 +396,7 @@ function Home() {
         />
       </div>
 
-      {/* On small screens, show image 2 below image 1 instead of overlay */}
+      {/* Small screen stacked image below */}
       <div className="md:hidden mt-6 w-full border-4 border-white rounded-xl overflow-hidden shadow-xl">
         <img
           src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
@@ -407,8 +406,8 @@ function Home() {
       </div>
     </div>
 
-    {/* Right: Text content */}
-    <div className="text-gray-800 px-2 sm:px-0">
+    {/* Right: Text Content */}
+    <div className="text-gray-800 flex flex-col justify-center h-full px-2 sm:px-0">
       <h3 className="text-xl font-semibold text-green-800 tracking-wider uppercase mb-2">
         About Us
       </h3>
@@ -432,6 +431,7 @@ function Home() {
     </div>
   </div>
 </section>
+
 
 <section className=" mt-16">
   

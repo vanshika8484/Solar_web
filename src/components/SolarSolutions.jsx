@@ -34,12 +34,12 @@ const SolarSolutions = () => {
           <div className="flex flex-wrap gap-x-20 gap-y-6 mb-10 max-w-[420px]">
             <div>
               <p className="font-semibold text-[24px] text-green-700">7220KWh</p>
-              <p className="text-[12px] text-gray-600"> system total abhi tk hmne lgaya h 
+              <p className="text-[12px] text-gray-600"> systems are total added  
 </p>
             </div>
             <div>
               <p className="font-semibold text-[24px] text-green-700">15818000 KG </p>
-              <p className="text-[12px] text-gray-600">Per year hum <br/> CO2 reduce kr rhe h</p>
+              <p className="text-[12px] text-gray-600">Per year <br/> CO2 reduction </p>
             </div>
           </div>
 

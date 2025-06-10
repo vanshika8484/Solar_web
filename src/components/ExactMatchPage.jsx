@@ -34,11 +34,9 @@ export default function ExactMatchPage() {
       <div className="overflow-hidden py-10 sm:py-16 mt-8 sm:mt-14">
         <motion.div
           className="flex space-x-6 sm:space-x-10 px-4 sm:px-8"
-          animate={{ x: ["0%", "-100%"] }}
+          animate={{ x: ["0%", "0%"] }}
           transition={{
-            repeat: Infinity,
-            duration: 20,
-            ease: "linear",
+            
           }}
         >
           {[...logos, ...logos].map((src, idx) => (
