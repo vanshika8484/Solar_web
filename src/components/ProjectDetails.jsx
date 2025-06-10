@@ -175,8 +175,7 @@ const ProjectDetails = () => {
 
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Address:</span>
-                                <span>53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar,
-Nai Basti Dundaher Ghaziabad,
+                                <span>53,Ramte Ram Rd,Ghaziabad,
 Uttar Pradesh 201001</span>
                             </div>
 
