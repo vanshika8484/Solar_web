@@ -95,7 +95,8 @@ function Home() {
   };
 
   return (
-    <div className="pt-7 relative overflow-hidden -mt-20 sm:ml-0 lg:ml-16  md:ml-16 max-w-[1150px]  xl:ml-16 2xl:ml-32  ">
+    <div className="pt-7 relative overflow-hidden -mt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+
       <ChatbotToggle />
 
       <motion.section
@@ -211,7 +212,7 @@ function Home() {
 
       
 
-      <section className=" py-16 px-4 md:px-10  GetfontHomeDash -mt-20">
+      <section className=" py-16 px-4 md:px-10  GetfontHomeDash ">
         <section className="bg-[#f8f7f0] py-16 px-6 md:px-20">
           <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
             {/* Left Content */}
@@ -368,12 +369,13 @@ function Home() {
     </div>
   </div>
 </section> */}
-      <section>
+      <section className=" m-10">
         <StatsSection />
+        <SolarSolutions />
       </section>
-      <SolarSolutions />
+      
 
-<section className="">
+<section className="m-10">
   <div className="GetfontHomeDash max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-stretch relative mt-14">
     
     {/* Left: Images */}
@@ -436,7 +438,7 @@ function Home() {
 <section className=" mt-16">
   
 </section>
-      <section className=" mt-36">
+      <section className=" mt-36 m-10">
       
         <ChartCard />
       </section>
@@ -445,19 +447,18 @@ function Home() {
       </section>
 
       <section></section>
-      <section className="bg-[#f8f7f0]">
+      <section className="bg-[#f8f7f0] mr-10 ml-10">
         <SolarServices />
         <SolarProduct />
+      <BreakTheMyth/>
+      
+       
       </section>
-      <section>
-        <BreakTheMyth/>
-      </section>
-      <section>
-        {/* <Hero/> */}
-      </section>
+     
 
-      <main className="max-w-7xl mx-auto px-6 py-16 bg-[#f8f7f0] GetFontSol">
-        <section className="bg-green-800 rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10">
+      <main className="max-w-7xl mx-auto px-6 py-16 bg-[#f8f7f0] GetFontSol mr-10 ml-10 ">
+      
+        <section className="bg-green-800 rounded-2xl p-10 md:p-16 flex flex-col  md:flex-row items-center justify-between gap-10">
           {/* Text content */}
           <div className="text-white max-w-3xl text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 leading-snug">
@@ -488,28 +489,29 @@ function Home() {
           </div>
         </section>
 
-        <section>
+        <section className="">
           <ChatUI1/>
         </section>
       </main>
 
-      <section className="">
+      <section className="mr-10 ml-10">
        <Ctpage/>
         <SolarCostCalculator />
 
         <FaqSection />
       </section>
 
-      <section className="bg-[#f8f7f0]">
+      <section className="bg-[#f8f7f0] mr-10 ml-10">
         <SolarPortfolio />
       <CustomerCarousel />
-      </section>
+      
 
       <ExactMatchPage />
       <ContactForm />
      
       
       <Footer />
+      </section>
     </div>
   );
 }

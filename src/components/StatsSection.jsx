@@ -60,7 +60,7 @@ function StatCard({ target, label, Icon, delay }) {
 
 function StatsSection() {
   return (
-    <section className="bg-[#f8f7f0] py-20  -mt-24">
+    <section className="bg-[#f8f7f0] py-20  -mt-24 ">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (

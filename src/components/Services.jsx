@@ -11,34 +11,35 @@ const services = [
   {
     icon: <FaTools className="text-4xl text-green-800" />,
     title: "Installation & Commissioning (INC)",
-    description:
-      "Divy Power handles the complete installation and commissioning of solar systems, generators, and other power equipment.",
+    description: "Divy Power handles the complete installation and commissioning of solar systems, generators, and other power equipment.",
+    path: "/Installation_&_Commissioning_(INC)",
   },
   {
     icon: <FaProjectDiagram className="text-4xl text-green-800" />,
     title: "Engineering, Procurement, and Construction (EPC)",
-    description:
-      "They provide turnkey solutions for solar energy projects, including design, procurement of materials, and construction.",
+    description: "They provide turnkey solutions for solar energy projects, including design, procurement of materials, and construction.",
+    path: "/Engineering_Procurement_and_Construction_(EPC)",
   },
   {
     icon: <FaCog className="text-4xl text-green-800" />,
     title: "Operations & Maintenance (O&M)",
-    description:
-      "Provides ongoing maintenance to ensure optimal performance of solar panels, generators, and other systems.",
+    description: "Provides ongoing maintenance to ensure optimal performance of solar panels, generators, and other systems.",
+    path: "/Operations_&_Maintenance_(O&M)",
   },
   {
     icon: <FaRecycle className="text-4xl text-green-800" />,
     title: "Recycling & Sustainability",
-    description:
-      "Our eco-friendly approach ensures components are recycled and managed sustainably to reduce environmental impact.",
+    description: "Our eco-friendly approach ensures components are recycled and managed sustainably to reduce environmental impact.",
+    path: "/Recycling_&_Sustainability",
   },
   {
     icon: <FaSolarPanel className="text-4xl text-green-800" />,
     title: "Customized Solar Solutions",
-    description:
-      "Tailored solar panel setups to meet residential, commercial, and industrial needs for clean energy generation.",
+    description: "Tailored solar panel setups to meet residential, commercial, and industrial needs for clean energy generation.",
+    path: "/Customized_Solar_Solutions",
   },
 ];
+
 
 export default function Services() {
 
@@ -93,9 +94,10 @@ export default function Services() {
             <p className="text-sm text-gray-600 leading-relaxed">
               {service.description}
             </p>
-            <Link to="/ProjectDetails" className="flex items-center text-sm font-medium text-green-800 hover:underline">
-              Read More <span className="ml-1">→</span>
-            </Link>
+            <Link to={service.path} className="flex items-center text-sm font-medium text-green-800 hover:underline">
+  Read More <span className="ml-1">→</span>
+</Link>
+
           </motion.div>
         ))}
       </div>
