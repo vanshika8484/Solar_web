@@ -1,7 +1,7 @@
 // components/SocialIcons.jsx
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-const iconStyle = `w-10 h-10 rounded-md flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-300 animate-float`;
+const iconStyle = `w-10 h-10 rounded-md flex items-center justify-center text-white shadow-md `;
 
 const SocialIcons = () => {
   return (
