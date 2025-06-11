@@ -17,10 +17,16 @@ const InstallationServiceAltLayout = () => {
                                 "Recycling_&_Sustainability",
                                 "Customized_Solar_Solutions",
                             ].map((item, idx) => (
-                                <li key={idx} className="flex justify-between items-center">
-                                    <Link to={`/${item}`}> <span>{item}</span></Link>
-                                    <span className="text-green-600 text-lg">→</span>
+                                <li
+                                    key={idx}
+                                    className="flex justify-between items-center hover:bg-green-600 font-bold transition-colors duration-200 px-4 py-2 rounded"
+                                >
+                                    <Link to={`/${item}`}>
+                                        <span>{item}</span>
+                                    </Link>
+                                    <span className="text-green-600 text-2xl font-extrabold">→</span>
                                 </li>
+
                             ))}
                         </ul>
                     </div>
@@ -30,7 +36,7 @@ const InstallationServiceAltLayout = () => {
                         <h3 className="text-xl font-semibold mb-4">📄 Brochures</h3>
                         <div className="space-y-4">
                             {[1, 2].map((_, index) => (
-                                <div key={index} className="flex justify-between items-center text-sm p-3 bg-gray-50 rounded-md hover:bg-gray-100">
+                                <div key={index} className="flex justify-between items-center text-sm p-3 bg-gray-50 rounded-md hover:bg-gray-400">
                                     <div>
                                         <div className="font-medium">Document New Business</div>
                                         <div className="text-gray-500 text-xs">Business Consultation</div>
@@ -49,7 +55,7 @@ const InstallationServiceAltLayout = () => {
                         <img
                             src="https://divyby.redspace.in/assets/images/updated-images/img%201%20service.png"
                             alt="Installation Work"
-                            className="rounded-xl shadow-md w-full object-cover"
+                            className="rounded-xl shadow-md object-cover w-[500px] max-auto  h-auto"
                         />
                     </div>
 
@@ -63,12 +69,13 @@ const InstallationServiceAltLayout = () => {
                             from day one.
                         </p>
 
-                        <ul className="list-disc pl-5 space-y-2 text-sm mb-6">
+                        <ul className="list-disc pl-5 space-y-2 text-sm mb-6 marker: text-green-900">
                             <li>Creating a Balanced and Nutritious Setup</li>
                             <li>The Importance of System Hydration (Cooling & Maintenance)</li>
                             <li>Connection Between Clean Energy & Mental Peace</li>
                             <li>Getting Reliable Energy Without Interruptions</li>
                         </ul>
+
 
                         <p className="text-sm mb-4">
                             We ensure high performance, safety, and long-term dependability through

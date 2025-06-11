@@ -17,8 +17,13 @@ const FourService = () => {
                                 "Operations_&_Maintenance_(O&M)",
                                 "Customized_Solar_Solutions",
                             ].map((item, idx) => (
-                                <li key={idx} className="flex justify-between items-center">
-                                    <Link to={`/${item}`}> <span>{item}</span></Link>
+                                <li
+                                    key={idx}
+                                    className="flex justify-between items-center hover:bg-green-600 font-bold transition-colors duration-200 px-4 py-2 rounded"
+                                >
+                                    <Link to={`/${item}`}>
+                                        <span>{item}</span>
+                                    </Link>
                                     <span className="text-green-600 text-lg">→</span>
                                 </li>
                             ))}
@@ -49,7 +54,7 @@ const FourService = () => {
                         <img
                             src="https://divyby.redspace.in/assets/images/updated-images/img%204%20service.png"
                             alt="Installation Work"
-                            className="rounded-xl shadow-md w-full object-cover"
+                             className="rounded-xl shadow-md object-cover w-[500px] max-auto  h-auto"
                         />
                     </div>
 
@@ -57,7 +62,7 @@ const FourService = () => {
                     <section className="bg-white p-8 rounded-xl shadow-md">
                         <h1 className="text-3xl font-bold mb-4">Recycling & Sustainability:</h1>
                         <p className="text-sm leading-relaxed mb-6">
-                           We provide adaptable Annual Maintenance Contract (AMC) packages tailored for solar systems, diesel generators, and a range of other equipment, ensuring uninterrupted performance and long-term reliability. Our proactive approach focuses on preserving efficiency while minimizing operational disruptions, allowing you to enjoy a hassle-free power solution.
+                            We provide adaptable Annual Maintenance Contract (AMC) packages tailored for solar systems, diesel generators, and a range of other equipment, ensuring uninterrupted performance and long-term reliability. Our proactive approach focuses on preserving efficiency while minimizing operational disruptions, allowing you to enjoy a hassle-free power solution.
                         </p>
 
                         <ul className="list-disc pl-5 space-y-2 text-sm mb-6">

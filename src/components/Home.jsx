@@ -98,20 +98,21 @@ function Home() {
     <div className="pt-7 relative overflow-hidden -mt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
       <ChatbotToggle />
-
+<div className="bgimg1">
       <motion.section
-        className="bg-white min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
+        className="bgimg bg-white min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.div
+      
+        <motion.div 
           className="max-w-3xl w-full text-center "
           variants={itemVariants}
         >
-          {/* Badge */}
+          {/* Badge */} 
           <motion.span
-            className="inline-block bg-green-100 text-green-700 px-3 py-1  rounded-full text-xs GetfontHome "
+            className="inline-block bg-green-100 text-green-700 px-3 py-1  rounded-full text-xs font-bold "
             variants={itemVariants}
           >
             Trusted by 23K+ users
@@ -132,7 +133,7 @@ function Home() {
 
           {/* Subheadline */}
           <motion.p
-            className="text-green-600 GetfontHomeChat text-xl mb-4"
+            className="text-green-600 GetfontHomeChat1 text-xl mb-4"
             variants={itemVariants}
           >
             Tired of high electricity bills?
@@ -203,7 +204,9 @@ function Home() {
           </motion.div>
          
         </motion.div>
+
       </motion.section>
+        </div>
 
       <Suspense fallback={<div></div>}>
         <Dashboard />
@@ -507,6 +510,7 @@ function Home() {
       
 
       <ExactMatchPage />
+      
       <ContactForm />
      
       

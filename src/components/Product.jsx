@@ -62,7 +62,7 @@ function Product() {
       image: "https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg",
       to: "/LA",
     },
-    
+
   ];
 
   const Genset = [
@@ -80,7 +80,7 @@ function Product() {
       image: "https://divyby.redspace.in/assets/images/updated-images/genset%201.jpg",
       to: "/Diesel/Petrol Genset",
     },
-    
+
   ];
 
   return (
@@ -94,8 +94,8 @@ function Product() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-         
-         Our <span className='text-green-800'>Products</span>
+
+          Our <span className='text-green-800'>Products</span>
         </motion.h1>
       </div>
 
@@ -124,13 +124,57 @@ function Product() {
               <img src={item.image} alt={item.title} className="h-70 w-full object-cover" />
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
+                  {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
                     <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
-                  </div>
+                  </div> */}
                   <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-700">{item.description}</p>
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 flex justify-center">
+                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+                    <Link to={item.to}>Read More</Link>
+                  </button>
+                </div>
+
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Safety Solutions */}
+      {/* Safety Solutions */}
+      <motion.section className="bg-[#000000] rounded-sm py-20 px-6 text-white"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={containerVariants}
+      >
+        <motion.div className="max-w-7xl mx-auto text-center mb-10 "
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl  text-green-800 font-bold">Safety Solutions</h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
+          {saftyData.map((item, index) => (
+            <motion.div
+              key={index}
+              className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
+              variants={cardVariants}
+            >
+              <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
+              <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
+            </div> */}
+                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-700">{item.description}</p>
+                </div>
+                <div className="mt-6 flex justify-center">
                   <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
                     <Link to={item.to}>Read More</Link>
                   </button>
@@ -141,93 +185,50 @@ function Product() {
         </div>
       </motion.section>
 
-      {/* Safety Solutions */}
-    {/* Safety Solutions */}
-<motion.section className="bg-[#000000] rounded-sm py-20 px-6 text-white"
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true }}
-  variants={containerVariants}
->
-  <motion.div className="max-w-7xl mx-auto text-center mb-10 "
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-  >
-    <h2 className="text-4xl  text-green-800 font-bold">Safety Solutions</h2>
-  </motion.div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
-    {saftyData.map((item, index) => (
-      <motion.div
-        key={index}
-        className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
-        variants={cardVariants}
+
+
+
+      <motion.section className="bg-white py-20 px-6 text-white"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={containerVariants}
       >
-        <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
-        <div className="p-6 flex-1 flex flex-col justify-between">
-          <div>
-            <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
+        <motion.div className="max-w-7xl mx-auto text-center mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl text-black font-bold">Genset Solutions</h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
+          {Genset.map((item, index) => (
+            <motion.div
+              key={index}
+              className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
+              variants={cardVariants}
+            >
+              <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
               <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
-            </div>
-            <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-            <p className="text-sm text-gray-700">{item.description}</p>
-          </div>
-          <div className="mt-6">
-            <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-              <Link to={item.to}>Read More</Link>
-            </button>
-          </div>
+            </div> */}
+                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-900">{item.description}</p>
+                </div>
+                <div className="mt-6 flex justify-center">
+                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+                    <Link to={item.to}>Read More</Link>
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </motion.div>
-    ))}
-  </div>
-</motion.section>
-
-
-
-
-
-<motion.section className="bg-white py-20 px-6 text-white"
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true }}
-  variants={containerVariants}
->
-  <motion.div className="max-w-7xl mx-auto text-center mb-10"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-  >
-    <h2 className="text-4xl text-black font-bold">Genset Solutions</h2>
-  </motion.div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
-    {Genset.map((item, index) => (
-      <motion.div
-        key={index}
-        className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
-        variants={cardVariants}
-      >
-        <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
-        <div className="p-6 flex-1 flex flex-col justify-between">
-          <div>
-            <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
-              <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
-            </div>
-            <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-            <p className="text-sm text-gray-900">{item.description}</p>
-          </div>
-          <div className="mt-6">
-            <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-              <Link to={item.to}>Read More</Link>
-            </button>
-          </div>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</motion.section>
+      </motion.section>
 
 
 

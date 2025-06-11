@@ -13,12 +13,17 @@ const ThirdService = () => {
                         <ul className="space-y-3 text-sm">
                             {[
                                 "Installation_&_Commissioning_(INC)",
-                                "Engineering_Procurement_and_Construction_(EPC)",
+                                "Engineering_Procurement",
                                 "Recycling_&_Sustainability",
                                 "Customized_Solar_Solutions",
                             ].map((item, idx) => (
-                                <li key={idx} className="flex justify-between items-center">
-                                    <Link to={`/${item}`}> <span>{item}</span></Link>
+                                <li
+                                    key={idx}
+                                    className="flex justify-between items-center hover:bg-green-600 font-bold transition-colors duration-200 px-4 py-2 rounded"
+                                >
+                                    <Link to={`/${item}`}>
+                                        <span>{item}</span>
+                                    </Link>
                                     <span className="text-green-600 text-lg">→</span>
                                 </li>
                             ))}
@@ -49,7 +54,7 @@ const ThirdService = () => {
                         <img
                             src="https://divyby.redspace.in/assets/images/updated-images/img%203%20service.png"
                             alt="Installation Work"
-                            className="rounded-xl shadow-md w-full object-cover"
+                            className="rounded-xl shadow-md object-cover w-[500px] max-auto  h-auto"
                         />
                     </div>
 
@@ -57,7 +62,7 @@ const ThirdService = () => {
                     <section className="bg-white p-8 rounded-xl shadow-md">
                         <h1 className="text-3xl font-bold mb-4">Operations & Maintenance (O&M):</h1>
                         <p className="text-sm leading-relaxed mb-6">
-                           Divy Power provides comprehensive maintenance and performance monitoring for your solar and power systems. Our O&M services are designed to detect issues early, prevent breakdowns, and ensure that your system runs safely, efficiently, and at peak output, year after year.
+                            Divy Power provides comprehensive maintenance and performance monitoring for your solar and power systems. Our O&M services are designed to detect issues early, prevent breakdowns, and ensure that your system runs safely, efficiently, and at peak output, year after year.
                         </p>
 
                         <ul className="list-disc pl-5 space-y-2 text-sm mb-6">

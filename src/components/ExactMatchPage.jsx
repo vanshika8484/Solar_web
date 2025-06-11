@@ -28,16 +28,14 @@ export default function ExactMatchPage() {
   return (
     <div className="bg-[#f8f7f0] min-h-screen GetFontSol">
       {/* Black horizontal bar */}
-      <div className="w-full h-8 bg-black" />
+      <div className="w-full h-full " />
 
       {/* Animated Logos */}
       <div className="overflow-hidden py-10 sm:py-16 mt-8 sm:mt-14">
         <motion.div
           className="flex space-x-6 sm:space-x-10 px-4 sm:px-8"
           animate={{ x: ["0%", "0%"] }}
-          transition={{
-            
-          }}
+          transition={{}}
         >
           {[...logos, ...logos].map((src, idx) => (
             <img
@@ -50,8 +48,25 @@ export default function ExactMatchPage() {
         </motion.div>
       </div>
 
-    
-     
+      <div className="w-full h-full -mt-32" />
+
+      {/* Animated Logos */}
+      <div className="overflow-hidden py-10 sm:py-16  sm:mt-14">
+        <motion.div
+          className="flex space-x-6 sm:space-x-10 px-4 sm:px-8"
+          animate={{ x: ["0%", "0%"] }}
+          transition={{}}
+        >
+          {[...logos, ...logos].map((src, idx) => (
+            <img
+              key={idx}
+              src={src}
+              alt={`Logo ${idx}`}
+              className="h-8 sm:h-10 w-[100px] sm:w-[120px] object-contain flex-shrink-0"
+            />
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 }

@@ -27,3 +27,20 @@
   font-weight: 600;
   font-style: normal;
 }
+.GetfontHomeChat1{
+   font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.bgimg {
+  position: relative;
+  background-image: url('../Images/Solar4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+

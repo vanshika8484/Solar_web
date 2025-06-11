@@ -17,8 +17,13 @@ const SecondService = () => {
                                 "Recycling_&_Sustainability",
                                 "Customized_Solar_Solutions",
                             ].map((item, idx) => (
-                                <li key={idx} className="flex justify-between items-center">
-                                     <Link to={`/${item}`}> <span>{item}</span></Link>
+                                <li
+                                    key={idx}
+                                    className="flex justify-between items-center hover:bg-green-600 font-bold transition-colors duration-200 px-4 py-2 rounded"
+                                >
+                                    <Link to={`/${item}`}>
+                                        <span>{item}</span>
+                                    </Link>
                                     <span className="text-green-600 text-lg">→</span>
                                 </li>
                             ))}
@@ -49,7 +54,7 @@ const SecondService = () => {
                         <img
                             src="https://divyby.redspace.in/assets/images/updated-images/img%202%20service.png"
                             alt="Installation Work"
-                            className="rounded-xl shadow-md w-full object-cover"
+                            className="rounded-xl shadow-md object-cover w-[500px] max-auto  h-auto"
                         />
                     </div>
 
