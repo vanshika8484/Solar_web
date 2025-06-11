@@ -98,9 +98,9 @@ function Home() {
     <div className="pt-7 relative overflow-hidden -mt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
       <ChatbotToggle />
-<div className="bgimg1">
+<div className="">
       <motion.section
-        className="bgimg bg-white min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
+        className="bgimg11  bg-white min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
