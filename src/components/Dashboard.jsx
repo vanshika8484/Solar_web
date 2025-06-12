@@ -14,7 +14,7 @@ function Dashboard() {
 
   return (
     <motion.div
-      className="GetfontHomeDash ml-16 mr-16 max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-3"
+      className="GetfontHomeDash bg ml-16 mr-16 max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-3"
       variants={dashboardVariants}
       initial="hidden"
       animate="visible"
