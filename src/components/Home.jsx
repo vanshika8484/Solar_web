@@ -38,6 +38,7 @@ import BreakTheMyth from "./BreakTheMyth";
 import Ctpage from "./Ctpage";
 import PageOne from "./PageOne";
 import { Link } from "react-router-dom";
+import Conversation from "./Conversation";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -211,7 +212,8 @@ function Home() {
       <Suspense fallback={<div></div>}>
         <Dashboard />
       </Suspense>
-      <ChatUI />
+      {/* <ChatUI /> */}
+      <Conversation/>
 
       
 
