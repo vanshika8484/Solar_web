@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import ApexCharts from "apexcharts";
 import { motion } from "framer-motion";
-
 const chartOptions = (series) => ({
   series,
   chart: {
@@ -18,8 +17,22 @@ const chartOptions = (series) => ({
     axisBorder: { show: false },
     axisTicks: { show: false },
   },
-  yaxis: { show: false },
-  grid: { show: false },
+  yaxis: {
+    min: 0,
+    max: 100,
+    tickAmount: 10,
+    labels: {
+      style: {
+        colors: "#9CA3AF",
+        fontSize: "12px",
+      },
+    },
+    axisBorder: { show: false },
+    axisTicks: { show: false },
+  },
+  grid: {
+    show: false, // disables all grid lines
+  },
   dataLabels: { enabled: false },
   legend: { show: false },
   markers: {
@@ -32,6 +45,7 @@ const chartOptions = (series) => ({
     x: { show: false },
   },
 });
+
 
 const ChartCard = () => {
   useEffect(() => {

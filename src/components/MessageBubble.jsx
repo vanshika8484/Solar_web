@@ -1,47 +1,44 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Loader2 } from "lucide-react";
 
 const MessageBubble = ({ sender, text, typing }) => {
   const isUser = sender === "user";
 
-  const icon = isUser ? "🧑‍🌾" : "🤖";
-
   return (
     <motion.div
-      className={`flex w-full items-end ${isUser ? "justify-end" : "justify-start"}`}
-      initial={{ opacity: 0, y: 20 }}
+      className={`flex w-full mb-3 ${isUser ? "justify-end" : "justify-start"}`}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.3 }}
     >
-      {!isUser && (
-        <div className="mr-2 text-xl">{icon}</div>
-      )}
-      <div
-        className={`
-          relative px-4 py-2 max-w-[70%] rounded-2xl shadow
-          ${isUser ? "bg-green-800 text-gray-100 rounded-br-none" : "bg-orange-500 text-gray-100 rounded-bl-none"}
-        `}
-      >
-        {typing ? (
-          <span className="flex items-center space-x-2 animate-pulse">
-            <Loader2 className="w-4 h-4 animate-spin" />
-            <span>Typing...</span>
-          </span>
-        ) : (
-          text
-        )}
-        {/* Tail */}
+      <div className="relative max-w-[75%]">
         <div
-          className={`
-            absolute w-3 h-3 bg-inherit 
-            ${isUser ? "right-0 bottom-0 transform translate-x-1/2 rotate-45" : "left-0 bottom-0 transform -translate-x-1/2 rotate-45"}
-          `}
+          className={`px-4 py-3 rounded-2xl text-sm sm:text-base shadow-md whitespace-pre-line 
+            ${isUser
+              ? "bg-green-700 text-white rounded-br-none"
+              : "bg-orange-500 text-white rounded-bl-none"
+            }`}
+        >
+          {typing ? (
+            <div className="flex space-x-1 items-center h-5">
+              <span className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: "0s" }} />
+              <span className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: "0.15s" }} />
+              <span className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: "0.3s" }} />
+            </div>
+          ) : (
+            text
+          )}
+        </div>
+
+        {/* Bubble tail */}
+        <div
+          className={`absolute w-3 h-3 bg-inherit 
+            ${isUser
+              ? "bottom-0 right-0 translate-x-1/2 translate-y-1/2 rotate-45"
+              : "bottom-0 left-0 -translate-x-1/2 translate-y-1/2 rotate-45"
+            }`}
         />
       </div>
-      {isUser && (
-        <div className="ml-2 text-xl">{icon}</div>
-      )}
     </motion.div>
   );
 };
