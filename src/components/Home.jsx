@@ -113,7 +113,7 @@ function Home() {
         >
           {/* Badge */} 
           <motion.span
-            className="inline-block bg-green-100 text-green-700 px-3 py-1  rounded-full text-xs font-bold "
+            className="inline-block bg-green-100 text-green-700 px-3 py-1   rounded-full text-xs font-bold "
             variants={itemVariants}
           >
             Trusted by 23K+ users
@@ -121,20 +121,20 @@ function Home() {
 
           {/* Avatar Group */}
           <motion.div
-            className="flex justify-center items-center space-x-4 "
+            className="flex justify-center items-center space-x-4  "
             variants={itemVariants}
           >
             <img
               src={img1}
               alt="User 1"
-              className=" w-28 h-28 object-cover"
+              className=" w-36 h-36 object-cover -mt-4"
             />
            
           </motion.div>
 
           {/* Subheadline */}
           <motion.p
-            className="text-green-600 GetfontHomeChat1 text-xl mb-4"
+            className="text-green-600 GetfontHomeChat1 text-xl mb-2 -mt-4"
             variants={itemVariants}
           >
             Tired of high electricity bills?
@@ -145,7 +145,7 @@ function Home() {
             className="mb-8 tracking-tight text-center "
             variants={itemVariants}
           >
-            <div className="GetfontHome text-5xl sm:text-6xl lg:text-5xl text-black leading-snug">
+            <div className="GetfontHome text-5xl sm:text-6xl lg:text-6xl text-black leading-snug">
               Go Solar, Save More:
             </div>
             <div className="GetfontHome text-4xl sm:text-5xl lg:text-5xl text-gray-300 mt-5 mb-4 ">

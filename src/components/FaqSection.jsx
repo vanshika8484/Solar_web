@@ -4,11 +4,11 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: " What makes Divy Power different from other solar companies ?",
+    question: " What makes Divy Power different from other solar companies?",
     answer: "We are an authorized partner of Tata Power Solar with over a decade of experience...",
   },
   {
-    question: " Do you provide complete solar project solutions ?",
+    question: "Do you provide complete solar project solutions?",
     answer: "Yes, from conceptual planning and feasibility studies to installation...!",
   },
   {
@@ -16,11 +16,11 @@ const faqs = [
     answer: "Online apply karna hota hai ya approved vendor ke through kaam karwana hota hai. Hum help kar denge usme bhi, tu tension na le.",
   },
   {
-    question: "Can I get a customized solar solution for my home or business ?",
+    question: "Can I get a customized solar solution for my home or business?",
     answer: "Absolutely! We assess your energy needs, location, and budget...",
   },
   {
-    question: " What is included in your AMC (Annual Maintenance Contract)?",
+    question: "What is included in your AMC (Annual Maintenance Contract)?",
     answer: "Our AMC covers regular maintenance, system health checks...",
   },
   {
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "What is the lifespan of a solar panel system?",
-    answer: " With proper maintenance, our high-quality solar panels can last 25 years or more...",
+    answer: "With proper maintenance, our high-quality solar panels can last 25 years or more...",
   },
   {
     question: "Do you provide gensets along with solar systems?",
@@ -54,34 +54,53 @@ const FaqSection = () => {
   };
 
   const handleToggleFaqs = () => {
-    if (visibleCount >= faqs.length) {
-      setVisibleCount(3); // collapse
-    } else {
-      setVisibleCount(prev => Math.min(prev + 3, faqs.length)); // show more
-    }
+    setVisibleCount(visibleCount >= faqs.length ? 3 : visibleCount + 3);
+    setOpenIndex(null); // Close any open FAQ
   };
 
   return (
-    <section className="bg-green-900 py-20 px-4 sm:px-8 lg:px-32 GetfontHomeDash">
-      <div className="max-w-7xl mx-auto text-center">
-        <h4 className="text-2xl font-robotoslab font-bold text-white mb-4">OUR FAQ</h4>
-        <h2 className="text-4xl font-robotoslab font-bold text-white mb-4">
-          Chacha Ki Free Solar Salah
-        </h2>
-        <p className="text-gray-300 text-lg mb-12">
-          Jo bhi confusion ho, Chacha sab samjhayenge!
-        </p>
-      </div>
+    <section className="bg-gradient-to-br from-green-900 to-green-800 py-20 px-4 sm:px-8 lg:px-32 font-sans">
+      {/* Header */}
+      <motion.div
+        className="max-w-6xl mx-auto text-center mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h4 className="text-2xl font-bold text-white mb-3 tracking-wide">OUR FAQ</h4>
+        <h2 className="text-4xl font-bold text-yellow-300 mb-4">Chacha Ki Free Solar Salah</h2>
+        <p className="text-gray-300 text-lg">Jo bhi confusion ho, Chacha sab samjhayenge!</p>
+      </motion.div>
 
-      <div className="space-y-6">
+      {/* FAQ List */}
+      <motion.div
+        className="space-y-6"
+        initial="hidden"
+        animate="visible"
+        variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+      >
         {faqs.slice(0, visibleCount).map((faq, index) => (
-          <div key={index} className="bg-[#dedede] border border-[#d6eaf0] rounded-xl transition hover:shadow-lg">
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 100 }}
+            className="bg-[#f0f4f7] rounded-xl shadow-md hover:shadow-xl transition duration-300"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <button
               className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none"
               onClick={() => toggleAccordion(index)}
             >
-              <span className="text-gray-900 font-medium text-base sm:text-lg">{faq.question}</span>
-              <span className="text-gray-900">
+              <motion.span
+                className="text-gray-800 font-semibold text-base sm:text-lg"
+                whileTap={{ scale: 0.95 }}
+              >
+                {faq.question}
+              </motion.span>
+              <span className="text-gray-800">
                 {openIndex === index ? <Minus size={24} /> : <Plus size={24} />}
               </span>
             </button>
@@ -94,24 +113,32 @@ const FaqSection = () => {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="overflow-hidden px-6 pb-5 text-gray-900 text-sm sm:text-base"
+                  className="overflow-hidden px-6 pb-5 text-gray-800 text-sm sm:text-base"
                 >
                   {faq.answer}
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="text-center mt-10">
-        <button
+      {/* See More / Less */}
+      <motion.div
+        className="text-center mt-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={handleToggleFaqs}
-          className="bg-white text-green-900 font-semibold py-2 px-6 rounded-lg shadow hover:bg-gray-200 transition duration-300"
+          className="bg-yellow-300 text-green-900 font-semibold py-2 px-6 rounded-lg shadow hover:bg-yellow-400 transition duration-300"
         >
           {visibleCount >= faqs.length ? "See Less" : "See More"}
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     </section>
   );
 };

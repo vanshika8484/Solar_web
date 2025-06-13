@@ -36,7 +36,7 @@ const Conversation = () => {
 
   return (
     <div className="min-h-screen  flex flex-col items-center p-6">
-      <h1 className="text-3xl font-bold text-yellow-700 mb-6">Solar Power Chat</h1>
+      <h1 className="text-3xl font-bold text-green-800 mb-6">Solar Power Chat</h1>
       <div className="w-full max-w-xl  rounded-2xl p-4 space-y-3 overflow-y-auto h-[500px]">
         {messages.map((msg, i) => (
           <MessageBubble key={i} sender={msg.sender} text={msg.text} />
