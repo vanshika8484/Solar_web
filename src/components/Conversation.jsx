@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import MessageBubble from "./MessageBubble";
+import solarChachaImg from "../Images/chacha.png";
+import roshniDidiImg from "../Images/didi.png";
 
 const conversationData = [
-  { sender: "user", text: "Hi! Can you tell me what solar power is?" },
-  { sender: "ai", text: "Sure! Solar power is energy from the sun that's converted into electricity." },
-  { sender: "user", text: "Is it good for the environment?" },
-  { sender: "ai", text: "Absolutely. It's clean, renewable, and helps reduce carbon emissions." },
-  { sender: "user", text: "Can I install it at home?" },
-  { sender: "ai", text: "Yes! With solar panels and inverters, you can generate power right at home." },
+  { sender: "roshni", text: "Mera bijli ka bill iss baar bhi ₹3500 aa gaya" },
+  { sender: "chacha", text: "Beti, is desh mein har family agle 5 saal mein ₹3 lakh se zyada sirf bijli mein gawa degi. Aur milta kya hai? Power cut aur mehenga bijli." },
+  { sender: "roshni", text: "Toh phir hum karein kya? Bijli toh chahiye na." },
+  { sender: "chacha", text: "Isiliye toh keh raha hoon. Chhat pe jo suraj chamak raha hai, woh muft hai. Solar laga lo. Apni bijli khud banao. Har din jo paisa jaa raha hai, woh bachao." },
 ];
 
 const Conversation = () => {
@@ -21,28 +21,42 @@ const Conversation = () => {
 
       const typingTimeout = setTimeout(() => {
         setIsTyping(false);
-
-        const showMessageTimeout = setTimeout(() => {
-          setMessages((prev) => [...prev, conversationData[currentIndex]]);
-          setCurrentIndex((prev) => prev + 1);
-        }, 500); // Message appears after typing
-
-        return () => clearTimeout(showMessageTimeout);
-      }, 1000); // Typing duration
+        setMessages((prev) => [...prev, conversationData[currentIndex]]);
+        setCurrentIndex((prev) => prev + 1);
+      }, 1800); // Typing duration before showing the message
 
       return () => clearTimeout(typingTimeout);
     }
   }, [currentIndex]);
 
   return (
-    <div className="min-h-screen  flex flex-col items-center p-6">
-      <h1 className="text-3xl font-bold text-green-800 mb-6">Solar Power Chat</h1>
-      <div className="w-full max-w-xl  rounded-2xl p-4 space-y-3 overflow-y-auto h-[500px]">
+    <div className="min-h-screen bg-white flex flex-col items-center p-6">
+      <h2 className="text-2xl sm:text-3xl font-bold text-green-800 mb-4 text-center">
+        Problem + Solution
+      </h2>
+      <p className="text-gray-600 text-center max-w-xl mb-8">
+        Still Paying for Electricity? That’s Like Paying Rent for the Sun. <br />
+        <strong>Let Solar Chacha & Roshni Didi explain why switch to solar</strong>
+      </p>
+      <div className="w-full max-w-xl bg-gray-100 rounded-2xl p-4 space-y-3 overflow-y-auto h-[480px] shadow-lg">
         {messages.map((msg, i) => (
-          <MessageBubble key={i} sender={msg.sender} text={msg.text} />
+          <MessageBubble
+            key={i}
+            sender={msg.sender}
+            text={msg.text}
+            avatar={msg.sender === "chacha" ? solarChachaImg : roshniDidiImg}
+          />
         ))}
         {isTyping && currentIndex < conversationData.length && (
-          <MessageBubble sender={conversationData[currentIndex].sender} typing={true} />
+          <MessageBubble
+            sender={conversationData[currentIndex].sender}
+            typing={true}
+            avatar={
+              conversationData[currentIndex].sender === "chacha"
+                ? solarChachaImg
+                : roshniDidiImg
+            }
+          />
         )}
       </div>
     </div>

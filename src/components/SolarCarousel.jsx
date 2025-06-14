@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import './Home.css'
 import PageOne from "./PageOne";
 
+
 const solarImages = [
   "https://images.pexels.com/photos/30285845/pexels-photo-30285845.jpeg",
   "https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg",
@@ -31,6 +32,7 @@ const SolarCarousel = () => {
 
   return (
     <div className="w-full  max-w-5xl mx-auto p-6 GetFontSol ">
+    
       <PageOne/>
 
       <div className="relative w-full h-80 md:h-[28rem] md:mt-5 sm:-mt-44  overflow-hidden  ">

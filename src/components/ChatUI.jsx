@@ -1,105 +1,64 @@
-import React from "react";
-import { motion } from "framer-motion";
-import solarg from "../Images/chacha.png";
-import didi from "../Images/didi.png";
-import "./Home.css";
+import React, { useEffect, useState } from "react";
+import MessageBubble2 from "./MessageBubble2";
+import solarChachaImg from "../Images/chacha.png";
+import roshniDidiImg from "../Images/didi.png";
 
-const chatMessages = [
-  {
-    name: "",
-    side: "right",
-    img: didi,
-    text: "Mera bijli ka bill iss baar bhi ₹3500 aa gaya",
-  },
-  {
-    name: "",
-    side: "left",
-    img: solarg,
-    text: "Arey beti... Solar Lagwao and ₹3500 mein poore mahine ka ghar ka kharcha chalao!",
-  },
+const conversationData = [
+  { sender: "chacha", text: "DIVY believe in Solution Based Approach, Doing Common things, Uncommonly Well" },
+  { sender: "roshni", text: "We don’t just install solar. We make it easy, accessible, trustworthy and a little magical." },
+  { sender: "chacha", text: "Har ghar ko roshan karna hai. Yeh sirf kaam nahi, zimmedaari hai." },
+  { sender: "roshni", text: "Aur Divy Solar ne yeh zimmedaari dil se nibhayi." },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.35,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-const chatVariants = (side) => ({
-  hidden: { opacity: 0, x: side === "right" ? 60 : -60, y: 20 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
-});
-
-const avatarVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { type: "spring", stiffness: 200, damping: 15 },
-  },
-};
-
 const ChatUI = () => {
-  return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.4 }}
-      className="GetfontHomeChat min-h-[300px] bg-white flex items-center justify-center px-4 py-6 sm:py-10"
-    >
-      <div className="w-full max-w-4xl flex flex-col gap-y-10">
-        {chatMessages.map((msg, index) => (
-          <motion.div
-            key={index}
-            variants={chatVariants(msg.side)}
-            className={`flex flex-col items-${msg.side === "right" ? "end" : "start"} w-full`}
-          >
-            {/* Chat Bubble */}
-            <motion.div
-              className={`text-[15px] sm:text-[16px] leading-relaxed font-medium px-4 py-3 sm:px-5 sm:py-4 rounded-xl max-w-[90%] sm:max-w-[70%] shadow-md border transition-transform ${
-                msg.side === "right"
-                  ? "bg-orange-500 text-white border-orange-200"
-                  : "bg-[#4aab3d] text-gray-900 border-sky-200"
-              }`}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              {msg.text}
-            </motion.div>
+  const [messages, setMessages] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(false);
 
-            {/* Avatar */}
-            <motion.div
-              variants={avatarVariants}
-              className="text-center mt-3"
-              whileHover={{ y: -4 }}
-            >
-              <img
-                src={msg.img}
-                alt={msg.name}
-                className="w-16 h-16 sm:w-28 sm:h-28 object-contain mx-auto rounded-full"
-              />
-              <div className="text-sm font-semibold text-gray-800 mt-2">
-                {msg.name}
-              </div>
-            </motion.div>
-          </motion.div>
+  useEffect(() => {
+    if (currentIndex < conversationData.length) {
+      setIsTyping(true);
+      const typingTimeout = setTimeout(() => {
+        setIsTyping(false);
+        setMessages((prev) => [...prev, conversationData[currentIndex]]);
+        setCurrentIndex((prev) => prev + 1);
+      }, 1800);
+      return () => clearTimeout(typingTimeout);
+    }
+  }, [currentIndex]);
+
+  return (
+    <div className="min-h-screen bg-white flex flex-col items-center p-6">
+      <h2 className="text-2xl sm:text-3xl font-bold text-green-800 mb-4 text-center">
+        Our Philosophy
+      </h2>
+      <p className="text-gray-600 text-center max-w-xl mb-8">
+        What makes DIVY Power different? It’s not just solar—it’s a responsibility we take to heart. <br />
+        <strong>Let Solar Chacha & Roshni Didi explain.</strong>
+      </p>
+
+      <div className="w-full max-w-3xl bg-gray-100 rounded-2xl p-6 space-y-4">
+        {messages.map((msg, i) => (
+          <MessageBubble2
+            key={i}
+            sender={msg.sender}
+            text={msg.text}
+            avatar={msg.sender === "chacha" ? solarChachaImg : roshniDidiImg}
+          />
         ))}
+        {isTyping && currentIndex < conversationData.length && (
+          <MessageBubble2
+            sender={conversationData[currentIndex].sender}
+            typing={true}
+            avatar={
+              conversationData[currentIndex].sender === "chacha"
+                ? solarChachaImg
+                : roshniDidiImg
+            }
+          />
+        )}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

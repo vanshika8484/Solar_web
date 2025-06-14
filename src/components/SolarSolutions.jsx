@@ -14,8 +14,7 @@ const SolarSolutions = () => {
       >
         <div className="lg:flex-1 max-w-[500px]">
           <img
-            src="https://storage.googleapis.com/a1aa/image/e9519b91-9347-4552-5dab-d16eaf280dab.jpg
-"
+            src="https://storage.googleapis.com/a1aa/image/e9519b91-9347-4552-5dab-d16eaf280dab.jpg"
             alt="Solar energy panel"
             className="w-full h-auto rounded-lg object-cover shadow-lg"
             width="500"
@@ -24,22 +23,30 @@ const SolarSolutions = () => {
           />
         </div>
         <div className="lg:flex-1 flex flex-col justify-start">
-          <h1 className="font-semibold text-[30px] leading-[38px] mb-3 text-[#1f2937]">
-            All Your Energy Needs,<br /> Solved by Us
+          {/* Updated Heading and Text */}
+          <h1 className="font-semibold text-[30px] leading-[38px] mb-2 text-[#1f2937]">
+            We’re not here to just install panels.<br />
+            We’re here to solve your problems.
           </h1>
-          <p className="text-[16px] leading-[24px] text-gray-700 mb-6 max-w-[420px] font-semibold">
-            We offer five essential solar solutions tailored to your needs.
+
+          <h2 className="text-green-700 font-semibold text-lg mb-3">
+            We Don’t Just Sell Solar. We Engineer Smart Power Solutions.
+          </h2>
+
+          <p className="text-[15px] leading-[24px] text-gray-700 mb-6 max-w-[500px] font-medium">
+            At DIVY Power, we believe solar isn’t just a product, it’s your power freedom.
+            <br />
+            From site assessment to installation and support, we handle everything.
           </p>
 
           <div className="flex flex-wrap gap-x-20 gap-y-6 mb-10 max-w-[420px]">
             <div>
               <p className="font-semibold text-[24px] text-green-700">7220KWh</p>
-              <p className="text-[12px] text-gray-600"> systems are total added  
-</p>
+              <p className="text-[12px] text-gray-600">systems are total added</p>
             </div>
             <div>
-              <p className="font-semibold text-[24px] text-green-700">15818000 KG </p>
-              <p className="text-[12px] text-gray-600">Per year <br/> CO2 reduction </p>
+              <p className="font-semibold text-[24px] text-green-700">15818000 KG</p>
+              <p className="text-[12px] text-gray-600">Per year <br /> CO2 reduction</p>
             </div>
           </div>
 
@@ -62,7 +69,7 @@ const SolarSolutions = () => {
                 <span>{solution}</span>
                 <i
                   className={`fas fa-arrow-up-right text-lg ${
-                    index === 0 ? "text-green-700]" : "text-gray-300"
+                    index === 0 ? "text-green-700" : "text-gray-300"
                   }`}
                 ></i>
               </button>
@@ -78,7 +85,6 @@ const SolarSolutions = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        
         {/* Features Grid */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {[

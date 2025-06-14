@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import ApexCharts from "apexcharts";
 import { motion } from "framer-motion";
+
+// Chart configuration function
 const chartOptions = (series) => ({
   series,
   chart: {
@@ -19,8 +21,8 @@ const chartOptions = (series) => ({
   },
   yaxis: {
     min: 0,
-    max: 100,
-    tickAmount: 10,
+    max: 60, // set to 60 only
+    tickAmount: 6, // 0, 10, 20, 30, 40, 50, 60
     labels: {
       style: {
         colors: "#9CA3AF",
@@ -31,7 +33,7 @@ const chartOptions = (series) => ({
     axisTicks: { show: false },
   },
   grid: {
-    show: false, // disables all grid lines
+    show: false,
   },
   dataLabels: { enabled: false },
   legend: { show: false },
@@ -45,7 +47,6 @@ const chartOptions = (series) => ({
     x: { show: false },
   },
 });
-
 
 const ChartCard = () => {
   useEffect(() => {
@@ -103,9 +104,6 @@ const ChartCard = () => {
         <h3 className={`text-xl font-semibold mb-4 ${highlightColor}`}>{title}</h3>
 
         <div className="w-full h-[200px] bg-black rounded-lg overflow-hidden shadow-inner relative">
-          <div className="absolute top-3 right-3 text-green-600 text-sm px-2 py-1 rounded-full">
-           
-          </div>
           <div id={chartId} className="w-full h-full" />
         </div>
 
@@ -128,15 +126,26 @@ const ChartCard = () => {
   );
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="flex flex-col md:flex-row w-full h-auto p-6 md:p-12 bg-[#11592c] gap-6"
-    >
-      <ChartBox title="Without Solar" chartId="chart-without-solar" highlightColor="text-orange-600" />
-      <ChartBox title="With Solar" chartId="chart-with-solar" highlightColor="text-green-600" />
-    </motion.div>
+    <section className="w-full bg-white px-4 py-8">
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-2xl sm:text-3xl font-bold text-center text-green-800 mb-6"
+      >
+        Visual Representation of how solar can reduce Electricity Bills and Save Environment
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col md:flex-row w-full h-auto p-6 md:p-12 bg-[#11592c] gap-6"
+      >
+        <ChartBox title="Without Solar" chartId="chart-without-solar" highlightColor="text-orange-600" />
+        <ChartBox title="With Solar" chartId="chart-with-solar" highlightColor="text-green-600" />
+      </motion.div>
+    </section>
   );
 };
 

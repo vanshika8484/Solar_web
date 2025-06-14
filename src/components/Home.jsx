@@ -99,71 +99,74 @@ function Home() {
     <div className="pt-7 relative overflow-hidden -mt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
       <ChatbotToggle />
-<div className="bgimg">
-      <motion.section
-        className="bgimg min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-      
-        <motion.div 
-          className="max-w-3xl w-full text-center "
-          variants={itemVariants}
+      <div className="bgimg">
+        <motion.section
+          className="bgimg min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          {/* Badge */} 
-          <motion.span
-            className="inline-block bg-green-100 text-green-700 px-3 py-1   rounded-full text-xs font-bold "
-            variants={itemVariants}
-          >
-            Trusted by 23K+ users
-          </motion.span>
 
-          {/* Avatar Group */}
           <motion.div
-            className="flex justify-center items-center space-x-4  "
+            className="max-w-3xl w-full text-center "
             variants={itemVariants}
           >
-            <img
-              src={img1}
-              alt="User 1"
-              className=" w-36 h-36 object-cover -mt-4"
-            />
-           
-          </motion.div>
+            {/* Badge */}
+            <motion.span
+              className="inline-block bg-green-100 text-green-700 px-3 py-1   rounded-full text-xs font-bold "
+              variants={itemVariants}
+            >
+              Trusted by 23K+ users
+            </motion.span>
 
-          {/* Subheadline */}
-          <motion.p
-            className="text-green-600 GetfontHomeChat1 text-xl mb-2 -mt-4"
-            variants={itemVariants}
-          >
-            Tired of high electricity bills?
-          </motion.p>
+            {/* Avatar Group */}
+            <motion.div
+              className="flex justify-center items-center space-x-4  "
+              variants={itemVariants}
+            >
+              <img
+                src={img1}
+                alt="User 1"
+                className=" w-36 h-36 object-cover -mt-4"
+              />
 
-          {/* Main Heading */}
-          <motion.h1
-            className="mb-8 tracking-tight text-center "
-            variants={itemVariants}
-          >
-            <div className="GetfontHome text-5xl sm:text-6xl lg:text-6xl text-black leading-snug">
-              Go Solar, Save More:
-            </div>
-            <div className="GetfontHome text-4xl sm:text-5xl lg:text-5xl text-gray-300 mt-5 mb-4 ">
-              Clean and Renewable <span className=" text-black ">Energy</span>
-            </div>
-            <div className="GetfontHome text-4xl sm:text-5xl lg:text-5xl text-black mt-5">
-              for a Brighter Tomorrow
-            </div>
-          </motion.h1>
+            </motion.div>
 
-          {/* Separator */}
-          {/* <motion.div
+            {/* Subheadline */}
+            <motion.p
+              className="text-green-600 GetfontHomeChat1 text-xl mb-2 -mt-4"
+              variants={itemVariants}
+            >
+              Your Electricity Bill is Burning a Hole in Your Wallet
+
+            </motion.p>
+
+            {/* Main Heading */}
+            <motion.h1
+              className="mb-8 tracking-tight text-center "
+              variants={itemVariants}
+            >
+              <div className="GetfontHome text-5xl sm:text-4xl lg:text-5xl text-black leading-snug">
+                Switch to clean:
+              </div>
+              <div className="GetfontHome  text-4xl sm:text-2xl lg:text-3xl text-gray-300 mt-3 mb-4 ">
+                Cost-saving solar energy before
+                <span className=" text-black "> the next rate hike.</span>
+              </div>
+              <div className="GetfontHome text-4xl -mt-2 sm:text-5xl lg:text-3xl text-black mt-5">
+                Power your home or business with India’s most trusted solar experts.
+
+              </div>
+            </motion.h1>
+
+            {/* Separator */}
+            {/* <motion.div
             className="h-1.5 w-24 mx-auto mb-10 bg-green-800 rounded-full shadow-md"
             variants={itemVariants}
           ></motion.div> */}
 
-          {/* Description */}
-          {/* <motion.p
+            {/* Description */}
+            {/* <motion.p
             className="text-gray-700 text-lg leading-relaxed mb-12 max-w-xl mx-auto"
             variants={itemVariants}
           >
@@ -172,50 +175,51 @@ function Home() {
             your home the smart way.
           </motion.p> */}
 
-          {/* CTA Button */}
-          <motion.div
-            className="flex flex-col items-center space-y-6"
-            variants={itemVariants}
-          >
+            {/* CTA Button */}
             <motion.div
               className="flex flex-col items-center space-y-6"
               variants={itemVariants}
             >
-              <motion.button
-                type="button"
-                className="group bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-7 py-3 text-lg inline-flex items-center gap-2 transition-all duration-300 GetfontHomeChat"
-                whileHover={buttonHover}
-                whileTap={{ scale: 0.95 }}
+              <motion.div
+                className="flex flex-col items-center space-y-6"
+                variants={itemVariants}
               >
-                <Link to="/Contact">
-                  Get Solar Estimate
-                </Link>
-                <motion.span
-                  className="inline-block"
-                  animate={{ x: 0 }}
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.3 }}
+                <motion.button
+                  type="button"
+                  className="group bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-7 py-3 text-lg inline-flex items-center gap-2 transition-all duration-300 GetfontHomeChat"
+                  whileHover={buttonHover}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <FaArrowRight />
-                </motion.span>
-              </motion.button>
+                  <Link to="/Contact">
+                    Get Free Solar Consultation
+
+                  </Link>
+                  <motion.span
+                    className="inline-block"
+                    animate={{ x: 0 }}
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <FaArrowRight />
+                  </motion.span>
+                </motion.button>
+              </motion.div>
+
+              {/* Circular Badge under button */}
             </motion.div>
 
-            {/* Circular Badge under button */}
           </motion.div>
-         
-        </motion.div>
 
-      </motion.section>
-        </div>
+        </motion.section>
+      </div>
 
       <Suspense fallback={<div></div>}>
         <Dashboard />
       </Suspense>
       {/* <ChatUI /> */}
-      <Conversation/>
+      <Conversation />
 
-      
+
 
       <section className=" py-16 px-4 md:px-10  GetfontHomeDash ">
         <section className="bg-[#f8f7f0] py-16 px-6 md:px-20">
@@ -252,28 +256,28 @@ function Home() {
             </motion.div>
 
             {/* Right Image */}
-           <motion.div
-  className="md:w-1/2 w-full"
-  initial={{ x: 80, opacity: 0 }}
-  whileInView={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
->
-  <div className="w-full max-w-md h-40 sm:h-48 rounded-xl overflow-hidden shadow-xl mx-auto">
-    <img
-      src={solar}
-      alt="Solar Panel Field"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</motion.div>
+            <motion.div
+              className="md:w-1/2 w-full"
+              initial={{ x: 80, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-full max-w-md h-40 sm:h-48 rounded-xl overflow-hidden shadow-xl mx-auto">
+                <img
+                  src={solar}
+                  alt="Solar Panel Field"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
 
           </div>
         </section>
         <section>
-        <Solarabout/>
-        
-      </section>
+          <Solarabout />
+
+        </section>
 
         {/* Another Layout___________>>>>>>>>>>>>>>> */}
 
@@ -325,7 +329,7 @@ function Home() {
         {/* </div> */}
         {/* </section> */}
 
-        
+
       </section>
 
       {/* <section className="bg-white">
@@ -378,11 +382,11 @@ function Home() {
         <StatsSection />
         <SolarSolutions />
       </section>
-      
 
-<section className="m-10">
+
+     <section className="m-10">
   <div className="GetfontHomeDash max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-stretch relative mt-14">
-    
+
     {/* Left: Images */}
     <div className="relative flex flex-col justify-center h-full">
       {/* Main Image */}
@@ -419,35 +423,36 @@ function Home() {
         About Us
       </h3>
       <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-4">
-        We Believe Solar Power Should Be{" "}
-        <span className="text-orange-600">Accessible</span>
+        We Don’t Just Sell Solar. <br className="hidden sm:block" /> We Engineer Smart Power Solutions.
       </h2>
       <p className="text-base leading-relaxed mb-4">
-        At DIVY Power Pvt. Ltd., we’ve been lighting lives responsibly for
-        over a decade as an authorized partner of Tata Power Solar. Backed
-        by Tata’s legacy of trust, we deliver cost-effective solar
-        solutions that prioritize energy safety, quality, and long-term
-        performance.
+        At <strong>DIVY Power</strong>, we believe solar isn’t just a product, it’s your power freedom.
+        From site assessment to installation and support, we handle everything.
+      </p>
+      <p className="text-base leading-relaxed mb-4">
+        We’ve been lighting lives responsibly for over a decade as an authorized partner of <strong>Tata Power Solar</strong>.
+        Backed by Tata’s legacy of trust, we deliver cost-effective solar solutions that prioritize energy safety,
+        quality, and long-term performance.
       </p>
       <p className="text-base leading-relaxed">
-        From planning to financing, and installation to maintenance, we
-        offer customized solar services required to meet your project’s
-        needs. With us, you don’t just go solar, you go safe, smart, and
-        sustainable.
+        From planning to financing, and installation to maintenance, we offer customized solar services required to meet your project’s needs.
+        With us, you don’t just go solar — you go <strong>safe, smart, and sustainable</strong>.
       </p>
     </div>
   </div>
 </section>
 
 
-<section className=" mt-16">
-  
-</section>
+
+      <section className=" mt-16">
+
+      </section>
       <section className=" mt-36 m-10">
-      
+
         <ChartCard />
       </section>
       <section className=" h-[800px]">
+      <ChatUI1/>
         <SolarCarousel />
       </section>
 
@@ -455,14 +460,14 @@ function Home() {
       <section className="bg-[#f8f7f0] mr-10 ml-10">
         <SolarServices />
         <SolarProduct />
-      <BreakTheMyth/>
-      
-       
+        <BreakTheMyth />
+
+
       </section>
-     
+
 
       <main className="max-w-7xl mx-auto px-6 py-16 bg-[#f8f7f0] GetFontSol mr-10 ml-10 ">
-      
+
         <section className="bg-green-800 rounded-2xl p-10 md:p-16 flex flex-col  md:flex-row items-center justify-between gap-10">
           {/* Text content */}
           <div className="text-white max-w-3xl text-center md:text-left">
@@ -495,12 +500,12 @@ function Home() {
         </section>
 
         <section className="">
-          <ChatUI1/>
+          <ChatUI />
         </section>
       </main>
 
       <section className="mr-10 ml-10">
-       <Ctpage/>
+        <Ctpage />
         <SolarCostCalculator />
 
         <FaqSection />
@@ -508,15 +513,15 @@ function Home() {
 
       <section className="bg-[#f8f7f0] mr-10 ml-10">
         <SolarPortfolio />
-      <CustomerCarousel />
-      
+        <CustomerCarousel />
 
-      <ExactMatchPage />
-      
-      <ContactForm />
-     
-      
-      <Footer />
+
+        <ExactMatchPage />
+
+        <ContactForm />
+
+
+        <Footer />
       </section>
     </div>
   );

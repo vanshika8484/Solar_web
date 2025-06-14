@@ -3,22 +3,23 @@ import { AiOutlineSwap } from "react-icons/ai";
 import { IoStatsChart } from "react-icons/io5";
 import { BsGlobe } from "react-icons/bs";
 
+
 const features = [
   {
     icon: <AiOutlineSwap className="text-4xl text-green-800" />,
-    title: "Renewable & Sustainable",
+    title: "Free Consultation & Feasibility Check",
     description:
       "Solar energy is derived from the sun, a virtually unlimited source, making it one of the most sustainable energy options.",
   },
   {
     icon: <IoStatsChart className="text-4xl text-green-800" />,
-    title: "Increased Property Value",
+    title: " Govt. Approved Installations with Subsidy Guidance",
     description:
       "Installing solar panels can increase your property's value and attract eco-conscious buyers.",
   },
   {
     icon: <BsGlobe className="text-4xl text-green-800" />,
-    title: "Government Incentives",
+    title: "High-Efficiency Panels with 25 Years Warranty",
     description:
       "Enjoy benefits like tax credits, subsidies, and rebates when switching to solar energy.",
   },
@@ -26,7 +27,9 @@ const features = [
 
 const PageOne = () => {
   return (
+    
     <section className="py-12 px-4 bg-white">
+  
       <div className="max-w-6xl mx-auto">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
