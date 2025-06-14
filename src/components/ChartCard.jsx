@@ -145,6 +145,8 @@ const ChartCard = () => {
         <ChartBox title="Without Solar" chartId="chart-without-solar" highlightColor="text-orange-600" />
         <ChartBox title="With Solar" chartId="chart-with-solar" highlightColor="text-green-600" />
       </motion.div>
+      
+      
     </section>
   );
 };

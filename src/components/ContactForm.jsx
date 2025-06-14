@@ -32,7 +32,7 @@ const ContactForm = () => {
   };
 
   return (
-    <main className="bg-[#f8f7f0] px-4 sm:px-8 md:px-16 py-20 -mt-96">
+    <main className="bg-[#f8f7f0] px-4 sm:px-8 md:px-16 py-20 ">
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat">
 

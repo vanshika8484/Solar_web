@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SolarCostCalculator = () => {
   return (
-    <div className="bg-green-900 min-h-screen GetFontSol">
+    <div className="bg-green-900 min-h-screen GetFontSol ml-12 mr-12">
       {/* Main Heading */}
       <div className="text-center px-4 py-10 md:py-14">
         <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold text-white leading-snug max-w-5xl mx-auto">

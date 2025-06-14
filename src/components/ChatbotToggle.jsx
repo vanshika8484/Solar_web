@@ -27,10 +27,11 @@ const ChatbotToggle = () => {
       setCurrentMsgIndex((prevIndex) =>
         prevIndex + 1 < messages.length ? prevIndex + 1 : 0
       );
-    }, 5000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, []);
+
 
   return (
     <>

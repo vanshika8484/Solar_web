@@ -41,7 +41,7 @@ export default function SolarPortfolio() {
       : portfolioData.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="bg-[#f8f7f0] text-gray-900 min-h-screen px-4 py-10 GetFontDash">
+    <div className="bg-[#f8f7f0] lg:-mt-96 -mt-[600px] text-gray-900 min-h-screen px-4 py-10 GetFontDash">
       
 
       <div className="text-center mb-6">
