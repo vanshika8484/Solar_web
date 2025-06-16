@@ -34,11 +34,13 @@
   font-style: normal;
 }
 
-.bgimg11 {
+.bgimg {
   position: relative;
-  background-image: url('../Images/img4.png');
+  
+  background-image: url('../Images/b.png');
+
   background-size: cover;
-  background-position: center;
+  background-position:bottom;
   background-repeat: no-repeat;
 }
 

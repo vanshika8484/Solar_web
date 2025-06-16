@@ -39,6 +39,7 @@ import Ctpage from "./Ctpage";
 import PageOne from "./PageOne";
 import { Link } from "react-router-dom";
 import Conversation from "./Conversation";
+import Homestart from "./Homestart";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -98,111 +99,11 @@ function Home() {
   return (
     <div className="pt-7 relative overflow-hidden -mt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <ChatbotToggle />
-      <div className="bgimg">
-        <motion.section
-          className="bgimg min-h-screen flex items-center justify-center px-6 lg:px-20 py-24 font-sans "
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div
-            className="max-w-3xl w-full text-center "
-            variants={itemVariants}
-          >
-            {/* Badge */}
-            <motion.span
-              className="inline-block bg-green-100 text-green-700 px-3 py-1   rounded-full text-xs font-bold "
-              variants={itemVariants}
-            >
-              Trusted by 23K+ users
-            </motion.span>
-
-            {/* Avatar Group */}
-            <motion.div
-              className="flex justify-center items-center space-x-4  "
-              variants={itemVariants}
-            >
-              <img
-                src={img1}
-                alt="User 1"
-                className=" w-36 h-36 object-cover -mt-4"
-              />
-            </motion.div>
-
-            {/* Subheadline */}
-            <motion.p
-              className="text-green-600 GetfontHomeChat1 text-xl mb-2 -mt-4"
-              variants={itemVariants}
-            >
-              Your Electricity Bill is Burning a Hole in Your Wallet
-            </motion.p>
-
-            {/* Main Heading */}
-            <motion.h1
-              className="mb-8 tracking-tight text-center "
-              variants={itemVariants}
-            >
-              <div className="GetfontHome text-5xl sm:text-4xl lg:text-5xl text-black leading-snug">
-                Switch to clean:
-              </div>
-              <div className="GetfontHome  text-4xl sm:text-2xl lg:text-3xl text-gray-300 mt-3 mb-4 ">
-                Cost-saving solar energy before
-                <span className=" text-black "> the next rate hike.</span>
-              </div>
-              <div className="GetfontHome text-4xl -mt-2 sm:text-5xl lg:text-3xl text-black mt-5">
-                Power your home or business with India’s most trusted solar
-                experts.
-              </div>
-            </motion.h1>
-
-            {/* Separator */}
-            {/* <motion.div
-            className="h-1.5 w-24 mx-auto mb-10 bg-green-800 rounded-full shadow-md"
-            variants={itemVariants}
-          ></motion.div> */}
-
-            {/* Description */}
-            {/* <motion.p
-            className="text-gray-700 text-lg leading-relaxed mb-12 max-w-xl mx-auto"
-            variants={itemVariants}
-          >
-            Go solar today and enjoy clean, renewable energy for a sustainable
-            tomorrow. Save on bills, reduce your carbon footprint, and power
-            your home the smart way.
-          </motion.p> */}
-
-            {/* CTA Button */}
-            <motion.div
-              className="flex flex-col items-center space-y-6"
-              variants={itemVariants}
-            >
-              <motion.div
-                className="flex flex-col items-center space-y-6"
-                variants={itemVariants}
-              >
-                <motion.button
-                  type="button"
-                  className="group bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-7 py-3 text-lg inline-flex items-center gap-2 transition-all duration-300 GetfontHomeChat"
-                  whileHover={buttonHover}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link to="/Contact">Get Free Solar Consultation</Link>
-                  <motion.span
-                    className="inline-block"
-                    animate={{ x: 0 }}
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <FaArrowRight />
-                  </motion.span>
-                </motion.button>
-              </motion.div>
-
-              {/* Circular Badge under button */}
-            </motion.div>
-          </motion.div>
-        </motion.section>
-      </div>
+     <div>
+     <section>
+      <Homestart/>
+     </section>
+    </div>
 
       <Suspense fallback={<div></div>}>
         <Dashboard />

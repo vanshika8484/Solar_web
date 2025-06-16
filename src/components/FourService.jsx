@@ -1,88 +1,89 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+const services = [
+    {
+        label: "Installation & Commissioning",
+        path: "Installation_&_Commissioning_(INC)",
+        // icon: <FaTools className="text-green-700 text-3xl" />,
+    },
+    {
+        label: "Engineering, Procurement, and Construction",
+        path: "Engineering_Procurement_and_Construction_(EPC)",
+        // icon: <FaTools className="text-green-700 text-3xl" />,
+    },
+    {
+        label: "Operations & Maintenance",
+        path: "Operations_&_Maintenance_(O&M)",
+        // icon: <FaCogs className="text-green-700 text-3xl" />,
+    },
+    {
+        label: "Customized Solar Solutions",
+        path: "Customized_Solar_Solutions",
+        // icon: <FaSun className="text-green-700 text-3xl" />,
+    },
+];
 
 const FourService = () => {
     return (
-        <div className="bg-[#f9f9f4] text-[#222] min-h-screen py-12 px-6 md:px-12 lg:px-24">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                {/* Sidebar */}
-                <aside className="space-y-8 lg:sticky top-12 h-fit">
-                    {/* Services */}
-                    <div className="bg-white rounded-xl shadow-md p-6">
-                        <h3 className="text-xl font-semibold mb-4">🔧 Services</h3>
-                        <ul className="space-y-3 text-sm">
-                            {[
-                                "Installation_&_Commissioning_(INC)",
-                                "Engineering_Procurement",
-                                "Operations_&_Maintenance_(O&M)",
-                                "Customized_Solar_Solutions",
-                            ].map((item, idx) => (
-                                <li
-                                    key={idx}
-                                    className="flex justify-between items-center hover:bg-green-600 font-bold transition-colors duration-200 px-4 py-2 rounded"
-                                >
-                                    <Link to={`/${item}`}>
-                                        <span>{item}</span>
-                                    </Link>
-                                    <span className="text-green-600 text-lg">→</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+        <div className="bg-gray-900 text-white min-h-screen GetfontHome mb-2">
 
-                    {/* Brochure */}
-                    <div className="bg-white rounded-xl shadow-md p-6">
-                        <h3 className="text-xl font-semibold mb-4">📄 Brochures</h3>
-                        <div className="space-y-4">
-                            {[1, 2].map((_, index) => (
-                                <div key={index} className="flex justify-between items-center text-sm p-3 bg-gray-50 rounded-md hover:bg-gray-100">
-                                    <div>
-                                        <div className="font-medium">Document New Business</div>
-                                        <div className="text-gray-500 text-xs">Business Consultation</div>
-                                    </div>
-                                    <span className="text-green-600 text-xl">⬇️</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </aside>
 
-                {/* Main Content */}
-                <main className="lg:col-span-2">
-                    {/* Header Image */}
-                    <div className="w-full mb-8">
-                        <img
-                            src="https://divyby.redspace.in/assets/images/updated-images/img%204%20service.png"
-                            alt="Installation Work"
-                             className="rounded-xl shadow-md object-cover w-[500px] max-auto  h-auto"
-                        />
-                    </div>
+            {/* Services Grid */}
+            <section className="max-w-7xl mx-auto px-6 py-12">
+                <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {services.map((service, idx) => (
+                        <motion.div
+                            key={idx}
+                            whileHover={{ scale: 1.05 }}
+                            className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+                        >
+                            {service.icon}
+                            <h3 className="font-semibold text-lg mt-4 mb-2 text-blue-900">{service.label}</h3>
+                            <Link
+                                to={`/${service.path}`}
+                                className="mt-auto text-blue-900 font-medium hover:underline"
+                            >
+                                Explore →
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
 
-                    {/* Content Block */}
-                    <section className="bg-white p-8 rounded-xl shadow-md">
-                        <h1 className="text-3xl font-bold mb-4">Recycling & Sustainability:</h1>
-                        <p className="text-sm leading-relaxed mb-6">
-                            We provide adaptable Annual Maintenance Contract (AMC) packages tailored for solar systems, diesel generators, and a range of other equipment, ensuring uninterrupted performance and long-term reliability. Our proactive approach focuses on preserving efficiency while minimizing operational disruptions, allowing you to enjoy a hassle-free power solution.
-                        </p>
+            {/* Main Content */}
+            <main className="bg-white text-white rounded-xl shadow-lg max-w-4xl mx-auto p-8 mb-16">
+                <motion.img
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    src="https://divyby.redspace.in/assets/images/updated-images/img%204%20service.png"
+                    alt="Installation"
+                    className="rounded-xl mb-6 w-full max-h-[400px] object-cover"
+                />
 
-                        <ul className="list-disc pl-5 space-y-2 text-sm mb-6">
-                            <li>Concise & Professiona</li>
-                            <li> Customer-Centric & Reassuring</li>
-                            <li>  Technical & Detail-Oriented</li>
-                            <li>Marketing & Engaging</li>
-                        </ul>
+                <h2 className="text-2xl font-bold text-blue-900 mb-4">Recycling & Sustainability</h2>
+                <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+                    We provide adaptable Annual Maintenance Contract(AMC) packages tailored for solar systems, diesel generators, and a range of other equipment, ensuring uninterrupted performance and long - term reliability.Our proactive approach focuses on preserving efficiency while minimizing operational disruptions, allowing you to enjoy a hassle - free power solution.
+                </p>
 
-                        <p className="text-sm mb-4">
-                            With regular check-ups and preventive maintenance, we detect potential issues before they escalate, keeping your systems in peak condition. Our skilled technicians conduct detailed inspections, replacing worn-out components and fine-tuning performance to prevent unnecessary breakdowns.
-                        </p>
+                <ul className="list-disc pl-6 text-sm mb-4 text-gray-700 marker:text-blue-900">
+                    <li>Concise & Professiona</li>
+                    <li> Customer-Centric & Reassuring</li>
+                    <li>  Technical & Detail-Oriented</li>
+                    <li>Marketing & Engaging</li>
+                </ul>
 
-                        <h2 className="font-semibold text-lg mb-2">Our Simple Four Steps</h2>
-                        <p className="text-sm">
-                            In case of unexpected failures, we prioritize swift issue resolution through rapid troubleshooting and expert intervention. From minor adjustments to major repairs, we handle it all with professionalism—so you never have to worry about downtime affecting your operations
-                        </p>
-                    </section>
-                </main>
-            </div>
+                <p className="text-sm text-gray-700 mb-4">
+                    With regular check-ups and preventive maintenance, we detect potential issues before they escalate, keeping your systems in peak condition. Our skilled technicians conduct detailed inspections, replacing worn-out components and fine-tuning performance to prevent unnecessary breakdowns.
+                </p>
+
+                <h3 className="text-lg font-semibold text-blue-900 ">Our Simple Four Steps</h3>
+                <p className="text-sm text-gray-700">
+                    In case of unexpected failures, we prioritize swift issue resolution through rapid troubleshooting and expert intervention. From minor adjustments to major repairs, we handle it all with professionalism—so you never have to worry about downtime affecting your operations
+                </p>
+            </main>
         </div>
     );
 }

@@ -29,46 +29,50 @@ export default function Ctpage() {
     },
   ];
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
-    }),
-  };
+  // Duplicate testimonials to make loop smooth
+  const loopTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <div className="bg-[#f8f7f0] text-white min-h-screen px-4 py-10 GetfontHomeDash -mt-36">
-      {/* Consultation Banner */}
-     
-
-      {/* Testimonials Section */}
-      <div className="max-w-6xl mx-auto  text-center px-4">
-        <p className="text-green-800 font-semibold mb-1 uppercase">Testimonials</p>
-        <h3 className="text-2xl sm:text-3xl text-black font-bold mb-10">
-          What Satisfied Customers Say
+    <div className="bg-[#f8f7f0] text-white min-h-screen px-4 py-10 GetfontHomeDash -mt-36 overflow-hidden">
+      {/* Header */}
+      <div className="max-w-6xl mx-auto text-center px-4 mb-12">
+        <p className="text-green-800 font-semibold mb-2 uppercase tracking-widest">
+          Testimonials
+        </p>
+        <h3 className="text-2xl sm:text-3xl text-black font-bold">
+          What Our Happy Customers Say
         </h3>
-
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              custom={index}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-md text-left"
-            >
-              <p className="text-gray-800 mb-4">"{t.feedback}"</p>
-              <p className="font-semibold text-black">{t.name}</p>
-              <p className="text-green-800 text-sm">{t.role}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
-       <div className="max-w-5xl mx-auto bg-white text-black rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4 mt-10">
+
+      {/* Sliding Testimonials */}
+      <div className="overflow-hidden">
+        <motion.div
+          className="flex gap-6"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            duration: 20,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+          {loopTestimonials.map((t, index) => (
+            <div
+              key={index}
+              className="min-w-[300px] max-w-sm bg-white p-6 rounded-2xl shadow-lg text-black"
+            >
+              <div className="flex mb-2 text-yellow-400 text-lg">
+                {"⭐".repeat(5)}
+              </div>
+              <p className="text-gray-700 italic mb-4">"{t.feedback}"</p>
+              <p className="font-semibold">{t.name}</p>
+              <p className="text-green-800 text-sm">{t.role}</p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="max-w-5xl mx-auto bg-white text-black rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4 mt-16">
         <div className="text-center md:text-left">
           <p className="text-sm text-green-800 font-semibold uppercase">Call us now</p>
           <h2 className="text-xl font-bold">

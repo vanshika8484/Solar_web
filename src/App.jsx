@@ -7,7 +7,7 @@ import Projects from './components/Projects'
 import Product from './components/Product'
 // import Workwithus from './components/Workwithus'
 import Contact from './components/Contact'
-import Navbar2 from './components/Navbar2'
+// import Navbar2 from './components/Navbar2'
 import SolarPanelPage from './components/SolarPanelPage'
 import SolarPumpPage from './components/SolarPumpPage'
 import MicroInverter from './components/MicroInverter'
@@ -25,6 +25,7 @@ import FirstService from './components/FirstService'
 import FourService from './components/FourService'
 import ThirdService from './components/ThirdService'
 import SecondService from './components/SecondService'
+import SolarLanding from './components/SolarLanding'
 
 
 
@@ -34,7 +35,7 @@ function App() {
 
   return (
     <>
-      <Navbar2 />
+      <SolarLanding />
       <Cursor />
 
  
