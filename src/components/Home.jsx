@@ -118,8 +118,8 @@ function Home() {
         <SolarSolutions />
       </section> */}
 
-      <section className=" mt-16"></section>
-      <section className=" mt-36 m-10">
+     
+      <section className=" -mt-11 m-10">
         <ChartCard />
       </section>
       <section>
@@ -203,10 +203,10 @@ function Home() {
         <SolarProduct />
       </section>
 
-      <main className="max-w-7xl mx-auto px-6 py-16 bg-[#f8f7f0] GetFontSol mr-10 ml-10 ">
-        <section className="bg-green-800 rounded-2xl p-10 md:p-16 flex flex-col  md:flex-row items-center justify-between gap-10">
+      <main className="max-w-full mx-auto  bg-[#f8f7f0] GetFontSol mr-10 ml-10 ">
+        <section className="bg-green-800  p-10 md:p-16 flex flex-col  md:flex-row items-center justify-between gap-10">
           {/* Text content */}
-          <div className="text-white max-w-3xl text-center md:text-left">
+          <div className="text-white w-full text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 leading-snug">
               We Are Expensive But We Are Safe
             </h2>

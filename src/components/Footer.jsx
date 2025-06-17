@@ -20,18 +20,9 @@ const routes = [
   { name: "Contact", path: "/contact" },
 ];
 
-const solutions = [
-  "Solar Rooftop",
-  "Solar Water Pump",
-  "EV Charging Stations",
-  "Battery Storage Solutions",
-  "Solar Street Lights",
-  "Hybrid Solar Systems",
-];
-
 const Footer = () => {
   return (
-    <footer className="bg-[#03132B] text-white GetFontSol px-6 py-8 rounded-t-3xl text-sm">
+    <footer className="bg-[#03132B] text-white GetFontSol px-6 py-8  text-sm">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Contact Info */}
         <div>
@@ -75,12 +66,36 @@ const Footer = () => {
         <div>
           <h4 className="text-base font-semibold mb-2 border-b border-blue-300 pb-1">Our Solutions</h4>
           <ul className="text-blue-100 space-y-2 leading-relaxed">
-            {solutions.map((item) => (
-              <li key={item} className="flex items-center gap-2 hover:text-white">
+            <li className="grid grid-cols-2 gap-2">
+              <span className="flex items-center gap-2 hover:text-white">
                 <FaAngleRight className="text-white" />
-                <span>{item}</span>
-              </li>
-            ))}
+                Solar Rooftop
+              </span>
+              <span className="flex items-center gap-2 hover:text-white">
+                <FaAngleRight className="text-white" />
+                Battery Storage 
+              </span>
+            </li>
+            <li className="grid grid-cols-2 gap-2">
+              <span className="flex items-center gap-2 hover:text-white">
+                <FaAngleRight className="text-white" />
+                Solar Street Lights
+              </span>
+              <span className="flex items-center gap-2 hover:text-white">
+                <FaAngleRight className="text-white" />
+                Hybrid Solar Systems
+              </span>
+            </li>
+            <li className="grid grid-cols-2 gap-2">
+              <span className="flex items-center gap-2 hover:text-white">
+                <FaAngleRight className="text-white" />
+                Solar Water Pump
+              </span>
+              <span className="flex items-center gap-2 hover:text-white">
+                <FaAngleRight className="text-white" />
+                EV Charging Stations
+              </span>
+            </li>
           </ul>
 
           <div className="flex gap-2 mt-4">

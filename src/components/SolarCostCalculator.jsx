@@ -7,7 +7,7 @@ const SolarCostCalculator = () => {
     <div className="bg-green-900 min-h-screen GetFontSol ml-12 mr-12">
       {/* Main Heading */}
       <div className="text-center px-4 py-10 md:py-14">
-        <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold text-white leading-snug max-w-5xl mx-auto">
+        <h1 className="text-2xl sm:text-3xl md:text-2xl font-bold text-white leading-snug max-w-5xl mx-auto">
           Solar Chacha - Aaj hi Solar Lagwao, environment bachao <br />
           aur agle 5 saal me 3 lakh se jyada apne electricity bills par bhi Bachao
         </h1>

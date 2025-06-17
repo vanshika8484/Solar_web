@@ -38,7 +38,7 @@ const Conversation = () => {
         Still Paying for Electricity? That’s Like Paying Rent for the Sun. <br />
         <strong>Let Solar Chacha & Roshni Didi explain why switch to solar</strong>
       </p>
-      <div className="w-full max-w-xl bg-gray-100 rounded-2xl p-4 space-y-3 overflow-y-auto h-[480px] shadow-lg">
+      <div className="w-full max-w-xl bg-gray-900 rounded-2xl p-4 space-y-3 overflow-y-auto h-[480px] shadow-lg">
         {messages.map((msg, i) => (
           <MessageBubble
             key={i}

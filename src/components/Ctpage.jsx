@@ -27,6 +27,78 @@ export default function Ctpage() {
       name: "Jack Black",
       role: "Private",
     },
+    {
+      feedback:
+        "I contacted a representative of Solar Energy, Mr. Jacob Johnson, in 2023. He and his team were great and installed the panel group for three weeks. Great product, great service.",
+      name: "Martha Daniels",
+      role: "Enthusiastic",
+    },
+    {
+      feedback:
+        "I highly recommend Solar Energy. Reliable and economical, with fast, professional service. The offers were explained clearly, and I received everything on time.",
+      name: "Aaron Knauff",
+      role: "Private",
+    },
+    {
+      feedback:
+        "I am very satisfied with Solar Energy. The installation was fast, the team professional, and I got a noticeable reduction in my energy bill.",
+      name: "Curtis Brown",
+      role: "Market",
+    },
+    {
+      feedback:
+        "Very satisfied with the performance. From requesting the quote to installation, everything was clear and professional. Highly recommended.",
+      name: "Jack Black",
+      role: "Private",
+    },
+    {
+      feedback:
+        "I contacted a representative of Solar Energy, Mr. Jacob Johnson, in 2023. He and his team were great and installed the panel group for three weeks. Great product, great service.",
+      name: "Martha Daniels",
+      role: "Enthusiastic",
+    },
+    {
+      feedback:
+        "I highly recommend Solar Energy. Reliable and economical, with fast, professional service. The offers were explained clearly, and I received everything on time.",
+      name: "Aaron Knauff",
+      role: "Private",
+    },
+    {
+      feedback:
+        "I am very satisfied with Solar Energy. The installation was fast, the team professional, and I got a noticeable reduction in my energy bill.",
+      name: "Curtis Brown",
+      role: "Market",
+    },
+    {
+      feedback:
+        "Very satisfied with the performance. From requesting the quote to installation, everything was clear and professional. Highly recommended.",
+      name: "Jack Black",
+      role: "Private",
+    },
+    {
+      feedback:
+        "I contacted a representative of Solar Energy, Mr. Jacob Johnson, in 2023. He and his team were great and installed the panel group for three weeks. Great product, great service.",
+      name: "Martha Daniels",
+      role: "Enthusiastic",
+    },
+    {
+      feedback:
+        "I highly recommend Solar Energy. Reliable and economical, with fast, professional service. The offers were explained clearly, and I received everything on time.",
+      name: "Aaron Knauff",
+      role: "Private",
+    },
+    {
+      feedback:
+        "I am very satisfied with Solar Energy. The installation was fast, the team professional, and I got a noticeable reduction in my energy bill.",
+      name: "Curtis Brown",
+      role: "Market",
+    },
+    {
+      feedback:
+        "Very satisfied with the performance. From requesting the quote to installation, everything was clear and professional. Highly recommended.",
+      name: "Jack Black",
+      role: "Private",
+    },
   ];
 
   // Duplicate testimonials to make loop smooth

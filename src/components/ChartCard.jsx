@@ -131,7 +131,7 @@ const ChartCard = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-2xl sm:text-3xl font-bold text-center text-green-800 mb-6"
+        className="text-2xl sm:text-2xl font-bold text-center text-green-800 mb-6"
       >
         Visual Representation of how solar can reduce Electricity Bills and Save Environment
       </motion.h2>

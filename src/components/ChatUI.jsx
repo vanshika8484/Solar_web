@@ -37,7 +37,7 @@ const ChatUI = () => {
         <strong>Let Solar Chacha & Roshni Didi explain.</strong>
       </p>
 
-      <div className="w-full max-w-3xl bg-gray-100 rounded-2xl p-6 space-y-4">
+      <div className="w-full max-w-3xl bg-gray-900 rounded-2xl p-6 space-y-4 ">
         {messages.map((msg, i) => (
           <MessageBubble2
             key={i}

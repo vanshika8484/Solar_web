@@ -58,7 +58,7 @@ const services = [
 
 const SolarServices = () => {
   return (
-    <section className="py-16 px-4 bg-white mt-[10px] lg:mt-[10px]">
+    <section className="py-16 px-4 bg-white mt-[10px] lg:mt-[1px]">
       <div className="max-w-6xl mx-auto text-center ">
         <h2 className="text-green-800 font-bold uppercase text-lg mb-2">Our Services</h2>
         <h1 className="text-4xl font-semibold text-gray-900">Unlock the Potential of the Sun with Solar Energy</h1>

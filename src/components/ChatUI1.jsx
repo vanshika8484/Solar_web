@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import MessageBubble1 from "./MessageBubble1";
 import solarChachaImg from "../Images/chacha.png";
 import roshniDidiImg from "../Images/didi.png";
+import HoverVideoCard from "./HoverVideoCard";
+
 
 const conversationData = [
   { sender: "roshni", text: "Wo sab to theek hai Chacha, par DIVY se hi solar kyu lagwae? Or bhi to companies hai jo solar laga rahi hai." },
@@ -42,7 +44,7 @@ const ChatUI1 = () => {
       </p>
 
       {/* Chat Section - No Scroll, Auto Height, No Shadow */}
-      <div className="w-full max-w-3xl bg-gray-100 rounded-2xl p-6 space-y-4 h-auto">
+      <div className="w-full max-w-3xl bg-gray-900 rounded-2xl p-6 space-y-2 h-auto">
         {messages.map((msg, i) => (
           <MessageBubble1
             key={i}
@@ -65,29 +67,7 @@ const ChatUI1 = () => {
       </div>
 
       {/* Stories of Change Section */}
-      {currentIndex >= conversationData.length && (
-        <div className="mt-12 text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-green-800 mb-4">
-            Stories of Change We’re Proud of
-          </h2>
-          <p className="text-gray-600 mb-6 px-4">
-            Our clients believed in us — and so can you. See how solar changed their lives.
-          </p>
-
-          <div className="w-full aspect-video rounded-xl overflow-hidden bg-gray-200">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Customer Story"
-              className="w-full h-full"
-              allowFullScreen
-            ></iframe>
-          </div>
-
-          <p className="mt-6 text-lg font-semibold text-orange-600">
-            Aap kis cheez ka intezaar kar rahe hai? Aaj hi contact karein DIVY Power ko – Trust bhi, Bachat bhi.
-          </p>
-        </div>
-      )}
+      <HoverVideoCard/>
     </div>
   );
 };
