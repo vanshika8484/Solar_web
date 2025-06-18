@@ -2,9 +2,9 @@ import React from 'react'
 
 import MasonryGallery from './MasonryGallery'
 import RatingWorks from './RatingWorks'
-
 import Footer from './Footer'
 import { motion } from 'framer-motion'
+import ReelsSection from './ReelsSection'
 
 
 function NewWorkWithUs() {
