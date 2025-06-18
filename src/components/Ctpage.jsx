@@ -144,7 +144,7 @@ export default function Ctpage() {
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-5xl mx-auto bg-white text-black rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4 mt-16">
+      <div className="max-w-5xl mx-auto  bg-white text-black rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4 mt-16">
         <div className="text-center md:text-left">
           <p className="text-sm text-green-800 font-semibold uppercase">Call us now</p>
           <h2 className="text-xl font-bold">

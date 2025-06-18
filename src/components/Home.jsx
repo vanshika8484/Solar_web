@@ -33,8 +33,7 @@ import SolarSolutions from "./SolarSolutions";
 import Solarabout from "./Solarabout";
 import Hero from "./Hero";
 import ChatUI1 from "./ChatUI1";
-import ChatUI3 from "./BreakTheMyth";
-import BreakTheMyth from "./BreakTheMyth";
+
 import Ctpage from "./Ctpage";
 import PageOne from "./PageOne";
 import { Link } from "react-router-dom";
@@ -97,13 +96,13 @@ function Home() {
   };
 
   return (
-    <div className="pt-7 relative overflow-hidden -mt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="pt-7 relative overflow-hidden -mt-20  max-w-7xl mx-auto">
       <ChatbotToggle />
-     <div>
-     <section>
-      <Homestart/>
-     </section>
-    </div>
+      <div>
+        <section>
+          <Homestart />
+        </section>
+      </div>
 
       <Suspense fallback={<div></div>}>
         <Dashboard />
@@ -118,7 +117,7 @@ function Home() {
         <SolarSolutions />
       </section> */}
 
-     
+
       <section className=" -mt-11 m-10">
         <ChartCard />
       </section>

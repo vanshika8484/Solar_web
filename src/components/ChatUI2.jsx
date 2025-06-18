@@ -52,7 +52,7 @@ const ChatUI3 = () => {
       viewport={{ once: true, amount: 0.3 }}
       className="bg-[#f8f7f0] py-10 px-4 sm:px-6 lg:px-8 GetfontHomeChat"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl sm:text-3xl GetfontHomeDash text-center text-[#2c3e50] mb-10">
           Chacha Bol Rahe Hain, Solar Lagwao Bhai!
         </h2>

@@ -31,7 +31,7 @@ export default function ExactMatchPage() {
       <div className="w-full h-full " />
 
       {/* Animated Logos */}
-      <div className="overflow-hidden py-10 sm:py-16 mt-8 sm:mt-14">
+      <div className="overflow-hidden max-h-[400px] py-10 sm:py-16 mt-8 sm:mt-14">
         <motion.div
           className="flex space-x-6 sm:space-x-10 px-4 sm:px-8"
           animate={{ x: ["0%", "0%"] }}

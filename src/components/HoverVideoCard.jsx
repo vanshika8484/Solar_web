@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const reelsData = Array.from({ length: 10 }).map((_, i) => ({
   videoSrc: `/videos/solar${(i % 3) + 1}.mp4`,
@@ -10,44 +9,47 @@ const reelsData = Array.from({ length: 10 }).map((_, i) => ({
 
 const HoverVideoCard = () => {
   const containerRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const scroll = (direction) => {
+  const scrollToIndex = (index) => {
     if (containerRef.current) {
-      const scrollAmount = 250; // adjusted for new smaller size
-      containerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
+      const card = containerRef.current.children[index];
+      if (card) {
+        containerRef.current.scrollTo({
+          left: card.offsetLeft - containerRef.current.offsetLeft,
+          behavior: "smooth",
+        });
+        setActiveIndex(index);
+      }
     }
   };
 
-  return (
-    <section className="relative w-full px-4 py-8 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
-      <h2 className="text-center text-2xl font-bold text-black mb-6"> Reels </h2>
+  // Update activeIndex based on scroll position
+  useEffect(() => {
+    const container = containerRef.current;
+    const onScroll = () => {
+      const scrollLeft = container.scrollLeft;
+      const cardWidth = container.children[0].offsetWidth + 16; // includes space-x-4
+      const index = Math.round(scrollLeft / cardWidth);
+      setActiveIndex(index);
+    };
+    container.addEventListener("scroll", onScroll);
+    return () => container.removeEventListener("scroll", onScroll);
+  }, []);
 
-      {/* Navigation Buttons */}
-      <button
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/30 hover:bg-white/50 text-black p-2 rounded-full shadow backdrop-blur-sm"
-        onClick={() => scroll("left")}
-      >
-        <FaChevronLeft className=" text-white" size={18} />
-      </button>
-      <button
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/30 hover:bg-white/50 text-black p-2 rounded-full shadow backdrop-blur-sm"
-        onClick={() => scroll("right")}
-      >
-        <FaChevronRight className=" text-white "  size={18} />
-      </button>
+  return (
+    <section className="relative w-full px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
+      <h2 className="text-center text-3xl font-bold text-black mb-10">Reels</h2>
 
       {/* Reels Container */}
       <div
         ref={containerRef}
-        className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 scrollbar-hide"
+        className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 scrollbar-hide px-2"
       >
         {reelsData.map((reel, index) => (
           <motion.div
             key={index}
-            className="relative snap-start flex-shrink-0 w-[220px] h-[350px] bg-black rounded-xl overflow-hidden shadow-lg"
+            className="relative snap-start flex-shrink-0 w-[220px] h-[350px] bg-black rounded-xl overflow-hidden shadow-md"
             whileHover={{ scale: 1.04 }}
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
@@ -60,12 +62,25 @@ const HoverVideoCard = () => {
               loop
               muted
             />
-            {/* Overlay Info */}
-            <div className="absolute bottom-0 w-full bg-black/30 backdrop-blur-sm text-white px-3 py-2">
+            <div className="absolute bottom-0 w-full bg-black/40 backdrop-blur-sm text-white px-3 py-2">
               <h3 className="text-sm font-semibold">@{reel.username}</h3>
               <p className="text-xs">{reel.caption}</p>
             </div>
           </motion.div>
+        ))}
+      </div>
+
+      {/* Dot Indicators */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {reelsData.map((_, index) => (
+          <button
+            key={index}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === activeIndex ? "bg-green-600 scale-110" : "bg-gray-300"
+            }`}
+            onClick={() => scrollToIndex(index)}
+            aria-label={`Go to reel ${index + 1}`}
+          />
         ))}
       </div>
     </section>

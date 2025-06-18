@@ -30,15 +30,15 @@ const Conversation = () => {
   }, [currentIndex]);
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center p-6">
+    <div className="min-h-screen  bg-white flex flex-col items-center p-6">
       <h2 className="text-2xl sm:text-3xl font-bold text-green-800 mb-4 text-center">
         Problem + Solution
       </h2>
-      <p className="text-gray-600 text-center max-w-xl mb-8">
+      <p className="text-gray-600 text-center max-w-3xl mb-8">
         Still Paying for Electricity? That’s Like Paying Rent for the Sun. <br />
         <strong>Let Solar Chacha & Roshni Didi explain why switch to solar</strong>
       </p>
-      <div className="w-full max-w-xl bg-gray-900 rounded-2xl p-4 space-y-3 overflow-y-auto h-[480px] shadow-lg">
+      <div className="w-full max-w-3xl bg-gray-900 rounded-2xl p-4 space-y-3 overflow-y-auto h-[350px] shadow-lg">
         {messages.map((msg, i) => (
           <MessageBubble
             key={i}
