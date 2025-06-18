@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
 const logos = [
   "https://storage.googleapis.com/a1aa/image/664085b2-b4f5-40c9-b93c-3269fe3795a1.jpg",
   "https://storage.googleapis.com/a1aa/image/a7f1bae9-a591-4ea3-d207-3f5f2a8ab579.jpg",
