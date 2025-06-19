@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MessageBubble from "./MessageBubble";
 import solarChachaImg from "../Images/chacha.png";
 import roshniDidiImg from "../Images/didi.png";
+import './Home.css'
 
 const conversationData = [
   { sender: "roshni", text: "Mera bijli ka bill iss baar bhi ₹3500 aa gaya" },
@@ -38,7 +39,7 @@ const Conversation = () => {
         Still Paying for Electricity? That’s Like Paying Rent for the Sun. <br />
         <strong>Let Solar Chacha & Roshni Didi explain why switch to solar</strong>
       </p>
-      <div className="w-full max-w-3xl bg-gray-900 rounded-2xl p-4 space-y-3 overflow-y-auto h-[350px] shadow-lg">
+      <div className="wp w-full max-w-3xl bg-[#075e44] rounded-2xl p-4 space-y-3 overflow-y-auto h-[350px] shadow-lg">
         {messages.map((msg, i) => (
           <MessageBubble
             key={i}
