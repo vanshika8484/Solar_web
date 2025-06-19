@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MessageBubble2 from "./MessageBubble2";
 import solarChachaImg from "../Images/chacha.png";
 import roshniDidiImg from "../Images/didi.png";
+import './Home.css'
 
 const conversationData = [
   { sender: "chacha", text: "DIVY believe in Solution Based Approach, Doing Common things, Uncommonly Well" },
@@ -37,7 +38,7 @@ const ChatUI = () => {
         <strong>Let Solar Chacha & Roshni Didi explain.</strong>
       </p>
 
-      <div className="w-full max-w-3xl bg-gray-900 rounded-2xl p-6 space-y-4 ">
+      <div className="w-full max-w-3xl wp rounded-2xl p-6 space-y-4 ">
         {messages.map((msg, i) => (
           <MessageBubble2
             key={i}
