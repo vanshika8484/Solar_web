@@ -25,49 +25,54 @@ const CompanySection = () => {
   const activeContent = contentMap[activeTab];
 
   const tabStyle = (tab) =>
-  `cursor-pointer transition px-4 py-2 rounded-md text-sm font-medium ${
-    activeTab === tab
-      ? "bg-green-800 text-white shadow-md"
-      : "bg-transparent text-black hover:text-green-800"
-  }`;
+    `px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+      activeTab === tab
+        ? "bg-green-700 text-white shadow"
+        : "bg-white text-green-800 border border-green-600 hover:bg-green-100"
+    }`;
 
   return (
-    <section className="mt-32 GetFontSol">
-      <h2 className="text-center GetFontSol text-3xl">
-        Our <span className="text-green-800">Company</span>
+    <section className="py-20 bg-white GetfontHomeDash ml-20 mr-16">
+      <h2 className="text-4xl font-bold text-center text-green-800 mb-12">
+        Our <span className="text-black">Company</span>
       </h2>
 
-      <main className="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row gap-10">
-        {/* Left image */}
-        <div className="lg:w-1/2 ml-4">
-        
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-12">
+        {/* Left Image */}
+        <div className="w-full lg:w-1/2">
           <img
             src="https://storage.googleapis.com/a1aa/image/b08acab3-6b8b-47a9-3cc6-092bfccc4ded.jpg"
             alt="Solar panels"
-            className="rounded-xl w-full object-cover"
+            className="rounded-2xl shadow-lg object-cover w-full max-h-[480px]"
           />
         </div>
 
         {/* Right Content */}
-        <div className="lg:w-1/2 flex flex-col">
-          <h1 className="text-4xl GetFontSol text-black leading-tight text-center lg:text-left">
-            Produce Your Own<br />Clean<br />Save The Environment
-          </h1>
+        <div className="w-full lg:w-1/2 flex flex-col">
+          <h3 className="text-3xl font-semibold text-black mb-6 leading-tight text-center lg:text-left">
+            Produce Your Own <br />
+            <span className="text-green-700">Clean Energy</span> <br />
+            Save The Environment
+          </h3>
 
           {/* Tabs */}
-          <div className="flex items-center justify-center lg:justify-start space-x-8 mt-8 mb-6 text-sm font-semibold text-black">
-            <span className={tabStyle("mission")} onClick={() => setActiveTab("mission")}>
-              Our Mission
-            </span>
-            <span className={tabStyle("vision")} onClick={() => setActiveTab("vision")}>
-              Our Vision
-            </span>
-            <span className={tabStyle("why")} onClick={() => setActiveTab("why")}>
-              Why Choose Us?
-            </span>
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
+            {["mission", "vision", "why"].map((key) => (
+              <button
+                key={key}
+                className={tabStyle(key)}
+                onClick={() => setActiveTab(key)}
+              >
+                {key === "mission"
+                  ? "Our Mission"
+                  : key === "vision"
+                  ? "Our Vision"
+                  : "Why Choose Us?"}
+              </button>
+            ))}
           </div>
 
-          {/* Animated Content */}
+          {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -75,24 +80,22 @@ const CompanySection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
+              className="text-gray-700 text-sm sm:text-base leading-relaxed"
             >
-              <p className="text-gray-600 text-sm max-w-xl mb-8">{activeContent.text}</p>
+              <p className="mb-6">{activeContent.text}</p>
 
-              <div className="flex items-center space-x-4 mb-10 max-w-xs">
+              <div className="flex items-center gap-4">
                 <img
                   src={activeContent.img}
-                  alt="Content related visual"
-                  className="rounded-xl object-cover w-30 h-36"
+                  alt="Content visual"
+                  className="rounded-xl w-28 h-36 object-cover shadow"
                 />
-                <p className="text-black text-sm leading-relaxed">{activeContent.note}</p>
+                <p className="text-black text-sm">{activeContent.note}</p>
               </div>
             </motion.div>
           </AnimatePresence>
-
-          {/* Play video button */}
-          
         </div>
-      </main>
+      </div>
     </section>
   );
 };
