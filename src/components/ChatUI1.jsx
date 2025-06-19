@@ -44,7 +44,7 @@ const ChatUI1 = () => {
       </p>
 
       {/* Chat Section - No Scroll, Auto Height, No Shadow */}
-      <div className="w-full max-w-3xl bg-gray-900 rounded-2xl p-6 space-y-2 h-auto">
+      <div className="w-full max-w-3xl wp rounded-2xl p-6 space-y-2 h-auto">
         {messages.map((msg, i) => (
           <MessageBubble1
             key={i}
