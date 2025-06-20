@@ -96,7 +96,7 @@ function Home() {
   };
 
   return (
-    <div className="pt-7 relative overflow-hidden -mt-20  max-w-7xl mx-auto">
+    <div className=" relative overflow-hidden -mt-20  max-w-7xl mx-auto">
       <ChatbotToggle />
       <div>
         <section>
@@ -198,7 +198,7 @@ function Home() {
         <ChatUI1 />
       </section>
       <section className="bg-[#f8f7f0] mr-10 ml-10">
-        <SolarServices />
+        
         <SolarProduct />
       </section>
 
@@ -251,6 +251,11 @@ function Home() {
         <FaqSection />
 
         <ContactForm />
+
+        <section>
+
+
+        </section>
 
         <Footer />
       </section>
