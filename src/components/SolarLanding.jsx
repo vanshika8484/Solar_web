@@ -13,6 +13,7 @@ const navLinks = [
   { name: 'Projects', path: '/projects' },
   { name: 'Products', path: '/products' },
   { name: 'Work With Us', path: '/workwithus' },
+  { name: 'Career', path: '/career' },
   { name: 'Contact', path: '/contact' },
 ];
 
