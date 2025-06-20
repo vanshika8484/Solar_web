@@ -26,6 +26,7 @@ import FourService from './components/FourService'
 import ThirdService from './components/ThirdService'
 import SecondService from './components/SecondService'
 import SolarLanding from './components/SolarLanding'
+import Career from './components/Career'
 
 
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/products" element={<Product />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/workwithus" element={<NewWorkWithUs/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Solar-pannel" element={<SolarPanelPage />} />
