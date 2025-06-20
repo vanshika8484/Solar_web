@@ -4,7 +4,6 @@ import solarChachaImg from "../Images/chacha.png";
 import roshniDidiImg from "../Images/didi.png";
 import HoverVideoCard from "./HoverVideoCard";
 
-
 const conversationData = [
   { sender: "roshni", text: "Wo sab to theek hai Chacha, par DIVY se hi solar kyu lagwae? Or bhi to companies hai jo solar laga rahi hai." },
   { sender: "chacha", text: "Kyuki Beti, You Deserve a Brand that Cares." },
@@ -34,40 +33,45 @@ const ChatUI1 = () => {
   }, [currentIndex]);
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center p-6">
-      <h2 className="text-2xl sm:text-3xl font-bold text-green-800 mb-4 text-center">
+    <div className="min-h-screen bg-white p-6">
+      {/* <h2 className="text-2xl sm:text-3xl font-bold text-green-800 mb-4 text-center">
         Problem + Solution
       </h2>
-      <p className="text-gray-600 text-center max-w-xl mb-8">
+      <p className="text-gray-600 text-center max-w-xl mx-auto mb-8">
         Still Paying for Electricity? That’s Like Paying Rent for the Sun. <br />
         <strong>Let Solar Chacha & Roshni Didi explain why switch to solar</strong>
-      </p>
+      </p> */}
 
-      {/* Chat Section - No Scroll, Auto Height, No Shadow */}
-      <div className="w-full max-w-3xl wp rounded-2xl p-6 space-y-2 h-auto">
-        {messages.map((msg, i) => (
-          <MessageBubble1
-            key={i}
-            sender={msg.sender}
-            text={msg.text}
-            avatar={msg.sender === "chacha" ? solarChachaImg : roshniDidiImg}
-          />
-        ))}
-        {isTyping && currentIndex < conversationData.length && (
-          <MessageBubble1
-            sender={conversationData[currentIndex].sender}
-            typing={true}
-            avatar={
-              conversationData[currentIndex].sender === "chacha"
-                ? solarChachaImg
-                : roshniDidiImg
-            }
-          />
-        )}
+      {/* Main layout with chat and reels side by side */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto w-full">
+        {/* Chat Section */}
+        <div className="bg-gray-100 rounded-2xl wp p-4 space-y-2">
+          {messages.map((msg, i) => (
+            <MessageBubble1
+              key={i}
+              sender={msg.sender}
+              text={msg.text}
+              avatar={msg.sender === "chacha" ? solarChachaImg : roshniDidiImg}
+            />
+          ))}
+          {isTyping && currentIndex < conversationData.length && (
+            <MessageBubble1
+              sender={conversationData[currentIndex].sender}
+              typing={true}
+              avatar={
+                conversationData[currentIndex].sender === "chacha"
+                  ? solarChachaImg
+                  : roshniDidiImg
+              }
+            />
+          )}
+        </div>
+
+        {/* Reel Section */}
+        <div className="bg-gray-50 rounded-2xl p-4">
+          <HoverVideoCard />
+        </div>
       </div>
-
-      {/* Stories of Change Section */}
-      <HoverVideoCard/>
     </div>
   );
 };
