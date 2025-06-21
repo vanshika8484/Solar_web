@@ -192,7 +192,7 @@ function Home() {
                   width="400"
                   height="300"
                 />
-                <h1 className="text-white -mt-16 font-semibold About text-xl sm:text-2xl md:text-3xl leading-tight">
+                <h1 className="text-white  font-semibold About text-xl sm:text-2xl md:text-3xl leading-tight">
                   Still Paying for Electricity?
                   <br />
                   Let Solar Chacha &amp; Roshni Didi explain why switch to solar
@@ -220,7 +220,7 @@ function Home() {
       </section> */}
 
 
-      <section className=" -mt-11 m-10">
+      <section className=" -mt-64  m-10">
         <ChartCard />
       </section>
       <section>
