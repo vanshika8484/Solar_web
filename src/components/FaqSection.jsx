@@ -59,7 +59,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-green-900 to-green-800 py-20 px-4 sm:px-8 lg:px-32 font-sans">
+    <section className="bg-[#E50C0C] py-20 px-4 sm:px-8 lg:px-32 font-sans -mt-16">
       {/* Header */}
       <motion.div
         className="max-w-6xl mx-auto text-center mb-12"
@@ -67,7 +67,7 @@ const FaqSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h4 className="text-2xl font-bold text-white mb-3 tracking-wide">OUR FAQ</h4>
+        <h4 className="text-2xl font-bold text-white -mt-16 tracking-wide">OUR FAQ</h4>
         <h2 className="text-4xl font-bold text-yellow-300 mb-4">Chacha Ki Free Solar Salah</h2>
         <p className="text-gray-300 text-lg">Jo bhi confusion ho, Chacha sab samjhayenge!</p>
       </motion.div>
