@@ -25,28 +25,25 @@ const Footer = () => {
     <div className="bg-[#00122E] text-white GetfontHomeDash">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Call Back Consultation Box */}
-        <div className="mt-10 mb-8 border border-green-800 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div className="text-sm text-green-800 font-semibold leading-tight">
-            CALL US NOW
-            <p className="font-bold text-white text-base leading-tight mt-1">
-              Free Consultation by <br /> Calling
-              <span className="text-green-800"> +91 9310259325</span>
-            </p>
-          </div>
-          <form className="flex gap-3 w-full sm:w-auto">
-            <input
-              type="text"
-              placeholder="Enter your number"
-              className="rounded-md border border-gray-300 px-4 py-2 text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent flex-grow sm:w-64"
-            />
-            <button
-              type="submit"
-              className="bg-green-800 text-white rounded-md px-5 py-2 font-semibold hover:bg-green-700 transition"
-            >
-              Call Me Back
-            </button>
-          </form>
+         <div className="max-w-5xl mx-auto bg-white text-black rounded-2xl shadow-lg p-6 mb-4 flex flex-col md:flex-row items-center justify-between gap-4 mt-16">
+        <div className="text-center md:text-left">
+          <p className="text-sm text-green-800 font-semibold uppercase">Call us now</p>
+          <h2 className="text-xl font-bold">
+            Free Consultation by <br />
+            Calling <span className="text-green-800">+91 9310259325</span>
+          </h2>
         </div>
+        <div className="flex items-center w-full md:w-auto gap-2">
+          <input
+            type="text"
+            placeholder="Enter your number"
+            className="rounded-xl px-4 py-2 border border-gray-300 w-full md:w-64"
+          />
+          <button className="bg-green-800 text-white font-semibold px-4 py-2 rounded-xl hover:bg-green-700 transition">
+            Call Me Back
+          </button>
+        </div>
+      </div>
 
         {/* Main Footer Section */}
         <footer className="pb-10">
