@@ -182,7 +182,7 @@ function Home() {
 
             </div>
           </section>
-          <section className=" mt-[128px]">
+          <section className=" mt-[70px]">
             <div className="bg-[#E50C0C] flex justify-center items-center h-[450px] p-4">
               <div className="max-w-5xl w-full text-center">
                 <img
@@ -227,7 +227,7 @@ function Home() {
         <SolarCostCalculator />
 
       </section>
-      <section className="mt-[128px]">
+      <section className=" mt-24">
         <Dashboard />
       </section>
       <section>
