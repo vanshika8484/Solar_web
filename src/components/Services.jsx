@@ -40,10 +40,7 @@ const services = [
   },
 ];
 
-
 export default function Services() {
-
-
 
 
   const [formData, setFormData] = useState({
@@ -75,11 +72,11 @@ export default function Services() {
         <span className="text-black">Our Green</span> Services
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 cursor-pointer ">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-[#F7F6F0] p-8 rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col items-start space-y-5"
+            className="group  bg-[#F7F6F0] p-8 rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col items-start space-y-5"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -91,7 +88,7 @@ export default function Services() {
             <h3 className="text-lg font-semibold text-gray-900 leading-tight">
               {service.title}
             </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-600 leading-relaxed transition-opacity duration-300 opacity-100 group-hover:opacity-0">
               {service.description}
             </p>
             <Link to={service.path} className="flex items-center text-sm font-medium text-green-800 hover:underline">
@@ -193,3 +190,4 @@ export default function Services() {
     </section>
   );
 }
+//Services page
