@@ -220,7 +220,7 @@ function Home() {
       </section> */}
 
 
-      <section className=" -mt-64  m-10">
+      <section className=" -mt-64 md:-mt-64 lg:-mt-64 xl:-mt-72 2xl:-mt-[500px]  m-10">
         <ChartCard />
       </section>
       <section>
@@ -231,7 +231,7 @@ function Home() {
         <Dashboard />
       </section>
       <section>
-        <div className="text-center  py-6 mb-10xx">
+        <div className="text-center  py-6 mb-10">
           <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
             <Link to="./contact">Contact Us to Get Started</Link>
           </button>
@@ -249,7 +249,7 @@ function Home() {
       <section>
         <ChatUI1 />
       </section>
-      <section className="bg-[#f8f7f0] mr-10 ml-10">
+      <section className="bg-[#f8f7f0] mr-10 ml-10  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
 
         <SolarProduct />
       </section>
@@ -304,13 +304,13 @@ function Home() {
         </section>
       </main>
 
-      <section className="mr-10 ml-10">
+      <section className="mr-10 ml-10 -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[350px]">
         <Ctpage />
 
         <ExactMatchPage />
       </section>
 
-      <section className="bg-[#f8f7f0] mr-10 ml-10">
+      <section className="bg-[#f8f7f0] mr-10 ml-10 -mt-24 md:-mt-36 lg:-mt-36 xl:-mt-56 2xl:-mt-[630px]">
         <SolarPortfolio />
 
         <FaqSection />
@@ -322,7 +322,9 @@ function Home() {
 
         </section>
 
-        <Footer />
+       <section className="-mt-10 md:-mt-20 lg:-mt-20 xl:-mt-24 2xl:-mt-[100px]">
+         <Footer />
+       </section>
       </section>
     </div>
   );
