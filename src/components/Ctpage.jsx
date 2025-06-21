@@ -5,108 +5,64 @@ export default function Ctpage() {
   const testimonials = [
     {
       feedback:
-        "I contacted a representative of Solar Energy, Mr. Jacob Johnson, in 2023. He and his team were great and installed the panel group for three weeks. Great product, great service.",
-      name: "Martha Daniels",
-      role: "Enthusiastic",
+        "Excellent service with homely touch…! All the best..!!",
+      name: "GOOD YEAR",
+      role: "1 MWP",
     },
     {
       feedback:
-        "I highly recommend Solar Energy. Reliable and economical, with fast, professional service. The offers were explained clearly, and I received everything on time.",
-      name: "Aaron Knauff",
-      role: "Private",
+        "Fully Dependable. Well Planned, Secure Execution, Trusted and Commanded. Best Managed - Fully Responsive – we got remitted the Subsidy at early time. Good Partner – Heartily Wishes-",
+      name: "HINDU Education Society – Sonipat – Haryana",
+      role: "800 KWp",
     },
     {
       feedback:
-        "I am very satisfied with Solar Energy. The installation was fast, the team professional, and I got a noticeable reduction in my energy bill.",
-      name: "Curtis Brown",
-      role: "Market",
+        "Out standing service Support with instant decision is Edge of them. They know the Art to satisfied the every concern in corporate.",
+      name: "BKT",
+      role: "1000 KWp",
     },
     {
       feedback:
-        "Very satisfied with the performance. From requesting the quote to installation, everything was clear and professional. Highly recommended.",
-      name: "Jack Black",
-      role: "Private",
+        "Technical patienceful EPC. Supply and installations. This ‘T’&’D’ combination works with full determination even though during hardship.",
+      name: "Skylark Group",
+      role: "1450 KWp - 9 Locations",
     },
     {
       feedback:
-        "I contacted a representative of Solar Energy, Mr. Jacob Johnson, in 2023. He and his team were great and installed the panel group for three weeks. Great product, great service.",
-      name: "Martha Daniels",
-      role: "Enthusiastic",
+        "Recommendable supplier..!! Our Experience for – 450 KW solar - 5 locations.",
+      name: "Bal Bharati Group of Education",
+      role: "450 KW",
     },
     {
       feedback:
-        "I highly recommend Solar Energy. Reliable and economical, with fast, professional service. The offers were explained clearly, and I received everything on time.",
-      name: "Aaron Knauff",
-      role: "Private",
+        "Technical and Supportive installation – we are getting maximum generation in our area.",
+      name: "O.S Cool Home – Kundali – Haryana",
+      role: "100 KWp",
     },
     {
       feedback:
-        "I am very satisfied with Solar Energy. The installation was fast, the team professional, and I got a noticeable reduction in my energy bill.",
-      name: "Curtis Brown",
-      role: "Market",
+        "CARE with advisable capabilities. Humbled! With modern tools and solutions",
+      name: "Orient Syntax – Bhiwadi – Rajasthan",
+      role: "1000 KWp",
     },
     {
       feedback:
-        "Very satisfied with the performance. From requesting the quote to installation, everything was clear and professional. Highly recommended.",
-      name: "Jack Black",
-      role: "Private",
+        "Technical Expert Team, Timely Execution with full synchronised support with Govt’ dept.",
+      name: "Hargobind COLD – Markanda – Haryana",
+      role: "150 KW",
     },
     {
       feedback:
-        "I contacted a representative of Solar Energy, Mr. Jacob Johnson, in 2023. He and his team were great and installed the panel group for three weeks. Great product, great service.",
-      name: "Martha Daniels",
-      role: "Enthusiastic",
-    },
-    {
-      feedback:
-        "I highly recommend Solar Energy. Reliable and economical, with fast, professional service. The offers were explained clearly, and I received everything on time.",
-      name: "Aaron Knauff",
-      role: "Private",
-    },
-    {
-      feedback:
-        "I am very satisfied with Solar Energy. The installation was fast, the team professional, and I got a noticeable reduction in my energy bill.",
-      name: "Curtis Brown",
-      role: "Market",
-    },
-    {
-      feedback:
-        "Very satisfied with the performance. From requesting the quote to installation, everything was clear and professional. Highly recommended.",
-      name: "Jack Black",
-      role: "Private",
-    },
-    {
-      feedback:
-        "I contacted a representative of Solar Energy, Mr. Jacob Johnson, in 2023. He and his team were great and installed the panel group for three weeks. Great product, great service.",
-      name: "Martha Daniels",
-      role: "Enthusiastic",
-    },
-    {
-      feedback:
-        "I highly recommend Solar Energy. Reliable and economical, with fast, professional service. The offers were explained clearly, and I received everything on time.",
-      name: "Aaron Knauff",
-      role: "Private",
-    },
-    {
-      feedback:
-        "I am very satisfied with Solar Energy. The installation was fast, the team professional, and I got a noticeable reduction in my energy bill.",
-      name: "Curtis Brown",
-      role: "Market",
-    },
-    {
-      feedback:
-        "Very satisfied with the performance. From requesting the quote to installation, everything was clear and professional. Highly recommended.",
-      name: "Jack Black",
-      role: "Private",
+        "Very well Connected at every step – with Strong Tech. capabilities. Our MD is very impressed.",
+      name: "R.K. Rayon",
+      role: "100 KWp – Roof Top",
     },
   ];
 
-  // Duplicate testimonials to make loop smooth
   const loopTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <div className="bg-[#f8f7f0] text-white min-h-screen px-4 py-10 GetfontHomeDash -mt-36 overflow-hidden">
-      {/* Header */}
+    <div className="bg-[#f8f7f0] h-[530px] text-white  px-4 py-10 GetfontHomeDash -mt-36 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center px-4 mb-12">
         <p className="text-green-800 font-semibold mb-2 uppercase tracking-widest">
           Testimonials
@@ -116,13 +72,12 @@ export default function Ctpage() {
         </h3>
       </div>
 
-      {/* Sliding Testimonials */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden  h-[400px]">
         <motion.div
           className="flex gap-6"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 20,
+            duration: 30,
             ease: "linear",
             repeat: Infinity,
           }}
@@ -130,7 +85,7 @@ export default function Ctpage() {
           {loopTestimonials.map((t, index) => (
             <div
               key={index}
-              className="min-w-[300px] max-w-sm bg-white p-6 rounded-2xl shadow-lg text-black"
+              className="min-w-[300px]  max-w-sm bg-white p-6 rounded-2xl shadow-lg text-black"
             >
               <div className="flex mb-2 text-yellow-400 text-lg">
                 {"⭐".repeat(5)}
@@ -143,26 +98,7 @@ export default function Ctpage() {
         </motion.div>
       </div>
 
-      {/* CTA Section */}
-      <div className="max-w-5xl mx-auto  bg-white text-black rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4 mt-16">
-        <div className="text-center md:text-left">
-          <p className="text-sm text-green-800 font-semibold uppercase">Call us now</p>
-          <h2 className="text-xl font-bold">
-            Free Consultation by <br />
-            Calling <span className="text-green-800">+91 9310259325</span>
-          </h2>
-        </div>
-        <div className="flex items-center w-full md:w-auto gap-2">
-          <input
-            type="text"
-            placeholder="Enter your number"
-            className="rounded-xl px-4 py-2 border border-gray-300 w-full md:w-64"
-          />
-          <button className="bg-green-800 text-white font-semibold px-4 py-2 rounded-xl hover:bg-green-700 transition">
-            Call Me Back
-          </button>
-        </div>
-      </div>
+     
     </div>
   );
 }
