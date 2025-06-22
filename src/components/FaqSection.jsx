@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: " What makes Divy Power different from other solar companies?",
+    question: "What makes Divy Power different from other solar companies?",
     answer: "We are an authorized partner of Tata Power Solar with over a decade of experience...",
   },
   {
@@ -48,6 +48,8 @@ const faqs = [
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [visibleCount, setVisibleCount] = useState(3);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -59,15 +61,18 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="bg-[#E50C0C] py-20 px-4 sm:px-8 lg:px-32 font-sans -mt-16 md:-mt-20 lg:-mt-16 xl:-mt-16 2xl:-mt-[230px]">
+    <section
+      ref={ref}
+      className="bg-[#E50C0C] py-20 px-4 sm:px-8 lg:px-32 font-sans -mt-16 md:-mt-20 lg:-mt-16 xl:-mt-16 2xl:-mt-[230px]"
+    >
       {/* Header */}
       <motion.div
         className="max-w-6xl mx-auto text-center mb-12"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <h4 className="text-2xl font-bold text-white -mt-16 tracking-wide">OUR FAQ</h4>
+        <h4 className="text-2xl font-bold text-white tracking-wide">OUR FAQ</h4>
         <h2 className="text-4xl font-bold text-yellow-300 mb-4">Chacha Ki Free Solar Salah</h2>
         <p className="text-gray-300 text-lg">Jo bhi confusion ho, Chacha sab samjhayenge!</p>
       </motion.div>
@@ -76,8 +81,8 @@ const FaqSection = () => {
       <motion.div
         className="space-y-6"
         initial="hidden"
-        animate="visible"
-        variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+        animate={isInView ? "visible" : "hidden"}
+        variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
       >
         {faqs.slice(0, visibleCount).map((faq, index) => (
           <motion.div
@@ -127,7 +132,7 @@ const FaqSection = () => {
       <motion.div
         className="text-center mt-10"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={isInView ? { opacity: 1 } : {}}
         transition={{ delay: 0.4 }}
       >
         <motion.button
