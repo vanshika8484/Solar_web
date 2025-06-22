@@ -2,106 +2,142 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+const solutionData = [
+  {
+    title: "Homeowner Solutions",
+    content:
+      "We provide rooftop solar systems with battery backups, designed to reduce your energy bills by up to 80%. Includes site survey, net metering, and government subsidy support.",
+  },
+  {
+    title: "Business Owner Solutions",
+    content:
+      "Custom solar energy systems for SMEs, warehouses, and factories. Save on operating costs and gain energy independence with grid-tied or hybrid solar solutions.",
+  },
+  {
+    title: "Utility-Scale Owner Solutions",
+    content:
+      "Engineering, procurement, and construction (EPC) of large solar farms for utility-scale production. We ensure grid compliance, SCADA, and remote performance monitoring.",
+  },
+  {
+    title: "Smart String ESS Solutions",
+    content:
+      "Smart Energy Storage Systems (ESS) for dynamic power backup, load balancing, and energy arbitrage in commercial and residential environments.",
+  },
+  {
+    title: "Smart Micro-grid Solutions",
+    content:
+      "Advanced micro-grids using solar + ESS + AI-based management for communities and smart cities, enabling decentralized energy distribution and grid independence.",
+  },
+];
+
+const dropdownVariants = {
+  hidden: { opacity: 0, height: 0 },
+  visible: { opacity: 1, height: "auto" },
+  exit: { opacity: 0, height: 0 },
+};
+
 const SolarSolutions = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleDropdown = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+  };
 
   return (
     <main className="bg-[#f8f7f0] text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash -mt-10 ml-4 mr-4 sm:ml-12 sm:mr-12">
-      {/* Top Section */}
+      {/* Top Section Animation */}
       <motion.section
-        className="flex flex-col lg:flex-row items-center lg:items-start gap-4"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        className="flex flex-col lg:flex-row items-center lg:items-start gap-6"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
       >
-        {/* Left Image (Smaller & Aligned) */}
-        <div className="lg:w-1/2 w-full flex justify-center">
+        {/* Left Image */}
+        <motion.div
+          className="lg:w-1/2 w-full flex justify-center"
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <img
             src="https://storage.googleapis.com/a1aa/image/e9519b91-9347-4552-5dab-d16eaf280dab.jpg"
             alt="Solar energy panel"
             className="w-[400px] h-[400px] rounded-lg object-cover shadow-lg"
             loading="lazy"
           />
-        </div>
+        </motion.div>
 
         {/* Right Content */}
-        <div className="lg:w-1/2 w-full flex flex-col justify-start">
+        <motion.div
+          className="lg:w-1/2 w-full flex flex-col justify-start"
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h1 className="font-semibold text-[26px] leading-[36px] mb-2 text-[#1f2937]">
             We’re not here to just install panels.
-            <br />
-            We’re here to solve your problems.
+            <br /> We’re here to solve your problems.
           </h1>
 
           <h2 className="text-green-700 font-semibold text-lg mb-3">
-            We Don’t Just Sell Solar. We Engineer Smart Power Solutions.
+            We Engineer Smart Power Solutions.
           </h2>
 
           <p className="text-[15px] leading-[24px] text-gray-700 mb-6 font-medium">
-            At DIVY Power, we believe solar isn’t just a product, it’s your power freedom.
-            <br />
-            From site assessment to installation and support, we handle everything.
+            At <strong>DIVY Power</strong>, we believe solar isn’t just a product — it’s your power freedom. From site assessment to installation and support, we handle everything.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap gap-x-20 gap-y-6 mb-10">
             <div>
-              <p className="font-semibold text-[24px] text-green-700">7220KWh</p>
-              <p className="text-[12px] text-gray-600">systems are total added</p>
+              <p className="font-semibold text-[24px] text-green-700">7220 KWh</p>
+              <p className="text-[12px] text-gray-600">Systems Installed</p>
             </div>
             <div>
-              <p className="font-semibold text-[24px] text-green-700">15818000 KG</p>
-              <p className="text-[12px] text-gray-600">Per year <br /> CO2 reduction</p>
+              <p className="font-semibold text-[24px] text-green-700">15,818,000 KG</p>
+              <p className="text-[12px] text-gray-600">CO₂ Saved / Year</p>
             </div>
           </div>
 
-          {/* Dropdown Section */}
-          <div className="w-full space-y-2 select-none">
-            <div className="bg-white shadow-md rounded-md border border-gray-200 overflow-hidden">
-              <button
-                onClick={toggleDropdown}
-                className="w-full flex justify-between items-center px-5 py-3 text-[15px] font-semibold text-green-700 hover:bg-[#f0fdf4] transition-all"
-              >
-                <span>Homeowner Solutions</span>
-                <i
-                  className={`fas fa-chevron-${isDropdownOpen ? "up" : "down"} text-sm ${
-                    isDropdownOpen ? "text-green-700" : "text-gray-400"
-                  }`}
-                ></i>
-              </button>
+          {/* Dropdown List */}
+          <div className="w-full space-y-3 select-none">
+            {solutionData.map((item, index) => (
+              <div key={index} className="bg-white rounded-md shadow border border-gray-200 overflow-hidden">
+                <button
+                  onClick={() => toggleDropdown(index)}
+                  className="w-full flex justify-between items-center px-5 py-3 text-[15px] font-semibold text-green-700 hover:bg-[#f0fdf4] transition-all"
+                >
+                  <span>{item.title}</span>
+                  <i
+                    className={`fas fa-chevron-${openIndex === index ? "up" : "down"} text-sm ${
+                      openIndex === index ? "text-green-700" : "text-gray-400"
+                    }`}
+                  ></i>
+                </button>
 
-              {/* Animated Dropdown */}
-              <AnimatePresence>
-                {isDropdownOpen && (
-                  <motion.div
-                    className="px-5 pb-4 pt-2 text-[14px] text-gray-800 space-y-2"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <p className="hover:text-green-700 cursor-pointer">
-                      • Business Owner Solutions
-                    </p>
-                    <p className="hover:text-green-700 cursor-pointer">
-                      • Utility-Scale Owner Solutions
-                    </p>
-                    <p className="hover:text-green-700 cursor-pointer">
-                      • Smart String ESS Solutions
-                    </p>
-                    <p className="hover:text-green-700 cursor-pointer">
-                      • Smart Micro-grid Solutions
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      key="dropdown"
+                      className="px-5 pb-4 pt-2 text-[14px] text-gray-800"
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={dropdownVariants}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {item.content}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </motion.section>
-
-      {/* Bottom Features Section */}
-      
     </main>
   );
 };
