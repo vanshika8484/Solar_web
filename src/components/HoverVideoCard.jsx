@@ -58,7 +58,7 @@ const HoverVideoCard = () => {
 
   return (
     <section className="relative w-full px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
-      <h2 className="text-center text-3xl font-bold text-black mb-10">Reels</h2>
+      <h2 className="text-center text-3xl font-bold text-black mb-10">Why switch to solar</h2>
 
       {/* Reels Container */}
       <div
