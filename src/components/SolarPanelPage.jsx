@@ -54,13 +54,14 @@ export default function SolarPanelPage() {
                             </p>
                         </motion.section>
 
+                        <div className="flex items-start gap-6">
                         <motion.img
                             initial="hidden"
                             animate="visible"
                             variants={fadeUp}
                             src="https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=600"
                             alt="Solar Panels Field"
-                            className="w-full h-auto rounded shadow"
+                            className="w-[380px] h-[270px] rounded shadow"
                         />
 
                         <motion.section
@@ -71,12 +72,14 @@ export default function SolarPanelPage() {
                             <p className=" text-gray-500">
                                 Longevity and durability are at the core of our solar panel offerings. Built to withstand harsh weather conditions and maintain consistent output over years of use, our panels provide a dependable energy solution. Their robust construction and high-quality components ensure minimal degradation, offering long-lasting power generation with minimal maintenance.
                             </p>
-                            <p className="mt-4 text-gray-500">
+                            
+                        </motion.section>
+                        </div>  
+                        <p className="mt-4 text-gray-500">
                                 Beyond financial savings, adopting solar energy contributes significantly to environmental preservation. By reducing carbon emissions and reliance on fossil fuels, our panels help create a cleaner, greener future. Investing in solar is not just a smart choice for energy efficiency—it’s a commitment to sustainability and responsible energy consumption
 
                                 01
                             </p>
-                        </motion.section>
 
                         <motion.div
                             initial="hidden"
