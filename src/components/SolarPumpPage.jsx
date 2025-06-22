@@ -53,14 +53,14 @@ const SolarPumpPage = () => {
                                Designed to support irrigation, water supply systems, and livestock management, Divy Power’s solar pumps provide consistent and effective water distribution. Whether irrigating fields, filling reservoirs, or supplying drinking water to livestock, these pumps ensure uninterrupted performance. Their ability to function in off-grid locations makes them indispensable for farmers and rural enterprises seeking independent water management solutions.
                             </p>
                         </motion.section>
-
+                        <div className="flex items-start gap-6">
                         <motion.img
                             initial="hidden"
                             animate="visible"
                             variants={fadeUp}
                             src="https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=600"
                             alt="Solar Panels Field"
-                            className="w-full h-auto rounded shadow"
+                            className="w-[380px] h-[270px] rounded shadow"
                         />
 
                         <motion.section
@@ -71,11 +71,12 @@ const SolarPumpPage = () => {
                              <p className="  text-gray-500">
                                 One of the standout advantages of these solar pumps is their minimal maintenance requirement. Built with durable components and advanced technology, they demand little upkeep, making them a hassle-free investment. With a long operational lifespan, they remain highly effective even under demanding weather conditions, ensuring a reliable water supply without frequent servicing or costly repairs.
                             </p>
+
+                        </motion.section>
+                            </div>
                             <p className='mt-4 text-gray-500'>
                                 Divy Power has designed its solar pumps to withstand extreme environments, from scorching summers to cold winters. Their rugged construction ensures optimal functionality, even in challenging landscapes, offering users peace of mind and consistent performance. By harnessing clean energy, these pumps contribute to environmental sustainability while delivering practical solutions for agricultural and rural water needs.
                             </p>
-                        </motion.section>
-
                         <motion.div
                             initial="hidden"
                             animate="visible"
