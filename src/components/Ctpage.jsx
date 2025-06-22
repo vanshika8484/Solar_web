@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 export default function Ctpage() {
   const testimonials = [
     {
-      feedback:
-        "Excellent service with homely touch…! All the best..!!",
+      feedback: "Excellent service with homely touch…! All the best..!!",
       name: "GOOD YEAR",
       role: "1 MWP",
     },
@@ -62,7 +61,8 @@ export default function Ctpage() {
   const loopTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <div className="bg-[#f8f7f0] h-[530px] text-white  px-4 py-10 GetfontHomeDash -mt-36 overflow-hidden">
+    <div className="bg-[#f8f7f0] h-[530px] text-white px-4 py-10 GetfontHomeDash -mt-36 overflow-hidden">
+      {/* Header */}
       <div className="max-w-6xl mx-auto text-center px-4 mb-12">
         <p className="text-green-800 font-semibold mb-2 uppercase tracking-widest">
           Testimonials
@@ -72,7 +72,8 @@ export default function Ctpage() {
         </h3>
       </div>
 
-      <div className="overflow-hidden  h-[400px]">
+      {/* Scrolling Cards */}
+      <div className="overflow-hidden h-[400px]">
         <motion.div
           className="flex gap-6"
           animate={{ x: ["0%", "-50%"] }}
@@ -83,22 +84,19 @@ export default function Ctpage() {
           }}
         >
           {loopTestimonials.map((t, index) => (
-            <div
+            <motion.div
               key={index}
-              className="min-w-[300px]  max-w-sm bg-white p-6 rounded-2xl shadow-lg text-black"
+              whileHover={{ scale: 1.05, boxShadow: "0 12px 30px rgba(0, 0, 0, 0.15)" }}
+              className="min-w-[300px] max-w-sm bg-white p-6 rounded-2xl shadow-md text-black transition-all duration-300 cursor-pointer hover:bg-[#e8f5e9]"
             >
-              <div className="flex mb-2 text-yellow-400 text-lg">
-                {"⭐".repeat(5)}
-              </div>
-              <p className="text-gray-700 italic mb-4">"{t.feedback}"</p>
-              <p className="font-semibold">{t.name}</p>
-              <p className="text-green-800 text-sm">{t.role}</p>
-            </div>
+              <div className="flex mb-2 text-yellow-400 text-lg">{"⭐".repeat(5)}</div>
+              <p className="text-gray-700 italic mb-4 line-clamp-4">"{t.feedback}"</p>
+              <p className="font-semibold text-[16px]">{t.name}</p>
+              <p className="text-green-800 text-sm font-medium">{t.role}</p>
+            </motion.div>
           ))}
         </motion.div>
       </div>
-
-     
     </div>
   );
 }
