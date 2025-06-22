@@ -32,9 +32,9 @@ const InstallationServiceAltLayout = () => {
 
 
             {/* Services Grid */}
-            <section className="max-w-7xl mx-auto px-6 py-12">
+            <section className="max-w-7xl mx-auto px-6 pt-12 pb-2">
                 <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2>
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {services.map((service, idx) => (
                         <motion.div
                             key={idx}
@@ -51,7 +51,7 @@ const InstallationServiceAltLayout = () => {
                             </Link>
                         </motion.div>
                     ))}
-                </div>
+                </div> */}
             </section>
 
             {/* Main Content */}
@@ -91,51 +91,31 @@ const InstallationServiceAltLayout = () => {
                     to making sustainable energy easy, accessible, and reliable.
                 </p>
             </main>
+              <section className="max-w-7xl mx-auto px-6 pb-12">
+                {/* <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2> */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {services.map((service, idx) => (
+                        <motion.div
+                            key={idx}
+                            whileHover={{ scale: 1.05 }}
+                            className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+                        >
+                            {service.icon}
+                            <h3 className="font-semibold text-lg mt-4 mb-2 text-blue-900">{service.label}</h3>
+                            <Link
+                                to={`/${service.path}`}
+                                className="mt-auto text-blue-900 font-medium hover:underline"
+                            >
+                                Explore →
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
         </div>
     );
 };
 
 export default InstallationServiceAltLayout;
 
-
-//  const services = [
-//         "Engineering_Procurement_and_Construction_(EPC)",
-//         "Operations_&_Maintenance_(O&M)",
-//         "Recycling_&_Sustainability",
-//         "Customized_Solar_Solutions",
-//     ];
-
-// <motion.section
-//     className="bg-white text-blue-900 rounded-xl p-8 shadow space-y-6"
-//     variants={fadeUp}
-//     custom={2}
-// >
-//     <h1 className="text-3xl font-bold">Installation & Commissioning (INC)</h1>
-
-//     <p className="text-sm leading-relaxed text-gray-700">
-//         At Divy Power, we manage the complete installation and commissioning of solar systems,
-//         generators, and energy equipment. Our team ensures every part is installed and tested correctly,
-//         so your system performs seamlessly from day one.
-//     </p>
-
-//     <ul className="list-disc pl-6 text-sm text-gray-700 space-y-2 marker:text-blue-700">
-//         <li>Creating a Balanced and Nutritious Setup</li>
-//         <li>The Importance of System Hydration (Cooling & Maintenance)</li>
-//         <li>Connection Between Clean Energy & Mental Peace</li>
-//         <li>Getting Reliable Energy Without Interruptions</li>
-//     </ul>
-
-//     <p className="text-sm text-gray-700">
-//         We ensure high performance, safety, and long-term dependability through precise site evaluation,
-//         custom system configuration, rigorous quality checks, and operational guidance.
-//     </p>
-
-//     <div>
-//         <h2 className="text-lg font-semibold text-blue-900 mb-2">Our Simple Four Steps</h2>
-//         <p className="text-sm text-gray-700">
-//             Whether you're installing at home, at a factory, or a corporate site,
-//             Divy Power ensures minimal downtime and maximum efficiency. We’re committed
-//             to making sustainable energy easy, accessible, and reliable.
-//         </p>
-//     </div>
-// </motion.section>
