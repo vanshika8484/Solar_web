@@ -31,26 +31,9 @@ const ThirdService = () => {
 
 
             {/* Services Grid */}
-            <section className="max-w-7xl mx-auto px-6 py-12">
+            <section className="max-w-7xl mx-auto px-6 pt-12">
                 <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2>
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    {services.map((service, idx) => (
-                        <motion.div
-                            key={idx}
-                            whileHover={{ scale: 1.05 }}
-                            className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
-                        >
-                            {service.icon}
-                            <h3 className="font-semibold text-lg mt-4 mb-2 text-blue-900">{service.label}</h3>
-                            <Link
-                                to={`/${service.path}`}
-                                className="mt-auto text-blue-900 font-medium hover:underline"
-                            >
-                                Explore →
-                            </Link>
-                        </motion.div>
-                    ))}
-                </div>
+               
             </section>
 
             {/* Main Content */}
@@ -85,6 +68,27 @@ const ThirdService = () => {
                     From cleaning solar modules to replacing worn components, we ensure your system operates at peak efficiency year-round—with minimal disruptions and consistent energy output.
                 </p>
             </main>
+             <section className="max-w-7xl mx-auto px-6 pb-12">
+                {/* <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2> */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {services.map((service, idx) => (
+                        <motion.div
+                            key={idx}
+                            whileHover={{ scale: 1.05 }}
+                            className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+                        >
+                            {service.icon}
+                            <h3 className="font-semibold text-lg mt-4 mb-2 text-blue-900">{service.label}</h3>
+                            <Link
+                                to={`/${service.path}`}
+                                className="mt-auto text-blue-900 font-medium hover:underline"
+                            >
+                                Explore →
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
         </div>
     );
 }
