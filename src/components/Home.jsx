@@ -42,6 +42,7 @@ import { Link, Links } from "react-router-dom";
 import Conversation from "./Conversation";
 import Homestart from "./Homestart";
 import HomeStart2 from "./HomeStart2";
+import ExpertTeam from "./ExpertTeam";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -105,8 +106,8 @@ function Home() {
         <section>
           <Homestart />
           <HomeStart2 />
-          
-          
+
+
         </section>
       </div>
 
@@ -140,6 +141,9 @@ function Home() {
 
       <section>
         <SolarSolutions />
+      </section>
+      <section>
+         <ContactForm />
       </section>
 
       <section className=" ">
@@ -201,6 +205,9 @@ function Home() {
         <section className="">
           <ChatUI />
         </section>
+        <section>
+          <ExpertTeam/>
+        </section>
       </main>
 
       <section className="mr-10 ml-10 -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[350px]">
@@ -212,16 +219,18 @@ function Home() {
       <section className="bg-[#f8f7f0] mr-10 ml-10 -mt-24 md:-mt-36 lg:-mt-36 xl:-mt-56 2xl:-mt-[630px]">
         <SolarPortfolio />
 
+        <ExpertTeam/>
+
         <FaqSection />
 
-        <ContactForm />
+       
 
         <section>
 
 
         </section>
 
-        <section className="-mt-10 md:-mt-20 lg:-mt-20 xl:-mt-24 2xl:-mt-[100px]">
+        <section className="mt-10 md:mt-20 lg:mt-20 xl:mt-24 2xl:-mt-[10px]">
           <Footer />
         </section>
       </section>
