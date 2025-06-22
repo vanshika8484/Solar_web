@@ -1,90 +1,121 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-const FiveService = () => {
+
+const services = [
+    {
+        label: "Engineering, Procurement, and Construction",
+        path: "Engineering_Procurement_and_Construction_(EPC)",
+        // icon: <FaTools className="text-green-700 text-3xl" />,
+    },
+    {
+        label: "Operations & Maintenance",
+        path: "Operations_&_Maintenance_(O&M)",
+        // icon: <FaCogs className="text-green-700 text-3xl" />,
+    },
+    {
+        label: "Recycling & Sustainability",
+        path: "Recycling_&_Sustainability",
+        // icon: <FaRecycle className="text-green-700 text-3xl" />,
+    },
+    {
+        label: "Customized Solar Solutions",
+        path: "Customized_Solar_Solutions",
+        // icon: <FaSun className="text-green-700 text-3xl" />,
+    },
+];
+
+const InstallationServiceAltLayout = () => {
     return (
-        <div className="bg-[#f9f9f4] text-[#222] min-h-screen py-12 px-6 md:px-12 lg:px-24">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                {/* Sidebar */}
-                <aside className="space-y-8 lg:sticky top-12 h-fit">
-                    {/* Services */}
-                    <div className="bg-white rounded-xl shadow-md p-6">
-                        <h3 className="text-xl font-semibold mb-4">🔧 Services</h3>
-                        <ul className="space-y-3 text-sm">
-                            {[
-                                "Installation_&_Commissioning_(INC)",
-                                "Engineering_Procurement",
-                                "Operations_&_Maintenance_(O&M)",
-                                "Recycling_&_Sustainability",
-                            ].map((item, idx) => (
-                                <li
-                                    key={idx}
-                                    className="flex justify-between items-center hover:bg-green-600 font-bold transition-colors duration-200 px-4 py-2 rounded"
-                                >
-                                    <Link to={`/${item}`}>
-                                        <span>{item}</span>
-                                    </Link>
-                                    <span className="text-green-600 text-lg">→</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+        <div className="bg-gray-900 text-white min-h-screen GetfontHome mb-2">
 
-                    {/* Brochure */}
-                    <div className="bg-white rounded-xl shadow-md p-6">
-                        <h3 className="text-xl font-semibold mb-4">📄 Brochures</h3>
-                        <div className="space-y-4">
-                            {[1, 2].map((_, index) => (
-                                <div key={index} className="flex justify-between items-center text-sm p-3 bg-gray-50 rounded-md hover:bg-gray-100">
-                                    <div>
-                                        <div className="font-medium">Document New Business</div>
-                                        <div className="text-gray-500 text-xs">Business Consultation</div>
-                                    </div>
-                                    <span className="text-green-600 text-xl">⬇️</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </aside>
 
-                {/* Main Content */}
-                <main className="lg:col-span-2">
-                    {/* Header Image */}
-                    <div className="w-full mb-8">
-                        <img
-                            src="https://divyby.redspace.in/assets/images/updated-images/img%205%20service.png"
-                            alt="Installation Work"
-                            className="rounded-xl shadow-md object-cover w-[500px] max-auto  h-auto"
-                        />
-                    </div>
+            {/* Services Grid */}
+            <section className="max-w-7xl mx-auto px-6 pt-12 pb-2">
+                <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2>
+                {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {services.map((service, idx) => (
+                        <motion.div
+                            key={idx}
+                            whileHover={{ scale: 1.05 }}
+                            className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+                        >
+                            {service.icon}
+                            <h3 className="font-semibold text-lg mt-4 mb-2 text-blue-900">{service.label}</h3>
+                            <Link
+                                to={`/${service.path}`}
+                                className="mt-auto text-blue-900 font-medium hover:underline"
+                            >
+                                Explore →
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div> */}
+            </section>
 
-                    {/* Content Block */}
-                    <section className="bg-white p-8 rounded-xl shadow-md">
-                        <h1 className="text-3xl font-bold mb-4">Customized Solar Solutions:</h1>
-                        <p className="text-sm leading-relaxed mb-6">
-                            Just like the human body requires routine check-ups to stay healthy, your energy system needs regular assessments to maintain efficiency and reliability. Our detailed evaluations cover critical components such as solar panels, wiring, inverters, batteries, and generators, ensuring every part functions optimally. By proactively identifying wear and inefficiencies, we help you avoid costly breakdowns and unexpected power failures.
-                        </p>
+            {/* Main Content */}
+            <main className="bg-white text-white rounded-xl shadow-lg max-w-4xl mx-auto p-8 mb-16">
+                <motion.img
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    src="https://divyby.redspace.in/assets/images/updated-images/img%201%20service.png"
+                    alt="Installation"
+                    className="rounded-xl mb-6 w-full max-h-[400px] object-cover"
+                />
 
-                        <ul className="list-disc pl-5 space-y-2 text-sm mb-6">
-                            <li>Concise & Professional</li>
-                            <li> Customer-Centric & Reassuring</li>
-                            <li>  Technical & Detail-Oriented</li>
-                            <li>Marketing & Engaging</li>
-                        </ul>
+                <h2 className="text-2xl font-bold text-blue-900 mb-4">Installation & Commissioning (INC)</h2>
+                <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+                    At Divy Power, we manage the complete installation and commissioning of solar systems,
+                    generators, and energy equipment. Our team ensures every part is installed and tested correctly,
+                    so your system performs seamlessly from day one.
+                </p>
 
-                        <p className="text-sm mb-4">
-                            Through comprehensive diagnostics, we detect early signs of deterioration and potential risks before they escalate into major issues. Our expert technicians thoroughly inspect connections, performance metrics, and structural integrity, providing tailored solutions to optimize your system’s lifespan and output.
-                        </p>
+                <ul className="list-disc pl-6 text-sm mb-4 text-gray-700 marker:text-blue-900">
+                    <li>Creating a Balanced and Nutritious Setup</li>
+                    <li>The Importance of System Hydration (Cooling & Maintenance)</li>
+                    <li>Connection Between Clean Energy & Mental Peace</li>
+                    <li>Getting Reliable Energy Without Interruptions</li>
+                </ul>
 
-                        <h2 className="font-semibold text-lg mb-2">Our Simple Four Steps</h2>
-                        <p className="text-sm">
-                            Think of it as a full-body scan for your power setup—giving you peace of mind and ensuring continuous, smooth operation. With our proactive approach, you’ll always have a healthy and efficient energy system, ready to support your power needs without disruption.
-                        </p>
-                    </section>
-                </main>
-            </div>
+                <p className="text-sm text-gray-700 mb-4">
+                    We ensure high performance, safety, and long-term dependability through precise site evaluation,
+                    custom system configuration, rigorous quality checks, and operational guidance.
+                </p>
+
+                <h3 className="text-lg font-semibold text-blue-900 ">Our Simple Four Steps</h3>
+                <p className="text-sm text-gray-700">
+                    Whether you're installing at home, at a factory, or a corporate site,
+                    Divy Power ensures minimal downtime and maximum efficiency. We’re committed
+                    to making sustainable energy easy, accessible, and reliable.
+                </p>
+            </main>
+              <section className="max-w-7xl mx-auto px-6 pb-12">
+                {/* <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2> */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {services.map((service, idx) => (
+                        <motion.div
+                            key={idx}
+                            whileHover={{ scale: 1.05 }}
+                            className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+                        >
+                            {service.icon}
+                            <h3 className="font-semibold text-lg mt-4 mb-2 text-blue-900">{service.label}</h3>
+                            <Link
+                                to={`/${service.path}`}
+                                className="mt-auto text-blue-900 font-medium hover:underline"
+                            >
+                                Explore →
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
         </div>
     );
-}
+};
 
-export default FiveService
+export default InstallationServiceAltLayout;
+
