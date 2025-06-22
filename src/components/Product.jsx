@@ -84,7 +84,9 @@ function Product() {
   ];
 
   return (
-    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol  m-16 ">
+    <div className='flex items-center justify-center min-h-screen'>
+      <div>
+    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol  m-16 max-w-7xl">
       <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
 
       <div className="relative z-10">
@@ -235,6 +237,8 @@ function Product() {
 
       <Footer />
     </section>
+    </div>
+    </div>
   );
 }
 
