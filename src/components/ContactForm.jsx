@@ -44,7 +44,7 @@ const ContactForm = () => {
   };
 
   return (
-    <main className="bg-[#f8f7f0] px-4 sm:px-8 md:px-16 py-20">
+    <main className="bg-[#f8f7f0] px-4 sm:px-8 md:px-16 py-20 -mt-20">
       <ToastContainer position="top-right" autoClose={3000} />
 
       {/* ✅ Main Heading */}
