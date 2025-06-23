@@ -48,7 +48,7 @@ const ContactForm = () => {
       <ToastContainer position="top-right" autoClose={3000} />
 
       {/* ✅ Main Heading */}
-      <div className="text-center max-w-4xl mx-auto mb-12">
+      <div className="text-center max-w-4xl mx-auto mb-12 -mt-[60px]">
         <h2 className="text-2xl md:text-3xl font-bold text-[#E50C0C] leading-snug About1">
           Bijli ka bill bhejiye and Solar Chacha se jaaniye<br />
           apne rooftop ke liye Best Solar Solution
