@@ -6,6 +6,7 @@ import { Sun } from "lucide-react";
 import solar from "../Images/solar.jpg";
 import solarch from "../Images/chacha.png";
 import img1 from "../Images/Img1.png";
+import DivyRedesign from "../Images/DivyRedesign.png";
 
 import "./Home.css";
 
@@ -158,60 +159,11 @@ function Home() {
         <SolarProduct />
       </section>
 
-      <main className="max-w-full mx-auto  bg-[#f8f7f0] GetFontSol mr-10 ml-10 ">
-        <section className="bg-[#E50C0C] py-16 px-6 sm:px-12">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+     <section>
+      <img src={DivyRedesign}/>
+     </section>
 
-            {/* Left Image */}
-            <div className="flex-shrink-0">
-              <img
-                src="https://storage.googleapis.com/a1aa/image/e9519b91-9347-4552-5dab-d16eaf280dab.jpg"
-                alt="Solar Panel Setup"
-                className="w-full max-w-[220px] h-auto object-contain"
-              />
-            </div>
-
-            {/* Center Text */}
-            <div className="text-white flex-1 text-center md:text-left">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 leading-snug About1">
-                Invest in Safety Settle for Nothing Less
-              </h2>
-              <p className="text-base md:text-lg leading-relaxed font-normal About">
-                At <strong>Divy Power</strong>, we believe that quality and safety come first.
-                While our solutions may come at a premium, we never compromise on the integrity
-                of our installations. Our systems are built with government-approved materials,
-                installed by certified engineers, and designed for long-term durability.
-                <br className="hidden sm:block" />
-                <br />
-                We take pride in ensuring that every solar installation is robust, reliable,
-                and secure — giving you peace of mind that your investment will last for decades.
-                When you choose Divy, you’re choosing <strong>safety, reliability, and performance</strong>.
-              </p>
-            </div>
-
-            {/* Right Image */}
-            <div className="flex-shrink-0">
-              <img
-                src={frongimg}
-                alt="Solar Chacha"
-                className="w-64 h-68 md:w-72 md:h-72 object-contain sc"
-                width={200}
-                height={200}
-              />
-            </div>
-
-          </div>
-        </section>
-
-        <section className="">
-          <ChatUI />
-        </section>
-        <section className=" -mt-[320px]">
-          <ExpertTeam />
-        </section>
-      </main>
-
-      <section className="mr-10 ml-10 -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[350px]">
+      <section className="mr-10 ml-10 mt-32">
         <Ctpage />
 
         <ExactMatchPage />
