@@ -44,7 +44,7 @@ const SolarSolutions = () => {
   };
 
   return (
-    <main className="bg-[#f8f7f0] text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash -mt-10 ml-4 mr-4 sm:ml-12 sm:mr-12">
+    <main className="bg-white text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash -mt-10 ml-4 mr-4 sm:ml-12 sm:mr-12">
       {/* Top Section Animation */}
       <motion.section
         className="flex flex-col lg:flex-row items-center lg:items-start gap-6"
@@ -71,7 +71,7 @@ const SolarSolutions = () => {
 
         {/* Right Content */}
         <motion.div
-          className="lg:w-1/2 w-full flex flex-col justify-start"
+          className="lg:w-1/2 w-full flex flex-col justify-start bg-[#f8f7f0]"
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
