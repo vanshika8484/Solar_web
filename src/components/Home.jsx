@@ -120,8 +120,8 @@ function Home() {
 
 
 
-      <section className=" -mt-64 md:-mt-64 lg:-mt-64 xl:-mt-72 2xl:-mt-[500px]  m-10">
-        <ChartCard />
+      <section className=" -mt-72  md:-mt-72 lg:-mt-72 xl:-mt-72 2xl:-mt-[500px]  m-10">
+        {/* <ChartCard /> */}
       </section>
       <section>
         <SolarCostCalculator />
@@ -142,7 +142,7 @@ function Home() {
       <section>
         <SolarSolutions />
       </section>
-      <section>
+      <section className=" mt-20">
          <ContactForm />
       </section>
 
@@ -205,7 +205,7 @@ function Home() {
         <section className="">
           <ChatUI />
         </section>
-        <section>
+        <section className=" -mt-[320px]">
           <ExpertTeam/>
         </section>
       </main>
