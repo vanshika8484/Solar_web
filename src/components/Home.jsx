@@ -43,6 +43,7 @@ import Conversation from "./Conversation";
 import Homestart from "./Homestart";
 import HomeStart2 from "./HomeStart2";
 import ExpertTeam from "./ExpertTeam";
+import HoverVideoCard1 from "./HoverVideoCard1";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -131,7 +132,7 @@ function Home() {
         <Dashboard />
       </section>
       <section>
-        <div className="text-center  py-6 mb-10">
+        <div className="text-center  py-6 mb-10 -mt-40">
           <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
             <Link to="./contact">Contact Us to Get Started</Link>
           </button>
@@ -139,11 +140,11 @@ function Home() {
 
       </section>
 
-      <section>
+      <section className="">
         <SolarSolutions />
       </section>
       <section className=" mt-20">
-         <ContactForm />
+        <ContactForm />
       </section>
 
       <section className=" ">
@@ -206,7 +207,7 @@ function Home() {
           <ChatUI />
         </section>
         <section className=" -mt-[320px]">
-          <ExpertTeam/>
+          <ExpertTeam />
         </section>
       </main>
 
@@ -218,12 +219,15 @@ function Home() {
 
       <section className="bg-[#f8f7f0] mr-10 ml-10 -mt-24 md:-mt-36 lg:-mt-36 xl:-mt-56 2xl:-mt-[630px]">
         <SolarPortfolio />
+        <HoverVideoCard1/>
 
-        <ExpertTeam/>
+       <section className=" mt-12">
+         <ExpertTeam />
+       </section>
 
         <FaqSection />
 
-       
+
 
         <section>
 
