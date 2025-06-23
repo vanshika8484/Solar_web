@@ -56,7 +56,7 @@ const ContactForm = () => {
       </div>
 
       {/* Form & Info Section */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat -mt-12">
 
         {/* Left: Form */}
         <form
@@ -64,10 +64,7 @@ const ContactForm = () => {
           className="bg-[#f8f7f0] w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8 flex flex-col gap-6"
           encType="multipart/form-data"
         >
-          <div className="text-center mb-4">
-            <h3 className="text-xl font-semibold text-green-800">Talk to Solar Chacha</h3>
-            <p className="text-gray-600 text-sm">We’ll get back to you shortly.</p>
-          </div>
+          
 
           <div className="flex flex-col gap-4">
             <input
@@ -130,9 +127,7 @@ const ContactForm = () => {
 
         {/* Right: Info */}
         <section className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start gap-6 text-center md:text-left px-2 sm:px-0">
-          <h4 className="flex items-center gap-2 text-green-800 font-mono tracking-widest text-sm">
-            <i className="fas fa-lightbulb"></i> CONTACT US
-          </h4>
+         
 
           <div className="flex flex-col gap-4 text-lg text-black">
             <p className="flex items-center justify-center md:justify-start gap-3">
