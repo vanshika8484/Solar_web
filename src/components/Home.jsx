@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { Suspense, lazy } from "react";
 import { Sun } from "lucide-react";
 import solar from "../Images/solar.jpg";
-
+import solarch from "../Images/chacha.png";
+import img1 from "../Images/Img1.png";
 import DivyRedesign from "../Images/DivyRedesign.png";
 
 import "./Home.css";
