@@ -17,12 +17,15 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data } = await axios.post(`https://solar-4-8a9b.onrender.com/api/senddata`, {
-        name,
-        email,
-        phoneNo,
-        message,
-      });
+      const { data } = await axios.post(
+        'https://solar-4-8a9b.onrender.com/api/senddata',
+        {
+          name,
+          email,
+          phoneNo,
+          message,
+        }
+      );
       toast.success('Message sent successfully!');
       setName('');
       setEmail('');
@@ -30,8 +33,9 @@ function Contact() {
       setMessage('');
     } catch (error) {
       toast.error('Something went wrong. Try again.');
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const containerVariants = {
@@ -49,7 +53,7 @@ function Contact() {
   };
 
   return (
-    <div className="max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6  m-16 ">
+    <div className="max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6 m-16">
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-7xl mx-auto GetFontSol">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-5">
