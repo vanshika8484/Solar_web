@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
+import CareerForm from './CareerForm';
 
 
 const Career = () => {
@@ -305,8 +306,13 @@ const Career = () => {
           </div>
         </div>
       </motion.div>
+      <section className=' -mt-8'>
+        <CareerForm/>
+      </section>
       
-    <Footer />
+  <section className=' mt-[130px]'>
+      <Footer />
+  </section>
     </div>
   );
 };
