@@ -51,7 +51,7 @@ function CareerForm() {
     return (
         <div className="max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6  m-16 ">
             {/*  */}
-            <div className="max-w-2xl mx-auto bg-white p-6 rounded-2xl shadow-lg mt-10">
+            <div className="max-w-2xl mx-auto bg-white p-6 rounded-2xl shadow-lg -mt-16">
                 <h2 className="text-2xl font-semibold mb-6 text-gray-800 text-center">Get a chance to Work with Us.</h2>
                 <form className="space-y-5">
                     {/* Name */}
