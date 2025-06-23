@@ -77,9 +77,11 @@ const SolarSolutions = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h1 className="font-semibold text-[26px] leading-[36px] mb-2 text-[#1f2937]">
-            We’re not here to just install panels.
-            <br /> We’re here to solve your problems.
+          <h1 className="font-semibold text-[26px] leading-[36px] mb-2 text-[#E50C0C]">
+           We don't believe in just installing Solar
+           <br/>
+            We Believe in solving Problems
+
           </h1>
 
           <h2 className="text-green-700 font-semibold text-lg mb-3">
