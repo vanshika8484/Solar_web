@@ -33,7 +33,7 @@ const Conversation = () => {
   return (
     <div className="min-h-screen  bg-white flex flex-col items-center p-6">
       
-      <div className="wp w-full max-w-3xl bg-[#075e44] rounded-2xl p-4 space-y-3 overflow-y-auto h-[350px] shadow-lg">
+      <div className="wp w-full max-w-3xl bg-[#075e44] rounded-2xl p-4 space-y-3 overflow-y-auto  shadow-lg">
         {messages.map((msg, i) => (
           <MessageBubble
             key={i}
