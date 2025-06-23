@@ -13,7 +13,7 @@ function Dashboard() {
   };
 
   return (
-    <div className="px-4 py-8 bg-[#F8F7F0] min-h-screen -mt-32 ">
+    <div className="px-4 py-8 bg-[#F8F7F0] min-h-[800px] -mt-32  m-10 ">
       <div className="bg-[#D9D9D9] rounded-xl shadow-xl p-6 sm:p-8 max-w-7xl mx-auto">
         {/* ✅ Inner Box Starts */}
         <div className="bg-white rounded-xl p-6 sm:p-8 shadow-md">
@@ -180,7 +180,7 @@ function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Your 3kW solar system is working efficiently and producing clean energy. Today, it has generated over 14 units of electricity, offsetting around 21 kg of carbon emissions, the same as planting a tree a day.
+           
           </motion.p>
         </div>
         {/* ✅ Inner Box Ends */}
