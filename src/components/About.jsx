@@ -104,7 +104,7 @@ export default function About() {
 
       {/* About Sections */}
       <motion.div
-        className="space-y-14 md:space-y-20 max-w-4xl w-full mt-10"
+        className="space-y-14 md:space-y-20 max-w-4xl w-full -mt-96"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
