@@ -123,12 +123,12 @@ function HomeStart2() {
           transition={{ type: "spring", stiffness: 60, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="bg-[#E50C0C] flex justify-center items-center h-[450px] p-4">
-            <div className="max-w-5xl w-full text-center">
+          <div className="bg-[#E50C0C] flex justify-center items-center h-[370px] p-4">
+            <div className="max-w-5xl  w-full text-center">
               <motion.img
                 src={img1}
                 alt="Cartoon sun characters"
-                className="mx-auto -mt-32 mb-6 max-w-full h-auto"
+                className="mx-auto -mt-24 mb-6 max-w-full h-auto"
                 width="400"
                 height="300"
                 initial={{ scale: 0.7, opacity: 0 }}
@@ -136,7 +136,7 @@ function HomeStart2() {
                 transition={{ type: "spring", stiffness: 60, delay: 0.4 }}
               />
               <motion.h1
-                className="text-white font-semibold About text-xl sm:text-2xl md:text-3xl leading-tight"
+                className="text-white font-semibold About text-xl sm:text-2xl md:text-3xl leading-tight -mt-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
