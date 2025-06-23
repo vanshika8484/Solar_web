@@ -4,6 +4,8 @@ import ProcessSteps from "./ProcessSteps";
 import ExpertTeam from "./ExpertTeam";
 import SolarCards from "./SolarCards";
 import ContactCards from "./ContactCards";
+import sunPhoto from "../Images/chacha.png";
+import sunImage from "../Images/didi.png";
 import Footer from "./Footer";
 import CompanySection from "./CompanySection";
 import ChatUI4 from "./ChatUI4";
@@ -93,39 +95,31 @@ export default function About() {
         <CompanySection />
       </div>
 
-      <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+     <section className="bg-white py-8 px-4 sm:px-6 lg:px-8"> {/* Reduced padding */}
         <div className="bg-[#fdf6ee] shadow-xl rounded-xl p-6 sm:p-10 md:p-12 max-w-[1000px] mx-auto">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-green-700 mb-6 text-center md:text-left">
-            At Divy Power Pvt. Ltd.
-          </h2>
+          <div className="flex items-center justify-center mb-4"> {/* Reduced margin-bottom */}
+            <img src={sunPhoto} alt="Chacha" className="w-16 h-16 mr-4" />
+            <h2 className="text-2xl md:text-4xl font-extrabold text-red-700 text-center md:text-left">
+              Why Choose Us as Your Solar Partner?
+            </h2>
+            <img src={sunImage} alt="Didi" className="w-16 h-16 ml-4" />
+          </div>
           <div className="text-gray-800 text-base md:text-lg leading-relaxed space-y-5">
             <p>
-              At Divy Power Pvt. Ltd., we don’t just install solar systems — we build lasting energy partnerships. What truly sets us apart is our commitment to quality, accountability, and long-term service, ensuring that your journey into clean energy is smooth, secure, and truly impactful.
+              At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems - we build <span className="text-green-500">lasting energy partnerships</span>. What truly sets us apart is our commitment to quality, accountability, and long-term service, ensuring that your journey into clean energy is smooth, secure, and impactful.
             </p>
-            <p>
-              We are a trusted name in the solar industry, known for our reliability and consistency. Our job doesn’t end at installation. We stay with you throughout your system’s life cycle, offering support, maintenance, and real-time solutions whenever needed. When you choose Divy, you choose peace of mind.
-            </p>
-            <p>
-              Our systems are built to last — and we mean it. With top-grade components, certified engineers, and government-approved materials, we ensure that your solar panels won’t "fly off in the wind" or suffer from poor installation practices. We prioritize safety and durability, making sure your investment pays off for decades.
-            </p>
-            <p>
-              As an MNRE-approved and UPNEDA-certified partner, we are officially recognized by the Government of India and regularly work alongside government bodies to deliver high-impact solar projects across villages, schools, societies, and institutions. From rural zones to urban rooftops, our credibility speaks for itself.
-            </p>
-            <p>
-              Our impact isn’t just on paper — we’ve reduced over 158 million kilograms of CO₂ emissions and counting. That’s not just a number; it’s a tangible step toward a cleaner, healthier planet, made possible through every project we complete.
-            </p>
-            <p>
-              We don’t believe in one-size-fits-all. Whether you're a homeowner, a school, a housing society, or a large enterprise, we offer custom-designed solar solutions that are optimized for your unique energy requirements and budget.
-            </p>
-            <p>
-              What’s more, we pride ourselves on fast installations, hassle-free service, and guaranteed performance. From the first consultation to the final handover, we ensure a seamless, transparent experience that keeps your goals at the center.
-            </p>
-            <p>
-              When you choose Divy Power, you’re not just choosing solar — you’re choosing a partner in building a greener, smarter future.
-            </p>
+
+            <ul className="list-disc list-inside space-y-2"> {/* Reduced space-y */}
+              <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
+              <li><strong>Post-installation support</strong> real-time maintenance and performance monitoring throughout the <br /> system's lifecycle.</li>
+              <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure <br /> maximum durability and safety.</li>
+              <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
+              <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
+            </ul>
           </div>
         </div>
       </section>
+
 
       <section>
         <ProcessSteps />
