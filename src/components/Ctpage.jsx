@@ -86,8 +86,13 @@ export default function Ctpage() {
           {loopTestimonials.map((t, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.05, boxShadow: "0 12px 30px rgba(0, 0, 0, 0.15)" }}
-              className="min-w-[300px] max-w-sm bg-white p-6 rounded-2xl shadow-md text-black transition-all duration-300 cursor-pointer hover:bg-[#e8f5e9]"
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "#ffffff",
+                color: "#000000",
+                boxShadow: "0 12px 30px rgba(0, 0, 0, 0.15)",
+              }}
+              className="min-w-[300px] max-w-sm bg-[#e8f5e9] p-6 rounded-2xl shadow-md text-black transition-all duration-300 cursor-pointer"
             >
               <div className="flex mb-2 text-yellow-400 text-lg">{"⭐".repeat(5)}</div>
               <p className="text-gray-700 italic mb-4 line-clamp-4">"{t.feedback}"</p>
