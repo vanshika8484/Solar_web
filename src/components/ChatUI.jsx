@@ -30,13 +30,7 @@ const ChatUI = () => {
 
   return (
     <div className="min-h-screen bg-white flex flex-col items-center p-6">
-      <h2 className="text-2xl sm:text-3xl font-bold text-green-800 mb-4 text-center">
-        Our Philosophy
-      </h2>
-      <p className="text-gray-600 text-center max-w-xl mb-8">
-        What makes DIVY Power different? It’s not just solar—it’s a responsibility we take to heart. <br />
-        <strong>Let Solar Chacha & Roshni Didi explain.</strong>
-      </p>
+     
 
       <div className="w-full max-w-3xl wp rounded-2xl p-6 space-y-4 ">
         {messages.map((msg, i) => (
