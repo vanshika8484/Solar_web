@@ -166,10 +166,13 @@ function Home() {
       <section className="mr-10 ml-10 mt-32">
         <Ctpage />
 
-        <ExactMatchPage />
+       
+      </section>
+      <section className=" -mt-36 ">
+         <ExactMatchPage />
       </section>
 
-      <section className="bg-[#f8f7f0] mr-10 ml-10 -mt-24 md:-mt-36 lg:-mt-36 xl:-mt-56 2xl:-mt-[630px]">
+      <section className="bg-[#f8f7f0] mr-10 ml-10 -mt-48 md:-mt-48 lg:-mt-48 xl:-mt-56 2xl:-mt-[630px]">
         <SolarPortfolio />
         <HoverVideoCard1/>
 
