@@ -16,7 +16,7 @@ function Dashboard() {
     <div className="px-4 py-8 bg-[#F8F7F0] min-h-[800px] -mt-32  m-10 ">
       <div className="bg-[#D9D9D9] rounded-xl shadow-xl p-6 sm:p-8 max-w-7xl mx-auto">
         {/* ✅ Inner Box Starts */}
-        <div className="bg-white rounded-xl p-6 sm:p-8 shadow-md">
+        <div className="bg-white rounded-xl p-0 sm:p-2 shadow-md">
           {/* Heading */}
           <motion.h2
             className="text-3xl sm:text-2xl lg:text-3xl text-center font-bold text-black mb-10 GetfontHome"
