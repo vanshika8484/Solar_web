@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 
 const reelsData = [
-  { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750336141/rmnkle80uluxiowzuiad.mp4', username: "solar_user_1", caption: "Reel 1: Clean and green energy revolution!" },
-  { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750336042/euw0bne5rwftvk05nzfq.mp4', username: "solar_user_2", caption: "Reel 2: Solar is the future!" },
-  { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750335938/srjv4ckwwre2po1ijgif.mp4', username: "solar_user_3", caption: "Reel 3: Powering your world sustainably!" },
-  { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750335798/rzplfwwmiot0kof9c8qx.mp4', username: "solar_user_4", caption: "Reel 4: Clean energy in action!" },
-  { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750335599/mdxskru5npv1vokvifnv.mp4', username: "solar_user_5", caption: "Reel 5: Greener tomorrow starts today!" },
-  { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750334859/sc0churytfgb7kt9go2q.mp4', username: "solar_user_6", caption: "Reel 6" },
+  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750336141/rmnkle80uluxiowzuiad.mp4', username: "solar_user_1", caption: "Reel 1: Clean and green energy revolution!" },
+  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750336042/euw0bne5rwftvk05nzfq.mp4', username: "solar_user_2", caption: "Reel 2: Solar is the future!" },
+  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750335938/srjv4ckwwre2po1ijgif.mp4', username: "solar_user_3", caption: "Reel 3: Powering your world sustainably!" },
+  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750335798/rzplfwwmiot0kof9c8qx.mp4', username: "solar_user_4", caption: "Reel 4: Clean energy in action!" },
+  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750335599/mdxskru5npv1vokvifnv.mp4', username: "solar_user_5", caption: "Reel 5: Greener tomorrow starts today!" },
+  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750334859/sc0churytfgb7kt9go2q.mp4', username: "solar_user_6", caption: "Reel 6" },
 ];
 
 const HoverVideoCard = () => {
@@ -58,7 +58,9 @@ const HoverVideoCard = () => {
 
   return (
     <section className="relative w-full px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
-      <h2 className="text-center text-3xl font-bold text-black mb-10">Why switch to solar</h2>
+      <h2 className="text-center text-3xl font-bold text-green-800 mb-10">Stories Of Change We're Proud of
+       <p className=" p-5 text-sm text-black font-medium">Our client belived in us - and so can you,See how solar changed their lives.</p></h2>
+     
 
       {/* Reels Container */}
       <div
@@ -107,10 +109,10 @@ const HoverVideoCard = () => {
               controls={false}
               muted={false} // play with sound
             />
-            <div className="absolute bottom-0 w-full bg-black/40 backdrop-blur-sm text-white px-3 py-2">
+            {/* <div className="absolute bottom-0 w-full bg-black/40 backdrop-blur-sm text-white px-3 py-2">
               <h3 className="text-sm font-semibold">@{reel.username}</h3>
               <p className="text-xs">{reel.caption}</p>
-            </div>
+            </div> */}
           </motion.div>
         ))}
       </div>
