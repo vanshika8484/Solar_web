@@ -128,7 +128,7 @@ const SolarCostCalculator = () => {
           className="flex justify-center items-center h-full"
           variants={cardVariants}
         >
-          <div className="w-full h-full flex">
+          <div className=" h-full flex ">
             <ElectricitySavedCard />
           </div>
         </motion.section>
