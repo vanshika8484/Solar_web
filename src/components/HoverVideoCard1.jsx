@@ -59,7 +59,7 @@ const HoverVideoCard1 = () => {
 
   return (
     <section className="relative w-full px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
-      <h2 className="text-center text-3xl font-bold text-black mb-10">Why switch to solar</h2>
+      <h2 className="text-center text-3xl font-bold text-green-800 mb-10">Why switch to solar</h2>
 
       {/* Reels Container */}
       <div
@@ -108,10 +108,10 @@ const HoverVideoCard1 = () => {
               controls={false}
               muted={false} // play with sound
             />
-            <div className="absolute bottom-0 w-full bg-black/40 backdrop-blur-sm text-white px-3 py-2">
+            {/* <div className="absolute bottom-0 w-full bg-black/40 backdrop-blur-sm text-white px-3 py-2">
               <h3 className="text-sm font-semibold">@{reel.username}</h3>
               <p className="text-xs">{reel.caption}</p>
-            </div>
+            </div> */}
           </motion.div>
         ))}
       </div>
