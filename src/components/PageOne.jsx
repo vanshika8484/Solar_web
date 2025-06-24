@@ -36,7 +36,7 @@ const fadeUpVariant = {
 
 const PageOne = () => {
   return (
-    <section className="py-12 px-4 bg-white">
+    <section className="py-12 px-4 bg-[#f8f7f0]">
       {/* Top Feature Cards */}
       <motion.div
         className="max-w-6xl mx-auto"
