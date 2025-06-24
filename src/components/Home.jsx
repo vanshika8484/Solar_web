@@ -154,12 +154,12 @@ function Home() {
       <section>
         <ChatUI1 />
       </section>
-      <section className="bg-[#f8f7f0] mr-10 ml-10  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
+      <section className="bg-green-800 mr-10 ml-10  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
 
         <SolarProduct />
       </section>
 
-     <section>
+     <section className=" mt-10">
       <img src={DivyRedesign}/>
      </section>
 
@@ -168,7 +168,7 @@ function Home() {
 
        
       </section>
-      <section className=" -mt-36 ">
+      <section className=" -mt-28 sm:-mt-28 md:-mt-36 lg:-mt-36 xl:-mt-36 ">
          <ExactMatchPage />
       </section>
 
