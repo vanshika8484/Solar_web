@@ -133,7 +133,7 @@ function Home() {
         <Dashboard />
       </section>
       <section>
-        <div className="text-center  py-6 mb-10 -mt-40">
+        <div className="text-center  py-6 mb-10  sm:-mt-20 lg:-mt-44 md:-mt-40 ">
           <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
             <Link to="./contact">Contact Us to Get Started</Link>
           </button>
