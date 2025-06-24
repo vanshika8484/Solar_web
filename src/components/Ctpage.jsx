@@ -64,9 +64,9 @@ export default function Ctpage() {
     <div className="bg-[#f8f7f0] h-[530px] text-white px-4 py-10 GetfontHomeDash -mt-36 overflow-hidden">
       {/* Header */}
       <div className="max-w-6xl mx-auto text-center px-4 mb-12">
-        <p className="text-green-800 font-semibold mb-2 uppercase tracking-widest">
+        {/* <p className="text-green-800 font-semibold mb-2 uppercase tracking-widest">
           Testimonials
-        </p>
+        </p> */}
         <h3 className="text-2xl sm:text-3xl text-black font-bold">
           What Our Happy Customers Say
         </h3>
