@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 // import { FaTools, FaCogs, FaRecycle, FaSun } from "react-icons/fa";
 
 const services = [
@@ -110,6 +111,9 @@ const SecondService = () => {
             </motion.div>
           ))}
         </div>
+      </section>
+      <section>
+        <Footer/>
       </section>
     </div>
   );
