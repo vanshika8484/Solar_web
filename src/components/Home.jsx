@@ -141,7 +141,7 @@ function Home() {
 
       </section>
 
-      <section className="">
+      <section className=" ">
         <SolarSolutions />
       </section>
       <section className=" mt-20">
@@ -154,7 +154,7 @@ function Home() {
       <section>
         <ChatUI1 />
       </section>
-      <section className="bg-green-800 mr-10 ml-10  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
+      <section className="bg-green-800 mr-2 ml-2  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
 
         <SolarProduct />
       </section>
@@ -162,8 +162,10 @@ function Home() {
      <section className=" mt-10">
       <img src={DivyRedesign}/>
      </section>
-
-      <section className="mr-10 ml-10 mt-32">
+<section className=" mt-12">
+         <ExpertTeam />
+       </section>
+      <section className=" mt-16">
         <Ctpage />
 
        
@@ -172,7 +174,7 @@ function Home() {
          <ExactMatchPage />
       </section>
 
-      <section className="bg-[#f8f7f0] mr-10 ml-10 -mt-48 md:-mt-48 lg:-mt-48 xl:-mt-56 2xl:-mt-[630px]">
+      <section className="bg-[#f8f7f0]  -mt-48 md:-mt-48 lg:-mt-48 xl:-mt-56 2xl:-mt-[630px]">
         <SolarPortfolio />
         <HoverVideoCard1/>
 
