@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Footer from './Footer';
 
 const services = [
     {
@@ -88,6 +89,10 @@ const ThirdService = () => {
                         </motion.div>
                     ))}
                 </div>
+            </section>
+
+            <section>
+                <Footer/>
             </section>
         </div>
     );
