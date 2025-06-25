@@ -44,7 +44,7 @@ const SolarSolutions = () => {
   };
 
   return (
-    <main className="bg-white text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash -mt-5 ml-4 mr-4 sm:ml-12 sm:mr-12">
+    <main className="bg-white text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash  ml-4 mr-4 sm:ml-12 sm:mr-12">
       {/* Top Section Animation */}
       <motion.section
         className="flex flex-col lg:flex-row items-center lg:items-start gap-6"
