@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <>
-    <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol md:px-12 lg:px-20 xl:px-32 ">
+    <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol md:px-12 lg:px-20 xl:px-32 2xl:px-52 ">
       <h1 className="text-4xl font-bold text-center mt-14 text-green-800 mb-10"><span className=" text-black">Our </span>Projects</h1>
 
       {/* Filter Buttons */}
