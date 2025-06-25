@@ -112,7 +112,9 @@ const InstallationServiceAltLayout = () => {
                     ))}
                 </div>
             </section>
-
+<section>
+                <Footer/>
+            </section>
         </div>
     );
 };
