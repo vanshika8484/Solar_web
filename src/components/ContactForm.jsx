@@ -46,7 +46,7 @@ const ContactForm = () => {
   };
 
   return (
-    <main className="bg-green-800 px-4 sm:px-8 md:px-16 py-20 -mt-20">
+    <main className="bg-green-800 px-4 sm:px-8 md:px-16 py-20 -mt-24">
       <ToastContainer position="top-right" autoClose={3000} />
 
       <div className="text-center max-w-4xl mx-auto mb-12 -mt-[70px]">
@@ -60,7 +60,7 @@ const ContactForm = () => {
         {/* Form Section */}
         <form
           onSubmit={handelSubmit}
-          className="bg-white w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8 flex flex-col gap-5 shadow" 
+          className="bg-white w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8 flex flex-col gap-5 shadow -mt-10" 
           encType="multipart/form-data"
         >
           {/* Name & Phone side by side */}
@@ -71,7 +71,7 @@ const ContactForm = () => {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="flex-1 rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
+              className="flex-1 rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
             />
             <input
               type="tel"
@@ -79,18 +79,18 @@ const ContactForm = () => {
               required
               value={phoneNo}
               onChange={(e) => setPhone(e.target.value)}
-              className="flex-1 rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
+              className="flex-1 rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
             />
           </div>
 
-          {/* Email */}
+          <div className="flex flex-col sm:flex-row gap-4">
           <input
             type="email"
             placeholder="Your Email"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="rounded-full py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow w-full"
+            className="rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow w-full"
           />
 
           {/* Upload Bijli Bill */}
@@ -103,6 +103,7 @@ const ContactForm = () => {
               onChange={(e) => setBillFile(e.target.files[0])}
               className="w-full py-2 px-3 bg-white rounded-xl shadow focus:outline-none"
             />
+          </div>
           </div>
 
           {/* Message */}
