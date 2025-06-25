@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 
 const services = [
@@ -113,8 +114,8 @@ const InstallationServiceAltLayout = () => {
                 </div>
             </section>
 <section>
-                <Footer/>
-            </section>
+    <Footer/>
+</section>
         </div>
     );
 };
