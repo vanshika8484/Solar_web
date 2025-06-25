@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import ProcessSteps from "./ProcessSteps";
 import ExpertTeam from "./ExpertTeam";
 import FiguringOut from "./FiguringOut";
@@ -11,6 +11,8 @@ import ChatUI4 from "./ChatUI4";
 import localImage from "../Images/Background.jpg";
 import sunImage from "../Images/didi.png";
 import sunPhoto from "../Images/chacha.png";
+import ScrollStackingCards from "./ScrollStackingCards"; // <-- Imported here
+import "./ScrollStackingCards.css"; // <-- Include CSS
 
 const aboutUsContent = [
   {
@@ -75,22 +77,12 @@ const aboutUsContent = [
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.3 } },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
 export default function About() {
   return (
     <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center">
-      {/* Image Instead of Heading */}
+      {/* Banner Image */}
       <motion.img
-        src={localImage} // Use the imported local image
+        src={localImage}
         alt="banner"
         className="w-full h-[70vh] object-cover"
         initial={{ opacity: 0, y: -20 }}
@@ -98,58 +90,19 @@ export default function About() {
         transition={{ duration: 0.5 }}
       />
 
-      <section className="mt-8"> {/* Reduced margin-top */}
+      <section className="mt-8">
         <ChatUI4 />
       </section>
 
-      {/* Content Sections */}
-      <motion.div
-        className="space-y-10 md:space-y-14 -mt-96 max-w-4xl w-full"
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-      >
-        {aboutUsContent.map((item, index) => (
-          <motion.div
-            key={index}
-            className={`flex flex-col md:flex-row items-center ${index % 2 !== 0 ? "md:flex-row-reverse" : ""} gap-6 md:gap-10 p-6 md:p-8 border border-gray-200 bg-[#f8f9fb] rounded-3xl shadow-md transition hover:shadow-lg`}
-            variants={cardVariants}
-            initial="hidden" // Start hidden
-            whileInView="show" // Animate to show when in view
-            viewport={{ once: false }} // Keep checking for visibility
-          >
-            <motion.div
-              className="md:w-1/2 w-full"
-            >
-              <div className="w-full max-w-md h-40 sm:h-48 rounded-xl overflow-hidden shadow-lg mx-auto">
-                <img
-                  src={item.img}
-                  alt={item.alt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
-
-            <div className="md:w-3/5">
-              <h3 className="text-lg font-semibold text-green-800">{item.heading}</h3> {/* Changed to green */}
-              <h4 className="text-md text-gray-600">{item.subheading}</h4>
-              <ul className="list-disc list-inside space-y-2">
-                {item.points.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
-
-      <div>
-        <CompanySection />
+      {/* Scroll Stacking Cards */}
+      <div className="-mt-96 mb-24">
+        <ScrollStackingCards content={aboutUsContent} />
       </div>
 
-      <section className="bg-white py-8 px-4 sm:px-6 lg:px-8"> {/* Reduced padding */}
+      {/* Why Choose Us Section */}
+      <section className="bg-white py-8 px-4 sm:px-6 lg:px-8">
         <div className="bg-[#fdf6ee] shadow-xl rounded-xl p-6 sm:p-10 md:p-12 max-w-[1000px] mx-auto">
-          <div className="flex items-center justify-center mb-4"> {/* Reduced margin-bottom */}
+          <div className="flex items-center justify-center mb-4">
             <img src={sunPhoto} alt="Chacha" className="w-16 h-16 mr-4" />
             <h2 className="text-2xl md:text-4xl font-extrabold text-red-700 text-center md:text-left">
               Why Choose Us as Your Solar Partner?
@@ -158,13 +111,12 @@ export default function About() {
           </div>
           <div className="text-gray-800 text-base md:text-lg leading-relaxed space-y-5">
             <p>
-              At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems - we build <span className="text-green-500">lasting energy partnerships</span>. What truly sets us apart is our commitment to quality, accountability, and long-term service, ensuring that your journey into clean energy is smooth, secure, and impactful.
+              At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems - we build <span className="text-green-500">lasting energy partnerships</span>.
             </p>
-
-            <ul className="list-disc list-inside space-y-2"> {/* Reduced space-y */}
+            <ul className="list-disc list-inside space-y-2">
               <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
-              <li><strong>Post-installation support</strong> real-time maintenance and performance monitoring throughout the <br /> system's lifecycle.</li>
-              <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure <br /> maximum durability and safety.</li>
+              <li><strong>Post-installation support</strong> real-time maintenance and performance monitoring throughout the system's lifecycle.</li>
+              <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure maximum durability and safety.</li>
               <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
               <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
             </ul>
@@ -172,15 +124,17 @@ export default function About() {
         </div>
       </section>
 
-      <section className="mt-2"> {/* Reduced margin-top */}
+      <CompanySection />
+
+      <section className="mt-2">
         <ProcessSteps />
         <ExpertTeam />
         <FiguringOut />
         <SolarCards />
-        <ContactCards /> 
+        <ContactCards />
       </section>
 
-      <section className="mt-1"> {/* Reduced margin-top */}
+      <section className="mt-1">
         <Footer />
       </section>
     </div>
