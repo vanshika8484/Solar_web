@@ -7,13 +7,13 @@ import Loader from "../Loader";
 import 'react-toastify/dist/ReactToastify.css';
 
 function CareerForm() {
-  const [name, setName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [FirstName, setFirstName] = useState('');
+  const [LastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [phoneNo, setPhone] = useState('');
-  const [position, setPosition] = useState('');
+  const [Phone, setPhone] = useState('');
+  const [Position, setPosition] = useState('');
   const [message, setMessage] = useState('');
-  const [cv, setCv] = useState(null);
+  const [CV, setCv] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -22,14 +22,15 @@ function CareerForm() {
 
     try {
       const formData = new FormData();
-      formData.append("name", name);
-      formData.append("lastName", lastName);
+      formData.append("FirstName", FirstName);
+      formData.append("LastName", LastName);
       formData.append("email", email);
-      formData.append("phoneNo", phoneNo);
-      formData.append("position", position);
+      formData.append("Phone", Phone);
+      formData.append("Position", Position);
       formData.append("message", message);
-      if (cv) {
-        formData.append("cv", cv);
+      formData.append("PortfolioLink", "N/A"); // optional field
+      if (CV) {
+        formData.append("CV", CV);
       }
 
       await axios.post(`https://solar-4-8a9b.onrender.com/api/CareerApi`, formData, {
@@ -39,7 +40,7 @@ function CareerForm() {
       });
 
       toast.success('Message sent successfully!');
-      setName('');
+      setFirstName('');
       setLastName('');
       setEmail('');
       setPhone('');
@@ -60,33 +61,28 @@ function CareerForm() {
         </h2>
 
         <form className="space-y-5" onSubmit={handleSubmit}>
-          {/* First Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
             <input
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="First Name"
+              value={FirstName}
+              onChange={(e) => setFirstName(e.target.value)}
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
-          {/* Last Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
             <input
               type="text"
-              value={lastName}
+              value={LastName}
               onChange={(e) => setLastName(e.target.value)}
-              placeholder="Last Name"
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
-          {/* Email & Phone No */}
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="w-full">
               <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
@@ -94,7 +90,6 @@ function CareerForm() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -103,20 +98,18 @@ function CareerForm() {
               <label className="block text-sm font-medium text-gray-700 mb-1">Phone No</label>
               <input
                 type="tel"
-                value={phoneNo}
+                value={Phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="Phone"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
 
-          {/* Position Dropdown */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Position</label>
             <select
-              value={position}
+              value={Position}
               onChange={(e) => setPosition(e.target.value)}
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -129,7 +122,6 @@ function CareerForm() {
             </select>
           </div>
 
-          {/* Message */}
           <div>
             <textarea
               rows="5"
@@ -140,7 +132,6 @@ function CareerForm() {
             ></textarea>
           </div>
 
-          {/* CV Upload */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Upload your CV (PDF, DOCX)</label>
             <input
@@ -155,7 +146,6 @@ function CareerForm() {
             />
           </div>
 
-          {/* Submit Button */}
           <div>
             <button
               type="submit"
@@ -167,7 +157,6 @@ function CareerForm() {
           </div>
         </form>
       </div>
-
       <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
