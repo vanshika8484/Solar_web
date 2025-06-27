@@ -17,20 +17,12 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
+      console.log(name,email,phoneNo,message)
       const { data } = await axios.post(
-        'https://solar-4-8a9b.onrender.com/api/senddata',
-        {
-          name,
-          email,
-          phoneNo,
-          message,
-        }
+        "https://solar-4-8a9b.onrender.com/api/contact",
+       {name,email,phoneNo,message}
       );
       toast.success('Message sent successfully!');
-      setName('');
-      setEmail('');
-      setPhone('');
-      setMessage('');
     } catch (error) {
       toast.error('Something went wrong. Try again.');
     } finally {
