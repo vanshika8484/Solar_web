@@ -138,9 +138,10 @@ export default function About() {
 
 
       </div>
-      <section className="lg:mt-[6700px] sm:mt-[8000px] md:mt-[8000px] mt-[13200px]  ">
+     <section className="mt-[13200px] sm:mt-0 md:mt-0 lg:mt-[6400px] xl:mt-[7000px] 2xl:mt-[9000px]">
         <Footer />
       </section>
+
     </div>
   );
 }
