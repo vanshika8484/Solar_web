@@ -79,62 +79,66 @@ const aboutUsContent = [
 
 export default function About() {
   return (
-    <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center">
-      {/* Banner Image */}
-      <motion.img
-        src={localImage}
-        alt="banner"
-        className="w-full h-[70vh] object-cover"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      />
+    <div>
+      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center">
+        {/* Banner Image */}
+        <motion.img
+          src={localImage}
+          alt="banner"
+          className="w-full h-[70vh] object-cover"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
 
-      <section className="mt-8">
-        <ChatUI4 />
-      </section>
+        <section className="mt-8">
+          <ChatUI4 />
+        </section>
 
-      {/* Scroll Stacking Cards */}
-      <div className="-mt-96 mb-24">
-        <ScrollStackingCards content={aboutUsContent} />
-      </div>
-
-      {/* Why Choose Us Section */}
-      <section className="bg-white py-8 px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#fdf6ee] shadow-xl rounded-xl p-6 sm:p-10 md:p-12 max-w-[1000px] mx-auto">
-          <div className="flex items-center justify-center mb-4">
-            <img src={sunPhoto} alt="Chacha" className="w-16 h-16 mr-4" />
-            <h2 className="text-2xl md:text-4xl font-extrabold text-red-700 text-center md:text-left">
-              Why Choose Us as Your Solar Partner?
-            </h2>
-            <img src={sunImage} alt="Didi" className="w-16 h-16 ml-4" />
-          </div>
-          <div className="text-gray-800 text-base md:text-lg leading-relaxed space-y-5">
-            <p>
-              At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems - we build <span className="text-green-500">lasting energy partnerships</span>.
-            </p>
-            <ul className="list-disc list-inside space-y-2">
-              <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
-              <li><strong>Post-installation support</strong> real-time maintenance and performance monitoring throughout the system's lifecycle.</li>
-              <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure maximum durability and safety.</li>
-              <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
-              <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
-            </ul>
-          </div>
+        {/* Scroll Stacking Cards */}
+        <div className="-mt-96 mb-24">
+          <ScrollStackingCards content={aboutUsContent} />
         </div>
-      </section>
 
-      <CompanySection />
+        {/* Why Choose Us Section */}
+        <section className="bg-white py-8 px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#fdf6ee] shadow-xl rounded-xl p-6 sm:p-10 md:p-12 max-w-[1000px] mx-auto">
+            <div className="flex items-center justify-center mb-4">
+              <img src={sunPhoto} alt="Chacha" className="w-16 h-16 mr-4" />
+              <h2 className="text-2xl md:text-4xl font-extrabold text-red-700 text-center md:text-left">
+                Why Choose Us as Your Solar Partner?
+              </h2>
+              <img src={sunImage} alt="Didi" className="w-16 h-16 ml-4" />
+            </div>
+            <div className="text-gray-800 text-base md:text-lg leading-relaxed space-y-5">
+              <p>
+                At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems - we build <span className="text-green-500">lasting energy partnerships</span>.
+              </p>
+              <ul className="list-disc list-inside space-y-2">
+                <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
+                <li><strong>Post-installation support</strong> real-time maintenance and performance monitoring throughout the system's lifecycle.</li>
+                <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure maximum durability and safety.</li>
+                <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
+                <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-      <section className="mt-2">
-        <ProcessSteps />
-        <ExpertTeam />
-        <FiguringOut />
-        <SolarCards />
-        <ContactCards />
-      </section>
+        <CompanySection />
 
-      <section className="mt-1">
+        <section className="mt-2">
+          <ProcessSteps />
+          <ExpertTeam />
+          <FiguringOut />
+          <SolarCards />
+          <ContactCards />
+
+        </section>
+
+
+      </div>
+      <section className="lg:mt-[6700px] sm:mt-[8000px] md:mt-[8000px] mt-[13200px]  ">
         <Footer />
       </section>
     </div>
