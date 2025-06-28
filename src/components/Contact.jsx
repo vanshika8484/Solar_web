@@ -45,7 +45,7 @@ function Contact() {
   };
 
   return (
-    <div className="max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen px-6 m-16">
+    <div className="max-h-screen bg-gradient-to-br from-green-50 to-white py-20 min-h-screen ">
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-7xl mx-auto GetFontSol">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-5">
