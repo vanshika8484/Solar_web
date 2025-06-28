@@ -62,7 +62,7 @@ export default function Services() {
     console.log(formData);
   };
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 max-w-7xl max-h-screen mx-auto GetFontSol md:px-12 lg:px-20 xl:px-32 ">
+    <section className="bg-white py-16  max-w-7xl max-h-screen mx-auto GetFontSol  ">
       <motion.h2
         className="text-3xl sm:text-4xl mt-14 font-bold text-green-800 text-center mb-12"
         initial={{ opacity: 0, y: -30 }}
@@ -72,7 +72,7 @@ export default function Services() {
         <span className="text-black">Our Green</span> Services
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 cursor-pointer ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 cursor-pointer px-4 sm:px-6 ">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -148,29 +148,23 @@ export default function Services() {
                 value={formData.email}
                 onChange={handleChange}
               />
-              <input
+             
+             
+            </div>
+             <input
                 type="tel"
                 name="phone"
                 placeholder="Your Phone"
-                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none"
+                className="border w-full border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none"
                 value={formData.phone}
                 onChange={handleChange}
               />
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                className="border border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none"
-                value={formData.subject}
-                onChange={handleChange}
-              />
-            </div>
 
             <textarea
               name="message"
               rows="5"
               placeholder="Your Message"
-              className="w-full border border-gray-300 rounded-2xl py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none mb-6"
+              className="w-full border mt-5 border-gray-300 rounded-2xl py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none mb-6"
               value={formData.message}
               onChange={handleChange}
             ></textarea>
