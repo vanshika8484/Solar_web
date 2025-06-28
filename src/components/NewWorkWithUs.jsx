@@ -20,7 +20,7 @@ function NewWorkWithUs() {
       </motion.h2>
 
   
-    <div className='md:px-12 lg:px-14 xl:px-20 bg-[#f8f7f0]'>
+    <div className=' bg-[#f8f7f0]'>
     
     <section className=' mt-20'>
         <ReelsSection/>
