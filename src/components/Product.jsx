@@ -86,7 +86,7 @@ function Product() {
   return (
     <div className='flex items-center justify-center min-h-screen'>
       <div>
-    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol  m-16 max-w-7xl">
+    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol   max-w-7xl">
       <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
 
       <div className="relative z-10">
@@ -146,7 +146,7 @@ function Product() {
 
       {/* Safety Solutions */}
       {/* Safety Solutions */}
-      <motion.section className="bg-[#000000] rounded-sm py-20 px-6 text-white"
+      <motion.section className="bg-[#000000] rounded-sm py-20  text-white"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -235,7 +235,9 @@ function Product() {
 
 
 
-      <Footer />
+      <section className=' w-full'>
+        <Footer />
+      </section>
     </section>
     </div>
     </div>
