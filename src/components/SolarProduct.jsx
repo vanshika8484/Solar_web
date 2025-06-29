@@ -39,17 +39,17 @@ const cardVariants = {
 
 const SolarProducts = () => {
   return (
-    <section className="bg-green-800 py-16 px-4 GetFontSol ">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white pt-4 px-6 md:px-10 lg:px-16 GetFontSol ">
+      <div className="max-w-5xl mx-auto bg-green-800 rounded-xl shadow-lg ">
         <div className="text-center mb-12">
-          <p className="text-green-800 text-xl font-bold uppercase tracking-widest">
+          <p className="text-white text-xl font-bold uppercase tracking-widest mb-2 pt-6">
             Our Product
           </p>
-          <h2 className="text-4xl font-semibold text-gray-100 -mt-16">
+          <p className="text-4xl font-semibold text-white ">
             Harness The Power Of The Sun With Solar Energy!
-          </h2>
+          </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2  mx-4 justify-items-center gap-4" > 
           {products.map((product, index) => (
             <motion.div
               key={index}
@@ -58,7 +58,8 @@ const SolarProducts = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+              //  className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 mb-2 w-full max-w-sm and mx-auto"  
+              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300 mb-2 w-full max-w-sm mx-auto"
             >
               <div className="w-16 h-16 rounded-full bg-green-800 flex items-center justify-center mb-6">
                 {product.icon}
