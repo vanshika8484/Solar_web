@@ -19,7 +19,7 @@ function Dashboard() {
         <div className="bg-white rounded-xl p-0 sm:p-2 shadow-md">
           {/* Heading */}
           <motion.h2
-            className="text-3xl sm:text-2xl lg:text-3xl text-center font-bold text-black mb-10 GetfontHome"
+            className="text-xl sm:text-xl lg:text-3xl text-center font-bold text-black mb-10 GetfontHome"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
