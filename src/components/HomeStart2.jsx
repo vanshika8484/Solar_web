@@ -74,10 +74,10 @@ function HomeStart2() {
                 About Us
               </motion.h3>
               <motion.h2
-                className="text-3xl About1 sm:text-4xl font-bold leading-tight mb-4"
+                className="text-xl About1 sm:text-2xl lg:text-4xl font-bold leading-tight mb-4"
                 variants={fadeUp}
               >
-                We Don’t Just Sell Solar. <br className="hidden sm:block" /> We Engineer Smart Power Solutions.
+                We Don’t Just Sell Solar. <br className="hidden sm:block" />We Engineer Smart Power Solutions.
               </motion.h2>
               <motion.p className="text-base leading-relaxed mb-4" variants={fadeUp}>
                 At <strong>DIVY Power</strong>, we believe solar isn’t just a product, it’s your power freedom...
@@ -91,7 +91,7 @@ function HomeStart2() {
 
               {/* Stats */}
               <motion.div
-                className="flex flex-wrap gap-x-20 gap-y-6 mt-5 max-w-[420px]"
+                className="flex  gap-x-20 gap-y-6 mt-5 max-w-[420px]"
                 variants={fadeUp}
               >
                 <div>
