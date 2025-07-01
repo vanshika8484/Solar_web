@@ -13,6 +13,8 @@ import sunImage from "../Images/didi.png";
 import sunPhoto from "../Images/chacha.png";
 import ScrollStackingCards from "./ScrollStackingCards"; // <-- Imported here
 import "./ScrollStackingCards.css"; // <-- Include CSS
+import HoverVideoCard2 from "./HoverVideoCard2";
+import HoverVideoCard3 from "./HoverVideoCard3";
 
 const aboutUsContent = [
   {
@@ -129,7 +131,12 @@ export default function About() {
 
         <section className="mt-2">
           <ProcessSteps />
-          <ExpertTeam />
+         <section className=" ml-10 mr-10">
+           <HoverVideoCard2 />
+         </section>
+         <section className=" ml-10 mr-10">
+           <HoverVideoCard3/>
+         </section>
           <FiguringOut />
           <SolarCards />
           <ContactCards />
@@ -138,7 +145,7 @@ export default function About() {
 
 
       </div>
-     <section className="mt-[13200px] sm:mt-0 md:mt-0 lg:mt-[6400px] xl:mt-[7000px] 2xl:mt-[9000px]">
+      <section className="mt-[13200px] sm:mt-0 md:mt-0 lg:mt-[8200px] xl:mt-[7000px] 2xl:mt-[9000px]">
         <Footer />
       </section>
 
