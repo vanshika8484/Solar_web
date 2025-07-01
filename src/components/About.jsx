@@ -145,7 +145,7 @@ export default function About() {
 
 
       </div>
-      <section className="mt-[13200px] sm:mt-0 md:mt-0 lg:mt-[8200px] xl:mt-[7000px] 2xl:mt-[9000px]">
+      <section className="mt-[15200px] sm:mt-0 md:mt-0 lg:mt-[8200px] xl:mt-[7000px] 2xl:mt-[9000px]">
         <Footer />
       </section>
 
