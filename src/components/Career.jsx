@@ -81,7 +81,7 @@ const Career = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -139,7 +139,7 @@ const Career = () => {
             >
               <div className="px-4 py-5 sm:p-6">
                 <div className="flex items-center">
-                  <div className="flex-shrink-0 bg-purple-500 rounded-md p-3">
+                  <div className="flex-shrink-0 bg-green-700 rounded-md p-3">
                     <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -221,7 +221,7 @@ const Career = () => {
               </ul>
 
               <div className="mt-8">
-                <button className="w-full bg-purple-600 border border-transparent rounded-md py-3 px-4 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                <button className="w-full bg-green-600 border border-transparent rounded-md py-3 px-4 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
                   Apply for this position
                 </button>
               </div>
@@ -243,7 +243,7 @@ const Career = () => {
         transition={{ duration: 0.8 }}
         className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8"
       >
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl shadow-xl overflow-hidden">
+        <div className=" bg-green-700 rounded-xl shadow-xl overflow-hidden">
           <div className="px-6 py-12 sm:p-12">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
