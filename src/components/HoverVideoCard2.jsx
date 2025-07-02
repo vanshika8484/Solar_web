@@ -57,7 +57,7 @@ const HoverVideoCard2 = () => {
   return (
     <section className="relative w-full px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
       <h2 className="text-center text-xl md:text-3xl font-bold text-green-800 mb-10">
-        OUR FOUNDER PHILOSOPHY Growth at DIVY 
+        OUR FOUNDER PHILOSOPHY
       </h2>
 
       {/* Video Reels Container */}
