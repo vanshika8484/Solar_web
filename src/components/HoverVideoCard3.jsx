@@ -42,36 +42,66 @@ const teamMembers = [
 ];
 
 const HoverVideoCard3 = () => {
-  return (
-    <div className="bg-white min-h-screen py-8 px-4 -mt-20 sm:px-6 lg:px-8 GetFontSol">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-center text-xl md:text-3xl font-bold text-green-800 mb-10">
-         Growth at DIVY 
-      </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md p-4 relative hover:shadow-lg transition-all GetFontSol">
-              <div className="relative rounded-lg overflow-hidden GetFontSol">
-                <video
-                  src={member.reel}
-                  alt={member.name}
-                  className="w-full h-56 object-cover rounded-lg transform hover:scale-105 transition-transform duration-300"
-                  controls
-                />
-                {/* <button
-                  aria-label={`Play video for ${member.name}`}
-                  className="absolute bottom-3 left-3 bg-green-800 hover:bg-green-700 text-white rounded-full p-3 shadow-md"
+   const scrollRef = useRef(null);
+    const animationFrame = useRef(null);
+    const [isPaused, setIsPaused] = useState(false);
+  
+    useEffect(() => {
+      let scrollPos = 0;
+  
+      const autoScroll = () => {
+        if (!isPaused && scrollRef.current) {
+          scrollPos += 0.5;
+          if (scrollPos >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
+            scrollPos = 0;
+          }
+          scrollRef.current.scrollLeft = scrollPos;
+        }
+        animationFrame.current = requestAnimationFrame(autoScroll);
+      };
+  
+      animationFrame.current = requestAnimationFrame(autoScroll);
+  
+      return () => cancelAnimationFrame(animationFrame.current);
+    }, [isPaused]);
+  
+    return (
+      <div className="bg-white min-h-screen py-8 px-4 -mt-20 sm:px-6 lg:px-8 GetFontSol">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-center text-xl md:text-3xl font-bold text-green-800 mb-10">
+            OUR FOUNDER PHILOSOPHY
+          </h2>
+  
+          <div
+            ref={scrollRef}
+            className="overflow-x-auto scroll-hide"
+            style={{ whiteSpace: "nowrap" }}
+          >
+            <div className="flex space-x-6 w-max">
+              {teamMembers.map((member, index) => (
+                <div
+                  key={index}
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
+                  className="flex-shrink-0 w-72 bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-all"
                 >
-                  
-                </button> */}
-              </div>
-              
+                  <div className="relative rounded-lg overflow-hidden">
+                    <video
+                      src={member.reel}
+                      className="w-full h-56 object-cover rounded-lg transform hover:scale-105 transition-transform duration-300"
+                      controls
+                    />
+                  </div>
+                  <div className="mt-3 text-left">
+                    <h3 className="text-md font-semibold text-gray-800">{member.name}</h3>
+                    <p className="text-sm text-gray-600">{member.role}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
-
+    );
+  };
 export default HoverVideoCard3;
