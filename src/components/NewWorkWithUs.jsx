@@ -20,13 +20,15 @@ function NewWorkWithUs() {
       </motion.h2>
 
   
-    <div className=' bg-[#f8f7f0]'>
+    <div className=' bg-[#f8f7f0] '>
     
-    <section className=' mt-20'>
+    <section className=' mt-20 mr-16 ml-16'>
         <ReelsSection/>
     </section>
-        <MasonryGallery/>
+       <section className=' mr-20 ml-20'>
+         <MasonryGallery/>
         <RatingWorks/>
+       </section>
         
      <section className=' mt-20'>
            <Footer/>
