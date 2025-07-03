@@ -53,7 +53,7 @@ function Contact() {
         </h2>
 
         <motion.div
-          className="grid md:grid-cols-2 gap-10"
+          className="grid md:grid-cols-2 gap-10  mr-28 ml-28"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -127,7 +127,7 @@ function Contact() {
         </motion.div>
 
         {/* Google Map */}
-        <motion.div className="mt-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.8 }}>
+        <motion.div className="mt-16 mr-28 ml-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.8 }}>
           <iframe
             title="map"
             className="w-full h-96 rounded-2xl shadow-lg"
