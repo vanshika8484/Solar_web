@@ -84,12 +84,12 @@ function Product() {
   ];
 
   return (
-    <div className='flex items-center justify-center min-h-screen'>
+    <div className='flex items-center justify-center min-h-screen '>
       <div>
-    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol   max-w-7xl">
+    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol   max-w-7xl ">
       <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
 
-      <div className="relative z-10">
+      <div className="relative z-10 ">
         <motion.h1
           className="text-4xl font-bold text-black mb-2 "
           initial={{ opacity: 0, y: -30 }}
@@ -102,7 +102,7 @@ function Product() {
       </div>
 
       {/* Solar Solutions */}
-      <motion.section className="py-20 px-6 text-white "
+      <motion.section className="py-20 px-6 text-white mr-36 ml-36 "
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
