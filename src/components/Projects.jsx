@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { categories, projects, iconMap } from "./ProjectData";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const SVGAccent = () => (
   <svg
@@ -17,9 +18,15 @@ const SVGAccent = () => (
 
 const Projects = () => {
   const [active, setActive] = useState("All");
+  
 
   const filtered = active === "All" ? projects : projects.filter(p => p.category === active);
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/ProjectDetails'); // make sure this path matches your Route
+  };
   return (
     <>
     <section className="min-h-screen px-4 py-10 bg-gradient-to-br from-white to-gray-100 shadow-lg GetFontSol md:px-12 lg:px-20 xl:px-32 2xl:px-52 ">
@@ -116,13 +123,14 @@ const Projects = () => {
           the viability of hydropower projects based on water resources, terrain,<br />
           and environmental factors.
         </p>
-        <motion.button
-          whileTap={{ scale: 0.97 }}
-          whileHover={{ scale: 1.03 }}
-          className="bg-green-800 text-white text-sm font-normal rounded-full px-8 py-3 w-max hover:bg-green-700 transition"
-        >
-          View Details
-        </motion.button>
+       <motion.button
+      whileTap={{ scale: 0.97 }}
+      whileHover={{ scale: 1.03 }}
+      onClick={handleClick}
+      className="bg-green-800 text-white text-sm font-normal rounded-full px-8 py-3 w-max hover:bg-green-700 transition"
+    >
+      View Details
+    </motion.button>
       </motion.div>
     </section>
     </section>
