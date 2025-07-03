@@ -100,7 +100,7 @@ export default function Services() {
   };
 
   return (
-    <section className="bg-white py-16 max-w-7xl mx-auto GetFontSol">
+    <section className="bg-white py-16 max-w-7xl mx-auto GetFontSol ">
       <motion.h2
         className="text-3xl sm:text-4xl mt-14 font-bold text-green-800 text-center mb-12"
         initial={{ opacity: 0, y: -30 }}
@@ -110,37 +110,37 @@ export default function Services() {
         <span className="text-black">Our Green</span> Services
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 cursor-pointer px-4 sm:px-6">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className="group bg-[#F7F6F0] p-8 rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col items-start space-y-5"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 cursor-pointer px-4 sm:px-6  mr-24 ml-24">
+      {services.map((service, index) => (
+        <motion.div
+          key={index}
+          className="group bg-white p-8 rounded-2xl shadow-md hover:bg-[#F7F6F0] hover:shadow-xl transition duration-300 flex flex-col items-start space-y-5"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: index * 0.1 }}
+        >
+          <div className="bg-white p-4 rounded-full text-green-800">
+            {service.icon}
+          </div>
+          <h3 className="text-lg font-semibold text-gray-900 leading-tight">
+            {service.title}
+          </h3>
+          <p className="text-sm text-gray-600 leading-relaxed transition-opacity duration-300">
+            {service.description}
+          </p>
+          <Link
+            to={service.path}
+            className="flex items-center text-sm font-medium text-green-800 hover:underline"
           >
-            <div className="bg-white p-4 rounded-full text-green-800">
-              {service.icon}
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 leading-tight">
-              {service.title}
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed transition-opacity duration-300 opacity-100 group-hover:opacity-0">
-              {service.description}
-            </p>
-            <Link
-              to={service.path}
-              className="flex items-center text-sm font-medium text-green-800 hover:underline"
-            >
-              Read More <span className="ml-1">→</span>
-            </Link>
-          </motion.div>
-        ))}
-      </div>
+            Read More <span className="ml-1">→</span>
+          </Link>
+        </motion.div>
+      ))}
+    </div>
 
       {/* Contact Form Section */}
-      <div className="bg-white min-h-screen px-4 py-12 sm:px-6 lg:px-8">
+      <div className="bg-white min-h-screen px-4 py-12 sm:px-6 lg:px-8 mr-24 ml-24">
         <div className="max-w-7xl mx-auto">
           <main className="mt-12 flex flex-col md:flex-row gap-12 items-start">
             <div className="flex-shrink-0 w-full md:w-1/2 relative rounded-xl overflow-hidden">
