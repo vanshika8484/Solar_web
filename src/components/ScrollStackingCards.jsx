@@ -44,10 +44,10 @@ const ScrollStackingCards = ({ content }) => {
           </div>
           <div className="text-content">
             <h3>{card.heading}</h3>
-            <h4>{card.subheading}</h4>
+            <h4 className="GetfontHomeDash">{card.subheading}</h4>
             <ul>
               {card.points.map((point, idx) => (
-                <li key={idx}>{point}</li>
+                <li className="GetfontHomeDash" key={idx}>{point}</li>
               ))}
             </ul>
           </div>
