@@ -98,12 +98,12 @@ export default function About() {
         </section>
 
         {/* Scroll Stacking Cards */}
-        <div className="-mt-96 mb-24">
+        <div className="-mt-[450px] mb-24">
           <ScrollStackingCards content={aboutUsContent} />
         </div>
 
         {/* Why Choose Us Section */}
-        <section className="bg-white py-8 px-4 sm:px-6 lg:px-8">
+        <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[320px]">
           <div className="bg-[#fdf6ee] shadow-xl rounded-xl p-6 sm:p-10 md:p-12 max-w-[1000px] mx-auto">
             <div className="flex items-center justify-center mb-4">
               <img src={sunPhoto} alt="Chacha" className="w-16 h-16 mr-4" />
@@ -127,25 +127,31 @@ export default function About() {
           </div>
         </section>
 
-        <CompanySection />
+        <section className="-mt-[20px]">
+          <CompanySection />
+        </section>
 
-        <section className="mt-2">
+        <section className="-mt-16">
           <ProcessSteps />
-         <section className=" ml-10 mr-10">
-           <HoverVideoCard2 />
-         </section>
-         <section className=" ml-10 mr-10">
-           <HoverVideoCard3/>
-         </section>
-          <FiguringOut />
-          <SolarCards />
-          <ContactCards />
+          <section className=" ml-10 mr-10 -mt-32">
+            <HoverVideoCard2 />
+          </section>
+          <section className=" ml-10 mr-10 mt-10">
+            <HoverVideoCard3 />
+          </section>
+          <section className=" mt-10">
+            <FiguringOut />
+          </section>
+          <section className="-mt-20">
+            <SolarCards />
+            <ContactCards />
+          </section>
 
         </section>
 
 
       </div>
-      <section className="mt-[15200px] sm:mt-0 md:mt-0 lg:mt-[8200px] xl:mt-[8200px] 2xl:mt-[9000px]">
+      <section className="mt-[15200px] sm:mt-0 md:mt-0 lg:mt-[6800px] xl:mt-[6600px] 2xl:mt-[7500px]">
         <Footer />
       </section>
 
