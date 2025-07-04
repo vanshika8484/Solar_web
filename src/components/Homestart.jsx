@@ -65,7 +65,7 @@ function Homestart() {
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.2, duration: 1 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
                 >
                     <img
                         src={family}
