@@ -86,7 +86,7 @@ function Product() {
   return (
     <div className='flex items-center justify-center min-h-screen '>
       <div>
-    <section className=" max-h-screen relative py-20 text-center bg-gradient-to-br from-green-50 to-white GetFontSol   max-w-7xl ">
+    <section className=" max-h-screen relative py-20 text-center  bg-gradient-to-br from-white to-gray-100 GetFontSol   max-w-7xl ">
       <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
 
       <div className="relative z-10 ">
@@ -102,7 +102,7 @@ function Product() {
       </div>
 
       {/* Solar Solutions */}
-      <motion.section className="py-20 px-6 text-white mr-36 ml-36 "
+      <motion.section className="py-20 px-6 text-white  bg-gradient-to-br from-white to-gray-100 "
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -120,7 +120,7 @@ function Product() {
           {solarData.map((item, index) => (
             <motion.div
               key={index}
-              className=" text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
+              className=" text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
               variants={cardVariants}
             >
               <img src={item.image} alt={item.title} className="h-70 w-full object-cover" />
@@ -157,7 +157,7 @@ function Product() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl  text-green-800 font-bold">Safety Solutions</h2>
+          <h2 className="text-4xl  text-green-700 font-bold">Safety Solutions</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
@@ -209,7 +209,7 @@ function Product() {
           {Genset.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
+              className="bg-white text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
               variants={cardVariants}
             >
               <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
