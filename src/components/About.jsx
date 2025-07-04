@@ -133,19 +133,22 @@ export default function About() {
 
         <section className="-mt-16">
           <ProcessSteps />
-          <section className=" ml-10 mr-10 -mt-32">
+          <section className=" ml-10 mr-10 -mt-20">
             <HoverVideoCard2 />
           </section>
-          <section className=" ml-10 mr-10 -mt-48">
+          <section className=" ml-10 mr-10 -mt-32">
             <HoverVideoCard3 />
           </section>
-          <section className=" -mt-48">
+          <section className=" -mt-36">
             <FiguringOut />
           </section>
-          <section className="-mt-20 ml-24 mr-24">
+          <section className=" mt-5 ml-24 mr-24">
             <SolarCards />
-            <ContactCards />
+          
           </section>
+           <section className="">
+              <ContactCards />
+           </section>
 
         </section>
 
