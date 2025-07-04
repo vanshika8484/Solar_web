@@ -69,7 +69,7 @@ const HoverVideoCard3 = () => {
       <div className="bg-white min-h-screen py-8 px-4 -mt-20 sm:px-6 lg:px-8 GetFontSol">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-center text-xl md:text-3xl font-bold text-green-800 mb-10">
-            OUR FOUNDER PHILOSOPHY
+           Growth At Divy
           </h2>
   
           <div
