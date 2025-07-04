@@ -241,7 +241,7 @@ const Career = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8 mr-32 ml-32"
+        className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8 mr-10 ml-10"
       >
         <div className=" bg-green-700 rounded-xl shadow-xl overflow-hidden">
           <div className="px-6 py-12 sm:p-12">
