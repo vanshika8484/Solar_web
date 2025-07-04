@@ -114,7 +114,7 @@ export default function Services() {
       {services.map((service, index) => (
         <motion.div
           key={index}
-          className="group bg-white p-8 rounded-2xl shadow-md hover:bg-[#F7F6F0] hover:shadow-xl transition duration-300 flex flex-col items-start space-y-5"
+          className="group bg-[#F7F6F0] p-8 rounded-2xl shadow-md hover:bg-white hover:shadow-xl transition duration-300 flex flex-col items-start space-y-5"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
