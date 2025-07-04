@@ -140,7 +140,7 @@ export default function Services() {
     </div>
 
       {/* Contact Form Section */}
-      <div className="bg-white min-h-screen px-4 py-12 sm:px-6 lg:px-8 mr-24 ml-24">
+      <div className=" bg-gradient-to-br from-white to-gray-100  min-h-screen px-4 py-12 sm:px-6 lg:px-8 mr-24 ml-24">
         <div className="max-w-7xl mx-auto">
           <main className="mt-12 flex flex-col md:flex-row gap-12 items-start">
             <div className="flex-shrink-0 w-full md:w-1/2 relative rounded-xl overflow-hidden">
