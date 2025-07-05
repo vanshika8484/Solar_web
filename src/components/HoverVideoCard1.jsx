@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const reelsData = [
   { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750682931/Kaushlesh_We_And_Our_Competitors_fqtpmh.mp4', username: "solar_user_1", caption: "Reel 1: Clean and green energy revolution!" },
-  { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750682960/Rajeev_Arora_Our_Quality_Is_Our_Legacy_nnxwdz.mp4', username: "solar_user_2", caption: "Reel 2: Solar is the future!" },
+  
   { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683018/Rajeev_Arora_Our_Quality_Is_Our_Legacy_xvwpmw.mp4', username: "solar_user_3", caption: "Reel 3: Powering your world sustainably!" },
   { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683050/Ateesh_Tata_Authorised_Solar_Partner_tpssdt.mp4', username: "solar_user_4", caption: "Reel 4: Clean energy in action!" },
   { videoSrc:'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683064/Asha_Divy_Power_Sop_s_elrwrz.mp4', username: "solar_user_5", caption: "Reel 5: Greener tomorrow starts today!" },
