@@ -29,7 +29,7 @@ const teamMembers = [
 
 const FiguringOut = () => {
   return (
-    <div className="bg-white min-h-screen py-8 px-4 -mt-20 sm:px-6 lg:px-8 GetFontSol">
+    <div className="bg-white min-h-screen py-8 px-4 -mt-30 sm:px-6 lg:px-8 GetFontSol ">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl GetFontSol mb-8 text-red-800">Figuring Out with Divy</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -39,7 +39,7 @@ const FiguringOut = () => {
                 <video
                   src={member.reel}
                   alt={member.name}
-                  className="w-full h-56 object-cover rounded-lg transform hover:scale-105 transition-transform duration-300"
+                  className="w-full h-60 object-cover rounded-lg transform hover:scale-105 transition-transform duration-300"
                   controls
                 />
                 {/* <button
@@ -49,10 +49,10 @@ const FiguringOut = () => {
                   
                 </button> */}
               </div>
-              <div className="mt-3 text-center">
+              {/* <div className="mt-3 text-center">
                 <h3 className="text-lg GetFontSol">{member.name}</h3>
                 <p className="text-gray-500 text-sm mt-1">{member.role}</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
