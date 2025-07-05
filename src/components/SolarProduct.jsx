@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 import { GiSolarPower, GiLightningSpanner, GiGasPump } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import La from "./La";
-
 
 const products = [
   {
@@ -20,7 +18,7 @@ const products = [
   {
     title: "Genset Solutions",
     icon: <GiGasPump className="text-white text-3xl" />,
-    features: ["Gas Genset", "Diesel/Petrol Genset"],
+    features: ["Diesel/Petrol Genset"],
   },
 ];
 
@@ -39,7 +37,7 @@ const cardVariants = {
 
 const SolarProducts = () => {
   return (
-    <section className="bg-green-800 py-16 px-4 GetFontSol ">
+    <section className="bg-green-800 py-16 px-4 GetFontSol">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-green-800 text-xl font-bold uppercase tracking-widest">
@@ -49,7 +47,7 @@ const SolarProducts = () => {
             Harness The Power Of The Sun With Solar Energy!
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 ml-16 mr-16">
           {products.map((product, index) => (
             <motion.div
               key={index}
@@ -58,28 +56,31 @@ const SolarProducts = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="group bg-[#0c093d] p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl"
             >
-              <div className="w-16 h-16 rounded-full bg-green-800 flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-full bg-green-800 flex items-center justify-center mb-6 ">
                 {product.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">
+              <h3 className="text-xl font-semibold mb-4 text-gray-100 group-hover:text-black transition-colors duration-300">
                 {product.title}
               </h3>
-              <ul className="space-y-2 text-gray-700 text-sm mb-6">
+              <ul className="space-y-2 text-sm mb-6">
                 {product.features.map((feature, i) => (
-                  <li key={i} className="flex items-center">
+                  <li
+                    key={i}
+                    className="flex items-center text-gray-300 group-hover:text-black transition-colors duration-300"
+                  >
                     <FaCheckCircle className="text-green-800 mr-2" />
                     {feature}
                   </li>
                 ))}
               </ul>
               <Link
-  to={"/LA"}
-  className="mt-2 text-sm text-black font-semibold underline decoration-2 underline-offset-2 hover:text-green-700"
->
-  Read More →
-</Link>
+                to={"/LA"}
+                className="mt-2 text-sm text-gray-300 group-hover:text-black font-semibold underline decoration-2 underline-offset-2 transition-colors duration-300 hover:text-green-700"
+              >
+                Read More →
+              </Link>
             </motion.div>
           ))}
         </div>
