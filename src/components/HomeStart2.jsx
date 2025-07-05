@@ -117,18 +117,18 @@ function HomeStart2() {
 
         {/* Bottom Section with Cartoon */}
         <motion.section
-          className="mt-[70px]"
+          className="mt-[70px] animate-float"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 60, delay: 0.3 }}
           viewport={{ once: true }}
         >
           <div className="bg-[#E50C0C] flex justify-center items-center h-[370px] p-4">
-            <div className="max-w-5xl  w-full text-center">
+            <div className="max-w-5xl  w-full text-center ">
               <motion.img
                 src={img1}
                 alt="Cartoon sun characters"
-                className="mx-auto -mt-24 mb-6 max-w-full h-auto"
+                className="mx-auto -mt-24 mb-6 max-w-full h-auto "
                 width="400"
                 height="300"
                 initial={{ scale: 0.7, opacity: 0 }}
