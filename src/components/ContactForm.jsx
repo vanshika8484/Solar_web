@@ -46,17 +46,17 @@ const ContactForm = () => {
   };
 
   return (
-    <main className="bg-green-800 px-4 sm:px-8 md:px-16 py-20 -mt-24 GetfontHomeChat">
+    <main className="bg-green-800 px-4 sm:px-8 md:px-16 py-20 -mt-24 About">
       <ToastContainer position="top-right" autoClose={3000} />
 
       <div className="text-center max-w-4xl mx-auto mb-12 -mt-[70px]">
-        <h2 className="text-xl md:text-3xl GetfontHomeDash text-white leading-snug About1">
+        <h2 className="text-xl md:text-3xl About text-white leading-snug About1">
           Bijli ka bill bhejiye and Solar Chacha se jaaniye<br />
           apne rooftop ke liye Best Solar Solution
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat mt-6 ">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat mt-16 ">
         {/* Form Section */}
         <form
           onSubmit={handelSubmit}
