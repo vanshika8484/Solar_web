@@ -44,10 +44,10 @@ const SolarSolutions = () => {
   };
 
   return (
-    <main className="bg-white text-black max-w-[1500px] mx-auto p-6 sm:p-10 GetfontHomeDash  ml-4 mr-4 sm:ml-12 sm:mr-12">
+    <main className="bg-white text-black max-w-[1500px] mx-auto p-6 sm:p-10 About ml-4 mr-4 sm:ml-12 sm:mr-12 -mt-24" >
       {/* Top Section Animation */}
       <motion.section
-        className="flex flex-col lg:flex-row items-center lg:items-start gap-6"
+        className="flex flex-col lg:flex-row items-center lg:items-start gap-6 mt-9"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
