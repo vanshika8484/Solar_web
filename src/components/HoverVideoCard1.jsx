@@ -57,9 +57,18 @@ const HoverVideoCard1 = () => {
     };
   }, []);
 
+  const handlePrev = () => {
+  const prevIndex = (activeIndex - 1 + reelsData.length) % reelsData.length;
+  scrollToIndex(prevIndex);
+};
+
+const handleNext = () => {
+  const nextIndex = (activeIndex + 1) % reelsData.length;
+  scrollToIndex(nextIndex);
+};
   return (
-    <section className="relative w-full px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
-      <h2 className="text-center text-3xl font-bold text-green-800 mb-10">Why switch to solar</h2>
+    <section className="relative w-full px-4 py-4 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
+      <h2 className="text-center text-3xl font-bold text-green-800 mb-10">Why Choose Us</h2>
 
       {/* Reels Container */}
       <div
@@ -72,6 +81,13 @@ const HoverVideoCard1 = () => {
         }}
         onWheel={(e) => e.preventDefault()} // prevent scroll on wheel
       >
+        <button
+         onClick={handlePrev}
+         className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-transparent hover:bg-green-700 text-white
+                     rounded-full p-3 z-10 shadow-md"
+        >
+         ⬅️
+        </button>
         {/* Hide scrollbar manually */}
         <style>{`
           div::-webkit-scrollbar {
@@ -114,6 +130,13 @@ const HoverVideoCard1 = () => {
             </div> */}
           </motion.div>
         ))}
+        <button
+         onClick={handleNext}
+         className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-transparent hover:bg-green-700 text-white 
+                    rounded-full p-3 z-10 shadow-md "
+        >
+         ➡️
+        </button>
       </div>
 
       {/* Dot Indicators */}
@@ -121,7 +144,7 @@ const HoverVideoCard1 = () => {
         {reelsData.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-green-600 scale-110" : "bg-gray-300"
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-green-600 scale-110" : "bg-gray-300 "
               }`}
             onClick={() => scrollToIndex(index)}
             aria-label={`Go to reel ${index + 1}`}
