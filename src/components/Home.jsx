@@ -45,6 +45,7 @@ import Homestart from "./Homestart";
 import HomeStart2 from "./HomeStart2";
 import ExpertTeam from "./ExpertTeam";
 import HoverVideoCard1 from "./HoverVideoCard1";
+import FiguringOut1 from "./FiguringOut1";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -159,11 +160,11 @@ function Home() {
         <SolarProduct />
       </section>
 
-     <section className=" mt-10">
+     <section className=" mt-10 animate-float">
       <img src={DivyRedesign}/>
      </section>
 <section className=" mt-12">
-         <ExpertTeam />
+         <FiguringOut1/>
        </section>
       <section className=" mt-16">
         <Ctpage />
