@@ -1,5 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
+// Sample data
 const teamMembers = [
   {
     name: 'Mark Makana',
@@ -41,52 +43,61 @@ const teamMembers = [
 
 const HoverVideoCard2 = () => {
   const scrollRef = useRef(null);
-  const animationFrame = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
 
-  useEffect(() => {
-    let scrollPos = 0;
-
-    const autoScroll = () => {
-      if (!isPaused && scrollRef.current) {
-        scrollPos += 0.5;
-        if (scrollPos >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
-          scrollPos = 0;
-        }
-        scrollRef.current.scrollLeft = scrollPos;
-      }
-      animationFrame.current = requestAnimationFrame(autoScroll);
-    };
-
-    animationFrame.current = requestAnimationFrame(autoScroll);
-
-    return () => cancelAnimationFrame(animationFrame.current);
-  }, [isPaused]);
+  const scrollBy = (direction) => {
+    if (!scrollRef.current) return;
+    const scrollAmount = 300;
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <div className="bg-white min-h-screen py-8 px-4 -mt-20 sm:px-6 lg:px-8 GetFontSol">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-center text-xl md:text-3xl font-bold text-green-800 mb-10">
+    <div className="bg-white min-h-screen px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto text-center relative">
+        <h2 className="text-xl md:text-3xl font-bold text-green-800 mb-10">
           OUR FOUNDER PHILOSOPHY
         </h2>
 
+        {/* Scroll Buttons */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 z-10 hidden sm:block">
+          <button
+            onClick={() => scrollBy("left")}
+            className="bg-black text-white rounded-full shadow-lg p-3 hover:bg-green-600 active:scale-95 transition"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+        </div>
+        <div className="absolute top-1/2 -translate-y-1/2 right-0 z-10 hidden sm:block">
+          <button
+            onClick={() => scrollBy("right")}
+            className="bg-black text-white rounded-full shadow-lg p-3 hover:bg-green-600 active:scale-95 transition"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Scrollable Cards */}
         <div
           ref={scrollRef}
           className="overflow-x-auto scroll-hide"
-          style={{ whiteSpace: "nowrap" }}
+          style={{
+            scrollBehavior: "smooth",
+            maxWidth: "100%",
+            whiteSpace: "nowrap",
+          }}
         >
-          <div className="flex space-x-6 w-max">
+          <div className="flex space-x-4 min-w-[150%]">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                onMouseEnter={() => setIsPaused(true)}
-                onMouseLeave={() => setIsPaused(false)}
-                className="flex-shrink-0 w-72 bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-all"
+                className="flex-shrink-0 w-64 sm:w-72 bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-all"
               >
                 <div className="relative rounded-lg overflow-hidden">
                   <video
                     src={member.reel}
-                    className="w-full h-56 object-cover rounded-lg transform hover:scale-105 transition-transform duration-300"
+                    className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
                     controls
                   />
                 </div>
