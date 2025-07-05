@@ -15,15 +15,16 @@ import ScrollStackingCards from "./ScrollStackingCards"; // <-- Imported here
 import "./ScrollStackingCards.css"; // <-- Include CSS
 import HoverVideoCard2 from "./HoverVideoCard2";
 import HoverVideoCard3 from "./HoverVideoCard3";
+import "./Home.css"; // Ensure this CSS file is imported for styles
 
 const aboutUsContent = [
   {
-    heading: "Not Just Selling Solar – We are a Partner in Your Energy Journey",
+    heading: "Not Just Selling Solar We are a Partner in Your Journey",
     subheading: "At Divy Power Pvt. Ltd., we don’t just sell solar panels. We listen, understand, and build solutions.",
     points: [
-      "Every home, business, or factory has a unique energy need – we begin by understanding yours.",
+      "Every home, business, or factory has a unique energy we begin by understanding yours",
       "Our approach is not sales-driven, it’s solution-focused.",
-      "We help you avoid costly mistakes caused by one-size-fits-all solar kits.",
+      "We help you avoid costly mistakes caused by all solar kits.",
       "We design systems that fit your life, not force you to adapt to them.",
     ],
     img: "https://storage.googleapis.com/a1aa/image/b08acab3-6b8b-47a9-3cc6-092bfccc4ded.jpg",
@@ -36,18 +37,18 @@ const aboutUsContent = [
       "Every electricity bill is money lost that could’ve been saved.",
       "Electricity prices are rising, and power cuts are more frequent.",
       "Delaying solar means losing not just money, but energy independence.",
-      "Going solar isn’t just smart, it’s urgent – and we help you act now.",
+      "Going solar isn’t just smart, it’s urgent and we help you act now.",
     ],
     img: "https://storage.googleapis.com/a1aa/image/a6bb9ba5-9710-4d97-6623-f283a7ce4df1.jpg",
     alt: "Clock with electric cables symbolizing urgency",
   },
   {
-    heading: "Powering Every Home – from Rooftops to Rural Villages",
-    subheading: "We build energy solutions for all, from high-rise buildings to the heart of rural India.",
+    heading: "Powering Every Home from Rooftops to Rural Villages",
+    subheading: "We deliver energy solutions for everyon high-rises to rural India",
     points: [
-      "No terrain or challenge is too complex – we deliver where it’s needed.",
+      "No terrain or challenge is too complex we deliver where it’s needed.",
       "Our systems are designed to endure Indian conditions: dust, heat, and rain.",
-      "Be it a home, farm, or school – our mission is to light it up, cleanly and reliably.",
+      "Be it a home, farm, or school our mission is to light it up, cleanly and reliably.",
       "We believe clean energy is a right, not a luxury.",
     ],
     img: "https://storage.googleapis.com/a1aa/image/72f5a45b-2e30-45fc-b276-a06c6a12a64e.jpg",
@@ -98,12 +99,12 @@ export default function About() {
         </section>
 
         {/* Scroll Stacking Cards */}
-        <div className="-mt-[450px] mb-24">
+        <div className="-mt-[550px] mb-24">
           <ScrollStackingCards content={aboutUsContent} />
         </div>
 
         {/* Why Choose Us Section */}
-        <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[320px]">
+        {/* <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[320px] About ">
           <div className="bg-[#fdf6ee] shadow-xl rounded-xl p-6 sm:p-10 md:p-12 max-w-[1000px] mx-auto">
             <div className="flex items-center justify-center mb-4">
               <img src={sunPhoto} alt="Chacha" className="w-16 h-16 mr-4" />
@@ -125,36 +126,62 @@ export default function About() {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="-mt-[20px]">
+        <section className="-mt-[290px]">
           <CompanySection />
         </section>
 
-        <section className="-mt-16">
-          <ProcessSteps />
-          <section className=" ml-10 mr-10 -mt-20">
+        <section className="">
+          <section className=" ml-10 mr-10 mt-36">
             <HoverVideoCard2 />
           </section>
-          <section className=" ml-10 mr-10 -mt-32">
+          <ProcessSteps />
+          <section className=" ml-10 mr-10 mt-10">
             <HoverVideoCard3 />
           </section>
-          <section className=" -mt-36">
+
+          {/* Why Choose Us Section */}
+          <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[100px] About">
+            <div className="bg-[#fdf6ee] shadow-xl rounded-xl p-6 sm:p-10 md:p-12 max-w-[1000px] mx-auto">
+              <div className="flex items-center justify-center mb-4">
+                <img src={sunPhoto} alt="Chacha" className="w-16 h-16 mr-4" />
+                <h2 className="text-2xl md:text-4xl font-extrabold text-red-700 text-center md:text-left">
+                  Why Choose Us as Your Solar Partner?
+                </h2>
+                <img src={sunImage} alt="Didi" className="w-16 h-16 ml-4" />
+              </div>
+              <div className="text-gray-800 text-base md:text-lg leading-relaxed space-y-5">
+                <p>
+                  At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems - we build <span className="text-green-500">lasting energy partnerships</span>.
+                </p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
+                  <li><strong>Post-installation support</strong> real-time maintenance and performance monitoring throughout the system's lifecycle.</li>
+                  <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure maximum durability and safety.</li>
+                  <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
+                  <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className=" mt-30">
             <FiguringOut />
           </section>
-          <section className=" mt-5 ml-24 mr-24">
+          <section className=" ml-20 mr-20">
             <SolarCards />
-          
+           
           </section>
-           <section className="">
-              <ContactCards />
-           </section>
+          <section className=" mt-6 ml-16 mr-16">
+             <ContactCards />
+          </section>
 
         </section>
 
 
       </div>
-      <section className="mt-[15200px] sm:mt-0 md:mt-0 lg:mt-[6400px] xl:mt-[6400px] 2xl:mt-[7500px]">
+      <section className="mt-[17500px] sm:mt-0 md:mt-0 lg:mt-[6800px] xl:mt-[6600px] 2xl:mt-[7500px]">
         <Footer />
       </section>
 
