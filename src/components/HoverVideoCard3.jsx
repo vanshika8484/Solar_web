@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // Optional icons
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
   {
@@ -53,58 +53,65 @@ const HoverVideoCard3 = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen  px-4 -mt-[120px] sm:px-6 lg:px-8 About1 ">
-      <div className="max-w-7xl mx-auto text-center relative">
-        <h2 className="text-center text-xl md:text-3xl font-bold text-green-800 mb-10">
+    <div className="bg-white py-12 px-4 sm:px-6 lg:px-12 relative -mt-[120px]">
+      <div className="max-w-7xl mx-auto relative">
+        <h2 className="text-center text-2xl sm:text-3xl font-bold text-green-800 mb-10">
           Growth At Divy
         </h2>
 
-        {/* Scroll Buttons */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-2 z-10 hidden sm:block">
+        {/* Desktop/Tablet Scroll Buttons */}
+        <div className="hidden sm:block absolute top-1/2 left-0 -translate-y-1/2 z-10">
           <button
             onClick={() => scrollBy("left")}
-            className="bg-black text-white rounded-full shadow-lg p-3 hover:bg-green-600 active:scale-95 transition"
+            className="bg-black text-white rounded-full shadow p-3 hover:bg-green-600 active:scale-95 transition"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
-
-        <div className="absolute top-1/2 -translate-y-1/2 right-2 z-10 hidden sm:block">
+        <div className="hidden sm:block absolute top-1/2 right-0 -translate-y-1/2 z-10">
           <button
             onClick={() => scrollBy("right")}
-            className="bg-black text-white rounded-full shadow-lg p-3 hover:bg-green-600 active:scale-95 transition"
+            className="bg-black text-white rounded-full shadow p-3 hover:bg-green-600 active:scale-95 transition"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 
-        {/* Scrollable Cards */}
+        {/* Scrollable Row */}
         <div
           ref={scrollRef}
-          className="overflow-x-auto scroll-hide scroll-hide"
-          style={{ whiteSpace: "nowrap", scrollBehavior: "smooth" }}
+          className="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide py-4"
         >
-          <div className="flex space-x-4 w-max">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-64 sm:w-72 bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-all"
-              >
-                <div className="relative rounded-lg overflow-hidden">
-                  <video
-                    src={member.reel}
-                    className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-                    controls
-                  />
-
-                </div>
-                {/* <div className="mt-3 text-left">
-                  <h3 className="text-md font-semibold text-gray-800">{member.name}</h3>
-                  <p className="text-sm text-gray-600">{member.role}</p>
-                </div> */}
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-60 sm:w-72 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all"
+            >
+              <div className="relative rounded-lg overflow-hidden">
+                <video
+                  src={member.reel}
+                  className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                  controls
+                />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Bottom Scroll Buttons */}
+        <div className="flex sm:hidden justify-center gap-6 mt-4">
+          <button
+            onClick={() => scrollBy("left")}
+            className="bg-black text-white rounded-full p-3 shadow hover:bg-green-600 transition active:scale-95"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => scrollBy("right")}
+            className="bg-black text-white rounded-full p-3 shadow hover:bg-green-600 transition active:scale-95"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </div>
