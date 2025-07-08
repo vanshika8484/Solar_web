@@ -32,31 +32,31 @@ const CompanySection = () => {
     }`;
 
   return (
-    <section className="py-5 bg-white About1 ml-20 mr-16 ">
-      <h2 className="text-4xl font-bold text-center text-green-800 mb-12">
+    <section className="py-10 px-4 sm:px-6 md:px-10 lg:px-20 bg-white">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-800 mb-10">
         Our <span className="text-black">Company</span>
       </h2>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-12">
+      <div className="flex flex-col lg:flex-row items-center gap-10">
         {/* Left Image */}
         <div className="w-full lg:w-1/2">
           <img
             src="https://storage.googleapis.com/a1aa/image/b08acab3-6b8b-47a9-3cc6-092bfccc4ded.jpg"
             alt="Solar panels"
-            className="rounded-2xl shadow-lg object-cover w-full max-h-[480px]"
+            className="rounded-2xl shadow-lg object-cover w-full max-h-[400px] sm:max-h-[480px]"
           />
         </div>
 
         {/* Right Content */}
         <div className="w-full lg:w-1/2 flex flex-col">
-          <h3 className="text-3xl font-semibold text-black mb-6 leading-tight text-center lg:text-left">
+          <h3 className="text-2xl sm:text-3xl font-semibold text-black mb-6 text-center lg:text-left leading-snug">
             Produce Your Own <br />
             <span className="text-green-700">Clean Energy</span> <br />
             Save The Environment
           </h3>
 
           {/* Tabs */}
-          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6">
             {["mission", "vision", "why"].map((key) => (
               <button
                 key={key}
@@ -84,13 +84,13 @@ const CompanySection = () => {
             >
               <p className="mb-6">{activeContent.text}</p>
 
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
                 <img
                   src={activeContent.img}
                   alt="Content visual"
-                  className="rounded-xl w-28 h-36 object-cover shadow"
+                  className="rounded-xl w-full sm:w-28 h-36 object-cover shadow"
                 />
-                <p className="text-black text-sm">{activeContent.note}</p>
+                <p className="text-black text-sm sm:text-base">{activeContent.note}</p>
               </div>
             </motion.div>
           </AnimatePresence>
