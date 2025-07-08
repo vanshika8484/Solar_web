@@ -182,7 +182,7 @@ function Home() {
         <HoverVideoCard1 />
 
 
-        <section className="About1">
+        <section className="About1 mt-20">
           <FaqSection />
         </section>
 
@@ -193,7 +193,7 @@ function Home() {
 
         </section>
 
-        <section className="mt-10 md:mt-20 About1 lg:mt-20 xl:mt-24 2xl:-mt-[10px]">
+        <section className="mt-20 md:mt-20 About1 lg:mt-20 xl:mt-24 2xl:-mt-[10px]">
           <Footer />
         </section>
       </section>
