@@ -37,7 +37,7 @@ const cardVariants = {
 
 const SolarProducts = () => {
   return (
-    <section className="bg-green-800 py-16 px-4 GetFontSol">
+    <section className="bg-green-800 py-16 px-4 About1">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-green-800 text-xl font-bold uppercase tracking-widest">
