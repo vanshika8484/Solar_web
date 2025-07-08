@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import solar from '../Images/Solar3.jpg'
 import {
   FaTools,
   FaSolarPanel,
@@ -110,61 +111,52 @@ export default function Services() {
         <span className="text-black">Our Green</span> Services
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 cursor-pointer px-4 sm:px-6  mr-24 ml-24">
-      {services.map((service, index) => (
-        <motion.div
-          key={index}
-          className="group bg-[#F7F6F0] p-8 rounded-2xl shadow-md hover:bg-white hover:shadow-xl transition duration-300 flex flex-col items-start space-y-5"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: index * 0.1 }}
-        >
-          <div className="bg-white p-4 rounded-full text-green-800">
-            {service.icon}
-          </div>
-          <h3 className="text-lg font-semibold text-gray-900 leading-tight">
-            {service.title}
-          </h3>
-          <p className="text-sm text-gray-600 leading-relaxed transition-opacity duration-300">
-            {service.description}
-          </p>
-          <Link
-            to={service.path}
-            className="flex items-center text-sm font-medium text-green-800 hover:underline"
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-12 xl:px-24">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="group bg-[#F7F6F0] p-6 sm:p-8 rounded-2xl shadow-md hover:bg-white hover:shadow-xl transition duration-300 flex flex-col items-start space-y-4 sm:space-y-5"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
           >
-            Read More <span className="ml-1">→</span>
-          </Link>
-        </motion.div>
-      ))}
-    </div>
+            <div className="bg-white p-4 rounded-full text-green-800">
+              {service.icon}
+            </div>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-900 leading-tight">
+              {service.title}
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {service.description}
+            </p>
+            <Link
+              to={service.path}
+              className="flex items-center text-sm font-medium text-green-800 hover:underline"
+            >
+              Read More <span className="ml-1">→</span>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
 
       {/* Contact Form Section */}
-      <div className=" bg-gradient-to-br from-white to-gray-100  min-h-screen px-4 py-12 sm:px-6 lg:px-8 mr-24 ml-24">
+      <div className="bg-gradient-to-br from-white to-gray-100 w-full px-4 py-12 sm:px-6 lg:px-12 xl:px-24">
         <div className="max-w-7xl mx-auto">
           <main className="mt-12 flex flex-col md:flex-row gap-12 items-start">
-            <div className="flex-shrink-0 w-full md:w-1/2 relative rounded-xl overflow-hidden">
+            {/* Left Image Block */}
+            <div className="w-full md:w-1/2 relative rounded-xl overflow-hidden mt-20">
               <img
-                src="https://storage.googleapis.com/a1aa/image/72879928-05fb-48e0-317a-b955a67eef62.jpg"
+                src={solar}
                 alt="Video preview"
                 className="rounded-xl w-full h-auto"
               />
-              <button
-                aria-label="Play video"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-md"
-              >
-                <svg
-                  className="w-6 h-6 text-green-800"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </button>
+
             </div>
 
-            <form onSubmit={handleSubmit} className="flex-1 max-w-xl w-full">
-              <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+            {/* Contact Form */}
+            <form onSubmit={handleSubmit} className="w-full md:w-1/2">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
                 Write Here Below?
               </h2>
               <p className="text-gray-700 mb-8">
@@ -195,7 +187,7 @@ export default function Services() {
                 type="tel"
                 name="phone"
                 placeholder="Your Phone"
-                className="border w-full border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none"
+                className="border w-full border-gray-300 rounded-full py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none mb-6"
                 value={formData.phone}
                 onChange={handleChange}
               />
@@ -204,7 +196,7 @@ export default function Services() {
                 name="message"
                 rows="5"
                 placeholder="Your Message"
-                className="w-full border mt-5 border-gray-300 rounded-2xl py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none mb-6"
+                className="w-full border border-gray-300 rounded-2xl py-3 px-5 focus:ring-2 focus:ring-green-800 outline-none mb-6"
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
@@ -212,11 +204,10 @@ export default function Services() {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full text-white rounded-full py-3 font-semibold transition ${
-                  loading
+                className={`w-full text-white rounded-full py-3 font-semibold transition ${loading
                     ? "bg-green-400 cursor-not-allowed"
                     : "bg-green-800 hover:bg-green-700"
-                }`}
+                  }`}
               >
                 {loading ? "Submitting..." : "SUBMIT NOW"}
               </button>
@@ -225,8 +216,9 @@ export default function Services() {
         </div>
       </div>
 
-     
-      
+
+
+
       <Footer />
     </section>
   );
