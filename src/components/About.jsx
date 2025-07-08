@@ -169,11 +169,11 @@ export default function About() {
           <section className=" mt-30">
             <FiguringOut />
           </section>
-          <section className=" ml-20 mr-20">
+          <section className=" ml-20 mr-20 mt-36">
             <SolarCards />
            
           </section>
-          <section className=" mt-6 ml-16 mr-16">
+          <section className=" mt-24 ml-16 mr-16">
              <ContactCards />
           </section>
 
@@ -181,7 +181,7 @@ export default function About() {
 
 
       </div>
-      <section className="mt-[17500px] sm:mt-0 md:mt-0 lg:mt-[6800px] xl:mt-[6600px] 2xl:mt-[7500px]">
+      <section className="mt-[17500px] sm:mt-0 md:mt-0 lg:mt-[7200px] xl:mt-[6900px] 2xl:mt-[7800px]">
         <Footer />
       </section>
 
