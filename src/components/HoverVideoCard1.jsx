@@ -4,33 +4,33 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const teamMembers = [
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750682931/Kaushlesh_We_And_Our_Competitors_fqtpmh.mp4',
-    username: "solar_user_1",
-    caption: "Reel 1: Clean and green energy revolution!",
+    username: "Kaushlesh Agarwal",
+    caption: "Reel 1: We And Our Competitors",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751711628/Shivam_Choose_Divy_As_Your_Solar_Partner_1_cy0ey7.mp4',
-    username: "solar_user_2",
-    caption: "Reel 2: Solar is the future!",
+    username: "Shivam Shengar",
+    caption: "Reel 2:Divy As Your Solar Partner",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683018/Rajeev_Arora_Our_Quality_Is_Our_Legacy_xvwpmw.mp4',
-    username: "solar_user_3",
-    caption: "Reel 3: Powering your world sustainably!",
+    username: " Rajeev Arora",
+    caption: "Reel 3: Our Quality Is Our Legacy",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683050/Ateesh_Tata_Authorised_Solar_Partner_tpssdt.mp4',
-    username: "solar_user_4",
-    caption: "Reel 4: Clean energy in action!",
+    username: "Ateesh Kumar",
+    caption: "Reel 4: Divy Tata Authorised Solar Partner",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683064/Asha_Divy_Power_Sop_s_elrwrz.mp4',
-    username: "solar_user_5",
-    caption: "Reel 5: Greener tomorrow starts today!",
+    username: "Asha Gupta",
+    caption: "Reel 5: SOP's of Divy Power",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683064/Asha_Warranty_On_Solars_m82qbv.mp4',
-    username: "solar_user_6",
-    caption: "Reel 6: Assured warranty on our solar panels!",
+    username: "Asha Gupta",
+    caption: "Reel 6: Warranty On Solars",
   },
 ];
 
