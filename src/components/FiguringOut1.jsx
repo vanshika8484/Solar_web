@@ -1,139 +1,119 @@
-
-import React, { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
-
-
+import React, { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const reelsData = [
-  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701264/Founder_And_Friends_Solar_Energy_And_Benefits_yjlwtu.mp4', username: "solar_user_1", caption: "Reel 1: Clean and green energy revolution!" },
-  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Ateesh_Breaking_The_Myth_zek5r6.mp4', username: "solar_user_2", caption: "Reel 2: Solar is the future!" },
-  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Riddhi_Go_Solar_Save_Environment_gstan5.mp4', username: "solar_user_3", caption: "Reel 3: Powering your world sustainably!" },
-  { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701248/Asha_Cheaper_Is_Not_Always_Safer_bbk2dm.mp4', username: "solar_user_4", caption: "Reel 4: Clean energy in action!" },
-   { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701219/Founder_And_Friends_Save_Environment_With_Solar_qswtyr.mp4', username: "solar_user_4", caption: "Reel 4: Clean energy in action!" },
-    { videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701055/Architecture_Interviews_Go_Solar_Save_Environment_2_u5awao.mp4', username: "solar_user_4", caption: "Reel 4: Clean energy in action!" },
- 
+  {
+    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701264/Founder_And_Friends_Solar_Energy_And_Benefits_yjlwtu.mp4',
+    username: "solar_user_1",
+    caption: "Reel 1: Clean and green energy revolution!",
+  },
+  {
+    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Ateesh_Breaking_The_Myth_zek5r6.mp4',
+    username: "solar_user_2",
+    caption: "Reel 2: Solar is the future!",
+  },
+  {
+    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Riddhi_Go_Solar_Save_Environment_gstan5.mp4',
+    username: "solar_user_3",
+    caption: "Reel 3: Powering your world sustainably!",
+  },
+  {
+    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701248/Asha_Cheaper_Is_Not_Always_Safer_bbk2dm.mp4',
+    username: "solar_user_4",
+    caption: "Reel 4: Clean energy in action!",
+  },
+  {
+    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701219/Founder_And_Friends_Save_Environment_With_Solar_qswtyr.mp4',
+    username: "solar_user_4",
+    caption: "Reel 5: Saving environment with solar!",
+  },
+  {
+    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701055/Architecture_Interviews_Go_Solar_Save_Environment_2_u5awao.mp4',
+    username: "solar_user_4",
+    caption: "Reel 6: Solar-powered future starts now!",
+  },
 ];
 
 const FiguringOut1 = () => {
-  const containerRef = useRef(null);
-  const videoRefs = useRef([]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const scrollInterval = useRef(null);
+  const scrollRef = useRef(null);
 
-  const scrollToIndex = (index) => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const card = container.children[index];
-    if (card) {
-      container.scrollTo({
-        left: card.offsetLeft - container.offsetLeft,
-        behavior: "smooth",
-      });
-      setActiveIndex(index);
-    }
+  const scrollBy = (direction) => {
+    if (!scrollRef.current) return;
+    const scrollAmount = 300;
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
   };
-
-  const startAutoScroll = () => {
-    stopAutoScroll();
-    scrollInterval.current = setInterval(() => {
-      setActiveIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % reelsData.length;
-        scrollToIndex(nextIndex);
-        return nextIndex;
-      });
-    }, 3000);
-  };
-
-  const stopAutoScroll = () => {
-    if (scrollInterval.current) clearInterval(scrollInterval.current);
-  };
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      startAutoScroll();
-    }, 500);
-    return () => {
-      clearTimeout(timeout);
-      stopAutoScroll();
-    };
-  }, []);
 
   return (
-    <section className="relative w-full px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
-      <h2 className="text-center text-3xl font-bold text-green-800 mb-10">Why switch to solar
-     </h2>
-     
+    <div className="bg-white py-12 px-4 sm:px-6 lg:px-12 relative -mt-[120px]">
+      <div className="max-w-7xl mx-auto relative">
+        <h2 className="text-center text-2xl sm:text-3xl font-bold text-green-800 mb-10">
+         Why switch to solar
 
-      {/* Reels Container */}
-      <div
-        ref={containerRef}
-        className="flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory space-x-4 px-2"
-        style={{
-          height: "360px",
-          scrollBehavior: "smooth",
-          scrollbarWidth: "none",
-        }}
-        onWheel={(e) => e.preventDefault()} // prevent scroll on wheel
-      >
-        {/* Hide scrollbar manually */}
-        <style>{`
-          div::-webkit-scrollbar {
-            display: none;
-          }
-        `}</style>
+        </h2>
 
-        {reelsData.map((reel, index) => (
-          <motion.div
-            key={index}
-            className="relative snap-start flex-shrink-0 w-[220px] h-[350px] bg-black rounded-xl overflow-hidden shadow-md"
-            whileHover={{ scale: 1.05 }}
-            initial={{ opacity: 0, x: 80 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.05 }}
-            onMouseEnter={() => {
-              stopAutoScroll();
-              const video = videoRefs.current[index];
-              if (video) {
-                video.currentTime = 0;
-                video.play();
-              }
-            }}
-            onMouseLeave={() => {
-              const video = videoRefs.current[index];
-              if (video) video.pause();
-              startAutoScroll();
-            }}
-          >
-            <video
-              ref={(el) => (videoRefs.current[index] = el)}
-              src={reel.videoSrc}
-              className="w-full h-full object-cover"
-              controls={false}
-              muted={false} // play with sound
-            />
-            {/* <div className="absolute bottom-0 w-full bg-black/40 backdrop-blur-sm text-white px-3 py-2">
-              <h3 className="text-sm font-semibold">@{reel.username}</h3>
-              <p className="text-xs">{reel.caption}</p>
-            </div> */}
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Dot Indicators */}
-      <div className="flex justify-center mt-6 space-x-2">
-        {reelsData.map((_, index) => (
+        {/* Desktop/Tablet Arrows */}
+        <div className="hidden sm:block absolute top-1/2 left-0 -translate-y-1/2 z-10">
           <button
-            key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-green-600 scale-110" : "bg-gray-300"
-              }`}
-            onClick={() => scrollToIndex(index)}
-            aria-label={`Go to reel ${index + 1}`}
-          />
-        ))}
+            onClick={() => scrollBy("left")}
+            className="bg-black text-white rounded-full shadow p-3 hover:bg-green-600 active:scale-95 transition"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+        </div>
+        <div className="hidden sm:block absolute top-1/2 right-0 -translate-y-1/2 z-10">
+          <button
+            onClick={() => scrollBy("right")}
+            className="bg-black text-white rounded-full shadow p-3 hover:bg-green-600 active:scale-95 transition"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Scrollable Video Row */}
+        <div
+          ref={scrollRef}
+          className="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide py-4"
+        >
+          {reelsData.map((reel, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-60 sm:w-72 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all"
+            >
+              <div className="relative rounded-lg overflow-hidden">
+                <video
+                  src={reel.videoSrc}
+                  className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                  controls
+                />
+              </div>
+              <div className="mt-3 text-sm text-gray-700 font-semibold">
+                @{reel.username}
+              </div>
+              <p className="text-xs text-gray-500">{reel.caption}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Arrows */}
+        <div className="flex sm:hidden justify-center gap-6 mt-4">
+          <button
+            onClick={() => scrollBy("left")}
+            className="bg-black text-white rounded-full p-3 shadow hover:bg-green-600 transition active:scale-95"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => scrollBy("right")}
+            className="bg-black text-white rounded-full p-3 shadow hover:bg-green-600 transition active:scale-95"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
       </div>
-     
-    </section>
+    </div>
   );
 };
 
