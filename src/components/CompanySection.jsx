@@ -32,7 +32,7 @@ const CompanySection = () => {
     }`;
 
   return (
-    <section className="py-5 bg-white GetfontHomeDash ml-20 mr-16 ">
+    <section className="py-5 bg-white About1 ml-20 mr-16 ">
       <h2 className="text-4xl font-bold text-center text-green-800 mb-12">
         Our <span className="text-black">Company</span>
       </h2>
