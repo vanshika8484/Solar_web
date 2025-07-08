@@ -53,10 +53,10 @@ const HoverVideoCard3 = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen  px-4 -mt-[120px] sm:px-6 lg:px-8 GetFontSol ">
+    <div className="bg-white min-h-screen  px-4 -mt-[120px] sm:px-6 lg:px-8 About1 ">
       <div className="max-w-7xl mx-auto text-center relative">
         <h2 className="text-center text-xl md:text-3xl font-bold text-green-800 mb-10">
-          GROWTH STORIES AT DIVY
+          Growth At Divy
         </h2>
 
         {/* Scroll Buttons */}
