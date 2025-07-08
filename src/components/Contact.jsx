@@ -53,7 +53,7 @@ function Contact() {
         </h2>
 
         <motion.div
-          className="grid md:grid-cols-2 gap-10  mr-28 ml-28"
+          className="grid md:grid-cols-2 gap-10 sm:mr-0 sm:ml-0 md:mr-0 md:ml-0 lg:mr-28 lg:ml-28 xl:mr-28 xl:ml-28 2xl:mr-28 2xl:ml-28"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
