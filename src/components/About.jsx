@@ -180,11 +180,8 @@ export default function About() {
           <section className=" mt-30">
             <FiguringOut />
           </section>
-          <section className=" ml-20 mr-20 mt-[250px]">
-            <SolarCards />
-           
-          </section>
-          <section className=" mt-24 ml-16 mr-16 overflow-y-hidden">
+          
+          <section className=" mt-52 ml-16 mr-16  ">
              <ContactCards />
           </section>
 
@@ -192,7 +189,7 @@ export default function About() {
 
 
       </div>
-      <section className="mt-[17500px] sm:mt-0 md:mt-0 lg:mt-[7200px] xl:mt-[6900px] 2xl:mt-[7800px]">
+      <section className="mt-[9500px] sm:mt-0 md:mt-0 lg:mt-[7000px] xl:mt-[6600px] 2xl:mt-[7800px]">
         <Footer />
       </section>
 
