@@ -115,10 +115,14 @@ function CareerForm() {
               className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Select a position</option>
-              <option value="frontend">Frontend Developer</option>
-              <option value="backend">Backend Developer</option>
-              <option value="fullstack">Fullstack Developer</option>
-              <option value="designer">UI/UX Designer</option>
+              <option value="frontend">Sales executive </option>
+              <option value="backend">Sales manager </option>
+              <option value="fullstack">Operation manager </option>
+              <option value="designer">Service engineer </option>
+              <option value="frontend">Service manager </option>
+              <option value="backend">Pre-sales executive </option>
+              <option value="fullstack">HR Manager  </option>
+              <option value="designer">Purchase Manager </option>
             </select>
           </div>
 
