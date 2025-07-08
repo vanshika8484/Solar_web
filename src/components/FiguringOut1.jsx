@@ -9,18 +9,18 @@ const reelsData = [
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Ateesh_Breaking_The_Myth_zek5r6.mp4',
-    username: "solar_user_2",
-    caption: "Reel 2: Solar is the future!",
+    username: "Ateesh Kumar",
+    caption: "Reel 2: Breaking The Myth",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Riddhi_Go_Solar_Save_Environment_gstan5.mp4',
-    username: "solar_user_3",
-    caption: "Reel 3: Powering your world sustainably!",
+    username: "Riddhi Agarwal",
+    caption: "Reel 3: Go Solar Save Environment",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701248/Asha_Cheaper_Is_Not_Always_Safer_bbk2dm.mp4',
-    username: "solar_user_4",
-    caption: "Reel 4: Clean energy in action!",
+    username: "Asha Gupta",
+    caption: "Reel 4: Cheaper is not always safer",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701219/Founder_And_Friends_Save_Environment_With_Solar_qswtyr.mp4',
