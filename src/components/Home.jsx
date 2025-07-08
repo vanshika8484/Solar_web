@@ -46,6 +46,7 @@ import HomeStart2 from "./HomeStart2";
 import ExpertTeam from "./ExpertTeam";
 import HoverVideoCard1 from "./HoverVideoCard1";
 import FiguringOut1 from "./FiguringOut1";
+import ExactMatchPage1 from "./ExactMatchPage1";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -106,7 +107,7 @@ function Home() {
     <div className=" relative overflow-hidden   max-w-7xl mx-auto">
       <ChatbotToggle />
       <div>
-        <section>
+        <section className="About">
           <Homestart />
           <HomeStart2 />
 
@@ -126,15 +127,15 @@ function Home() {
       <section className=" -mt-72  md:-mt-72 lg:-mt-72 xl:-mt-72 2xl:-mt-[500px]  m-10">
         {/* <ChartCard /> */}
       </section>
-      <section>
+      <section className="About">
         <SolarCostCalculator />
 
       </section>
-      <section className=" mt-24">
+      <section className=" mt-24 About1">
         <Dashboard />
       </section>
       <section>
-        <div className="text-center  py-6 mb-10  sm:-mt-20 lg:-mt-44 md:-mt-40 ">
+        <div className="text-center About1  py-6 mb-10  sm:-mt-20 lg:-mt-44 md:-mt-40 ">
           <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
             <Link to="./contact">Contact Us to Get Started</Link>
           </button>
@@ -142,48 +143,48 @@ function Home() {
 
       </section>
 
-      <section className=" ">
+      <section className="About">
         <SolarSolutions />
       </section>
-      <section className=" mt-20">
+      <section className=" mt-20 About1">
         <ContactForm />
       </section>
 
-      <section className=" ">
+      <section className="About ">
         <PageOne />
       </section>
-      <section>
+      <section className="About">
         <ChatUI1 />
       </section>
-      <section className="bg-green-800 mr-2 ml-2  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
+      <section className="bg-green-800 mr-2 ml-2 About  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
 
         <SolarProduct />
       </section>
 
-     <section className=" mt-10 animate-float">
-      <img src={DivyRedesign}/>
-     </section>
-<section className=" mt-12">
-         <FiguringOut1/>
-       </section>
-      <section className=" mt-16">
+      <section className=" mt-10 animate-float">
+        <img src={DivyRedesign} />
+      </section>
+      <section className=" mt-12 About1">
+        <FiguringOut1 />
+      </section>
+      <section className=" mt-16 About1">
+      <ExactMatchPage1/>
         <Ctpage />
 
-       
+
       </section>
       <section className=" -mt-28 sm:-mt-28 md:-mt-36 lg:-mt-36 xl:-mt-36 ">
-         <ExactMatchPage />
+        <ExactMatchPage />
       </section>
 
-      <section className="bg-[#f8f7f0]  -mt-48 md:-mt-48 lg:-mt-48 xl:-mt-56 2xl:-mt-[630px]">
+      <section className="bg-[#f8f7f0] About1 -mt-48 md:-mt-48 lg:-mt-48 xl:-mt-56 2xl:-mt-[630px]">
         <SolarPortfolio />
-        <HoverVideoCard1/>
+        <HoverVideoCard1 />
 
-       <section className=" mt-12">
-         <ExpertTeam />
-       </section>
 
-        <FaqSection />
+        <section className="About1">
+          <FaqSection />
+        </section>
 
 
 
@@ -192,7 +193,7 @@ function Home() {
 
         </section>
 
-        <section className="mt-10 md:mt-20 lg:mt-20 xl:mt-24 2xl:-mt-[10px]">
+        <section className="mt-10 md:mt-20 About1 lg:mt-20 xl:mt-24 2xl:-mt-[10px]">
           <Footer />
         </section>
       </section>
