@@ -54,10 +54,10 @@ const HoverVideoCard2 = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen px-4 sm:px-6 lg:px-8 py-12">
+    <div className="bg-white min-h-screen px-4 sm:px-6 lg:px-8 py-12 About">
       <div className="max-w-7xl mx-auto text-center relative">
-        <h2 className="text-xl md:text-3xl font-bold text-green-800 mb-10">
-          OUR FOUNDER PHILOSOPHY
+        <h2 className="text-xl md:text-3xl About1 text-green-800 mb-10">
+          Our Founder Philosophy
         </h2>
 
         {/* Scroll Buttons */}
