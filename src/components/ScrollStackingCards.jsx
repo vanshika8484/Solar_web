@@ -43,7 +43,7 @@ const ScrollStackingCards = ({ content }) => {
             <img src={card.img} alt={card.alt} />
           </div>
           <div className="text-content">
-            <h3>{card.heading}</h3>
+            <h3 className="About">{card.heading}</h3>
             <h4 className="About text-[14px]" >{card.subheading}</h4>
             <ul>
               {card.points.map((point, idx) => (
