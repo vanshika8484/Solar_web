@@ -61,7 +61,7 @@ export default function Ctpage() {
   const loopTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <div className="bg-[#f8f7f0] h-[530px] text-white px-4 py-10 GetfontHomeDash -mt-36 overflow-hidden">
+    <div className="bg-[#f8f7f0] h-[530px] text-white px-4 py-10 GetfontHomeDash -mt-[430px] overflow-hidden">
       {/* Header */}
       <div className="max-w-6xl mx-auto text-center px-4 mb-12">
         {/* <p className="text-green-800 font-semibold mb-2 uppercase tracking-widest">
