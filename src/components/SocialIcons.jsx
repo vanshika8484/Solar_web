@@ -2,29 +2,25 @@
 import React, { useEffect, useState } from 'react';
 import {
   FaFacebookF,
-  FaTwitter,
+  FaXTwitter,
   FaLinkedinIn,
   FaGithub,
   FaInstagram,
   FaYoutube,
-} from 'react-icons/fa';
+  FaDribbble,
+  FaBehance,
+} from 'react-icons/fa6';
 
-const iconStyle = `w-10 h-10 rounded-md flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform duration-200`;
+const iconStyle = `w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg backdrop-blur-md`;
 
 const SocialIcons = () => {
   const [showIcons, setShowIcons] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShowIcons(true);
-      } else {
-        setShowIcons(false);
-      }
+      setShowIcons(window.scrollY > 100);
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -32,7 +28,7 @@ const SocialIcons = () => {
     <>
       {/* Left Side Icons */}
       <div
-        className={`fixed top-1/2 left-4 -translate-y-1/2 flex flex-col lg:gap-28 md:gap-28 gap-24 z-[9999] transition-opacity duration-500 ${
+        className={`hidden md:flex fixed top-1/2 left-3 -translate-y-1/2 flex-col gap-28 z-[9999] transition-opacity duration-500 ${
           showIcons ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -41,30 +37,34 @@ const SocialIcons = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={`${iconStyle} bg-blue-600`}
+          aria-label="Facebook"
         >
           <FaFacebookF />
         </a>
         <a
-          href="https://twitter.com"
+          href="https://x.com"
           target="_blank"
           rel="noopener noreferrer"
-          className={`${iconStyle} bg-sky-400`}
+          className={`${iconStyle} bg-black`}
+          aria-label="Twitter"
         >
-          <FaTwitter />
+          <FaXTwitter />
         </a>
         <a
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
           className={`${iconStyle} bg-blue-700`}
+          aria-label="LinkedIn"
         >
           <FaLinkedinIn />
         </a>
+        
       </div>
 
       {/* Right Side Icons */}
       <div
-        className={`fixed top-1/2 right-4 -translate-y-1/2 flex flex-col lg:gap-28 md:gap-28 gap-24 z-[9999] transition-opacity duration-500 ${
+        className={`hidden md:flex fixed top-1/2 right-3 -translate-y-1/2 flex-col gap-28 z-[9999] transition-opacity duration-500 ${
           showIcons ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -72,7 +72,8 @@ const SocialIcons = () => {
           href="https://github.com"
           target="_blank"
           rel="noopener noreferrer"
-          className={`${iconStyle} bg-gray-800`}
+          className={`${iconStyle} bg-gray-900`}
+          aria-label="GitHub"
         >
           <FaGithub />
         </a>
@@ -80,7 +81,8 @@ const SocialIcons = () => {
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className={`${iconStyle} bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500`}
+          className={`${iconStyle} bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600`}
+          aria-label="Instagram"
         >
           <FaInstagram />
         </a>
@@ -89,9 +91,12 @@ const SocialIcons = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={`${iconStyle} bg-red-600`}
+          aria-label="YouTube"
         >
           <FaYoutube />
         </a>
+       
+       
       </div>
     </>
   );
