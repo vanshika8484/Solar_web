@@ -37,10 +37,10 @@ const cardVariants = {
 
 const SolarProducts = () => {
   return (
-    <section className="bg-green-800 py-16 px-4 About1">
+    <section className="bg-gray-900 py-16 px-4 About1">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-green-800 text-xl font-bold uppercase tracking-widest">
+          <p className="text-gray-100 text-xl font-bold uppercase tracking-widest">
             Our Product
           </p>
           <h2 className="text-2xl font-semibold text-gray-100 -mt-16">
@@ -56,7 +56,7 @@ const SolarProducts = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="group bg-[#0c093d] p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl"
+              className="group bg-[#ee7a21] p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl"
             >
               <div className="w-16 h-16 rounded-full bg-green-800 flex items-center justify-center mb-6 ">
                 {product.icon}
