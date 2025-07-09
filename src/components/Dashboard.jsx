@@ -13,7 +13,7 @@ function Dashboard() {
   };
 
   return (
-    <div className="px-4 py-8 bg-[#F8F7F0] min-h-[800px] -mt-32   ">
+    <div className="hidden sm:block px-4 py-8 bg-[#F8F7F0] min-h-[800px] -mt-32">
       <div className="bg-[#D9D9D9] rounded-xl shadow-xl p-6 sm:p-8 max-w-7xl mx-auto ml-10 mr-10">
         {/* ✅ Inner Box Starts */}
         <div className="bg-white rounded-xl p-0 sm:p-2 shadow-md ">
@@ -180,7 +180,7 @@ function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-           
+            {/* Optional summary text here */}
           </motion.p>
         </div>
         {/* ✅ Inner Box Ends */}
