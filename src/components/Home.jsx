@@ -164,7 +164,7 @@ function Home() {
       <section className=" mt-10 animate-float">
         <img src={DivyRedesign} />
       </section>
-      <section className=" mt-12 About1">
+      <section className=" mt-20 About1">
         <FiguringOut1 />
       </section>
       <section className=" mt-16 About1">
