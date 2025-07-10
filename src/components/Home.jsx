@@ -193,7 +193,7 @@ function Home() {
 
         </section>
 
-        <section className="mt-20 md:mt-20 About1 lg:mt-20 xl:mt-24 2xl:-mt-[10px]">
+        <section className="mt-28 md:mt-28 About1 lg:mt-28 xl:mt-28 2xl:-mt-[10px]">
           <Footer />
         </section>
       </section>
