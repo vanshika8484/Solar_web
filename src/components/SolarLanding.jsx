@@ -40,7 +40,7 @@ const SolarLanding = () => {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-black rounded-full px-5 md:px-8 py-3 -mt-20">
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-black rounded-full px-5 md:px-8 py-3 sm:-mt-0 lg:-mt-20 md:-mt-20 ">
           {/* Logo */}
           <Link to="/" className="flex items-center h-12">
             <img
