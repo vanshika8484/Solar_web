@@ -71,7 +71,7 @@ const SolarSolutions = () => {
 
         {/* Right Content */}
         <motion.div
-          className="lg:w-1/2 w-full flex flex-col justify-start bg-[#f8f7f0]"
+          className="lg:w-1/2 w-full flex flex-col justify-start bg-[#f8f7f0] p-10"
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
