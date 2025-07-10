@@ -1,161 +1,169 @@
-import React, { useState } from "react";
-import solarg from "../Images/SolarChahaFront.png";
-import axios from "axios";
+import React, { useState } from 'react';
+import Footer from './Footer';
+import { motion } from 'framer-motion';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 import Loader from "../Loader";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import 'react-toastify/dist/ReactToastify.css';
 
-const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNo, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-  const [billFile, setBillFile] = useState(null);
+function CareerForm() {
+  const [FirstName, setFirstName] = useState('');
+  const [LastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [Phone, setPhone] = useState('');
+  const [Position, setPosition] = useState('');
+  const [message, setMessage] = useState('');
+  const [CV, setCv] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handelSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-     try {
+    try {
       const formData = new FormData();
-      formData.append("name", name);
+      formData.append("FirstName", FirstName);
+      formData.append("LastName", LastName);
       formData.append("email", email);
-      formData.append("phoneNo", phoneNo);
+      formData.append("Phone", Phone);
+      formData.append("Position", Position);
       formData.append("message", message);
-      formData.append("billFile", billFile);
+      formData.append("PortfolioLink", "N/A"); // optional field
+      if (CV) {
+        formData.append("CV", CV);
+      }
 
-      const { data } = await axios.post(
-        "https://solar-4-8a9b.onrender.com/api/senddata",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+      await axios.post(`https://solar-4-8a9b.onrender.com/api/CareerApi`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
         }
-      );
+      });
 
-      toast.success("Message sent successfully!");
-      console.log(data);
+      toast.success('Message sent successfully!');
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setPhone('');
+      setPosition('');
+      setMessage('');
+      setCv(null);
     } catch (error) {
-      toast.error("Something went wrong. Try again.");
-      console.error(error.message);
-    } finally {
-      setLoading(false);
+      toast.error('Something went wrong. Try again.');
     }
+    setLoading(false);
   };
 
   return (
-    <main className="bg-gray-900 px-4 sm:px-8 md:px-16 py-20 -mt-16 About max-h-[690px]">
-      <ToastContainer position="top-right" autoClose={3000} />
-
-      <div className="text-center max-w-4xl mx-auto mb-12 -mt-[70px]">
-        <h2 className="text-xl md:text-3xl About text-white leading-snug About1">
-          Bijli ka bill bhejiye and Solar Chacha se jaaniye<br />
-          apne rooftop ke liye Best Solar Solution
+    <div className="bg-gradient-to-br from-green-50 to-white py-16 px-4 sm:px-6 lg:px-8 min-h-screen">
+      <div className="max-w-3xl mx-auto bg-white p-6 sm:p-10 rounded-2xl shadow-lg">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-gray-800 text-center">
+          Get a chance to Work with Us.
         </h2>
-      </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat mt-16 ">
-        {/* Form Section */}
-        <form
-          onSubmit={handelSubmit}
-          className="bg-white w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8 flex flex-col gap-5 shadow -mt-10" 
-          encType="multipart/form-data"
-        >
-          {/* Name & Phone side by side */}
-          <div className="flex flex-col sm:flex-row gap-4">
+        <form className="space-y-5" onSubmit={handleSubmit}>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
             <input
               type="text"
-              placeholder="Your Name"
+              value={FirstName}
+              onChange={(e) => setFirstName(e.target.value)}
               required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="flex-1 rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
             <input
-              type="tel"
-              placeholder="Your Phone Number"
+              type="text"
+              value={LastName}
+              onChange={(e) => setLastName(e.target.value)}
               required
-              value={phoneNo}
-              onChange={(e) => setPhone(e.target.value)}
-              className="flex-1 rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-          <input
-            type="email"
-            placeholder="Your Email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow w-full"
-          />
+            <div className="w-full">
+              <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="w-full">
+              <label className="block text-sm font-medium text-gray-700 mb-1">Phone No</label>
+              <input
+                type="tel"
+                value={Phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
 
-          {/* Upload Bijli Bill */}
-          <div className="w-full">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Upload Your Bijli Bill
-            </label>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Position</label>
+            <select
+              value={Position}
+              onChange={(e) => setPosition(e.target.value)}
+              required
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Select a position</option>
+              <option value="frontend">Sales executive </option>
+              <option value="backend">Sales manager </option>
+              <option value="fullstack">Operation manager </option>
+              <option value="designer">Service engineer </option>
+              <option value="frontend">Service manager </option>
+              <option value="backend">Pre-sales executive </option>
+              <option value="fullstack">HR Manager  </option>
+              <option value="designer">Purchase Manager </option>
+            </select>
+          </div>
+
+          <div>
+            <textarea
+              rows="5"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Tell us something about yourself"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            ></textarea>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Upload your CV (PDF, DOCX)</label>
             <input
               type="file"
-              onChange={(e) => setBillFile(e.target.files[0])}
-              className="w-full py-2 px-3 bg-white rounded-xl shadow focus:outline-none"
+              accept=".pdf,.doc,.docx"
+              onChange={(e) => setCv(e.target.files[0])}
+              className="block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4
+                file:rounded-lg file:border-0
+                file:text-sm file:font-semibold
+                file:bg-blue-50 file:text-blue-700
+                hover:file:bg-blue-100"
             />
           </div>
+
+          <div>
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-green-700 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200"
+            >
+              {loading ? 'Submitting...' : 'Submit'}
+            </button>
           </div>
-
-          {/* Message */}
-          <textarea
-            rows={4}
-            placeholder="Your Message"
-            required
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="rounded-2xl py-3 px-5 placeholder-gray-500 resize-none focus:outline-none bg-white shadow w-full"
-          ></textarea>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="bg-[#E50C0C] text-white font-bold rounded-full py-4 px-8 w-full flex items-center justify-center gap-2 hover:bg-green-700 transition"
-          >
-            {loading ? <Loader /> : "SUBMIT NOW"}
-            <i className="fas fa-arrow-right"></i>
-          </button>
         </form>
-
-        {/* Contact Info Section */}
-        <section className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start gap-6 text-center md:text-left px-2 sm:px-0">
-          <div className="flex flex-col gap-4 text-lg text-white">
-            <p className="flex items-center justify-center md:justify-start gap-3">
-              <i className="fas fa-phone-alt text-green-800"></i>
-              <a className=" " href="tel:+91 9310259325">
-                +91 9310259325
-              </a>
-            </p>
-            <p className="flex items-center justify-center md:justify-start gap-3">
-              <i className="fas fa-map-marker-alt text-green-800"></i>
-              53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar,<br />
-              Nai Basti Dundaher Ghaziabad,<br />
-              Uttar Pradesh 201001
-            </p>
-            <p className="flex items-center justify-center md:justify-start gap-3">
-              <i className="fas fa-envelope text-green-800"></i>
-              <a className="font-semibold hover:text-[#3a8e3a]" href="mailto:info@divypower.in">
-                info@divypower.in
-              </a>
-            </p>
-          </div>
-
-          <div className="mt-4">
-            <img src={solarg} alt="Solar Chacha" className="max-w-[250px] w-full" />
-          </div>
-        </section>
       </div>
-    </main>
+      <ToastContainer position="top-right" autoClose={3000} />
+    </div>
   );
-};
+}
 
-export default ContactForm;
+export default CareerForm;
