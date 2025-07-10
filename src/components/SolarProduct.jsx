@@ -39,11 +39,11 @@ const SolarProducts = () => {
   return (
     <section className="bg-gray-900 py-16 px-4 About1">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 -mt-10">
           <p className="text-gray-100 text-xl font-bold uppercase tracking-widest">
             Our Product
           </p>
-          <h2 className="text-2xl font-semibold text-gray-100 -mt-16">
+          <h2 className="text-2xl font-semibold text-gray-100">
             Harness The Power Of The Sun With Solar Energy!
           </h2>
         </div>
