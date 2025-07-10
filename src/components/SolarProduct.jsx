@@ -56,19 +56,19 @@ const SolarProducts = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="group bg-[#ee7a21] p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl"
+              className="group bg-[#fdf6ee] p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl"
             >
               <div className="w-16 h-16 rounded-full bg-green-800 flex items-center justify-center mb-6 ">
                 {product.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-100 group-hover:text-black transition-colors duration-300">
+              <h3 className="text-xl font-semibold mb-4  text-black transition-colors duration-300">
                 {product.title}
               </h3>
               <ul className="space-y-2 text-sm mb-6">
                 {product.features.map((feature, i) => (
                   <li
                     key={i}
-                    className="flex items-center text-gray-300 group-hover:text-black transition-colors duration-300"
+                    className="flex items-center text-black transition-colors duration-300"
                   >
                     <FaCheckCircle className="text-green-800 mr-2" />
                     {feature}
@@ -77,7 +77,7 @@ const SolarProducts = () => {
               </ul>
               <Link
                 to={"/LA"}
-                className="mt-2 text-sm text-gray-300 group-hover:text-black font-semibold underline decoration-2 underline-offset-2 transition-colors duration-300 hover:text-green-700"
+                className="mt-2 text-sm text-black font-semibold underline decoration-2 underline-offset-2 transition-colors duration-300 hover:text-green-700"
               >
                 Read More →
               </Link>
