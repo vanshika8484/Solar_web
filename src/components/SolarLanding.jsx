@@ -36,11 +36,11 @@ const SolarLanding = () => {
       <div
         className={`w-full sticky top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/90 backdrop-blur shadow-md'
+            ? ' backdrop-blur shadow-md bg-white'
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-black rounded-full px-5 md:px-8 py-3">
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-black rounded-full px-5 md:px-8 py-3 -mt-20">
           {/* Logo */}
           <Link to="/" className="flex items-center h-12">
             <img
