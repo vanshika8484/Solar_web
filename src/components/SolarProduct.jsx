@@ -37,17 +37,17 @@ const cardVariants = {
 
 const SolarProducts = () => {
   return (
-    <section className="bg-gray-900 py-16 px-4 About1">
+    <section className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8 About1">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 -mt-10">
-          <p className="text-gray-100 text-xl font-bold uppercase tracking-widest">
+          <p className="text-gray-100 text-base sm:text-lg font-bold uppercase tracking-widest">
             Our Product
           </p>
-          <h2 className="text-2xl font-semibold text-gray-100">
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-100">
             Harness The Power Of The Sun With Solar Energy!
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 ml-16 mr-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <motion.div
               key={index}
@@ -56,12 +56,12 @@ const SolarProducts = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="group bg-[#fdf6ee] p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl"
+              className="group bg-[#fdf6ee] p-6 sm:p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl"
             >
-              <div className="w-16 h-16 rounded-full bg-green-800 flex items-center justify-center mb-6 ">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-800 flex items-center justify-center mb-5">
                 {product.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-4  text-black transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-semibold mb-4 text-black transition-colors duration-300">
                 {product.title}
               </h3>
               <ul className="space-y-2 text-sm mb-6">
