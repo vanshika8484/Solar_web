@@ -56,7 +56,7 @@ const ContactForm = () => {
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat mt-16 ">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat -mt-2 md:-mt-5 lg:-mt-5 xl:-mt-5  ">
         {/* Form Section */}
         <form
           onSubmit={handelSubmit}
