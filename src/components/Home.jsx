@@ -156,7 +156,7 @@ function Home() {
       <section className="About">
         <ChatUI1 />
       </section>
-      <section className="bg-green-800 mr-2 ml-2 About  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
+      <section className="bg-green-800  About  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
 
         <SolarProduct />
       </section>
@@ -164,7 +164,7 @@ function Home() {
       <section className=" mt-10 animate-float">
         <img src={DivyRedesign} />
       </section>
-      <section className=" mt-20 About1">
+      <section className=" mt-36 md:mt-20 lg:mt-20 xl:mt-20 2xl:mt-20  About1">
         <FiguringOut1 />
       </section>
       <section className=" mt-16 About1">
