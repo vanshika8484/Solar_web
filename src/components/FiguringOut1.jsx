@@ -90,7 +90,7 @@ const FiguringOut1 = () => {
                 />
               </div>
               <div className="mt-3 text-sm text-gray-700 font-semibold">
-                @{reel.username}
+               
               </div>
               <p className="text-xs text-gray-500">{reel.caption}</p>
             </div>
