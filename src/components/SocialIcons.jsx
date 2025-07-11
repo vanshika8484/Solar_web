@@ -7,11 +7,9 @@ import {
   FaGithub,
   FaInstagram,
   FaYoutube,
-  FaDribbble,
-  FaBehance,
 } from 'react-icons/fa6';
 
-const iconStyle = `w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg backdrop-blur-md`;
+const iconStyle = `w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg backdrop-blur-md`;
 
 const SocialIcons = () => {
   const [showIcons, setShowIcons] = useState(false);
@@ -26,9 +24,9 @@ const SocialIcons = () => {
 
   return (
     <>
-      {/* Left Side Icons */}
+      {/* Left Side Icons - Facebook, Twitter (X), LinkedIn */}
       <div
-        className={`hidden md:flex fixed top-1/2 left-3 -translate-y-1/2 flex-col gap-28 z-[9999] transition-opacity duration-500 ${
+        className={`flex fixed top-1/2 left-3 -translate-y-1/2 flex-col gap-16 sm:gap-28 z-[9999] transition-opacity duration-500 ${
           showIcons ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -59,12 +57,11 @@ const SocialIcons = () => {
         >
           <FaLinkedinIn />
         </a>
-        
       </div>
 
-      {/* Right Side Icons */}
+      {/* Right Side Icons - GitHub, Instagram, YouTube */}
       <div
-        className={`hidden md:flex fixed top-1/2 right-3 -translate-y-1/2 flex-col gap-28 z-[9999] transition-opacity duration-500 ${
+        className={`flex fixed top-1/2 right-3 -translate-y-1/2 flex-col gap-16 sm:gap-28 z-[9999] transition-opacity duration-500 ${
           showIcons ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -95,8 +92,6 @@ const SocialIcons = () => {
         >
           <FaYoutube />
         </a>
-       
-       
       </div>
     </>
   );
