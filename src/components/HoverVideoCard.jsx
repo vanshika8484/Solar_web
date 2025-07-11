@@ -130,7 +130,7 @@ const HoverVideoCard = () => {
         ))}
       </div>
       <div>
-        <p className=" About mt-8 text-orange-400">Aap kis cheez intezaar kar rahe hai ? Aaj hi contact karein Divy power ko-Trust bhi,Bachat bhi.</p>
+        <p className=" mt-8 text-orange-400 font-semibold text-center">Aap kis cheez intezaar kar rahe hai ? Aaj hi contact karein Divy power ko-Trust bhi,Bachat bhi.</p>
       </div>
     </section>
   );
