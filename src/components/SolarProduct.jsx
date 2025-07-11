@@ -47,7 +47,7 @@ const SolarProducts = () => {
             Harness The Power Of The Sun With Solar Energy!
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  ml-0 mr-0 md:ml-10 md:mr-10 lg:ml-5 lg:mr-10 xl:ml-10 xl:mr-10 ">
           {products.map((product, index) => (
             <motion.div
               key={index}
@@ -56,9 +56,9 @@ const SolarProducts = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="group bg-[#fdf6ee] p-6 sm:p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl"
+              className="group bg-[#fdf6ee] p-6 sm:p-8 rounded-2xl shadow-md transform transition duration-300 hover:scale-[0.98] hover:bg-white hover:shadow-xl "
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-800 flex items-center justify-center mb-5">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-800 flex items-center justify-center mb-5 ">
                 {product.icon}
               </div>
               <h3 className="text-lg sm:text-xl font-semibold mb-4 text-black transition-colors duration-300">
