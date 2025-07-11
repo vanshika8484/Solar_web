@@ -94,6 +94,10 @@ const HoverVideoCard3 = () => {
                   controls
                 />
               </div>
+              <div className="mt-3 text-left">
+                
+                <p className="text-sm text-gray-600">Topic:Growth At Divy</p>
+              </div>
             </div>
           ))}
         </div>
