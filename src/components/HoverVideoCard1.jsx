@@ -89,7 +89,7 @@ const HoverVideoCard1 = () => {
                 />
               </div>
               <div className="text-left mt-2 px-2 pb-2">
-                <div className="text-sm font-semibold text-gray-800">@{member.username}</div>
+                <div className="text-sm font-semibold text-gray-800"></div>
                 <p className="text-xs text-gray-500">{member.caption}</p>
               </div>
             </div>
