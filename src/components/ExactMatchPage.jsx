@@ -16,7 +16,7 @@ export default function ExactMatchPage() {
       </h2>
 
       {/* Centered Logos */}
-      <div className="overflow-hidden py-10 sm:py-16 -mt-8">
+      <div className="overflow-hidden py-10 sm:py-16 -mt-16">
         <div className="flex justify-center flex-wrap gap-6 sm:gap-10 px-4 sm:px-8">
           {logos.map((src, idx) => (
             <img
