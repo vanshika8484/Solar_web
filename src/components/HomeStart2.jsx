@@ -32,35 +32,30 @@ function HomeStart2() {
             viewport={{ once: true }}
             variants={{ show: { transition: { staggerChildren: 0.3 } } }}
           >
-            {/* Left Image */}
-            <motion.div
-              className="relative flex flex-col justify-center h-full"
-              variants={fadeLeft}
-            >
-              <div className="w-full rounded-xl overflow-hidden shadow-lg h-full">
-                <img
-                  src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
-                  alt="Solar Field"
-                  className="rounded-xl object-cover w-full h-full min-h-[400px]"
-                />
-              </div>
+          <motion.div
+  className="relative flex flex-col justify-center h-full"
+  variants={fadeLeft}
+>
+  {/* Main Image */}
+  <div className="w-full rounded-xl overflow-hidden shadow-lg h-full">
+    <img
+      src="https://images.pexels.com/photos/4254166/pexels-photo-4254166.jpeg"
+      alt="Solar Field"
+      className="rounded-xl object-cover w-full h-full min-h-[400px]"
+    />
+  </div>
 
-              <div className="absolute md:bottom-[-40px] md:left-[60px] w-3/4 border-4 border-white rounded-xl overflow-hidden shadow-xl md:block hidden">
-                <img
-                  src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
-                  alt="Solar Roof Work"
-                  className="rounded-xl object-cover w-full h-[250px]"
-                />
-              </div>
-
-              <div className="md:hidden mt-6 w-full border-4 border-white rounded-xl overflow-hidden shadow-xl">
-                <img
-                  src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
-                  alt="Solar Roof Work"
-                  className="rounded-xl object-cover w-full h-[200px]"
-                />
-              </div>
-            </motion.div>
+  {/* Overlay Image for All Screens */}
+  <div
+    className="absolute bottom-[-40px] left-[20px] md:left-[60px] w-[80%] border-4 border-white rounded-xl overflow-hidden shadow-xl"
+  >
+    <img
+      src="https://pikwizard.com/pw/medium/699a0ae210de0ebeb9b745be863f842d.jpg"
+      alt="Solar Roof Work"
+      className="rounded-xl object-cover w-full h-[180px] md:h-[250px]"
+    />
+  </div>
+</motion.div>
 
             {/* Right Text */}
             <motion.div
