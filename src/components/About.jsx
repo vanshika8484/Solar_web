@@ -83,7 +83,7 @@ const aboutUsContent = [
 export default function About() {
   return (
     <div>
-      <div  className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  ">
+      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-32 ">
         {/* Banner Image */}
         <motion.img
           src={localImage}
@@ -133,56 +133,56 @@ export default function About() {
         </section>
 
         <section className="">
-          <section className=" ml-10 mr-10 mt-36">
+          <section className=" ml-10 mr-10 ">
             <HoverVideoCard2 />
           </section>
           <ProcessSteps />
-          <section className=" ml-10 mr-10 mt-10">
+          <section className=" ml-10 mr-10 -mt-12">
             <HoverVideoCard3 />
           </section>
 
           {/* Why Choose Us Section */}
-        <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[10px] About">
-  <div className="bg-[#fdf6ee] shadow-xl overflow-x-hidden rounded-xl p-5 sm:p-8 md:p-12 max-w-[300px] sm:max-w-[300px] md:max-w-[1000px] mx-auto">
+          <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[10px] About">
+            <div className="bg-[#fdf6ee] shadow-xl overflow-x-hidden rounded-xl p-5 sm:p-8 md:p-12 max-w-[300px] sm:max-w-[300px] md:max-w-[1000px] mx-auto">
 
-    {/* Heading with icons - responsive layout */}
-    <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 text-center sm:text-left">
-      <div className="flex items-center gap-3">
-        <img src={sunPhoto} alt="Chacha" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain" />
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-red-700 leading-snug">
-          Why Choose Us <br className="sm:hidden" />
-          as Your Solar Partner?
-        </h2>
-        <img src={sunImage} alt="Didi" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain" />
-      </div>
-    </div>
+              {/* Heading with icons - responsive layout */}
+              <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 text-center sm:text-left">
+                <div className="flex items-center gap-3">
+                  <img src={sunPhoto} alt="Chacha" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain" />
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-red-700 leading-snug">
+                    Why Choose Us <br className="sm:hidden" />
+                    as Your Solar Partner?
+                  </h2>
+                  <img src={sunImage} alt="Didi" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain" />
+                </div>
+              </div>
 
-    {/* Content Section */}
-    <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-4">
-      <p className="text-center sm:text-left">
-        At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems —
-        we build <span className="text-green-600 font-semibold">lasting energy partnerships</span>.
-      </p>
+              {/* Content Section */}
+              <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-4">
+                <p className="text-center sm:text-left">
+                  At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems —
+                  we build <span className="text-green-600 font-semibold">lasting energy partnerships</span>.
+                </p>
 
-      <ul className="list-disc list-inside space-y-3 pl-4">
-        <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
-        <li><strong>Post-installation support:</strong> Real-time maintenance and performance monitoring throughout the system's lifecycle.</li>
-        <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure maximum durability and safety.</li>
-        <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
-        <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+                <ul className="list-disc list-inside space-y-3 pl-4">
+                  <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
+                  <li><strong>Post-installation support:</strong> Real-time maintenance and performance monitoring throughout the system's lifecycle.</li>
+                  <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure maximum durability and safety.</li>
+                  <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
+                  <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
 
 
 
           <section className=" mt-30">
             <FiguringOut />
           </section>
-          
+
           <section className=" mt-52 ml-16 mr-16  ">
-             <ContactCards />
+            <ContactCards />
           </section>
 
         </section>
