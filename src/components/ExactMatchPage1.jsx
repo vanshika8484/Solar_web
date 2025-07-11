@@ -20,7 +20,7 @@ export default function ExactMatchPage1() {
       </h2>
 
       {/* Animated Logos */}
-      <div className="overflow-hidden py-10 sm:py-16 -mt-8">
+      <div className="overflow-hidden py-10 sm:py-16 -mt-16">
         <div
           className="flex space-x-10 px-4 sm:px-8"
          
