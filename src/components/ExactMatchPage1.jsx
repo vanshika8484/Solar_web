@@ -15,7 +15,7 @@ export default function ExactMatchPage1() {
   return (
     <div className=" min-h-screen About1 -mt-24">
       {/* Heading */}
-      <h2 className="text-2xl sm:text-4xl  font-bold text-center pt-10 text-red-500">
+      <h2 className="text-2xl sm:text-4xl  font-bold text-center pt-10 text-red-600">
         Our Clients
       </h2>
 
