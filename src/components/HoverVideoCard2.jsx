@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
@@ -77,29 +77,30 @@ const HoverVideoCard2 = () => {
           </button>
         </div>
 
-        {/* Scrollable Card Row */}
-        <div
-          ref={scrollRef}
-          className="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide py-4"
-        >
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-60 sm:w-72 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all"
-            >
-              <div className="relative rounded-lg overflow-hidden">
-                <video
-                  src={member.reel}
-                  className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-                  controls
-                />
+        {/* Scrollable Card Row with side padding */}
+        <div className="overflow-hidden">
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto gap-4 scroll-smooth scrollbar-hide py-4 px-4 sm:px-8"
+          >
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-[240px] sm:w-72 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all"
+              >
+                <div className="relative rounded-lg overflow-hidden">
+                  <video
+                    src={member.reel}
+                    className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                    controls
+                  />
+                </div>
+                <div className="mt-3 text-left">
+                  <p className="text-sm text-gray-600">Topic: {member.role}</p>
+                </div>
               </div>
-              <div className="mt-3 text-left">
-                
-                <p className="text-sm text-gray-600">Topic: {member.role}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Mobile Bottom Center Buttons */}
