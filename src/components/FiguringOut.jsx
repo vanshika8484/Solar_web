@@ -41,13 +41,13 @@ const FiguringOut = () => {
   };
 
   return (
-    <div className="bg-white py-10 px-4 sm:px-6 lg:px-8 -mt-10 About">
+    <div className="bg-white py-10 px-4 sm:px-6 lg:px-8 -mt-10  ml-24">
       <div className="max-w-7xl mx-auto text-center relative">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-red-800 About1">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-red-800">
           Figuring Out with Divy
         </h2>
 
-        {/* Buttons visible only on mobile */}
+        {/* Mobile Left/Right Scroll Buttons */}
         <div className="relative block sm:hidden">
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
             <button
@@ -67,25 +67,27 @@ const FiguringOut = () => {
           </div>
         </div>
 
-        {/* Scrollable Video Cards */}
-        <div
-          ref={scrollRef}
-          className="flex sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4 overflow-x-auto sm:overflow-visible whitespace-nowrap sm:whitespace-normal scroll-smooth pb-4"
-        >
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="inline-block sm:block w-64 sm:w-full bg-white rounded-xl shadow-md hover:shadow-lg transition-all mr-4 sm:mr-0"
-            >
-              <div className="rounded-lg overflow-hidden">
-                <video
-                  src={member.reel}
-                  className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-                  controls
-                />
+        {/* Scrollable Cards Wrapper */}
+        <div className="overflow-hidden">
+          <div
+            ref={scrollRef}
+            className="flex sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4 scroll-smooth overflow-x-auto sm:overflow-visible px-4 sm:px-0 pb-4"
+          >
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 inline-block sm:block w-[240px] sm:w-full bg-white rounded-xl shadow-md hover:shadow-lg transition-all"
+              >
+                <div className="rounded-lg overflow-hidden">
+                  <video
+                    src={member.reel}
+                    className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                    controls
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
