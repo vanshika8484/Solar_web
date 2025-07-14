@@ -59,7 +59,7 @@ const HoverVideoCard3 = () => {
           Growth At Divy
         </h2>
 
-        {/* Desktop/Tablet Scroll Buttons */}
+        {/* Desktop Scroll Buttons */}
         <div className="hidden sm:block absolute top-1/2 left-0 -translate-y-1/2 z-10">
           <button
             onClick={() => scrollBy("left")}
@@ -77,32 +77,33 @@ const HoverVideoCard3 = () => {
           </button>
         </div>
 
-        {/* Scrollable Row */}
-        <div
-          ref={scrollRef}
-          className="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide py-4"
-        >
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-60 sm:w-72 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all"
-            >
-              <div className="relative rounded-lg overflow-hidden">
-                <video
-                  src={member.reel}
-                  className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-                  controls
-                />
+        {/* Scrollable Card Row with Padding */}
+        <div className="overflow-hidden">
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto gap-4 scroll-smooth scrollbar-hide py-4 px-4 sm:px-8"
+          >
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-[240px] sm:w-72 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all"
+              >
+                <div className="relative rounded-lg overflow-hidden">
+                  <video
+                    src={member.reel}
+                    className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                    controls
+                  />
+                </div>
+                <div className="mt-3 text-left">
+                  <p className="text-sm text-gray-600">Topic: Growth At Divy</p>
+                </div>
               </div>
-              <div className="mt-3 text-left">
-                
-                <p className="text-sm text-gray-600">Topic:Growth At Divy</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* Mobile Bottom Scroll Buttons */}
+        {/* Mobile Scroll Buttons */}
         <div className="flex sm:hidden justify-center gap-6 mt-4">
           <button
             onClick={() => scrollBy("left")}
