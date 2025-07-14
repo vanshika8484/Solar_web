@@ -83,7 +83,7 @@ const aboutUsContent = [
 export default function About() {
   return (
     <div>
-      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-0 flex flex-col items-center  mt-1 ">
+      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 ">
         {/* Banner Image */}
         <motion.img
           src={localImage}
@@ -133,7 +133,7 @@ export default function About() {
         </section>
 
         <section className="">
-          <section className=" ml-24 mr-24 ">
+          <section className=" ">
             <HoverVideoCard2 />
           </section>
           <ProcessSteps />
@@ -181,7 +181,7 @@ export default function About() {
             <FiguringOut />
           </section>
 
-          <section className=" mt-52 ml-16 mr-16  ">
+          <section className=" mt-52 ml-44 mr-44  ">
             <ContactCards />
           </section>
 
