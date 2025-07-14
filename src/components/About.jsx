@@ -83,7 +83,7 @@ const aboutUsContent = [
 export default function About() {
   return (
     <div>
-      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 ">
+      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-0 flex flex-col items-center  mt-1 ">
         {/* Banner Image */}
         <motion.img
           src={localImage}
