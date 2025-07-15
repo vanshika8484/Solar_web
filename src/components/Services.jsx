@@ -41,14 +41,14 @@ const services = [
     title: "Annual Maintenance Contracts (AMC)",
     description:
       "Divy Power provides AMC services for diesel generators, solar systems, and other equipment to ensure long-term reliability.",
-    path: "/Recycling_&_Sustainability",
+    path: "/Annual_Maintenance_Contracts(AMC)",
   },
   {
     icon: <FaSolarPanel className="text-4xl text-green-800" />,
     title: "Health Check ups",
     description:
       "We provide complete care for your car, including expert advice, repairs, and preferred maintenance services.",
-    path: "/Customized_Solar_Solutions",
+    path: "/Health_Check_ups",
   },
 ];
 
