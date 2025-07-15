@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
 import CareerForm from './CareerForm';
+import WorkCultureReels from './WorkCultureReels';
 
 
 const Career = () => {
@@ -28,6 +29,10 @@ const Career = () => {
         </p>
       </motion.div>
 
+
+<section>
+  <WorkCultureReels/>
+</section>
 
       {/* Benefits Section */}
       <motion.div
