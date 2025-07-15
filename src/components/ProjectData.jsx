@@ -3,6 +3,21 @@ import {
   Building2, Home, Landmark, Globe, Store, LayoutGrid
 } from "lucide-react";
 
+import Project1 from "../Images/Project1.jpg";
+import Project2 from "../Images/Project2.jpg";
+import Project3 from "../Images/Project3.jpeg";
+import Project4 from "../Images/Project4.jpeg";
+import Project5 from "../Images/Project5.JPG";
+import Project6 from "../Images/Project6.jpg";
+import Project7 from "../Images/Project7.jpg";
+import Project8 from "../Images/Project8.jpg";
+import Project9 from "../Images/Project9.jpeg";
+import Project10 from "../Images/Project10.jpg";
+import Project11 from "../Images/Project11.jpg"
+
+
+
+
 export const categories = [
   "All",
   "Residential",
@@ -23,80 +38,80 @@ export const iconMap = {
 export const projects = [
   {
     id: 1,
-    title: "Equality and Solidarity",
+    title: "Ansal sonipoat",
     category: "Residential",
     kwp: "N/A",
-    image: "https://picsum.photos/id/1018/400/300"
+    image: Project1
   },
   {
     id: 2,
-    title: "Windward Renewables",
+    title: "BKT Bhiwandi",
     category: "Commercial",
     kwp: "N/A",
-    image: "https://picsum.photos/id/1025/400/300"
+    image: Project2
   },
   {
     id: 3,
-    title: "Jaquar Group: 1440 Kwp",
+    title: "BSL Casting Commercial",
     category: "Govt Affiliates",
     kwp: "1440",
-    image: "https://picsum.photos/id/1003/400/300"
+    image: Project3
   },
   {
     id: 4,
-    title: "Bal Bharati Group of Education: 450 Kwp",
+    title: "DPS Panipat",
     category: "Govt Affiliates",
     kwp: "450",
-    image: "https://picsum.photos/id/1005/400/300"
+    image: Project4
   },
   {
     id: 5,
-    title: "Hindu Education Society: 800 Kwp",
+    title: "Hindu College",
     category: "Govt Affiliates",
     kwp: "800",
-    image: "https://picsum.photos/id/1006/400/300"
+    image: Project5
   },
   {
     id: 6,
-    title: "Orient Syntax: 1000 Kwp",
+    title: "LR College",
     category: "Commercial",
     kwp: "1000",
-    image: "https://picsum.photos/id/1020/400/300"
+    image: Project6
   },
   {
     id: 7,
-    title: "Skylark Group of Poultry: 1450 Kwp",
+    title: "Orient System",
     category: "Commercial",
     kwp: "1450",
-    image: "https://picsum.photos/id/1016/400/300"
+    image: Project7
   },
   {
     id: 8,
-    title: "O.S Cool Home: 100 Kwp",
+    title: "PVS Polymers",
     category: "Residential",
     kwp: "100",
-    image: "https://picsum.photos/id/1021/400/300"
+    image: Project8
   },
   {
     id: 9,
-    title: "R.K. Rayon: 100 Kwp (Roof Top)",
+    title: "Rangeeli Mahal Barsana",
     category: "Residential",
     kwp: "100",
-    image: "https://picsum.photos/id/1024/400/300"
+    image: Project9
   },
   {
     id: 10,
-    title: "Wind Whisper Energy",
+    title: "UNA Hotel",
     category: "Exhibitions",
     kwp: "N/A",
-    image: "https://picsum.photos/id/1033/400/300"
+    image: Project10
   },
   {
     id: 11,
-    title: "Sun Breeze Power",
+    title: "OS cool Home",
     category: "Stalls",
     kwp: "N/A",
-    image: "https://picsum.photos/id/1044/400/300"
+    image: Project11
   }
 ];
 
