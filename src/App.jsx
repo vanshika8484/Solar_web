@@ -64,8 +64,8 @@ function App() {
         <Route path="/Installation_&_Commissioning_(INC)" element={<FirstService/>} />
         <Route path="/Engineering_Procurement_and_Construction_(EPC)" element={<SecondService />} />
         <Route path="/Operations_&_Maintenance_(O&M)" element={<ThirdService />} />
-        <Route path="/Recycling_&_Sustainability" element={<FourService />} />
-        <Route path="/Customized_Solar_Solutions" element={<FiveService />} />
+        <Route path="/Annual_Maintenance_Contracts(AMC)" element={<FourService />} />
+        <Route path="/Health_Check_ups" element={<FiveService />} />
       </Routes>
 
     </>
