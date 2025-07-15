@@ -14,26 +14,26 @@ const services = [
         path: "Engineering_Procurement_and_Construction_(EPC)",
         // icon: <FaTools className="text-green-700 text-3xl" />,
     },
-    {
-        label: "Recycling & Sustainability",
-        path: "Recycling_&_Sustainability",
+     {
+        label: "Annual Maintenance Contracts (AMC)",
+        path: "Annual Maintenance Contracts (AMC)",
         // icon: <FaRecycle className="text-green-700 text-3xl" />,
     },
     {
-        label: "Customized Solar Solutions",
-        path: "Customized_Solar_Solutions",
+        label: "Health Check ups",
+        path: "Health Check ups",
         // icon: <FaSun className="text-green-700 text-3xl" />,
     },
 ];
 
 const ThirdService = () => {
     return (
-        <div className="bg-gray-900 text-white min-h-screen GetfontHome mb-2">
+        <div className="bg-gray-100 text-white min-h-screen GetfontHome mb-2 mt-20">
 
 
             {/* Services Grid */}
             <section className="max-w-7xl mx-auto px-6 pt-12">
-                <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2>
+                <h2 className="text-3xl font-bold text-center text-black mb-10"> Our Services</h2>
                
             </section>
 
