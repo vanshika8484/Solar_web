@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Footer from './Footer';
 import CareerForm from './CareerForm';
 import WorkCultureReels from './WorkCultureReels';
+import SafetySecurityReels from './SafetySecurityReels';
 
 
 const Career = () => {
@@ -105,6 +106,10 @@ const Career = () => {
           </div>
         </div>
       </motion.div>
+
+      <section>
+        <SafetySecurityReels/>
+      </section>
       <section className=' -mt-8'>
         <CareerForm/>
       </section>
