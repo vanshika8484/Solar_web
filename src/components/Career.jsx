@@ -12,7 +12,7 @@ const Career = () => {
  
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8 mt-24">
+    <div className="h-[2000px] bg-gradient-to-br from-gray-50 to-gray-100 py-12  mt-24">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
