@@ -58,7 +58,6 @@ function App() {
         <Route path="/Micro-Inverter" element={<MicroInverter />} />
         <Route path="/Earthing" element={<Earthing />} />
         <Route path="/LA" element={<La />} />
-        <Route path="/Gas-Genset" element={<GasGenset />} />
         <Route path="/Diesel/Petrol Genset" element={<Diesel />} />
         <Route path="/ProjectDetails" element={<ProjectDetails />} />
         <Route path="/Installation_&_Commissioning_(INC)" element={<FirstService/>} />
