@@ -1,20 +1,27 @@
 import { motion } from 'framer-motion';
+import e1 from "../Images/e1.JPG"
+import e2 from "../Images/e2.JPG"
+import e3 from "../Images/e3.JPG"
+import e4 from "../Images/e4.JPG"
+
+
+
 
 const images = [
   {
-    src: "https://storage.googleapis.com/a1aa/image/4d40dcc9-bb33-42f7-0a8a-bc8ede1380df.jpg",
+    src: e1,
     alt: "People walking near solar panels and wind turbine",
   },
   {
-    src: "https://storage.googleapis.com/a1aa/image/48bb4513-f5ae-41dc-bc7a-0b44fd77de0c.jpg",
+    src: e2,
     alt: "Engineer with clipboard near solar panels",
   },
   {
-    src: "https://storage.googleapis.com/a1aa/image/da2c29ca-7bbe-4b83-ea23-e0ef58a9ed34.jpg",
+    src: e3,
     alt: "Close-up of solar panels with wind turbine",
   },
   {
-    src: "https://storage.googleapis.com/a1aa/image/3eaac31e-b443-4d3c-1609-464df7dca822.jpg",
+    src: e4,
     alt: "Person looking at solar panels and wind turbine",
   },
 ];
