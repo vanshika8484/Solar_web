@@ -13,26 +13,26 @@ const services = [
         path: "Engineering_Procurement_and_Construction_(EPC)",
         // icon: <FaTools className="text-green-700 text-3xl" />,
     },
-    {
-        label: "Operations & Maintenance",
-        path: "Operations_&_Maintenance_(O&M)",
-        // icon: <FaCogs className="text-green-700 text-3xl" />,
+     {
+        label: "Annual Maintenance Contracts (AMC)",
+        path: "Annual Maintenance Contracts (AMC)",
+        // icon: <FaRecycle className="text-green-700 text-3xl" />,
     },
     {
-        label: "Customized Solar Solutions",
-        path: "Customized_Solar_Solutions",
+        label: "Health Check ups",
+        path: "Health Check ups",
         // icon: <FaSun className="text-green-700 text-3xl" />,
     },
 ];
 
 const FourService = () => {
     return (
-        <div className="bg-gray-900 text-white min-h-screen GetfontHome mb-2">
+        <div className="bg-gray-100 text-white min-h-screen GetfontHome mb-2 mt-20">
 
 
             {/* Services Grid */}
             <section className="max-w-7xl mx-auto px-6 pt-12">
-                <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2>
+                <h2 className="text-3xl font-bold text-center text-black mb-10"> Our Services</h2>
               
             </section>
 
@@ -47,7 +47,7 @@ const FourService = () => {
                     className="rounded-xl mb-6 w-full max-h-[400px] object-cover"
                 />
 
-                <h2 className="text-2xl font-bold text-blue-900 mb-4">Recycling & Sustainability</h2>
+                <h2 className="text-2xl font-bold text-blue-900 mb-4">Annual Maintenance Contracts (AMC)</h2>
                 <p className="text-gray-700 mb-4 text-sm leading-relaxed">
                     We provide adaptable Annual Maintenance Contract(AMC) packages tailored for solar systems, diesel generators, and a range of other equipment, ensuring uninterrupted performance and long - term reliability.Our proactive approach focuses on preserving efficiency while minimizing operational disruptions, allowing you to enjoy a hassle - free power solution.
                 </p>
