@@ -128,13 +128,14 @@ function Contact() {
 
         {/* Google Map */}
         <motion.div className="mt-16 mr-28 ml-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.8 }}>
-          <iframe
-            title="map"
-            className="w-full h-96 rounded-2xl shadow-lg"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.4200211741384!2d77.42795185827646!3d28.681681412447353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf0a53d63b979%3A0xcbe79e39d43f8339!2s53%2C%20Ramte%20Ram%20Rd%2C%20Exta%20Vihar%2C%20Arjun%20Nagar%2C%20Nai%20Basti%20Dundahera%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201001!5e0!3m2!1sen!2sin!4v1656154860112!5m2!1sen!2sin"
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
+         <iframe
+  title="map"
+  className="w-full h-96 rounded-2xl shadow-lg"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.4200211741384!2d77.42795185827646!3d28.681681412447353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf0a53d63b979%3A0xcbe79e39d43f8339!2s53%2C%20Ramte%20Ram%20Rd%2C%20Ekta%20Vihar%2C%20Arjun%20Nagar%2C%20Nai%20Basti%20Dundahera%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201001!5e0!3m2!1sen!2sin!4v1656154860112!5m2!1sen!2sin"
+  allowFullScreen=""
+  loading="lazy"
+></iframe>
+
         </motion.div>
       </div>
 
