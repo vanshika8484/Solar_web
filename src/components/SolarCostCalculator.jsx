@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ElectricitySavedCard from "./ElectricitySavedCard";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
-// Animation Variants
+
 const containerVariants = {
   hidden: {},
   show: {
@@ -18,6 +21,64 @@ const cardVariants = {
 };
 
 const SolarCostCalculator = () => {
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    electricityBill: "",
+    roofArea: "",
+    state: "",
+    district: "",
+    peakSunHours: "",
+    roofType: "",
+    phoneNumber: "",
+    meterKW: "",
+    meterConnection: "",
+    continuousLoadKW: "",
+  });
+
+  const [results, setResults] = useState(null);
+  const [showResults, setShowResults] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await axios.post("https://solar-4-8a9b.onrender.com/api/submit", formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+      setResults(response.data.results);
+      setShowResults(true);
+      alert('Calculate successfully!');
+      setFormData({
+        electricityBill: "",
+        roofArea: "",
+        state: "",
+        district: "",
+        peakSunHours: "",
+        roofType: "",
+        phoneNumber: "",
+        meterKW: "",
+        meterConnection: "",
+        continuousLoadKW: "",
+      });
+    } catch (error) {
+      const msg = error.response?.data?.error || error.message;
+      alert("Please provide all Fields");
+    } finally {
+      setLoading(false); // ✅ always stop loading
+    }
+  };
+
+
+  const handleCancel = () => {
+    setShowResults(false);
+    setResults(null);
+  };
+
   return (
     <motion.div
       className="bg-[#F8F7F0] min-h-screen GetFontSol px-4 md:px-10 lg:px-16 py-10"
@@ -26,7 +87,6 @@ const SolarCostCalculator = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
-      {/* Main Heading */}
       <motion.div className="text-center mb-8" variants={cardVariants}>
         <h1 className="text-xl sm:text-2xl md:text-xl font-bold text-[#E50C0C] leading-snug max-w-5xl mx-auto">
           Aaj hi Solar Lagwao, environment bachao <br />
@@ -34,13 +94,9 @@ const SolarCostCalculator = () => {
         </h1>
       </motion.div>
 
-      {/* Cards Grid with Equal Heights */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
         {/* Info Card */}
-        <motion.section
-          className="bg-white rounded-xl px-6 py-5 h-full flex flex-col"
-          variants={cardVariants}
-        >
+        <motion.section className="bg-white rounded-xl px-6 py-5 h-full flex flex-col" variants={cardVariants}>
           <h2 className="text-xl font-semibold text-[#1e1e1e] mb-3">Power Your Home With Solar</h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-3">
             Discover how affordable solar can be. Enter your details below to get your personalized cost estimate and start saving!
@@ -68,67 +124,97 @@ const SolarCostCalculator = () => {
           </div>
         </motion.section>
 
-        {/* Calculator */}
-        <motion.section
-          className="bg-[#d9f0d6] rounded-xl px-6 py-5 h-full flex flex-col"
-          variants={cardVariants}
-        >
-          <p className="text-green-800 text-xs uppercase tracking-widest mb-1 flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-green-800 inline-block"></span>
-            <span>About Calculator</span>
-          </p>
-          <h3 className="text-xl font-semibold text-[#1e1e1e] mb-4">Solar Cost Calculator</h3>
-          <form className="space-y-3 text-sm text-gray-700 flex-1 flex flex-col justify-between">
-            <div className="space-y-3">
-              {[
-                { id: 'monthly-bill', icon: 'fas fa-bolt', placeholder: 'Monthly Electricity Bill (₹)' },
-                { id: 'roof-area', icon: 'fas fa-ruler-combined', placeholder: 'Roof Area (sq. ft.)' },
-                { id: 'location', icon: 'fas fa-map-marker-alt', placeholder: 'Location / State' },
-                { id: 'peak-sun-hours', icon: 'fas fa-sun', placeholder: 'Avg. Peak Sun Hours (hrs/day)' },
-                { id: 'panel-efficiency', icon: 'fas fa-palette', placeholder: 'Panel Efficiency (%)' },
-              ].map(({ id, icon, placeholder }) => (
-                <div key={id}>
-                  <div className="flex items-center border border-blue-300 rounded-full px-4 py-2 bg-white hover:shadow-md transition">
-                    <i className={`${icon} text-green-800 mr-3`}></i>
-                    <input
-                      id={id}
-                      type="text"
-                      placeholder={placeholder}
-                      className="w-full outline-none text-gray-700 placeholder-gray-500 bg-transparent text-sm"
-                    />
+        {/* Calculator OR Result Section */}
+        <motion.section className="bg-[#d9f0d6] rounded-xl px-6 py-5 h-full flex flex-col" variants={cardVariants}>
+          {!showResults ? (
+            <>
+              <p className="text-green-800 text-xs uppercase tracking-widest mb-1 flex items-center space-x-2">
+                <span className="w-2 h-2 rounded-full bg-green-800 inline-block"></span>
+                <span>About Calculator</span>
+              </p>
+              <h3 className="text-xl font-semibold text-[#1e1e1e] mb-4">Solar Cost Calculator</h3>
+              <form className="space-y-3 text-sm text-gray-700 flex-1 flex flex-col justify-between" onSubmit={handleSubmit}>
+                <div className="space-y-3">
+                  {[
+                    { name: "electricityBill", icon: "fas fa-bolt", placeholder: "Monthly Electricity Bill (₹)" },
+                    { name: "roofArea", icon: "fas fa-ruler-combined", placeholder: "Roof Area (sq. ft.)" },
+                    { name: "state", icon: "fas fa-map-marker-alt", placeholder: "State" },
+                    { name: "district", icon: "fas fa-city", placeholder: "District" },
+                    { name: "peakSunHours", icon: "fas fa-sun", placeholder: "Avg. Peak Sun Hours (hrs/day)" },
+                    { name: "continuousLoadKW", icon: "fas fa-battery-three-quarters", placeholder: "Continuous Load (KW)" },
+                    { name: "phoneNumber", icon: "fas fa-phone", placeholder: "Phone Number" },
+                    { name: "meterKW", icon: "fas fa-plug", placeholder: "Meter KW" },
+                    { name: "meterConnection", icon: "fas fa-network-wired", placeholder: "Meter Connection Type" },
+                  ].map(({ name, icon, placeholder }) => (
+                    <div key={name}>
+                      <div className="flex items-center border border-blue-300 rounded-full px-4 py-2 bg-white hover:shadow-md transition">
+                        <i className={`${icon} text-green-800 mr-3`}></i>
+                        <input
+                          name={name}
+                          type="text"
+                          value={formData[name]}
+                          onChange={handleChange}
+                          placeholder={placeholder}
+                          className="w-full outline-none text-gray-700 placeholder-gray-500 bg-transparent text-sm"
+                        />
+                      </div>
+                    </div>
+                  ))}
+
+                  <div>
+                    <select
+                      name="roofType"
+                      value={formData.roofType}
+                      onChange={handleChange}
+                      className="w-full border border-blue-300 rounded-full px-4 py-2 bg-white text-blue-800 font-medium hover:shadow-md transition text-sm"
+                    >
+                      <option disabled value="">
+                        Roof Type
+                      </option>
+                      <option value="flat">Flat</option>
+                      <option value="sloped">Sloped</option>
+                      <option value="metal">Metal</option>
+                    </select>
                   </div>
                 </div>
-              ))}
-              <div>
-                <select className="w-full border border-blue-300 rounded-full px-4 py-2 bg-white text-blue-800 font-medium hover:shadow-md transition text-sm">
-                  <option disabled selected value="">Roof Type</option>
-                  <option value="flat">Flat</option>
-                  <option value="sloped">Sloped</option>
-                  <option value="metal">Metal</option>
-                </select>
-              </div>
-              <div className="flex items-center text-green-700 text-sm">
-                <input id="govt-subsidy" type="checkbox" className="w-4 h-4 text-green-800 border-green-800 rounded" />
-                <label htmlFor="govt-subsidy" className="ml-2 cursor-pointer">Govt. Subsidy Eligible?</label>
-              </div>
-            </div>
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="w-full bg-green-800 text-white font-bold rounded-full py-2.5 mt-3 hover:bg-green-700 transition text-sm"
-            >
-              Calculate Cost
-            </motion.button>
-          </form>
+
+                <motion.button
+                  type="submit"
+                  disabled={loading}
+                  whileHover={{ scale: loading ? 1 : 1.03 }}
+                  whileTap={{ scale: loading ? 1 : 0.97 }}
+                  className={`w-full ${loading ? "bg-gray-400" : "bg-green-800 hover:bg-green-700"} text-white font-bold rounded-full py-2.5 mt-3 transition text-sm`}
+                >
+                  {loading ? "Calculating..." : "Calculate Cost"}
+                </motion.button>
+
+              </form>
+            </>
+          ) : (
+            <>
+              <h3 className="text-xl font-semibold text-[#1e1e1e] mb-4">Estimated Results</h3>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li><strong>Monthly Generation:</strong> {results.adjustedMonthlyGeneration}</li>
+                <li><strong>CO₂ Saved:</strong> {results.co2Saved}</li>
+                <li><strong>25-Year Savings:</strong> {results.savings25Years}</li>
+                <li><strong>Savings in Words:</strong> {results.savingsInWords}</li>
+                <li><strong>Total Power Saved:</strong> {results.totalPowerSaved}</li>
+                <li><strong>Trees Saved:</strong> {results.treesSaved}</li>
+                <li><strong>Water Saved:</strong> {results.waterSaved}</li>
+              </ul>
+              <button
+                onClick={handleCancel}
+                className="w-full mt-4 bg-red-600 hover:bg-red-500 text-white font-semibold rounded-full py-2 text-sm transition"
+              >
+                Cancel
+              </button>
+            </>
+          )}
         </motion.section>
 
-        {/* Electricity Saved Card */}
-        <motion.section
-          className="flex justify-center items-center h-full"
-          variants={cardVariants}
-        >
-          <div className=" h-full flex ">
+        {/* Saved Impact Section */}
+        <motion.section className="flex justify-center items-center h-full" variants={cardVariants}>
+          <div className="h-full flex">
             <ElectricitySavedCard />
           </div>
         </motion.section>
