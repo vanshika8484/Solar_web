@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Pro1 from "../Images/Pro1.jpg";
+import Pro2 from "../Images/Pro2.jpg"
+import Pro3 from "../Images/Pro3.png";
 import Footer from "./Footer";
 
 const ProjectDetails = () => {
@@ -35,7 +38,7 @@ const ProjectDetails = () => {
                             initial="hidden"
                             animate="visible"
                             variants={fadeUp}
-                            src="https://divyby.redspace.in/assets-2/images/service/09.jpg"
+                            src={Pro1}
                             alt="Solar Panel Installation"
                             className="w-full h-auto rounded shadow"
                         />
@@ -58,7 +61,7 @@ const ProjectDetails = () => {
                             initial="hidden"
                             animate="visible"
                             variants={fadeUp}
-                            src="https://divyby.redspace.in/assets-2/images/service/10.jpg"
+                            src={Pro2}
                             alt="Solar Panels Field"
                             className="w-full h-auto rounded shadow"
                         />
@@ -147,7 +150,7 @@ const ProjectDetails = () => {
                             variants={fadeUp}
                             className="bg-white p-6 rounded shadow text-center"
                         >
-                            <img src="https://divyby.redspace.in/assets-2/images/cta/03.jpg" />
+                            <img src={Pro3} />
                             <p className="text-xl font-semibold">+91 9310259325</p>
                             <p className="text-sm text-gray-600">Mon–Sat 10:00 am–6:00 pm</p>
                             <p className="text-sm text-gray-600">24/7 Service Available</p>
