@@ -16,25 +16,25 @@ const services = [
     // icon: <FaCogs className="text-green-700 text-3xl" />,
   },
   {
-    label: "Recycling & Sustainability",
-    path: "Recycling_&_Sustainability",
-    // icon: <FaRecycle className="text-green-700 text-3xl" />,
-  },
-  {
-    label: "Customized Solar Solutions",
-    path: "Customized_Solar_Solutions",
-    // icon: <FaSun className="text-green-700 text-3xl" />,
-  },
+        label: "Annual Maintenance Contracts (AMC)",
+        path: "Annual Maintenance Contracts (AMC)",
+        // icon: <FaRecycle className="text-green-700 text-3xl" />,
+    },
+    {
+        label: "Health Check ups",
+        path: "Health Check ups",
+        // icon: <FaSun className="text-green-700 text-3xl" />,
+    },
 ];
 
 const SecondService = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen GetfontHome mb-2">
+    <div className="bg-gray-100 text-white min-h-screen GetfontHome mb-2 mt-20">
     
 
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto px-6 pt-12">
-        <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2>
+        <h2 className="text-3xl font-bold text-center text-black mb-10">Our Services</h2>
         {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, idx) => (
             <motion.div
