@@ -74,7 +74,7 @@ const La = () => {
                                 "Solar-Pump",
                                 "Micro-Inverter",
                                 "Earthing",
-                                "Gas-Genset",
+
                                 "Diesel/Petrol Genset",
                             ].map((product, i) => (
                                 <Link
@@ -87,14 +87,6 @@ const La = () => {
                             ))}
                         </div>
 
-                        <div className="bg-white p-6 rounded shadow text-center">
-                            <img src="https://divyby.redspace.in/assets-2/images/cta/03.jpg" />
-                            <p className="text-xl font-semibold">+91 9310259325</p>
-                            <p className="text-sm text-gray-600">Mon-Sat 10:00 am–6:00 pm</p>
-                            <p className="text-sm text-gray-600">24/7 Service Available</p>
-                            <button className=" px-4 py-2 bg-green-600 text-white rounded">
-                            <a  href="tel:+91 9310259325" >Call us Now</a></button>
-                        </div>
 
                         <div className="bg-white p-6 rounded shadow text-sm space-y-3">
                             <div className="flex items-start gap-2">
@@ -107,17 +99,17 @@ const La = () => {
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Phone:</span>
                                 <a href="tel:+011234567890" className="text-green-700 hover:underline">
-                            
 
-+91 9310259325
+
+                                    +91 9310259325
                                 </a>
                             </div>
 
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Address:</span>
                                 <span>53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar,
-Nai Basti Dundaher Ghaziabad,
-Uttar Pradesh 201001</span>
+                                    Nai Basti Dundaher Ghaziabad,
+                                    Uttar Pradesh 201001</span>
                             </div>
 
                             <div className="flex items-start gap-2">
