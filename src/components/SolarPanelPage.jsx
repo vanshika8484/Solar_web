@@ -132,7 +132,7 @@ export default function SolarPanelPage() {
                                 "Micro-Inverter",
                                 "Earthing",
                                 "LA",
-                                "Gas-Genset",
+                        
                                 "Diesel/Petrol Genset",
                             ].map((product, i) => (
                                 <Link
@@ -145,43 +145,18 @@ export default function SolarPanelPage() {
                             ))}
                         </motion.div>
 
-                        <motion.div
-                            initial="hidden"
-                            animate="visible"
-                            variants={fadeUp}
-                            className="bg-white p-6 rounded shadow text-center"
-                        >
-                            <img src="https://divyby.redspace.in/assets-2/images/cta/03.jpg" />
-                            <p className="text-xl font-semibold">(986)-2549.215</p>
-                            <p className="text-sm text-gray-600">Mon–Fri 7:00 am–9:00 pm</p>
-                            <p className="text-sm text-gray-600">24/7 Service Available</p>
-                            <button className="mt-4 px-4 py-2 bg-green-600 text-white rounded">Call us Now</button>
-                        </motion.div>
+                        
 
                         <motion.div className="bg-white p-6 rounded shadow text-sm space-y-3">
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Email:</span>
                                 <a href="mailto:info@example.com" className="text-green-700 hover:underline">
-                                    info@example.com
+                                  Info@divypower.com
+
                                 </a>
                             </div>
 
-                            <div className="flex items-start gap-2">
-                                <span className="font-bold text-gray-700 w-20">Phone:</span>
-                                <a href="tel:+011234567890" className="text-green-700 hover:underline">
-                                    (+01) 123 456 7890
-                                </a>
-                            </div>
-
-                            <div className="flex items-start gap-2">
-                                <span className="font-bold text-gray-700 w-20">Address:</span>
-                                <span>1212 Paint Valley Road, East USA</span>
-                            </div>
-
-                            <div className="flex items-start gap-2">
-                                <span className="font-bold text-gray-700 w-20">Hours:</span>
-                                <span>Mon–Sat: 8:00 - 18:00<br />Sunday: CLOSED</span>
-                            </div>
+                            
                         </motion.div>
 
                     </aside>
