@@ -71,13 +71,14 @@ function Contact() {
               <div>
                 <div className="flex items-start space-x-2">
                   <MdEmail className="text-2xl text-primary mt-1" />
-                  <div>
-                    <h4 className="font-medium text-gray-900">Email</h4>
-                    <p>
+                <br/>
+                <div className=' '>
+                    <h4 className="font-medium text-gray-900 mt-1">Email</h4>
+                    <p className=' -translate-x-9 mt-3'>
                       customersupport1@divypower.com<br />
                       Info@divypower.com
                     </p>
-                  </div>
+                 </div>
                 </div>
 
               </div>
