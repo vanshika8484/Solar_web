@@ -5,32 +5,32 @@ const reelsData = [
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701264/Founder_And_Friends_Solar_Energy_And_Benefits_yjlwtu.mp4',
     username: "solar_user_1",
-    caption: "Topic 1: Clean and green energy revolution!",
+    caption: "Topic : Clean and green energy revolution!",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Ateesh_Breaking_The_Myth_zek5r6.mp4',
     username: "Ateesh Kumar",
-    caption: "Topic 2: Breaking The Myth",
+    caption: "Topic : Breaking The Myth",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Riddhi_Go_Solar_Save_Environment_gstan5.mp4',
     username: "Riddhi Agarwal",
-    caption: "Topic 3: Go Solar Save Environment",
+    caption: "Topic : Go Solar Save Environment",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701248/Asha_Cheaper_Is_Not_Always_Safer_bbk2dm.mp4',
     username: "Asha Gupta",
-    caption: "Topic 4: Cheaper is not always safer",
+    caption: "Topic : Cheaper is not always safer",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701219/Founder_And_Friends_Save_Environment_With_Solar_qswtyr.mp4',
     username: "solar_user_4",
-    caption: "Topic 5: Saving environment with solar!",
+    caption: "Topic : Saving environment with solar!",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701055/Architecture_Interviews_Go_Solar_Save_Environment_2_u5awao.mp4',
     username: "solar_user_4",
-    caption: "Topic 6: Solar-powered future starts now!",
+    caption: "Topic : Solar-powered future starts now!",
   },
 ];
 
