@@ -68,7 +68,7 @@ function Contact() {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">📧 Email</h4>
-                <p>Divy@gmail.com<br />Info@divyPower.in</p>
+                <p>customersupport1@divypower.com<br />Info@divypower.com</p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">📞 Phone</h4>
