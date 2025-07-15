@@ -1,42 +1,21 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const portfolioData = [
-  {
-    id: 1,
-    title: "Equality and Solidarity",
-    image: "https://storage.googleapis.com/a1aa/image/efc5784c-5e54-4bed-188c-2f6fd3221084.jpg",
-    category: "Eco Solar",
-  },
-  {
-    id: 2,
-    title: "Windward Renewables",
-    image: "https://storage.googleapis.com/a1aa/image/790d5027-8e2b-42f0-6959-472c820ac383.jpg",
-    category: "Power",
-  },
-  {
-    id: 3,
-    title: "Sun Breeze Power",
-    image: "https://storage.googleapis.com/a1aa/image/04222cce-eb38-4286-09b7-7774a4ed0fca.jpg",
-    category: "Solar Pro",
-  },
-  {
-    id: 4,
-    title: "Wind Whisper Energy",
-    image: "https://storage.googleapis.com/a1aa/image/06883fd0-91cf-4b59-2abd-5331aff56ccf.jpg",
-    category: "Energy",
-  },
-];
-
-const categories = ["All", "Power", "Eco Solar", "Solar Pro", "Energy"];
+import { categories, projects, iconMap } from "./ProjectData"; // Importing categories and projects
+import { useNavigate } from "react-router-dom";
 
 export default function SolarPortfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const navigate = useNavigate();
 
+  // Filter projects based on selected category
   const filteredData =
     selectedCategory === "All"
-      ? portfolioData
-      : portfolioData.filter((item) => item.category === selectedCategory);
+      ? projects.slice(0, 4) // Limit to first 4 projects
+      : projects.filter((item) => item.category === selectedCategory).slice(0, 4);
+
+  const handleReadMore = () => {
+    navigate('/ProjectDetails'); // Ensure this path matches your Route
+  };
 
   return (
     <section className="w-full px-4 -mt-[450px] sm:px-8 py-16 bg-gradient-to-br from-[#f8f7f0] to-white">
@@ -99,6 +78,16 @@ export default function SolarPortfolio() {
           ))}
         </div>
       </AnimatePresence>
+
+      {/* Read More Button */}
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={handleReadMore}
+          className="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-800 transition"
+        >
+          Read More
+        </button>
+      </div>
     </section>
   );
 }
