@@ -23,8 +23,7 @@ export const categories = [
   "Residential",
   "Commercial",
   "Govt Affiliates",
-  "Exhibitions",
-  "Stalls",
+  "Exhibitions and stalls",
 ];
 
 export const iconMap = {
@@ -102,14 +101,14 @@ export const projects = [
   {
     id: 10,
     title: "UNA Hotel",
-    category: "Exhibitions",
+    category: "Exhibitions and stalls",
     kwp: "N/A",
     image: Project10
   },
   {
     id: 11,
     title: "OS cool Home",
-    category: "Stalls",
+    category: "Exhibitions and stalls",
     kwp: "N/A",
     image: Project11
   }
