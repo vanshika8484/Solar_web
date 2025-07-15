@@ -5,32 +5,32 @@ const teamMembers = [
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750682931/Kaushlesh_We_And_Our_Competitors_fqtpmh.mp4',
     username: "Kaushlesh Agarwal",
-    caption: "Topic 1: We And Our Competitors",
+    caption: "Topic : We And Our Competitors",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751711628/Shivam_Choose_Divy_As_Your_Solar_Partner_1_cy0ey7.mp4',
     username: "Shivam Shengar",
-    caption: "Topic 2:Divy As Your Solar Partner",
+    caption: "Topic :Divy As Your Solar Partner",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683018/Rajeev_Arora_Our_Quality_Is_Our_Legacy_xvwpmw.mp4',
     username: " Rajeev Arora",
-    caption: "Topic3 3: Our Quality Is Our Legacy",
+    caption: "Topic : Our Quality Is Our Legacy",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683050/Ateesh_Tata_Authorised_Solar_Partner_tpssdt.mp4',
     username: "Ateesh Kumar",
-    caption: "Topic 4: Divy Tata Authorised Solar Partner",
+    caption: "Topic : Divy Tata Authorised Solar Partner",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683064/Asha_Divy_Power_Sop_s_elrwrz.mp4',
     username: "Asha Gupta",
-    caption: "Topic 5: SOP's of Divy Power",
+    caption: "Topic : SOP's of Divy Power",
   },
   {
     videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683064/Asha_Warranty_On_Solars_m82qbv.mp4',
     username: "Asha Gupta",
-    caption: "Topic 6: Warranty On Solars",
+    caption: "Topic : Warranty On Solars",
   },
 ];
 
