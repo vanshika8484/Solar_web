@@ -31,7 +31,7 @@ const SocialIcons = () => {
         }`}
       >
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/divypowerpvtltd/"
           target="_blank"
           rel="noopener noreferrer"
           className={`${iconStyle} bg-blue-600`}
@@ -40,7 +40,7 @@ const SocialIcons = () => {
           <FaFacebookF />
         </a>
         <a
-          href="https://x.com"
+          href="https://x.com/DivyPower"
           target="_blank"
           rel="noopener noreferrer"
           className={`${iconStyle} bg-black`}
@@ -49,7 +49,7 @@ const SocialIcons = () => {
           <FaXTwitter />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/divy-power-private-limited/?originalSubdomain=in"
           target="_blank"
           rel="noopener noreferrer"
           className={`${iconStyle} bg-blue-700`}
@@ -75,7 +75,7 @@ const SocialIcons = () => {
           <FaGithub />
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/divy.power/"
           target="_blank"
           rel="noopener noreferrer"
           className={`${iconStyle} bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600`}
@@ -84,7 +84,7 @@ const SocialIcons = () => {
           <FaInstagram />
         </a>
         <a
-          href="https://youtube.com"
+          href="https://www.youtube.com/@divypower4791"
           target="_blank"
           rel="noopener noreferrer"
           className={`${iconStyle} bg-red-600`}
