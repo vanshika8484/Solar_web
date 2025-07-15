@@ -26,7 +26,7 @@ const Footer = () => {
     <div className="bg-[#00122E] text-white GetfontHomeDash">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Call Back Box - reduced padding and margin */}
-        <CallBackSection/>
+        <CallBackSection />
 
         {/* Main Footer */}
         <footer className="pb-6">
@@ -36,9 +36,13 @@ const Footer = () => {
               <h3 className="text-sm font-semibold border-b border-green-800 pb-1 mb-3">Contact Info</h3>
               <ul className="space-y-1 text-sm text-[#B0B9D1]">
                 <li className="flex items-center gap-2"><FaPhoneAlt /> +91 9310259325</li>
-                <li className="flex items-center gap-2"><FaPhoneAlt /> +91 0987654321</li>
-                <li className="flex items-center gap-2"><FaEnvelope /> divy@gmail.com</li>
-                <li className="flex items-center gap-2"><FaEnvelope /> info@divypower.in</li>
+
+                <li className="flex items-center gap-2"><FaEnvelope /> admin@divypower.com</li>
+                <li className="flex items-center gap-2"><FaEnvelope /> Info@divypower.com
+                </li>
+                <li className="flex items-center gap-2"><FaEnvelope /> 
+
+                  sales@divypower.com</li>
               </ul>
             </div>
 
