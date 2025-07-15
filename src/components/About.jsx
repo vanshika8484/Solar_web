@@ -83,7 +83,7 @@ const aboutUsContent = [
 export default function About() {
   return (
     <div>
-      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-6 ">
+      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 ">
         {/* Banner Image */}
         <motion.img
           src={localImage}
@@ -97,6 +97,7 @@ export default function About() {
         <section className="mt-8">
           <ChatUI4 />
         </section>
+
 
         {/* Scroll Stacking Cards */}
         <div className="-mt-[550px] mb-24">
@@ -131,6 +132,9 @@ export default function About() {
         <section className="-mt-[290px]">
           <CompanySection />
         </section>
+        <section className=" mt-52  ">
+            <ContactCards />
+          </section>
 
         <section className="">
           <section className=" ">
@@ -140,6 +144,7 @@ export default function About() {
           <section className="  ml-24 mr-24 -mt-12">
             <HoverVideoCard3 />
           </section>
+          
 
           {/* Why Choose Us Section */}
           <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[10px] About">
@@ -181,9 +186,7 @@ export default function About() {
             <FiguringOut />
           </section>
 
-          <section className=" mt-52 ml-44 mr-44  ">
-            <ContactCards />
-          </section>
+          
 
         </section>
 
