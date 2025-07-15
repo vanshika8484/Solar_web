@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
+import { MdEmail } from "react-icons/md";
+
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import Loader from "../Loader";
@@ -17,10 +19,10 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
-      console.log(name,email,phoneNo,message)
+      console.log(name, email, phoneNo, message)
       const { data } = await axios.post(
         "https://solar-4-8a9b.onrender.com/api/contact",
-       {name,email,phoneNo,message}
+        { name, email, phoneNo, message }
       );
       toast.success('Message sent successfully!');
     } catch (error) {
@@ -67,8 +69,17 @@ function Contact() {
                 <p>53, Ramte Ram Rd, Exta Vihar, Arjun Nagar, Nai Basti Dundahera, Ghaziabad, Uttar Pradesh 201001</p>
               </div>
               <div>
-                <h4 className="font-medium text-gray-900">📧 Email</h4>
-                <p>customersupport1@divypower.com<br />Info@divypower.com</p>
+                <div className="flex items-start space-x-2">
+                  <MdEmail className="text-2xl text-primary mt-1" />
+                  <div>
+                    <h4 className="font-medium text-gray-900">Email</h4>
+                    <p>
+                      customersupport1@divypower.com<br />
+                      Info@divypower.com
+                    </p>
+                  </div>
+                </div>
+
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">📞 Phone</h4>
@@ -128,13 +139,13 @@ function Contact() {
 
         {/* Google Map */}
         <motion.div className="mt-16 ml-0 mr-0 lg:mr-28 lg:ml-28 xl:mr-28 xl:ml-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.8 }}>
-         <iframe
-  title="map"
-  className="w-full h-96 rounded-2xl shadow-lg"
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.4200211741384!2d77.42795185827646!3d28.681681412447353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf0a53d63b979%3A0xcbe79e39d43f8339!2s53%2C%20Ramte%20Ram%20Rd%2C%20Ekta%20Vihar%2C%20Arjun%20Nagar%2C%20Nai%20Basti%20Dundahera%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201001!5e0!3m2!1sen!2sin!4v1656154860112!5m2!1sen!2sin"
-  allowFullScreen=""
-  loading="lazy"
-></iframe>
+          <iframe
+            title="map"
+            className="w-full h-96 rounded-2xl shadow-lg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.4200211741384!2d77.42795185827646!3d28.681681412447353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf0a53d63b979%3A0xcbe79e39d43f8339!2s53%2C%20Ramte%20Ram%20Rd%2C%20Ekta%20Vihar%2C%20Arjun%20Nagar%2C%20Nai%20Basti%20Dundahera%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201001!5e0!3m2!1sen!2sin!4v1656154860112!5m2!1sen!2sin"
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
 
         </motion.div>
       </div>
