@@ -61,7 +61,7 @@ const ProjectDetails = () => {
                             initial="hidden"
                             animate="visible"
                             variants={fadeUp}
-                            src={Pro2}
+                            src={Pro3}
                             alt="Solar Panels Field"
                             className="w-full h-auto rounded shadow"
                         />
@@ -150,7 +150,7 @@ const ProjectDetails = () => {
                             variants={fadeUp}
                             className="bg-white p-6 rounded shadow text-center"
                         >
-                            <img src={Pro3} />
+                            <img src={Pro2} />
                             <p className="text-xl font-semibold">+91 9310259325</p>
                             <p className="text-sm text-gray-600">Mon–Sat 10:00 am–6:00 pm</p>
                             <p className="text-sm text-gray-600">24/7 Service Available</p>
