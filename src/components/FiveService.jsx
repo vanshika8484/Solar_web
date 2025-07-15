@@ -16,25 +16,25 @@ const services = [
         // icon: <FaCogs className="text-green-700 text-3xl" />,
     },
     {
-        label: "Recycling & Sustainability",
-        path: "Recycling_&_Sustainability",
+        label: "Annual Maintenance Contracts (AMC)",
+        path: "Annual Maintenance Contracts (AMC)",
         // icon: <FaRecycle className="text-green-700 text-3xl" />,
     },
     {
-        label: "Customized Solar Solutions",
-        path: "Customized_Solar_Solutions",
+        label: "Health Check ups",
+        path: "Health Check ups",
         // icon: <FaSun className="text-green-700 text-3xl" />,
     },
 ];
 
 const InstallationServiceAltLayout = () => {
     return (
-        <div className="bg-gray-900 text-white min-h-screen GetfontHome mb-2">
+        <div className="bg-gray-100 text-white min-h-screen GetfontHome mb-2 mt-20">
 
 
             {/* Services Grid */}
             <section className="max-w-7xl mx-auto px-6 pt-12 pb-2">
-                <h2 className="text-3xl font-bold text-center text-white mb-10">🔧 Our Services</h2>
+                <h2 className="text-3xl font-bold text-center text-white mb-10"> Our Services</h2>
                 {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {services.map((service, idx) => (
                         <motion.div
@@ -66,7 +66,7 @@ const InstallationServiceAltLayout = () => {
                     className="rounded-xl mb-6 w-full max-h-[400px] object-cover"
                 />
 
-                <h2 className="text-2xl font-bold text-blue-900 mb-4">Installation & Commissioning (INC)</h2>
+                <h2 className="text-2xl font-bold text-blue-900 mb-4">Health Check ups</h2>
                 <p className="text-gray-700 mb-4 text-sm leading-relaxed">
                     At Divy Power, we manage the complete installation and commissioning of solar systems,
                     generators, and energy equipment. Our team ensures every part is installed and tested correctly,
