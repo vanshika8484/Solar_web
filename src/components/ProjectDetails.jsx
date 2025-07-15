@@ -6,6 +6,7 @@ import Pro2 from "../Images/Pro2.jpg"
 import Pro3 from "../Images/Pro3.png";
 import Footer from "./Footer";
 
+
 const ProjectDetails = () => {
     const fadeUp = {
         hidden: { opacity: 0, y: 30 },
