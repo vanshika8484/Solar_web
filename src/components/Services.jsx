@@ -38,16 +38,16 @@ const services = [
   },
   {
     icon: <FaRecycle className="text-4xl text-green-800" />,
-    title: "Recycling & Sustainability",
+    title: "Annual Maintenance Contracts (AMC)",
     description:
-      "Our eco-friendly approach ensures components are recycled and managed sustainably to reduce environmental impact.",
+      "Divy Power provides AMC services for diesel generators, solar systems, and other equipment to ensure long-term reliability.",
     path: "/Recycling_&_Sustainability",
   },
   {
     icon: <FaSolarPanel className="text-4xl text-green-800" />,
-    title: "Customized Solar Solutions",
+    title: "Health Check ups",
     description:
-      "Tailored solar panel setups to meet residential, commercial, and industrial needs for clean energy generation.",
+      "We provide complete care for your car, including expert advice, repairs, and preferred maintenance services.",
     path: "/Customized_Solar_Solutions",
   },
 ];
