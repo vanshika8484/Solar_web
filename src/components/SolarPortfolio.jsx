@@ -59,7 +59,7 @@ export default function SolarPortfolio() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 border border-gray-100"
             >
-              <div className="aspect-w-4 aspect-h-3 overflow-hidden">
+              <div className="h-48 overflow-hidden"> {/* Fixed height for equal size */}
                 <img
                   src={item.image}
                   alt={item.title}
