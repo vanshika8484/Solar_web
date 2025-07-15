@@ -13,7 +13,10 @@ import Project7 from "../Images/Project7.jpg";
 import Project8 from "../Images/Project8.jpg";
 import Project9 from "../Images/Project9.jpeg";
 import Project10 from "../Images/Project10.jpg";
-import Project11 from "../Images/Project11.jpg"
+import Project11 from "../Images/Project11.jpg";
+import stall4 from "../Images/stall4.JPG";
+import stall7 from "../Images/stall7.JPG";
+import stall8 from "../Images/stall8.JPG"
 
 
 
@@ -103,14 +106,14 @@ export const projects = [
     title: "UNA Hotel",
     category: "Exhibitions and stalls",
     kwp: "N/A",
-    image: Project10
+    image: stall4
   },
   {
     id: 11,
     title: "OS cool Home",
     category: "Exhibitions and stalls",
     kwp: "N/A",
-    image: Project11
+    image: stall7
   }
 ];
 
