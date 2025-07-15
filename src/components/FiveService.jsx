@@ -17,12 +17,12 @@ const services = [
     },
     {
         label: "Annual Maintenance Contracts (AMC)",
-        path: "Annual Maintenance Contracts (AMC)",
+        path: "Annual_Maintenance_Contracts(AMC)",
         // icon: <FaRecycle className="text-green-700 text-3xl" />,
     },
     {
         label: "Health Check ups",
-        path: "Health Check ups",
+        path: "Health_Check_ups",
         // icon: <FaSun className="text-green-700 text-3xl" />,
     },
 ];
@@ -34,7 +34,7 @@ const InstallationServiceAltLayout = () => {
 
             {/* Services Grid */}
             <section className="max-w-7xl mx-auto px-6 pt-12 pb-2">
-                <h2 className="text-3xl font-bold text-center text-white mb-10"> Our Services</h2>
+                <h2 className="text-3xl font-bold text-center text-black mb-10"> Our Services</h2>
                 {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {services.map((service, idx) => (
                         <motion.div
