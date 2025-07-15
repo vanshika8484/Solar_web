@@ -15,14 +15,18 @@ export default function ExactMatchPage1() {
   return (
     <div className="min-h-screen About1 -mt-24">
       {/* Heading */}
-      <h2 className="text-2xl sm:text-4xl font-bold text-center pt-10 text-red-600">
+      <h2 className="text-2xl sm:text-4xl font-bold text-center pt-10 text-red-600 mb-10">
         Our Clients
       </h2>
 
       {/* Animated Logos */}
       <div className="overflow-hidden py-10 sm:py-16 -mt-16">
         <div
-          className="flex space-x-10 px-4 sm:px-8 overflow-x-auto whitespace-nowrap"
+          className="flex space-x-10 px-4 sm:px-8 animate-scroll"
+          style={{
+            animation: 'scroll 20s linear infinite',
+            whiteSpace: 'nowrap',
+          }}
         >
           {[...logos, ...logos].map((src, idx) => (
             <img
@@ -34,6 +38,17 @@ export default function ExactMatchPage1() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
     </div>
   );
 }
