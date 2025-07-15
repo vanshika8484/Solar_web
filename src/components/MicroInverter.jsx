@@ -43,31 +43,31 @@ const MicroInverter = () => {
             <motion.section initial="hidden" animate="visible" variants={fadeUp}>
               <h2 className="text-2xl font-semibold mb-4">Micro Inverter</h2>
               <p className=' text-gray-500'>
-               Our micro inverters are engineered to enhance the efficiency and reliability of your solar panel system, providing a cutting-edge solution for energy conversion. Unlike conventional inverters that process power for an entire solar array, micro inverters operate individually on each panel, ensuring that every module functions at peak performance. This decentralized approach eliminates energy losses caused by shading or varying panel efficiency, making them an ideal choice for maximizing solar output.
+                Our micro inverters are engineered to enhance the efficiency and reliability of your solar panel system, providing a cutting-edge solution for energy conversion. Unlike conventional inverters that process power for an entire solar array, micro inverters operate individually on each panel, ensuring that every module functions at peak performance. This decentralized approach eliminates energy losses caused by shading or varying panel efficiency, making them an ideal choice for maximizing solar output.
               </p>
               <p className="mt-4 text-gray-500">
-               By optimizing energy conversion at the panel level, our micro inverters significantly improve the overall productivity of your system. Even if some panels are partially shaded or experience efficiency variations, the rest continue to generate power without disruption. This makes them particularly beneficial for installations in areas with unpredictable sunlight exposure or complex roof layouts, ensuring maximum energy yield throughout the day.
+                By optimizing energy conversion at the panel level, our micro inverters significantly improve the overall productivity of your system. Even if some panels are partially shaded or experience efficiency variations, the rest continue to generate power without disruption. This makes them particularly beneficial for installations in areas with unpredictable sunlight exposure or complex roof layouts, ensuring maximum energy yield throughout the day.
               </p>
             </motion.section>
             <div className="flex items-start gap-6">
-            <motion.img
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              src="https://divyby.redspace.in/assets/images/updated-images/inverter%201.png"
-              alt="Solar Panels Field"
-              className="w-[380px] h-[270px] rounded shadow"
-            />
+              <motion.img
+                initial="hidden"
+                animate="visible"
+                variants={fadeUp}
+                src="https://divyby.redspace.in/assets/images/updated-images/inverter%201.png"
+                alt="Solar Panels Field"
+                className="w-[380px] h-[270px] rounded shadow"
+              />
 
-            <motion.section initial="hidden" animate="visible" variants={fadeUp}>
-              <p className=' text-gray-500'>
-                Reliability is a core feature of our micro inverters, built with advanced technology to withstand diverse environmental conditions. Their durable design ensures long-term performance while reducing the risks associated with a single point of failure—common in traditional centralized inverter systems. With built-in monitoring capabilities, users can track real-time energy production, allowing for proactive maintenance and efficiency adjustments.
-              </p>
-            </motion.section>
+              <motion.section initial="hidden" animate="visible" variants={fadeUp}>
+                <p className=' text-gray-500'>
+                  Reliability is a core feature of our micro inverters, built with advanced technology to withstand diverse environmental conditions. Their durable design ensures long-term performance while reducing the risks associated with a single point of failure—common in traditional centralized inverter systems. With built-in monitoring capabilities, users can track real-time energy production, allowing for proactive maintenance and efficiency adjustments.
+                </p>
+              </motion.section>
             </div>
-              <p className="mt-4 text-gray-500">
-                Perfect for homeowners and businesses alike, our micro inverters offer a scalable and cost-effective solar solution. Whether you’re installing a residential system to lower electricity bills or implementing a commercial setup for sustainable energy use, micro inverters ensure the highest return on investment. Their ability to provide consistent power output, along with superior adaptability, makes them a smart choice for those looking to optimize their solar energy potential.
-              </p>
+            <p className="mt-4 text-gray-500">
+              Perfect for homeowners and businesses alike, our micro inverters offer a scalable and cost-effective solar solution. Whether you’re installing a residential system to lower electricity bills or implementing a commercial setup for sustainable energy use, micro inverters ensure the highest return on investment. Their ability to provide consistent power output, along with superior adaptability, makes them a smart choice for those looking to optimize their solar energy potential.
+            </p>
             <motion.div
               initial="hidden"
               animate="visible"
@@ -119,7 +119,6 @@ const MicroInverter = () => {
                 "Solar-Pump",
                 "Earthing",
                 "LA",
-                "Gas-Genset",
                 "Diesel/Petrol Genset",
               ].map((product, i) => (
                 <Link
@@ -132,43 +131,18 @@ const MicroInverter = () => {
               ))}
             </motion.div>
 
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              className="bg-white p-6 rounded shadow text-center"
-            >
-              <img src="https://divyby.redspace.in/assets-2/images/cta/03.jpg" />
-              <p className="text-xl font-semibold">(986)-2549.215</p>
-              <p className="text-sm text-gray-600">Mon–Fri 7:00 am–9:00 pm</p>
-              <p className="text-sm text-gray-600">24/7 Service Available</p>
-              <button className="mt-4 px-4 py-2 bg-green-600 text-white rounded">Call us Now</button>
-            </motion.div>
+
 
             <motion.div className="bg-white p-6 rounded shadow text-sm space-y-3">
               <div className="flex items-start gap-2">
                 <span className="font-bold text-gray-700 w-20">Email:</span>
                 <a href="mailto:info@example.com" className="text-green-700 hover:underline">
-                  info@example.com
+                  Info@divypower.com
+
                 </a>
               </div>
 
-              <div className="flex items-start gap-2">
-                <span className="font-bold text-gray-700 w-20">Phone:</span>
-                <a href="tel:+011234567890" className="text-green-700 hover:underline">
-                  (+01) 123 456 7890
-                </a>
-              </div>
 
-              <div className="flex items-start gap-2">
-                <span className="font-bold text-gray-700 w-20">Address:</span>
-                <span>1212 Paint Valley Road, East USA</span>
-              </div>
-
-              <div className="flex items-start gap-2">
-                <span className="font-bold text-gray-700 w-20">Hours:</span>
-                <span>Mon–Sat: 8:00 - 18:00<br />Sunday: CLOSED</span>
-              </div>
             </motion.div>
 
           </aside>
