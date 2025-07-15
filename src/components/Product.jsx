@@ -66,13 +66,7 @@ function Product() {
   ];
 
   const Genset = [
-    {
-      title: "Gas Genset",
-      description: "Our gas-powered gensets deliver reliable, low-emission backup power using natural gas or LPG—ideal for homes and businesses seeking efficient, low-maintenance energy solutions.",
-      icon: "https://divyby.redspace.in/assets/images/updated-images/gas%201.jpg",
-      image: "https://divyby.redspace.in/assets/images/updated-images/gas%201.jpg",
-      to: "/Gas-Genset",
-    },
+    
     {
       title: "Diesel/Petrol Genset",
       description: "Our diesel and petrol gensets provide reliable, high-performance power for homes, businesses, and remote sites—built for durability, efficiency, and dependable backup in any situation.",
@@ -205,7 +199,7 @@ function Product() {
           <h2 className="text-4xl text-black font-bold">Genset Solutions</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
+        <div className="grid  grid-cols-1 justify-center align-middle items-center gap-6 max-w-4xl mx-auto">
           {Genset.map((item, index) => (
             <motion.div
               key={index}
