@@ -4,6 +4,7 @@ import Footer from './Footer';
 import CareerForm from './CareerForm';
 import WorkCultureReels from './WorkCultureReels';
 import SafetySecurityReels from './SafetySecurityReels';
+import ImageSlider from './ImageSlider';
 
 
 const Career = () => {
@@ -113,7 +114,9 @@ const Career = () => {
       <section className=' -mt-8'>
         <CareerForm/>
       </section>
-      
+      <section>
+        <ImageSlider/>
+      </section>
   <section className=' mt-[130px]'>
       <Footer />
   </section>
