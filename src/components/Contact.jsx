@@ -127,7 +127,7 @@ function Contact() {
         </motion.div>
 
         {/* Google Map */}
-        <motion.div className="mt-16 mr-28 ml-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.8 }}>
+        <motion.div className="mt-16 ml-0 mr-0 lg:mr-28 lg:ml-28 xl:mr-28 xl:ml-28" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.8 }}>
          <iframe
   title="map"
   className="w-full h-96 rounded-2xl shadow-lg"
