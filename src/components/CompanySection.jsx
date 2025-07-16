@@ -34,7 +34,7 @@ const CompanySection = () => {
   return (
     <section className="py-10 px-4 sm:px-6 md:px-10 lg:px-20 bg-white">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-800 mb-10">
-        Our <span className="text-black">Company</span>
+        Our <span className="text-black About">Company</span>
       </h2>
 
       <div className="flex flex-col lg:flex-row items-center gap-10">
@@ -48,15 +48,15 @@ const CompanySection = () => {
         </div>
 
         {/* Right Content */}
-        <div className="w-full lg:w-1/2 flex flex-col">
-          <h3 className="text-2xl sm:text-3xl font-semibold text-black mb-6 text-center lg:text-left leading-snug">
+        <div className="w-full lg:w-1/2 flex flex-col ">
+          <h3 className="text-2xl sm:text-3xl About text-black mb-6 text-center lg:text-left leading-snug">
             Produce Your Own <br />
-            <span className="text-green-700">Clean Energy</span> <br />
+            <span className="text-green-700 About">Clean Energy</span> <br />
             Save The Environment
           </h3>
 
           {/* Tabs */}
-          <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6">
+          <div className="flex About flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6">
             {["mission", "vision", "why"].map((key) => (
               <button
                 key={key}
@@ -73,7 +73,7 @@ const CompanySection = () => {
           </div>
 
           {/* Tab Content */}
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait About">
             <motion.div
               key={activeTab}
               initial={{ opacity: 0, y: 20 }}
@@ -82,15 +82,15 @@ const CompanySection = () => {
               transition={{ duration: 0.4 }}
               className="text-gray-700 text-sm sm:text-base leading-relaxed"
             >
-              <p className="mb-6">{activeContent.text}</p>
+              <p className="mb-6 About">{activeContent.text}</p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <img
                   src={activeContent.img}
                   alt="Content visual"
-                  className="rounded-xl w-full sm:w-28 h-36 object-cover shadow"
+                  className="rounded-xl w-full sm:w-28 h-36 object-cover shadow About"
                 />
-                <p className="text-black text-sm sm:text-base">{activeContent.note}</p>
+                <p className=" About text-black text-sm sm:text-base">{activeContent.note}</p>
               </div>
             </motion.div>
           </AnimatePresence>
