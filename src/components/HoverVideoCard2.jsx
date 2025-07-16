@@ -37,7 +37,7 @@ const HoverVideoCard2 = () => {
   return (
     <div className="bg-white py-12 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-2xl sm:text-3xl font-bold text-green-800 mb-10">
+        <h2 className="text-center text-2xl sm:text-3xl About1 text-green-800 mb-10">
           Our Founder Philosophy
         </h2>
 
