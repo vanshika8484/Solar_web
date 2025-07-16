@@ -16,11 +16,13 @@ import "./ScrollStackingCards.css"; // <-- Include CSS
 import HoverVideoCard2 from "./HoverVideoCard2";
 import HoverVideoCard3 from "./HoverVideoCard3";
 import "./Home.css"; // Ensure this CSS file is imported for styles
+import HoverVideoCard from "./HoverVideoCard";
 
 const aboutUsContent = [
   {
     heading: "Not Just Selling Solar We are a Partner in Your Journey",
-    subheading: "At Divy Power Pvt. Ltd., we don’t just sell solar panels. We listen, understand, and build solutions.",
+    subheading:
+      "At Divy Power Pvt. Ltd., we don’t just sell solar panels. We listen, understand, and build solutions.",
     points: [
       "Every home, business, or factory has a unique energy we begin by understanding yours",
       "Our approach is not sales-driven, it’s solution-focused.",
@@ -32,7 +34,8 @@ const aboutUsContent = [
   },
   {
     heading: "What If You Delay Solar? The Hidden Cost of Waiting",
-    subheading: "We believe in honesty – waiting to switch to solar can cost more than you think.",
+    subheading:
+      "We believe in honesty – waiting to switch to solar can cost more than you think.",
     points: [
       "Every electricity bill is money lost that could’ve been saved.",
       "Electricity prices are rising, and power cuts are more frequent.",
@@ -44,7 +47,8 @@ const aboutUsContent = [
   },
   {
     heading: "Powering Every Home from Rooftops to Rural Villages",
-    subheading: "We deliver energy solutions for everyon high-rises to rural India",
+    subheading:
+      "We deliver energy solutions for everyon high-rises to rural India",
     points: [
       "No terrain or challenge is too complex we deliver where it’s needed.",
       "Our systems are designed to endure Indian conditions: dust, heat, and rain.",
@@ -56,7 +60,8 @@ const aboutUsContent = [
   },
   {
     heading: "A Legacy You Can Rely On",
-    subheading: "With over 25 years in the energy sector, trust is not claimed – it’s earned.",
+    subheading:
+      "With over 25 years in the energy sector, trust is not claimed – it’s earned.",
     points: [
       "We’ve grown with the solar industry and bring decades of expertise.",
       "Our systems are known for longevity and reliability.",
@@ -68,7 +73,8 @@ const aboutUsContent = [
   },
   {
     heading: "Creating Real Change Through Government Collaborations",
-    subheading: "We don’t just talk about impact – we create it, in partnership with the Government.",
+    subheading:
+      "We don’t just talk about impact – we create it, in partnership with the Government.",
     points: [
       "As a UPNEDA-approved vendor, we drive solar adoption at scale.",
       "We power not just homes, but hospitals, schools, and public infrastructure.",
@@ -82,117 +88,115 @@ const aboutUsContent = [
 
 export default function About() {
   return (
-    <div>
-      <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 ">
-        {/* Banner Image */}
-        <motion.img
-          src={localImage}
-          alt="banner"
-          className="w-full h-[70vh] object-cover"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        />
+    <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 ">
+      {/* Banner Image */}
+      <motion.img
+        src={localImage}
+        alt="banner"
+        className="w-full h-[70vh] object-cover"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      />
 
-        <section className="mt-8">
-          <ChatUI4 />
-        </section>
+      <section className="mt-8">
+        <ChatUI4 />
+      </section>
+
+      {/* Scroll Stacking Cards */}
+      <div className="-mt-[550px] mb-24">
+        <ScrollStackingCards content={aboutUsContent} />
+      </div>
+
+      <section className="-mt-[290px]">
+        <CompanySection />
+      </section>
+      
+      <section className=" -mt-20">
+        <HoverVideoCard2 />
+      </section>
+      <section>
+        <ProcessSteps />
+      </section>
+      <section className="  -mt-12">
+        <HoverVideoCard3 />
+      </section>
 
 
-        {/* Scroll Stacking Cards */}
-        <div className="-mt-[550px] mb-24">
-          <ScrollStackingCards content={aboutUsContent} />
-        </div>
 
-        {/* Why Choose Us Section */}
-        {/* <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[320px] About ">
-          <div className="bg-[#fdf6ee] shadow-xl rounded-xl p-6 sm:p-10 md:p-12 max-w-[1000px] mx-auto">
-            <div className="flex items-center justify-center mb-4">
-              <img src={sunPhoto} alt="Chacha" className="w-16 h-16 mr-4" />
-              <h2 className="text-2xl md:text-4xl font-extrabold text-red-700 text-center md:text-left">
-                Why Choose Us as Your Solar Partner?
+      {/* Why Choose Us Section */}
+      <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[10px] About">
+        <div className="bg-[#fdf6ee] shadow-xl overflow-x-hidden rounded-xl p-5 sm:p-8 md:p-12 max-w-[300px] sm:max-w-[300px] md:max-w-[1000px] mx-auto">
+          {/* Heading with icons - responsive layout */}
+          <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 text-center sm:text-left">
+            <div className="flex items-center gap-3">
+              <img
+                src={sunPhoto}
+                alt="Chacha"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+              />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-red-700 leading-snug">
+                Why Choose Us <br className="sm:hidden" />
+                as Your Solar Partner?
               </h2>
-              <img src={sunImage} alt="Didi" className="w-16 h-16 ml-4" />
-            </div>
-            <div className="text-gray-800 text-base md:text-lg leading-relaxed space-y-5">
-              <p>
-                At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems - we build <span className="text-green-500">lasting energy partnerships</span>.
-              </p>
-              <ul className="list-disc list-inside space-y-2">
-                <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
-                <li><strong>Post-installation support</strong> real-time maintenance and performance monitoring throughout the system's lifecycle.</li>
-                <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure maximum durability and safety.</li>
-                <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
-                <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
-              </ul>
+              <img
+                src={sunImage}
+                alt="Didi"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+              />
             </div>
           </div>
-        </section> */}
 
-        <section className="-mt-[290px]">
-          <CompanySection />
-        </section>
-        <section className=" mt-52  ">
-            <ContactCards />
-          </section>
+          {/* Content Section */}
+          <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-4">
+            <p className="text-center sm:text-left">
+              At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install
+              solar systems — we build{" "}
+              <span className="text-green-600 font-semibold">
+                lasting energy partnerships
+              </span>
+              .
+            </p>
 
-        <section className="">
-          <section className=" ">
-            <HoverVideoCard2 />
-          </section>
-          <ProcessSteps />
-          <section className="  ml-24 mr-24 -mt-12">
-            <HoverVideoCard3 />
-          </section>
-          
+            <ul className="list-disc list-inside space-y-3 pl-4">
+              <li>
+                <strong>
+                  Committed to quality, accountability, and long-term service.
+                </strong>
+              </li>
+              <li>
+                <strong>Post-installation support:</strong> Real-time
+                maintenance and performance monitoring throughout the system's
+                lifecycle.
+              </li>
+              <li>
+                <strong>
+                  Top-grade components, certified engineers &
+                  government-approved materials
+                </strong>{" "}
+                ensure maximum durability and safety.
+              </li>
+              <li>
+                <strong>MNRE-approved & UPNEDA-certified;</strong> officially
+                recognized by the government of India.
+              </li>
+              <li>
+                <strong>Proven track record</strong> with solar projects across
+                villages, schools, societies, and institutions.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-          {/* Why Choose Us Section */}
-          <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[10px] About">
-            <div className="bg-[#fdf6ee] shadow-xl overflow-x-hidden rounded-xl p-5 sm:p-8 md:p-12 max-w-[300px] sm:max-w-[300px] md:max-w-[1000px] mx-auto">
+      <section className=" mt-30 ">
+        <FiguringOut />
+      </section>
+<section className=" mt-52  ">
+        <ContactCards />
+      </section>
 
-              {/* Heading with icons - responsive layout */}
-              <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 text-center sm:text-left">
-                <div className="flex items-center gap-3">
-                  <img src={sunPhoto} alt="Chacha" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain" />
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-red-700 leading-snug">
-                    Why Choose Us <br className="sm:hidden" />
-                    as Your Solar Partner?
-                  </h2>
-                  <img src={sunImage} alt="Didi" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain" />
-                </div>
-              </div>
-
-              {/* Content Section */}
-              <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-4">
-                <p className="text-center sm:text-left">
-                  At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install solar systems —
-                  we build <span className="text-green-600 font-semibold">lasting energy partnerships</span>.
-                </p>
-
-                <ul className="list-disc list-inside space-y-3 pl-4">
-                  <li><strong>Committed to quality, accountability, and long-term service.</strong></li>
-                  <li><strong>Post-installation support:</strong> Real-time maintenance and performance monitoring throughout the system's lifecycle.</li>
-                  <li><strong>Top-grade components, certified engineers & government-approved materials</strong> ensure maximum durability and safety.</li>
-                  <li><strong>MNRE-approved & UPNEDA-certified;</strong> officially recognized by the government of India.</li>
-                  <li><strong>Proven track record</strong> with solar projects across villages, schools, societies, and institutions.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-
-
-          <section className=" mt-30 ">
-            <FiguringOut />
-          </section>
-
-          
-
-        </section>
-
-
-      </div>
-      <section className="mt-[9500px] sm:mt-0 md:mt-0 lg:mt-[6600px] xl:mt-[6600px] 2xl:mt-[7800px]">
+      <section className=" mt-20 lg:w-[2000px] md:w-[2000px] xl:w-[2000px] 2xl:w-[2000px] ">
         <Footer />
       </section>
 
