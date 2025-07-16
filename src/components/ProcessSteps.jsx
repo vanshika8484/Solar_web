@@ -10,12 +10,12 @@ import {
 const steps = [
   {
     id: "01",
-    title: "Register For Work",
+    title: "Register Work",
     Icon: ClipboardDocumentCheckIcon,
   },
   {
     id: "02",
-    title: "Inspect & Analyze",
+    title: "Inspect Analyze",
     Icon: MagnifyingGlassIcon,
   },
   {
@@ -39,7 +39,7 @@ export default function ProcessSteps() {
   return (
     <div className="bg-white min-h-screen flex flex-col GetFontSol">
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
-        <h1 className="text-center text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug max-w-4xl mx-auto">
+        <h1 className="text-center text-2xl sm:text-4xl md:text-5xl About1 text-gray-900 leading-snug max-w-4xl mx-auto ">
           Quality Handyman Solution
         </h1>
 
@@ -70,7 +70,7 @@ export default function ProcessSteps() {
               </motion.div>
 
               {/* Title */}
-              <h2 className="text-base sm:text-lg font-extrabold text-gray-900 leading-tight tracking-wide uppercase">
+              <h2 className="text-base sm:text-lg About1 text-gray-900 leading-tight tracking-wide uppercase">
                 {title.split(" ").map((line, i) => (
                   <React.Fragment key={i}>
                     {line}
