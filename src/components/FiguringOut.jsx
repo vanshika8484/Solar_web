@@ -41,7 +41,7 @@ const FiguringOut = () => {
   };
 
   return (
-    <div className="bg-white py-10 px-4 sm:px-6 lg:px-8 -mt-10  ml-24">
+    <div className=" py-10 px-4 sm:px-6 lg:px-8 -mt-10  ml-24">
       <div className="max-w-7xl mx-auto text-center relative">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-red-800">
           Figuring Out with Divy
