@@ -27,7 +27,7 @@ export default function CallBackSection() {
           Calling <span className="text-gray-800">+91 9310259325</span>
         </h2>
       </div>
-      <div className="flex items-center w-full md:w-auto gap-2">
+      <div className="flex items-center w-full md:w-auto gap-2 translate-x-72">
         <input
           type="text"
           value={phoneNumber}
@@ -37,7 +37,7 @@ export default function CallBackSection() {
         />
         <button
           onClick={handleRequestCallBack}
-          className="bg-green-800 text-white text-sm font-medium px-3 py-1.5 rounded-xl hover:bg-green-700 transition"
+          className="bg-green-800 text-white text-sm font-medium px-3 py-1.5 rounded-xl hover:bg-green-700 transition "
         >
           Call Me Back
         </button>
