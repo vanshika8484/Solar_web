@@ -88,7 +88,7 @@ const aboutUsContent = [
 
 export default function About() {
   return (
-    <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 ">
+    <div className="bg-white max-h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 About">
       {/* Banner Image */}
       <motion.img
         src={localImage}
@@ -112,13 +112,13 @@ export default function About() {
         <CompanySection />
       </section>
       
-      <section className=" -mt-20">
+      <section className="">
         <HoverVideoCard2 />
       </section>
       <section>
         <ProcessSteps />
       </section>
-      <section className="  -mt-12">
+      <section className="  -mt-44">
         <HoverVideoCard3 />
       </section>
 
@@ -196,7 +196,7 @@ export default function About() {
         <ContactCards />
       </section>
 
-      <section className=" mt-20 lg:w-[2000px] md:w-[2000px] xl:w-[2000px] 2xl:w-[2000px] ">
+      <section className=" mt-20 lg:min-w-[1300px]  md:min-w-[1300px] xl:min-w-[1300px] 2xl:min-w-[1400px] ">
         <Footer />
       </section>
 
