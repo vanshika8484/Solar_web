@@ -31,6 +31,7 @@ const ContactCards = () => {
               <span className="font-bold text-lg sm:text-2xl">
                 +91 9310259325
               </span>
+              <br/>
               <span className="text-gray-300 text-sm sm:text-base mt-1">
                 Available 24/7 to assist you
               </span>
