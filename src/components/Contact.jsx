@@ -65,25 +65,21 @@ function Contact() {
             <h3 className="text-2xl font-semibold text-green-800 mb-6">Contact Information</h3>
             <div className="space-y-6 text-gray-700">
               <div>
-                <h4 className="font-medium text-gray-900">📍 Address</h4>
+                <h4 className="font-bold text-gray-900"> Address</h4>
                 <p>53, Ramte Ram Rd, Exta Vihar, Arjun Nagar, Nai Basti Dundahera, Ghaziabad, Uttar Pradesh 201001</p>
               </div>
               <div>
-                <div className="flex items-start space-x-2">
-                  <MdEmail className="text-2xl text-primary mt-1" />
-                <br/>
-                <div className=' '>
-                    <h4 className="font-medium text-gray-900 mt-1">Email</h4>
-                    <p className=' -translate-x-9 mt-3'>
-                      customersupport1@divypower.com<br />
-                      Info@divypower.com
-                    </p>
-                 </div>
-                </div>
+
+
+                <h4 className="font-bold text-gray-900"> Email</h4>
+                <p>customersupport1@divypower.com<br />
+                  Info@divypower.com</p>
+
+
 
               </div>
               <div>
-                <h4 className="font-medium text-gray-900">📞 Phone</h4>
+                <h4 className="font-bold text-gray-900">Phone</h4>
                 <p>+91 9310259325<br />Open 24 Hours</p>
               </div>
             </div>
