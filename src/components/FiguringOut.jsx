@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
 
 const teamMembers = [
   {
@@ -29,65 +28,27 @@ const teamMembers = [
 ];
 
 const FiguringOut = () => {
-  const scrollRef = useRef(null);
-
-  const scrollBy = (direction) => {
-    if (!scrollRef.current) return;
-    const scrollAmount = 300;
-    scrollRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
-    });
-  };
-
   return (
-    <div className=" py-10 px-4 sm:px-6 lg:px-8 -mt-10  ml-24">
-      <div className="max-w-7xl mx-auto text-center relative">
+    <div className="py-10 px-4 sm:px-6 lg:px-8 -mt-10">
+      <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-red-800">
           Figuring Out with Divy
         </h2>
 
-        {/* Mobile Left/Right Scroll Buttons */}
-        <div className="relative block sm:hidden">
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
-            <button
-              onClick={() => scrollBy('left')}
-              className="bg-black text-white rounded-full p-2 shadow-md hover:bg-green-700"
+        {/* Responsive Grid: 2 columns on mobile, 4 on desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-2 sm:px-0">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden"
             >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-          </div>
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
-            <button
-              onClick={() => scrollBy('right')}
-              className="bg-black text-white rounded-full p-2 shadow-md hover:bg-green-700"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-
-        {/* Scrollable Cards Wrapper */}
-        <div className="overflow-hidden">
-          <div
-            ref={scrollRef}
-            className="flex sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4 scroll-smooth overflow-x-auto sm:overflow-visible px-4 sm:px-0 pb-4"
-          >
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 inline-block sm:block w-[240px] sm:w-full bg-white rounded-xl shadow-md hover:shadow-lg transition-all"
-              >
-                <div className="rounded-lg overflow-hidden">
-                  <video
-                    src={member.reel}
-                    className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-                    controls
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+              <video
+                src={member.reel}
+                className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                controls
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
