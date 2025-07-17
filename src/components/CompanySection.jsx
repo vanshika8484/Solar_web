@@ -87,14 +87,10 @@ const CompanySection = () => {
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 {/* Small Image with Play Icon */}
-                <div className="relative w-full sm:w-28 h-36 rounded-xl shadow overflow-hidden">
-                  <img
-                    src={activeContent.img}
-                    alt="Content visual"
-                    className="w-full h-full object-cover rounded-xl"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-                    <FaPlay className="text-white text-xl sm:text-2xl" />
+                <div className="relative w-full sm:w-28 h-36   overflow-hidden">
+                  
+                  <div className="absolute inset-0 flex items-center justify-center ">
+                    <FaPlay className="text-green-600 text-xl sm:text-2xl" />
                   </div>
                 </div>
 
