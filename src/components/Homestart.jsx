@@ -1,5 +1,5 @@
 import React from 'react';
-import background from "../Images/Home.png";
+import background from "../Images/home.png";
 import solarGlobe from "../Images/j.png";
 import family from "../Images/j2.png";
 import { motion } from 'framer-motion';
