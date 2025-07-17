@@ -1,16 +1,18 @@
 import React from 'react';
-import background from "../Images/j3.jpg";
-import solarGlobe from "../Images/j1.png";
+import background from "../Images/Home.png";
+import solarGlobe from "../Images/j.png";
 import family from "../Images/j2.png";
 import { motion } from 'framer-motion';
-import './SolarLanding.css';
+import { Link } from 'react-router-dom';
+
+
 
 function Homestart() {
     return (
         <div
-            className="min-h-screen flex flex-col relative overflow-hidden -mt-0 sm:-mt-0 lg:-mt-40"
+            className="min-h-screen  flex flex-col relative overflow-hidden -mt-0 sm:-mt-0 lg:-mt-40 bg-[#C4C4C4]"
             style={{
-                backgroundImage: `url(${background})`,
+
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}
@@ -19,42 +21,44 @@ function Homestart() {
 
                 {/* Left Content */}
                 <motion.div
-                    className="max-w-lg mt-16 md:mt-24 lg:mt-32 text-center lg:text-left z-10"
+                    className="max-w-lg mt-16 md:mt-24 lg:mt-32 text-center lg:text-left z-10 "
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <p className="text-black text-sm font-semibold mb-1">
-                        Your Electricity Bill is Burning a Hole in Your Wallet
+                    <p className="text-black text-sm font-semibold mb-1 -mt-0 md:-mt-16 lg:-mt-16 xl:-mt-16 2xl:-mt-16">
+                        Is Your Electricity Bill Burning a Hole in Your Wallet?
                     </p>
-                    <h1 className="text-[36px] md:text-5xl font-extrabold text-[#121827] leading-tight mb-1">
-                        SWITCH TO <span className="text-[#FD8C4E] italic font-extrabold">SOLAR ENERGY</span>
+                    <h1 className="text-[36px] md:text-4xl font-extrabold text-[#121827] leading-tight mb-1 ">
+                        THEN SWITCH TO <span className="text-[#FD8C4E] italic font-extrabold">SOLAR ENERGY TODAY</span>
                     </h1>
                     <p className="text-gray-600 text-sm font-medium mb-8 leading-relaxed">
                         Power your <span className="font-semibold">home</span> or business
                         <br />
                         with India’s most trusted solar experts.
                     </p>
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="bg-[#E50C0C] text-white font-semibold rounded-full py-3 px-8 w-full max-w-[320px] hover:bg-[#2f6f3a] transition"
-                    >
-                        Get Free Solar Consultation
-                    </motion.button>
+                    <Link to="/contact" className="">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-[#E50C0C]  w-[320px] text-white font-semibold rounded-full py-3 px-8 hover:bg-[#2f6f3a] transition"
+                        >
+                            Get Free Solar Consultation
+                        </motion.button>
+                    </Link>
                 </motion.div>
 
                 {/* Right Visuals */}
                 <motion.div
-                    className="relative flex-1 h-[500px] sm:h-[600px] md:h-[700px] mt-20 md:mt-32"
+                    className="relative flex-1 h-[500px]  sm:h-[600px] md:h-[700px] mt-20 md:mt-32"
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1.2 }}
                 >
                     <motion.img
-                        src={solarGlobe}
+                        src={background}
                         alt="Solar globe"
-                        className="absolute top-[100px] left-[0px] sm:top-[100px] sm:left-[-50px] md:top-[200px] md:left-[-150px] lg:top-[350px] lg:left-[-125px] scale-[1.8] sm:scale-[1.7] md:scale-[1.8] lg:scale-[1] w-[400px] sm:w-[500px] md:w-[600px] lg:w-[700px] rotating-image z-10"
+                        className="  md:absolute lg:absolute xl:absolute scale-[1.39] top-[250px] "
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8, duration: 1 }}
