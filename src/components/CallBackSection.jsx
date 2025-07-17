@@ -27,7 +27,7 @@ export default function CallBackSection() {
           Calling <span className="text-gray-800">+91 9310259325</span>
         </h2>
       </div>
-      <div className="flex items-center w-full md:w-auto gap-2 translate-x-72">
+      <div className="flex items-center w-full md:w-auto gap-2 translate-x-0 lg:translate-x-72 md:translate-x-72 xl:translate-x-72 2xl:translate-x-72">
         <input
           type="text"
           value={phoneNumber}
