@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPlay } from "react-icons/fa"; // Play icon
+import { FaPlay } from "react-icons/fa";
+import { IoClose } from "react-icons/io5"; // Close icon
 
 const CompanySection = () => {
   const [activeTab, setActiveTab] = useState("mission");
+  const [showVideo, setShowVideo] = useState(false);
 
   const contentMap = {
     mission: {
-      text: "At Divy Power Pvt. Ltd., our mission is to make clean, renewable energy accessible to everyone. We aim to lead the transition to a sustainable energy future through innovation, dedication, and long-term customer care.",
+      text: "At Divy Power Pvt. Ltd., our mission is to make clean, renewable energy accessible to everyone...",
       img: "https://storage.googleapis.com/a1aa/image/a118e549-6b03-4f16-1f35-7a306d7e772d.jpg",
       note: "We are driven by purpose — to energize every corner sustainably.",
     },
     vision: {
-      text: "We envision a future where every home and business uses clean solar energy to reduce environmental harm and improve quality of life. We’re committed to building that future with consistency and care.",
+      text: "We envision a future where every home and business uses clean solar energy...",
       img: "https://storage.googleapis.com/a1aa/image/a118e549-6b03-4f16-1f35-7a306d7e772d.jpg",
       note: "Our vision powers a cleaner tomorrow.",
     },
     why: {
-      text: "At Divy Power Pvt. Ltd., we don’t just install solar systems — we build lasting energy partnerships. What truly sets us apart is our commitment to quality, accountability, and long-term service, ensuring that your journey into clean energy is smooth, secure, and truly impactful.",
+      text: "At Divy Power Pvt. Ltd., we don’t just install solar systems — we build lasting energy partnerships...",
       img: "https://storage.googleapis.com/a1aa/image/a118e549-6b03-4f16-1f35-7a306d7e772d.jpg",
       note: "We are trustworthy — we don’t disappear after installation.",
     },
@@ -33,7 +35,8 @@ const CompanySection = () => {
     }`;
 
   return (
-    <section className="py-10 px-4 sm:px-6 md:px-10 lg:px-20 bg-white">
+    <section className="py-10 px-4 sm:px-6 md:px-10 lg:px-20 bg-white relative">
+      {/* Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-800 mb-10">
         Our <span className="text-black About">Company</span>
       </h2>
@@ -86,21 +89,53 @@ const CompanySection = () => {
               <p className="mb-6 About">{activeContent.text}</p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
-                {/* Small Image with Play Icon */}
-                <div className="relative w-full sm:w-28 h-36   overflow-hidden">
+                {/* Play Button */}
+                <div
+                  className="relative w-full sm:w-28 h-36  rounded-xl overflow-hidden cursor-pointer"
+                  onClick={() => setShowVideo(true)}
+                >
                   
-                  <div className="absolute inset-0 flex items-center justify-center ">
+                  <div className="absolute inset-0 flex items-center justify-center">
                     <FaPlay className="text-green-600 text-xl sm:text-2xl" />
                   </div>
                 </div>
 
                 {/* Note */}
-                <p className="About text-black text-sm sm:text-base">{activeContent.note}</p>
+                <p className="About text-black text-sm sm:text-base">
+                  {activeContent.note}
+                </p>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
       </div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {showVideo && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="relative w-full max-w-3xl aspect-video">
+              <button
+                onClick={() => setShowVideo(false)}
+                className="absolute -top-6 -right-6 text-white bg-red-600 p-2 rounded-full z-50"
+              >
+                <IoClose size={24} />
+              </button>
+              <iframe
+                src="https://res.cloudinary.com/dgabfduye/video/upload/v1752748108/DIVY_BBE_Final_pj3yz4.mp4"
+                allow="autoplay"
+                title="Divy Power Video"
+                className="w-full h-full rounded-xl"
+              ></iframe>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
