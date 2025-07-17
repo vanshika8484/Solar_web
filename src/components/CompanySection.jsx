@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaPlay } from "react-icons/fa"; // Play icon
 
 const CompanySection = () => {
   const [activeTab, setActiveTab] = useState("mission");
@@ -73,7 +74,7 @@ const CompanySection = () => {
           </div>
 
           {/* Tab Content */}
-          <AnimatePresence mode="wait About">
+          <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
               initial={{ opacity: 0, y: 20 }}
@@ -85,12 +86,20 @@ const CompanySection = () => {
               <p className="mb-6 About">{activeContent.text}</p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
-                <img
-                  src={activeContent.img}
-                  alt="Content visual"
-                  className="rounded-xl w-full sm:w-28 h-36 object-cover shadow About"
-                />
-                <p className=" About text-black text-sm sm:text-base">{activeContent.note}</p>
+                {/* Small Image with Play Icon */}
+                <div className="relative w-full sm:w-28 h-36 rounded-xl shadow overflow-hidden">
+                  <img
+                    src={activeContent.img}
+                    alt="Content visual"
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+                    <FaPlay className="text-white text-xl sm:text-2xl" />
+                  </div>
+                </div>
+
+                {/* Note */}
+                <p className="About text-black text-sm sm:text-base">{activeContent.note}</p>
               </div>
             </motion.div>
           </AnimatePresence>
