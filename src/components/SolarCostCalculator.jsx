@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ElectricitySavedCard from "./ElectricitySavedCard";
+import { FaBolt } from "react-icons/fa";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
+// Animation Variants
 const containerVariants = {
   hidden: {},
   show: {
@@ -21,6 +23,8 @@ const cardVariants = {
 };
 
 const SolarCostCalculator = () => {
+
+
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     electricityBill: "",
@@ -87,6 +91,7 @@ const SolarCostCalculator = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
+      {/* Main Heading */}
       <motion.div className="text-center mb-8" variants={cardVariants}>
         <h1 className="text-xl sm:text-2xl md:text-xl font-bold text-[#E50C0C] leading-snug max-w-5xl mx-auto">
           Aaj hi Solar Lagwao, environment bachao <br />
@@ -94,9 +99,13 @@ const SolarCostCalculator = () => {
         </h1>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+      {/* Cards Grid (Responsive) */}
+      <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-10 items-stretch space-y-6 lg:space-y-0">
         {/* Info Card */}
-        <motion.section className="bg-white rounded-xl px-6 py-5 h-full flex flex-col" variants={cardVariants}>
+        <motion.section
+          className="bg-white rounded-xl px-6 py-5 h-full flex flex-col w-full lg:max-w-md"
+          variants={cardVariants}
+        >
           <h2 className="text-xl font-semibold text-[#1e1e1e] mb-3">Power Your Home With Solar</h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-3">
             Discover how affordable solar can be. Enter your details below to get your personalized cost estimate and start saving!
@@ -106,6 +115,82 @@ const SolarCostCalculator = () => {
             <li>Lock in energy savings</li>
             <li>Maximize your roof potential</li>
           </ul>
+
+          <div className=" hidden lg:block  md:block xl:block 2xl:block flex items-center justify-center  p-4 font-['Inter']">
+            <div className="flex flex-col items-center justify-center p-6 w-72 sm:w-80">
+              <h2 className="text-gray-700 font-semibold text-lg mb-4">
+                Electricity Saved
+              </h2>
+
+              {/* SVG Circle */}
+              <div className="relative flex justify-center items-center mb-4">
+                <svg
+                  className="w-36 h-36"
+                  viewBox="0 0 160 160"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Background circle */}
+                  <circle cx="80" cy="80" r="70" stroke="#D9D9D9" strokeWidth="20" />
+                  {/* Red Arc - Electricity */}
+                  <circle
+                    cx="80"
+                    cy="80"
+                    r="70"
+                    stroke="#EF4444"
+                    strokeWidth="20"
+                    strokeDasharray="87.96 439.82"
+                    strokeDashoffset="0"
+                    strokeLinecap="round"
+                    transform="rotate(-90 80 80)"
+                  />
+                  {/* Green Arc - Solar Energy */}
+                  <circle
+                    cx="80"
+                    cy="80"
+                    r="70"
+                    stroke="#22C55E"
+                    strokeWidth="20"
+                    strokeDasharray="351.86 439.82"
+                    strokeDashoffset="-87.96"
+                    strokeLinecap="round"
+                    transform="rotate(-90 80 80)"
+                  />
+                </svg>
+
+                {/* Center Icon and Text */}
+                <div className="absolute flex flex-col items-center -mt-2">
+                  <FaBolt className="text-black text-2xl mb-1" />
+                  <span className="text-black font-semibold text-2xl leading-none">
+                    75%
+                  </span>
+                  <span className="text-gray-400 text-xs mt-1">Electricity</span>
+                </div>
+              </div>
+
+              {/* Legend */}
+              <div className="flex items-center justify-center space-x-4 mb-2">
+                <div className="flex items-center space-x-2">
+                  <div
+                    className="w-4 h-4 rounded-sm"
+                    style={{ backgroundColor: "#EF4444" }}
+                  ></div>
+                  <span className="text-gray-700 text-xs">Electricity</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div
+                    className="w-4 h-4 rounded-sm"
+                    style={{ backgroundColor: "#22C55E" }}
+                  ></div>
+                  <span className="text-gray-700 text-xs">Solar Energy</span>
+                </div>
+              </div>
+
+              <p className="text-gray-700 font-semibold text-sm text-center">
+                75% <span className="font-normal">electricity saved</span>
+              </p>
+            </div>
+          </div>
           <div className="flex flex-wrap gap-4 mt-auto">
             <div className="flex items-center space-x-3">
               <i className="fas fa-solar-panel text-green-800 text-xl"></i>
@@ -123,17 +208,15 @@ const SolarCostCalculator = () => {
             </div>
           </div>
         </motion.section>
-
-        {/* Calculator OR Result Section */}
-        <motion.section className="bg-[#d9f0d6] rounded-xl px-6 py-5 h-full flex flex-col" variants={cardVariants}>
+        <motion.section className="bg-[#d9f0d6] lg:w-[400px] xl:w-[400px] 2xl:w-[400px] md:w-[400px] w-full rounded-xl px-6 py-5 h-full lg:h-[620px] md:h-[620px] xl:h-[620px]  2xl:h-[610px]flex flex-col" variants={cardVariants}>
           {!showResults ? (
             <>
-              <p className="text-green-800 text-xs uppercase tracking-widest mb-1 flex items-center space-x-2">
+              <p className="text-green-800 text-xs uppercase tracking-widest mb-1 flex items-center space-x-2 -mt-2">
                 <span className="w-2 h-2 rounded-full bg-green-800 inline-block"></span>
                 <span>About Calculator</span>
               </p>
               <h3 className="text-xl font-semibold text-[#1e1e1e] mb-4">Solar Cost Calculator</h3>
-              <form className="space-y-3 text-sm text-gray-700 flex-1 flex flex-col justify-between" onSubmit={handleSubmit}>
+              <form className="space-y-3 text-sm text-gray-700 flex-1 flex flex-col justify-between -mt-2" onSubmit={handleSubmit}>
                 <div className="space-y-3">
                   {[
                     { name: "electricityBill", icon: "fas fa-bolt", placeholder: "Monthly Electricity Bill (₹)" },
@@ -212,9 +295,13 @@ const SolarCostCalculator = () => {
           )}
         </motion.section>
 
-        {/* Saved Impact Section */}
-        <motion.section className="flex justify-center items-center h-full" variants={cardVariants}>
-          <div className="h-full flex">
+
+        {/* Electricity Saved Card (only shown in mobile and tablet, hidden on lg+) */}
+        <motion.section
+          className="lg:hidden flex justify-center items-center h-full"
+          variants={cardVariants}
+        >
+          <div className="w-full max-w-md">
             <ElectricitySavedCard />
           </div>
         </motion.section>
@@ -224,3 +311,9 @@ const SolarCostCalculator = () => {
 };
 
 export default SolarCostCalculator;
+
+
+
+
+
+
