@@ -64,7 +64,7 @@ const SolarSolutions = () => {
           <img
             src="https://storage.googleapis.com/a1aa/image/e9519b91-9347-4552-5dab-d16eaf280dab.jpg"
             alt="Solar energy panel"
-            className="w-[400px] h-[400px] rounded-lg object-cover shadow-lg"
+            className="w-[400px] h-[500px] rounded-lg object-cover shadow-lg"
             loading="lazy"
           />
         </motion.div>
