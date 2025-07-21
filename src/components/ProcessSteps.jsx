@@ -86,7 +86,7 @@ export default function ProcessSteps() {
 
               {/* Bottom Triangle */}
               <svg
-                className="absolute bottom-0 left-0 right-0"
+                className="absolute bottom-0 left-0 right-0 top-3"
                 fill="none"
                 height="40"
                 viewBox="0 0 100 40"
