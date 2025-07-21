@@ -8,14 +8,14 @@ import ImageSlider from './ImageSlider';
 
 
 const Career = () => {
-  
 
-  
 
- 
+
+
+
 
   return (
-    <div className="h-[2000px] bg-gradient-to-br from-gray-50 to-gray-100 py-12  mt-24">
+    <div className="h-[2000px] bg-gradient-to-br from-gray-50 to-gray-100 py-12  mt-24 About">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -31,10 +31,26 @@ const Career = () => {
         </p>
       </motion.div>
 
+      <section className=' -mt-8'>
+        <CareerForm />
+      </section>
 
-<section>
-  <WorkCultureReels/>
-</section>
+      <section className=' flex justify-center mt-8'>
+        <a href='https://so365.in/smartapp_ess
+'>
+          <button
+            type="button"
+
+            className="w-[200px] lg:w-[300px] md:w-[300px] xl:w-[400px] 2xl:w-[500px] text-center bg-gray-900 text-white  hover:shadow-xl font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-200"
+          >
+ <span className=' text-xl'>Click Here to Access Sampark</span> <br/> For Internal Team only
+          </button>
+        </a>
+      </section>
+
+      <section className=' -mt-12'>
+        <WorkCultureReels />
+      </section>
 
       {/* Benefits Section */}
       <motion.div
@@ -109,17 +125,15 @@ const Career = () => {
       </motion.div>
 
       <section>
-        <SafetySecurityReels/>
+        <SafetySecurityReels />
       </section>
-      <section className=' -mt-8'>
-        <CareerForm/>
-      </section>
+
       <section>
-        <ImageSlider/>
+        <ImageSlider />
       </section>
-  <section className=' mt-[130px]'>
-      <Footer />
-  </section>
+      <section className=' mt-[130px]'>
+        <Footer />
+      </section>
     </div>
   );
 };
