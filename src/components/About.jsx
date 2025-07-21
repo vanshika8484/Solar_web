@@ -8,7 +8,7 @@ import ContactCards from "./ContactCards";
 import Footer from "./Footer";
 import CompanySection from "./CompanySection";
 import ChatUI4 from "./ChatUI4";
-import localImage from "../Images/Background.jpg";
+
 import sunImage from "../Images/didi.png";
 import sunPhoto from "../Images/chacha.png";
 import ScrollStackingCards from "./ScrollStackingCards"; // <-- Imported here
@@ -17,6 +17,7 @@ import HoverVideoCard2 from "./HoverVideoCard2";
 import HoverVideoCard3 from "./HoverVideoCard3";
 import "./Home.css"; // Ensure this CSS file is imported for styles
 import HoverVideoCard from "./HoverVideoCard";
+import ImageWithOverlay from "./ImageWithOverlay";
 
 const aboutUsContent = [
   {
@@ -90,15 +91,9 @@ export default function About() {
   return (
     <div className="bg-white  h-[8300px] text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 About">
       {/* Banner Image */}
-      <motion.img
-        src={localImage}
-        alt="banner"
-        className="w-full h-[70vh] object-cover"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      />
-
+     
+      <ImageWithOverlay/>
+      
       <section className="mt-8">
         <ChatUI4 />
       </section>
