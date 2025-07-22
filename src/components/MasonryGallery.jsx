@@ -1,18 +1,26 @@
 import React from 'react';
+import T1 from '../Images/T1.JPG'
+import T2 from '../Images/T2.jpg'
+import T3 from '../Images/T3.JPG'
+import T4 from '../Images/T4.JPG'
+import T5 from '../Images/T5.JPG'
+import T6 from '../Images/T6.JPG'
+import T7 from '../Images/T7.jpg'
+import T8 from '../Images/T8.JPG'
+import T9 from '../Images/T9.jpg'
+import T10 from '../Images/T10.JPG'
+import T11 from '../Images/T11.JPG'
+import T12 from '../Images/T12.JPG'
+import T13 from '../Images/T13.JPG'
+import T14 from '../Images/T14.jpg'
+import T15 from '../Images/T15.jpg'
+import T16 from '../Images/T16.JPG'
+import T17 from '../Images/T17.JPG'
+import T18 from '../Images/T18.JPG'
+
 
 const solarImages = [
-  'https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800&auto=format&fit=crop&q=60',
-  'https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&auto=format&fit=crop&q=60',
-  'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=60',
-  'https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=800&auto=format&fit=crop&q=60',
-  'https://plus.unsplash.com/premium_photo-1679952891276-2f991b868dfb?w=800&auto=format&fit=crop&q=60',
-  'https://images.unsplash.com/photo-1545209463-e2825498edbf?w=800&auto=format&fit=crop&q=60',
-  'https://images.unsplash.com/photo-1589275776107-e193042128bd?w=800&auto=format&fit=crop&q=60',
-  'https://plus.unsplash.com/premium_photo-1668078530961-32f4a1107791?w=800&auto=format&fit=crop&q=60',
-  'https://images.unsplash.com/photo-1576068205458-845521b0c0c4?w=800&auto=format&fit=crop&q=60',
-  'https://images.unsplash.com/photo-1440940627368-bd68a386bb73?w=800&auto=format&fit=crop&q=60',
-  'https://images.unsplash.com/photo-1544245607-99ac92ec1da5?w=800&auto=format&fit=crop&q=60',
-  'https://plus.unsplash.com/premium_photo-1679952890714-7eead60c1c12?w=800&auto=format&fit=crop&q=60'
+  T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16,T17,T18
 ];
 
 const MasonryGallery = () => {
