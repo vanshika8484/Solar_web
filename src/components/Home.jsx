@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Suspense, lazy } from "react";
-import { Sun } from "lucide-react";
+import { Sun, X } from "lucide-react";
 import solar from "../Images/solar.jpg";
 import solarch from "../Images/chacha.png";
 import img1 from "../Images/Img1.png";
@@ -104,7 +104,7 @@ function Home() {
   };
 
   return (
-    <div className=" relative overflow-hidden   max-w-7xl mx-auto">
+    <div className=" relative  max-w-full  mx-auto">
       <ChatbotToggle />
       <div>
         <section className="About">
@@ -131,10 +131,10 @@ function Home() {
         <SolarCostCalculator />
 
       </section>
-      <section className=" mt-24 About1">
+      <section className=" mt-24 About1 ">
         <Dashboard />
       </section>
-      <section>
+      <section className=" h-72">
         <div className="text-center About1  py-6 mb-10  -mt-36 lg:-mt-44 md:-mt-40 ">
           <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
             <Link to="./contact">Contact Us to Get Started</Link>
@@ -156,7 +156,7 @@ function Home() {
       <section className="About">
         <ChatUI1 />
       </section>
-      <section className="bg-green-800  About  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[200px]">
+      <section className="bg-green-800  About  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[10px]">
 
         <SolarProduct />
       </section>
@@ -182,7 +182,7 @@ function Home() {
         <HoverVideoCard1 />
 
 
-        <section className="About1 mt-20">
+        <section className="About1 mt-20 2xl:mt-60">
           <FaqSection />
         </section>
 
