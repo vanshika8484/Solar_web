@@ -3,36 +3,37 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const reelsData = [
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701264/Founder_And_Friends_Solar_Energy_And_Benefits_yjlwtu.mp4',
-    username: "solar_user_1",
-    caption: "Topic : Clean and green energy revolution!",
-  },
-  {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Ateesh_Breaking_The_Myth_zek5r6.mp4',
-    username: "Ateesh Kumar",
-    caption: "Topic : Breaking The Myth",
-  },
-  {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701253/Riddhi_Go_Solar_Save_Environment_gstan5.mp4',
+    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180180/Riddhi_Go_Solar_Save_Environment_kroi64.mp4",
     username: "Riddhi Agarwal",
-    caption: "Topic : Go Solar Save Environment",
+    caption: "Reel 1: Go Solar, Save Environment",
   },
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701248/Asha_Cheaper_Is_Not_Always_Safer_bbk2dm.mp4',
-    username: "Asha Gupta",
-    caption: "Topic : Cheaper is not always safer",
+    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180182/Kaushlesh_Source_Of_Renewable_Energy_wvveuh.mp4",
+    username: "Kaushlesh Sharma",
+    caption: "Reel 2: Source of Renewable Energy",
   },
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701219/Founder_And_Friends_Save_Environment_With_Solar_qswtyr.mp4',
-    username: "solar_user_4",
-    caption: "Topic : Saving environment with solar!",
+    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Ateesh_Make_Your_Future_Bright_With_Solar_jhgwuu.mp4",
+    username: "Ateesh Kumar",
+    caption: "Reel 3: Make Your Future Bright With Solar",
   },
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751701055/Architecture_Interviews_Go_Solar_Save_Environment_2_u5awao.mp4',
-    username: "solar_user_4",
-    caption: "Topic : Solar-powered future starts now!",
+    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Founder_And_Friends_Save_Environment_With_Solar_sqldlz.mp4",
+    username: "Divy Power Team",
+    caption: "Reel 4: Founder and Friends Save Environment",
+  },
+  {
+    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180180/Shivam_Go_Solar_Save_Environment_asbrgo.mp4",
+    username: "Shivam Singh",
+    caption: "Reel 5: Go Solar, Save Environment",
+  },
+  {
+    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Ateesh_Breaking_The_Myth_oifrah.mp4",
+    username: "Ateesh Kumar",
+    caption: "Reel 6: Breaking The Myth About Solar",
   },
 ];
+
 
 const FiguringOut1 = () => {
   const scrollRef = useRef(null);
@@ -50,7 +51,7 @@ const FiguringOut1 = () => {
     <div className="bg-white py-12 px-4 sm:px-6 lg:px-12 relative -mt-[120px]">
       <div className="max-w-7xl mx-auto relative">
         <h2 className="text-center text-2xl sm:text-3xl font-bold text-green-800 mb-10">
-         Why switch to solar
+        Breaking the Myth, Switch to Solar
 
         </h2>
 
