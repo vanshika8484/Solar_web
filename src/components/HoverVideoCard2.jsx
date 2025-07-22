@@ -2,34 +2,28 @@ import React from "react";
 
 const reelsData = [
   {
-    role: "Mission & Vision",
-    reel:
-      "https://res.cloudinary.com/dpopicwcb/video/upload/v1751351996/Founder_Mission_And_Vision_naxvpa.mp4",
-  },
-  {
-    role: "Company is a Group Company",
-    reel:
-      "https://res.cloudinary.com/dpopicwcb/video/upload/v1751351688/Founder_And_Friends_Company_Is_A_Group_Company_iaih5d.mp4",
-  },
-  {
-    role: "Company & Growth",
-    reel:
-      "https://res.cloudinary.com/dpopicwcb/video/upload/v1751351804/Founder_Company_Growth_pcuxia.mp4",
-  },
-  {
-    role: "Solving Government Propaganda",
-    reel:
-      "https://res.cloudinary.com/dpopicwcb/video/upload/v1751351804/Founder_And_Friends_Solving_Government_Propaganda_bc76ta.mp4",
+    role: "Employees Are Our Partners",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180630/Founder_And_Friends_Our_Employees_Are_Our_Partners_q8rdvn.mp4",
   },
   {
     role: "25 Years into Energy",
-    reel:
-      "https://res.cloudinary.com/dpopicwcb/video/upload/v1751351837/Founder_1_va6xls.mp4",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180629/Founder_1_mlm9ac.mp4",
+  },
+  {
+    role: "Company is a Group Company",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180628/Founder_And_Friends_Company_Is_A_Group_Company_rjj1dj.mp4",
+  },
+  {
+    role: "I Am A Worker Not Owner",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180628/Founder_I_Am_A_Worker_Not_Owner_k2jg2k.mp4",
+  },
+  {
+    role: "Mission & Vision",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180628/Founder_Mission_And_Vision_dtyyay.mp4",
   },
   {
     role: "We Believe in Solution",
-    reel:
-      "https://res.cloudinary.com/dpopicwcb/video/upload/v1751351593/Founder_2_pu2tf6.mp4",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180628/Founder_We_Believe_In_Solution_avwksa.mp4",
   },
 ];
 
