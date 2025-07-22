@@ -99,7 +99,7 @@ export default function About() {
       </section>
 
       {/* Scroll Stacking Cards */}
-      <div className="-mt-[550px] mb-24">
+      <div className="-mt-[550px] 2xl:-mt-[700px] mb-24">
         <ScrollStackingCards content={aboutUsContent} />
       </div>
 
@@ -113,7 +113,7 @@ export default function About() {
       <section>
         <ProcessSteps />
       </section>
-      <section className="  -mt-44">
+      <section className="  -mt-16 md:-mt-44 xl:-mt-64 2xl:-mt-96 lg:-mt-72">
         <HoverVideoCard3 />
       </section>
 
