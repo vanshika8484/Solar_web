@@ -61,7 +61,7 @@ const HoverVideoCard = () => {
   }, []);
 
   return (
-    <section className="relative w-[1100px]  px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
+    <section className="relative 2xl:w-[1100px]  w-full  px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
       <h2 className="text-center text-3xl font-bold text-green-800 mb-10">Stories Of Change We're Proud of
         <p className=" p-5 text-sm text-black font-medium">Our client belived in us - and so can you,See how solar changed their lives.</p></h2>
 
