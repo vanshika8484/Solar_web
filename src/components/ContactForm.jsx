@@ -49,14 +49,14 @@ const ContactForm = () => {
     <main className="bg-gray-900 px-4 sm:px-8 md:px-16 py-20 -mt-16 About max-h-[1250px] lg:max-h-[650px] md:max-h-[650px] xl:max-h-[650px] 2xl:max-h-[650px] ">
       <ToastContainer position="top-right" autoClose={3000} />
 
-      <div className="text-center max-w-4xl mx-auto mb-12 -mt-[50px]">
+      <div className="text-center max-w-4xl mx-auto mb-12 -mt-[50px] ">
         <h2 className="text-xl md:text-3xl About text-white leading-snug About1">
           Bijli ka bill bhejiye and Solar Chacha se jaaniye<br />
           apne rooftop ke liye Best Solar Solution
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat -mt-2 md:-mt-5 lg:-mt-5 xl:-mt-5  ">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat -mt-2 md:-mt-5 lg:-mt-5 xl:-mt-5 ml-0 2xl:ml-64  ">
         {/* Form Section */}
         <form
           onSubmit={handelSubmit}
