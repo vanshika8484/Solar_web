@@ -1,38 +1,50 @@
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
 const teamMembers = [
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750682931/Kaushlesh_We_And_Our_Competitors_fqtpmh.mp4',
-    username: "Kaushlesh Agarwal",
-    caption: "Topic : We And Our Competitors",
+    name: 'Asha Gupta',
+    role: 'Safety Advocate',
+    image: 'https://storage.googleapis.com/a1aa/image/asha-profile.jpg',
+    reel: 'https://res.cloudinary.com/drz2uocug/video/upload/v1753180383/Asha_Cheaper_Is_Not_Always_Safer_vuzxb7.mp4',
   },
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1751711628/Shivam_Choose_Divy_As_Your_Solar_Partner_1_cy0ey7.mp4',
-    username: "Shivam Shengar",
-    caption: "Topic :Divy As Your Solar Partner",
+    name: 'Ateesh Kumar',
+    role: 'TATA Solar Partner',
+    image: 'https://storage.googleapis.com/a1aa/image/ateesh-profile.jpg',
+    reel: 'https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Ateesh_Tata_Authorised_Solar_Partner_drukkj.mp4',
   },
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683018/Rajeev_Arora_Our_Quality_Is_Our_Legacy_xvwpmw.mp4',
-    username: " Rajeev Arora",
-    caption: "Topic : Our Quality Is Our Legacy",
+    name: 'Shivam Singh',
+    role: 'Solar Consultant',
+    image: 'https://storage.googleapis.com/a1aa/image/shivam-profile.jpg',
+    reel: 'https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Shivam_Choose_Divy_As_Your_Solar_Partner_ag2l1a.mp4',
   },
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683050/Ateesh_Tata_Authorised_Solar_Partner_tpssdt.mp4',
-    username: "Ateesh Kumar",
-    caption: "Topic : Divy Tata Authorised Solar Partner",
+    name: 'Kaushlesh Sharma',
+    role: 'Solar Analyst',
+    image: 'https://storage.googleapis.com/a1aa/image/kaushlesh-profile.jpg',
+    reel: 'https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Kaushlesh_We_And_Our_Competitors_fksvib.mp4',
   },
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683064/Asha_Divy_Power_Sop_s_elrwrz.mp4',
-    username: "Asha Gupta",
-    caption: "Topic : SOP's of Divy Power",
+    name: 'Asha Gupta',
+    role: 'Warranty Expert',
+    image: 'https://storage.googleapis.com/a1aa/image/asha-profile.jpg',
+    reel: 'https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Asha_Warranty_On_Solars_pwji0y.mp4',
   },
   {
-    videoSrc: 'https://res.cloudinary.com/dpopicwcb/video/upload/v1750683064/Asha_Warranty_On_Solars_m82qbv.mp4',
-    username: "Asha Gupta",
-    caption: "Topic : Warranty On Solars",
+    name: 'Rajeev Arora',
+    role: 'Quality Head',
+    image: 'https://storage.googleapis.com/a1aa/image/rajeev-profile.jpg',
+    reel: 'https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Rajeev_Arora_Our_Quality_Is_Our_Legacy_gejaps.mp4',
+  },
+  {
+    name: 'Asha Gupta',
+    role: 'SOP Trainer',
+    image: 'https://storage.googleapis.com/a1aa/image/asha-profile.jpg',
+    reel: 'https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Asha_Divy_Power_Sop_s_a7v2yo.mp4',
   },
 ];
+
 
 const HoverVideoCard1 = () => {
   const scrollRef = useRef(null);
@@ -49,8 +61,8 @@ const HoverVideoCard1 = () => {
   return (
     <div className="bg-white py-10 px-4 sm:px-6 lg:px-8 -mt-10">
       <div className="max-w-7xl mx-auto relative">
-        <h2 className="text-center text-3xl font-bold text-red-800 mb-10">
-          Figuring Out with Divy
+        <h2 className="text-center text-3xl  text-red-800 mb-10 About1">
+        Choose DIVY as your Solar Partner
         </h2>
 
         {/* Scroll Buttons */}
@@ -83,14 +95,14 @@ const HoverVideoCard1 = () => {
             >
               <div className="rounded-lg overflow-hidden">
                 <video
-                  src={member.videoSrc}
+                  src={member.reel}
                   className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
                   controls
                 />
               </div>
               <div className="text-left mt-2 px-2 pb-2">
                 <div className="text-sm font-semibold text-gray-800"></div>
-                <p className="text-xs text-gray-500">{member.caption}</p>
+                <p className="text-xs text-gray-500">{member.name}</p>
               </div>
             </div>
           ))}
