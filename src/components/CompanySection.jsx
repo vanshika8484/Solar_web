@@ -28,10 +28,9 @@ const CompanySection = () => {
   const activeContent = contentMap[activeTab];
 
   const tabStyle = (tab) =>
-    `px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-      activeTab === tab
-        ? "bg-green-700 text-white shadow"
-        : "bg-white text-green-800 border border-green-600 hover:bg-green-100"
+    `px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${activeTab === tab
+      ? "bg-green-700 text-white shadow"
+      : "bg-white text-green-800 border border-green-600 hover:bg-green-100"
     }`;
 
   return (
@@ -70,8 +69,8 @@ const CompanySection = () => {
                 {key === "mission"
                   ? "Our Mission"
                   : key === "vision"
-                  ? "Our Vision"
-                  : "Why Choose Us?"}
+                    ? "Our Vision"
+                    : "Why Choose Us?"}
               </button>
             ))}
           </div>
@@ -94,9 +93,12 @@ const CompanySection = () => {
                   className="relative w-full sm:w-28 h-36  rounded-xl overflow-hidden cursor-pointer"
                   onClick={() => setShowVideo(true)}
                 >
-                  
+
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <FaPlay className="text-green-600 text-xl sm:text-2xl" />
+                   <button className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-red-600 shadow-lg flex items-center justify-center hover:scale-105 transition">
+  <FaPlay className="text-white text-xl sm:text-2xl" />
+</button>
+
                   </div>
                 </div>
 
@@ -122,12 +124,13 @@ const CompanySection = () => {
             <div className="relative w-full max-w-3xl aspect-video">
               <button
                 onClick={() => setShowVideo(false)}
-                className="absolute -top-6 -right-6 text-white bg-red-600 p-2 rounded-full z-50"
+                className="absolute -top-6 -right-6 text-white bg-red-600 w-10 h-10 flex items-center justify-center rounded-full z-50 shadow-lg hover:bg-red-700 transition"
               >
-                <IoClose size={24} />
+                <IoClose size={20} />
               </button>
+
               <iframe
-                src="https://res.cloudinary.com/dgabfduye/video/upload/v1752748108/DIVY_BBE_Final_pj3yz4.mp4"
+                src="https://res.cloudinary.com/drz2uocug/video/upload/v1753181558/Project_Divy_1_bu4wrr.mp4"
                 allow="autoplay"
                 title="Divy Power Video"
                 className="w-full h-full rounded-xl"
