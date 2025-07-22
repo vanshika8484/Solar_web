@@ -59,7 +59,7 @@ const ChatUI1 = () => {
         </div>
 
         {/* Video Section below chat */}
-        <div className="bg-gray-50 rounded-2xl w-[1135px] -ml-28 p-4">
+        <div className="bg-gray-50 rounded-2xl  2xl:w-[1135px] w-full 2xl:-ml-28  -ml-0 p-4">
           <HoverVideoCard />
         </div>
       </div>
