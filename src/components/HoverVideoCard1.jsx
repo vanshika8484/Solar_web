@@ -59,7 +59,7 @@ const HoverVideoCard1 = () => {
   };
 
   return (
-    <div className="bg-white py-10 px-4 sm:px-6 lg:px-8 -mt-10">
+    <div className="bg-white py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto relative">
         <h2 className="text-center text-3xl  text-red-800 mb-10 About1">
         Choose DIVY as your Solar Partner
