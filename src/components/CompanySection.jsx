@@ -130,7 +130,7 @@ const CompanySection = () => {
               </button>
 
               <iframe
-                src="https://res.cloudinary.com/drz2uocug/video/upload/v1753181558/Project_Divy_1_bu4wrr.mp4"
+                src="https://res.cloudinary.com/drz2uocug/video/upload/v1753182129/Divy_Bbe_1_ejc7ce.mp4"
                 allow="autoplay"
                 title="Divy Power Video"
                 className="w-full h-full rounded-xl"
