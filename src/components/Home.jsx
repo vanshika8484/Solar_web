@@ -127,7 +127,7 @@ function Home() {
       <section className=" -mt-72  md:-mt-72 lg:-mt-72 xl:-mt-72 2xl:-mt-[500px]  m-10">
         {/* <ChartCard /> */}
       </section>
-      <section className="About">
+      <section className="About mt-24">
         <SolarCostCalculator />
 
       </section>
@@ -173,11 +173,9 @@ function Home() {
 
 
       </section>
-      <section className=" -mt-28 sm:-mt-28 md:-mt-36 lg:-mt-36 xl:-mt-36 ">
-        <ExactMatchPage />
-      </section>
+      
 
-      <section className="bg-[#f8f7f0] About1 -mt-48 md:-mt-48 lg:-mt-48 xl:-mt-56 2xl:-mt-[630px]">
+      <section className="bg-[#f8f7f0] About1 mt-96 md:mt-96 lg:mt-96 xl:mt-96 2xl:mt-[430px]">
         <SolarPortfolio />
         <HoverVideoCard1 />
 
