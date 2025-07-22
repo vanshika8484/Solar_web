@@ -16,7 +16,6 @@ import La from './components/La'
 import GasGenset from './components/GasGenset'
 import Diesel from './components/Diesel'
 import Cursor from './components/Cursor'
-import SocialIcons from './components/SocialIcons'
 import ScrollToTop from './components/ScrollToTop'
 import NewWorkWithUs from './components/NewWorkWithUs'
 import ProjectDetails from './components/ProjectDetails'
@@ -40,7 +39,7 @@ function App() {
       <Cursor />
 
  
-      <SocialIcons />
+     
       <ScrollToTop />
 
       <Routes>
