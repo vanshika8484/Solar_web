@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Homestart() {
     return (
         <div
-            className="min-h-screen  flex flex-col relative overflow-hidden -mt-0 sm:-mt-0 lg:-mt-40 bg-[#C4C4C4]"
+            className="min-h-screen  2xl:h-[1050px]  flex flex-col relative overflow-hidden -mt-0 sm:-mt-0 lg:-mt-40 bg-[#C4C4C4]"
             style={{
 
                 backgroundSize: "cover",
@@ -20,18 +20,18 @@ function Homestart() {
 
                 {/* Left Content */}
                 <motion.div
-                    className="max-w-lg mt-16 md:mt-24 lg:mt-32 text-center lg:text-left z-10 "
+                    className="max-w-lg mt-16 md:mt-24 lg:mt-32 text-center lg:text-left z-10 -ml-0 2xl:-ml-28 "
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <p className="text-black text-sm font-semibold mb-1 -mt-0 md:-mt-16 lg:-mt-16 xl:-mt-16 2xl:-mt-16">
+                    <p className="text-black text-sm 2xl:text-lg font-semibold mb-1 -mt-0 md:-mt-16 lg:-mt-16 xl:-mt-16 2xl:-mt-48 ">
                         Is Your Electricity Bill Burning a Hole in Your Wallet?
                     </p>
-                    <h1 className="text-[36px] md:text-4xl font-extrabold text-[#121827] leading-tight mb-1 ">
+                    <h1 className="text-[36px] md:text-4xl 2xl:text-[42px] font-extrabold text-[#121827] leading-tight mb-1 ">
                         THEN SWITCH TO <span className="text-[#FD8C4E] italic font-extrabold">SOLAR ENERGY TODAY</span>
                     </h1>
-                    <p className="text-gray-600 text-sm font-medium mb-8 leading-relaxed">
+                    <p className="text-gray-600 text-sm 2xl:text-lg font-medium mb-8 leading-relaxed ">
                         Power your <span className="font-semibold">home</span> or business
                         <br />
                         with India’s most trusted solar experts.
@@ -57,7 +57,7 @@ function Homestart() {
                     <motion.img
                         src={background}
                         alt="Solar globe"
-                        className="  md:absolute lg:absolute xl:absolute scale-[1.39] top-[250px] "
+                        className="  md:absolute lg:absolute xl:absolute scale-[1.39] 2xl:scale-[1.82] top-[250px] 2xl:top-[290px] "
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8, duration: 1 }}
@@ -73,7 +73,7 @@ function Homestart() {
                     <img
                         src={family}
                         alt="Smiling family"
-                        className="absolute top-[700px] left-[1050px] transform -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[300px] md:w-[360px] lg:w-[400px] z-20"
+                        className="absolute top-[700px] 2xl:top-[850px] left-[1050px] transform -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[300px] md:w-[360px] lg:w-[400px] z-20"
                     />
                 </motion.div>
 
