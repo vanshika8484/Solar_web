@@ -3,34 +3,35 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const safetyVideos = [
   {
-    name: "Kaushlesh - Employee Safety",
-    video: "https://res.cloudinary.com/dgabfduye/video/upload/v1752558649/Kaushlesh_Employee_Safety_At_Divy_nxnpgf.mp4",
-  },
-  {
     name: "Lal Singh - Safety & Security",
-    video: "https://res.cloudinary.com/dgabfduye/video/upload/v1752558648/Lal_Singh_Safety_And_Security_At_Divy_xxiiqd.mp4",
+    video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181458/Lal_Singh_Safety_And_Security_At_Divy_nk2xbw.mp4",
   },
   {
     name: "Lal Singh - Team Safety",
-    video: "https://res.cloudinary.com/dgabfduye/video/upload/v1752558648/Lal_Singh_Team_Safety_ijxnjr.mp4",
-  },
-  {
-    name: "Rajeev Arora - Safety & Benefits",
-    video: "https://res.cloudinary.com/dgabfduye/video/upload/v1752558647/Rajeev_Arora_Safety_And_Benefit_At_Divy_qwcii5.mp4",
+    video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181457/Lal_Singh_Team_Safety_b0r83u.mp4",
   },
   {
     name: "Kaushlesh Singh - Precautions",
-    video: "https://res.cloudinary.com/dgabfduye/video/upload/v1752558647/Kaushlesh_Singh_Safety_Precautions_At_Divy_txztkj.mp4",
+    video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181456/Kaushlesh_Singh_Safety_Precautions_At_Divy_ybrnwh.mp4",
+  },
+  {
+    name: "Kaushlesh - Employee Safety",
+    video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181456/Kaushlesh_Employee_Safety_At_Divy_ogdq6o.mp4",
+  },
+  {
+    name: "Rajeev Arora - Safety & Benefits",
+    video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181456/Rajeev_Arora_Safety_And_Benefit_At_Divy_mybckj.mp4",
   },
   {
     name: "Asha - Employee Safety",
-    video: "https://res.cloudinary.com/dgabfduye/video/upload/v1752558647/Asha_Employee_Safety_hf7gne.mp4",
+    video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181455/Asha_Employee_Safety_fnetk3.mp4",
   },
   {
     name: "Riddhi - Team Safety",
-    video: "https://res.cloudinary.com/dgabfduye/video/upload/v1752558647/Riddhi_Team_Safety_fshdhj.mp4",
+    video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181455/Riddhi_Team_Safety_eouwll.mp4",
   },
 ];
+
 
 const SafetySecurityReels = () => {
   const scrollRef = useRef(null);
