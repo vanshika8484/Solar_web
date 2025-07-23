@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const cardData = [
   {
@@ -6,14 +8,18 @@ const cardData = [
     date: 'March 15, 2022',
     tag: 'Oil Change',
     title: 'Praesent mus faucibus vitae tempor primis auctor',
+    name: "SolarArticle",
+    path: "/Blog1",
   },
   {
     image: 'https://storage.googleapis.com/a1aa/image/94007e8e-102e-4294-ca25-30ae5989025c.jpg',
     date: 'March 15, 2022',
     tag: 'Oil Change',
     title: 'Future mus faucibus vitae tempor primis juso art',
+    name: "SustainableProfitability",
+    path: "/Blog2",
   },
- 
+
 ];
 
 const SolarCards = () => {
@@ -53,12 +59,14 @@ const SolarCards = () => {
               <h3 className="text-sm sm:text-base text-gray-800 uppercase tracking-wide leading-snug mb-4 font-semibold">
                 {card.title}
               </h3>
-              <a
+              <div
                 href="#"
                 className="inline-block border border-green-800 text-green-800 px-5 py-2 text-xs sm:text-sm rounded hover:bg-green-50 transition"
               >
-                Read Details <i className="fas fa-arrow-right ml-2" />
-              </a>
+                <Link key={card.name} to={card.path}>
+                  Read Details <i className="fas fa-arrow-right ml-2" />
+                </Link>
+              </div>
             </div>
           </article>
         ))}
