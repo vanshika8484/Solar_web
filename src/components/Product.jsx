@@ -66,7 +66,7 @@ function Product() {
   ];
 
   const Genset = [
-    
+
     {
       title: "Diesel/Petrol Genset",
       description: "Our diesel and petrol gensets provide reliable, high-performance power for homes, businesses, and remote sites—built for durability, efficiency, and dependable backup in any situation.",
@@ -78,162 +78,170 @@ function Product() {
   ];
 
   return (
-    <div className='flex items-center justify-center min-h-screen '>
-      <div>
-    <section className=" max-h-screen relative py-20 text-center  bg-gradient-to-br from-white to-gray-100 GetFontSol   max-w-7xl ">
-      <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
+    <div>
+      <div className='flex items-center justify-center min-h-screen '>
+        <div>
+          <section className=" max-h-screen relative py-20 text-center  bg-gradient-to-br from-white to-gray-100 GetFontSol   max-w-7xl ">
+            <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
 
-      <div className="relative z-10 ">
-        <motion.h1
-          className="text-4xl font-bold text-black mb-2 "
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+            <div className="relative z-10 ">
+              <motion.h1
+                className="text-4xl font-bold text-black mb-2 "
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
 
-          Our <span className='text-green-800'>Products</span>
-        </motion.h1>
-      </div>
+                Our <span className='text-green-800'>Products</span>
+              </motion.h1>
+            </div>
 
-      {/* Solar Solutions */}
-      <motion.section className="py-20 px-6 text-white  bg-gradient-to-br from-white to-gray-100 "
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <motion.div className="max-w-7xl mx-auto text-center mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl text-green-800 font-bold">Solar Solutions</h2>
-        </motion.div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {solarData.map((item, index) => (
-            <motion.div
-              key={index}
-              className=" text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
-              variants={cardVariants}
+            {/* Solar Solutions */}
+            <motion.section className="py-20 px-6 text-white  bg-gradient-to-br from-white to-gray-100 "
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={containerVariants}
             >
-              <img src={item.image} alt={item.title} className="h-70 w-full object-cover" />
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
+              <motion.div className="max-w-7xl mx-auto text-center mb-10"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-4xl text-green-800 font-bold">Solar Solutions</h2>
+              </motion.div>
+
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {solarData.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className=" text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
+                    variants={cardVariants}
+                  >
+                    <img src={item.image} alt={item.title} className="h-70 w-full object-cover" />
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <div>
+                        {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
                     <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
                   </div> */}
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-700">{item.description}</p>
-                </div>
-                <div className="mt-6 flex justify-center">
-                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-                    <Link to={item.to}>Read More</Link>
-                  </button>
-                </div>
+                        <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                        <p className="text-sm text-gray-700">{item.description}</p>
+                      </div>
+                      <div className="mt-6 flex justify-center">
+                        <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+                          <Link to={item.to}>Read More</Link>
+                        </button>
+                      </div>
 
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+            </motion.section>
 
-      {/* Safety Solutions */}
-      {/* Safety Solutions */}
-      <motion.section className="bg-[#000000] rounded-sm py-20  text-white"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <motion.div className="max-w-7xl mx-auto text-center mb-10 "
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl  text-green-700 font-bold">Safety Solutions</h2>
-        </motion.div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
-          {saftyData.map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
-              variants={cardVariants}
+            {/* Safety Solutions */}
+            {/* Safety Solutions */}
+            <motion.section className="bg-[#000000] rounded-sm py-20  text-white"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={containerVariants}
             >
-              <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
+              <motion.div className="max-w-7xl mx-auto text-center mb-10 "
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-4xl  text-green-700 font-bold">Safety Solutions</h2>
+              </motion.div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
+                {saftyData.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
+                    variants={cardVariants}
+                  >
+                    <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <div>
+                        {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
               <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
             </div> */}
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-700">{item.description}</p>
-                </div>
-                <div className="mt-6 flex justify-center">
-                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-                    <Link to={item.to}>Read More</Link>
-                  </button>
-                </div>
+                        <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                        <p className="text-sm text-gray-700">{item.description}</p>
+                      </div>
+                      <div className="mt-6 flex justify-center">
+                        <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+                          <Link to={item.to}>Read More</Link>
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+            </motion.section>
 
 
 
 
 
-      <motion.section className="bg-white py-20 px-6 text-white"
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <motion.div className="max-w-7xl mx-auto text-center mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl text-black font-bold">Genset Solutions</h2>
-        </motion.div>
-
-        <div className="grid  grid-cols-1 justify-center align-middle items-center gap-6 max-w-4xl mx-auto">
-          {Genset.map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-white text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
-              variants={cardVariants}
+            <motion.section className="bg-white py-20 px-6 text-white"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={containerVariants}
             >
-              <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
+              <motion.div className="max-w-7xl mx-auto text-center mb-10"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-4xl text-black font-bold">Genset Solutions</h2>
+              </motion.div>
+
+              <div className="grid  grid-cols-1 justify-center align-middle items-center gap-6 max-w-4xl mx-auto">
+                {Genset.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
+                    variants={cardVariants}
+                  >
+                    <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
+                    <div className="p-6 flex-1 flex flex-col justify-between">
+                      <div>
+                        {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
               <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
             </div> */}
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-900">{item.description}</p>
-                </div>
-                <div className="mt-6 flex justify-center">
-                  <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-                    <Link to={item.to}>Read More</Link>
-                  </button>
-                </div>
+                        <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                        <p className="text-sm text-gray-900">{item.description}</p>
+                      </div>
+                      <div className="mt-6 flex justify-center">
+                        <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
+                          <Link to={item.to}>Read More</Link>
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-          ))}
+            </motion.section>
+
+
+
+
+
+          </section>
         </div>
-      </motion.section>
 
 
+      </div>
 
-
-      <section className=' w-full'>
+       <section className=' mt-[1500px] xl:mt-[1600px]' >
         <Footer />
       </section>
-    </section>
-    </div>
+
+     
     </div>
   );
 }
