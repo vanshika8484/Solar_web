@@ -26,7 +26,7 @@ const ContactForm = () => {
       formData.append("billFile", billFile);
 
       const { data } = await axios.post(
-        "https://solar-4-8a9b.onrender.com/api/senddata",
+        " https://solar-6.onrender.com/api/senddata",
         formData,
         {
           headers: {
