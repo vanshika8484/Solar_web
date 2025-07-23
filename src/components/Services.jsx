@@ -101,6 +101,7 @@ export default function Services() {
   };
 
   return (
+    <div>
     <section className="bg-white py-16 max-w-7xl mx-auto GetFontSol h-[2000px] ">
       <motion.h2
         className="text-3xl sm:text-4xl mt-14 font-bold text-green-800 text-center mb-12"
@@ -216,9 +217,13 @@ export default function Services() {
         </div>
       </div>
 
-     <section className=" ">
-       <Footer />
-     </section>
+     
     </section>
+
+    <section>
+      <Footer/>
+    </section>
+
+    </div>
   );
 }
