@@ -27,8 +27,8 @@ import gov2 from "../Images/gov2.JPG";
 import gov3 from "../Images/gov3.JPG";
 import gov4 from "../Images/gov4.JPG";
 import gov5 from "../Images/gov5.JPG";
-import gove1 from "../Images/gove1.JPG";
-import gove2 from "../Images/gove2.JPG";
+import gove1 from "../Images/gove1.DNG";
+import gove2 from "../Images/gove2.png";
 
 
 
