@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Blog1 from '../Images/Blog1.jpg'
+import Blog2 from '../Images/Blog2.jpg'
 
 
 const cardData = [
   {
-    image: 'https://storage.googleapis.com/a1aa/image/b76c2d14-7f1a-40cb-f873-a51cc19bdb92.jpg',
-    date: 'March 15, 2022',
-    tag: 'Oil Change',
-    title: 'Praesent mus faucibus vitae tempor primis auctor',
+    image:Blog1,
+    date: 'March 25, 2025',
+    tag: 'Solar Solution',
+    title: 'Title: Powering the Future: Unlocking the Potential of Solar Energy for Your Business',
     name: "SolarArticle",
     path: "/Blog1",
   },
   {
-    image: 'https://storage.googleapis.com/a1aa/image/94007e8e-102e-4294-ca25-30ae5989025c.jpg',
-    date: 'March 15, 2022',
-    tag: 'Oil Change',
-    title: 'Future mus faucibus vitae tempor primis juso art',
+    image: Blog2,
+    date: 'Nov 27, 2024',
+    tag: 'Solar Solution',
+    title: 'Embracing Solar Energy: A Path to Sustainable Profitability',
     name: "SustainableProfitability",
     path: "/Blog2",
   },
