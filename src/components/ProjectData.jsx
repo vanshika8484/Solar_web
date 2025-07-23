@@ -29,6 +29,7 @@ import gov4 from "../Images/gov4.JPG";
 import gov5 from "../Images/gov5.JPG";
 import gove1 from "../Images/gove1.png";
 import gove2 from "../Images/gove2.png";
+import gove3 from "../Images/gove3.jpg";
 
 
 
@@ -132,7 +133,7 @@ export const projects = [
   title: "Utkarsh ke 8 varsh Kavi Nagar Event",
   category: "Exhibitions and stalls",
   kwp: "N/A",
-  image: so2
+  image: gove3
 },
 {
   id: 14,
