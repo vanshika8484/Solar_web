@@ -21,7 +21,7 @@ function Contact() {
     try {
       console.log(name, email, phoneNo, message)
       const { data } = await axios.post(
-        "https://solar-4-8a9b.onrender.com/api/contact",
+        "https://solar-6.onrender.com/api/contact",
         { name, email, phoneNo, message }
       );
       toast.success('Message sent successfully!');
