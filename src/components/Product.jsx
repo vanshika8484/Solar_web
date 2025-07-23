@@ -3,6 +3,10 @@ import Footer from './Footer';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Package } from "lucide-react";
+import Genset1 from '../Images/Genset.jpg'
+import Micro from '../Images/Micro.jpg'
+import SolarP from '../Images/SolarP.jpg'
+
 
 // Animation variants
 const containerVariants = {
@@ -26,7 +30,7 @@ function Product() {
       description:
         "Our solar panels efficiently convert sunlight into electricity, ensuring long-lasting performance and reduced environmental impact for homes, businesses, and industries.",
       icon: "https://divyby.redspace.in/assets/images/updated-images/img%203.png",
-      image: "https://divyby.redspace.in/assets/images/updated-images/img%203.png",
+      image: SolarP,
       to: "/Solar-pannel",
     },
     {
@@ -42,7 +46,7 @@ function Product() {
       description:
         "Our compact, reliable micro inverters optimize solar performance by converting energy per panel, ensuring maximum output even with shading—ideal for homes and businesses seeking top solar returns.",
       icon: "https://divyby.redspace.in/assets/images/updated-images/Inverter%20img-min.jpg",
-      image: "https://divyby.redspace.in/assets/images/updated-images/Inverter%20img-min.jpg",
+      image: Micro,
       to: "/Micro-Inverter",
     },
   ];
@@ -71,7 +75,7 @@ function Product() {
       title: "Diesel/Petrol Genset",
       description: "Our diesel and petrol gensets provide reliable, high-performance power for homes, businesses, and remote sites—built for durability, efficiency, and dependable backup in any situation.",
       icon: "https://divyby.redspace.in/assets/images/updated-images/genset%201.jpg",
-      image: "https://divyby.redspace.in/assets/images/updated-images/genset%201.jpg",
+      image: Genset1,
       to: "/Diesel/Petrol Genset",
     },
 
