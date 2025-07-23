@@ -3,6 +3,7 @@ import Footer from './Footer';
 
 const SolarArticle = () => {
   return (
+    <div>
     <div className="max-w-5xl mx-auto px-4 py-12 text-gray-800 About mt-28">
       {/* Title */}
       <h1 className="text-3xl md:text-4xl font-bold text-brandBlue mb-6 text-left">
@@ -122,7 +123,9 @@ const SolarArticle = () => {
       <p className="text-base italic">With care,</p>
       <p className="font-semibold text-base">– Umesh Agarwal</p>
 
-      <section>
+      
+    </div>
+    <section className=' mt-20'>
         <Footer/>
       </section>
     </div>
