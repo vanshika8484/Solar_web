@@ -131,7 +131,7 @@ function Home() {
         <SolarCostCalculator />
 
       </section>
-      <section className=" mt-24 About1 ">
+      <section className="-mt-20 2xl:-mt-[270px] About1 ">
         <Dashboard />
       </section>
       <section className=" h-72">
