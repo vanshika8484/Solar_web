@@ -3,7 +3,7 @@ import Footer from './Footer';
 
 const SolarArticle = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 text-gray-800 font-inter">
+    <div className="max-w-5xl mx-auto px-4 py-12 text-gray-800 About mt-28">
       {/* Title */}
       <h1 className="text-3xl md:text-4xl font-bold text-brandBlue mb-6 text-left">
         Powering the Future: Unlocking the Potential of Solar Energy for Your Business
