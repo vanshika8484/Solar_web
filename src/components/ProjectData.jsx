@@ -108,14 +108,14 @@ export const projects = [
   },
   {
     id: 10,
-    title: "UNA Hotel",
+    title: "Build Bharat Expo",
     category: "Exhibitions and stalls",
     kwp: "N/A",
     image: stall4
   },
   {
     id: 11,
-    title: "OS cool Home",
+    title: "Utkarsh ke 8 varsh Kavi Nagar Event",
     category: "Exhibitions and stalls",
     kwp: "N/A",
     image: stall7
@@ -129,7 +129,7 @@ export const projects = [
 },
 {
   id: 13,
-  title: "Stall",
+  title: "Utkarsh ke 8 varsh Kavi Nagar Event",
   category: "Exhibitions and stalls",
   kwp: "N/A",
   image: so2
