@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ElectricitySavedCard from "./ElectricitySavedCard";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 // Animation Variants
 const containerVariants = {
@@ -18,6 +20,31 @@ const cardVariants = {
 };
 
 const SolarCostCalculator = () => {
+  const [monthlyBill, setMonthlyBill] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("https://solar-6.onrender.com/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ monthlyBill }),
+      });
+
+      if (response.ok) {
+        toast.success("Cost submitted successfully!");
+        setMonthlyBill(""); // Clear form
+      } else {
+        toast.error("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Error connecting to server.");
+    }
+  };
+
   return (
     <motion.div
       className="bg-[#F8F7F0] min-h-screen GetFontSol px-4 md:px-10 lg:px-16 py-10"
@@ -26,15 +53,16 @@ const SolarCostCalculator = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
+      <ToastContainer position="top-right" autoClose={3000} />
       {/* Main Heading */}
       <motion.div className="text-center mb-8" variants={cardVariants}>
-        <h1 className="text-xl sm:text-2xl md:text-xl font-bold text-[#E50C0C] leading-snug max-w-5xl mx-auto">
+        <h1 className="text-xl sm:text-2xl md:text-xl font-bold text-[#E50C0C] leading-snug max-w-5xl mx-auto mt-10 2xl:mt-16">
           Aaj hi Solar Lagwao, environment bachao <br />
           aur agle 5 saal me 3 lakh se jyada apne electricity bills par bhi Bachao
         </h1>
       </motion.div>
 
-      {/* Cards Grid with Equal Heights */}
+      {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
         {/* Info Card */}
         <motion.section
@@ -78,26 +106,25 @@ const SolarCostCalculator = () => {
             <span>About Calculator</span>
           </p>
           <h3 className="text-xl font-semibold text-[#1e1e1e] mb-4">Solar Cost Calculator</h3>
-          <form className="space-y-3 text-sm text-gray-700 flex-1 flex flex-col justify-between">
+          <form
+            className="space-y-3 text-sm text-gray-700 flex-1 flex flex-col justify-between"
+            onSubmit={handleSubmit}
+          >
             <div className="space-y-3">
-              {[
-                { id: 'monthly-bill', icon: 'fas fa-bolt', placeholder: 'Monthly Electricity Bill (₹)' },
-               
-              ].map(({ id, icon, placeholder }) => (
-                <div key={id}>
-                  <div className="flex items-center border border-blue-300 rounded-full px-4 py-2 bg-white hover:shadow-md transition">
-                    <i className={`${icon} text-green-800 mr-3`}></i>
-                    <input
-                      id={id}
-                      type="file"
-                      placeholder={placeholder}
-                      className="w-full outline-none text-gray-700 placeholder-gray-500 bg-transparent text-sm"
-                    />
-                  </div>
+              <div>
+                <div className="flex items-center border border-blue-300 rounded-full px-4 py-2 bg-white hover:shadow-md transition">
+                  <i className="fas fa-bolt text-green-800 mr-3"></i>
+                  <input
+                    id="monthly-bill"
+                    type="number"
+                    placeholder="Monthly Electricity Bill (₹)"
+                    value={monthlyBill}
+                    onChange={(e) => setMonthlyBill(e.target.value)}
+                    className="w-full outline-none text-gray-700 placeholder-gray-500 bg-transparent text-sm"
+                    required
+                  />
                 </div>
-              ))}
-              
-              
+              </div>
             </div>
             <motion.button
               type="submit"
@@ -115,7 +142,7 @@ const SolarCostCalculator = () => {
           className="flex justify-center items-center h-full"
           variants={cardVariants}
         >
-          <div className=" h-full flex ">
+          <div className="h-full flex">
             <ElectricitySavedCard />
           </div>
         </motion.section>
