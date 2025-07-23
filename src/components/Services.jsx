@@ -82,7 +82,7 @@ export default function Services() {
 
     try {
       const { data } = await axios.post(
-        "https://solar-4-8a9b.onrender.com/api/contact",
+        " https://solar-6.onrender.com/api/contact",
         {
           name,
           email,
@@ -160,8 +160,8 @@ export default function Services() {
                 Write Here Below?
               </h2>
               <p className="text-gray-700 mb-8">
-                For your comfort we will do everything—advice, repairs and
-                maintenance. Many solar owners choose us for our experience.
+                For your car we will do everything—advice, repairs and
+                maintenance. Many car owners choose us for our experience.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
