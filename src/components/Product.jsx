@@ -7,7 +7,7 @@ import Genset1 from '../Images/Genset.jpg'
 import Micro from '../Images/Micro.jpg'
 import SolarP from '../Images/SolarP.jpg'
 import pump from '../Images/pump.jpg'
-import light from '../Images/light.jpg'
+import light1 from '../Images/light1.jpg'
 
 
 // Animation variants
@@ -65,7 +65,7 @@ function Product() {
       title: "Lightning Arrestor (LA)",
       description: "Our lightning arrestors provide strong protection by safely redirecting lightning strikes, ensuring your electrical systems and infrastructure stay secure from unpredictable hazards.",
       icon: "https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg",
-      image: light,
+      image: light1,
       to: "/LA",
     },
 
