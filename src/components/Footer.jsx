@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
@@ -22,6 +23,7 @@ const routes = [
 ];
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#00122E] text-white GetfontHomeDash">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +42,7 @@ const Footer = () => {
                 <li className="flex items-center gap-2"><FaEnvelope /> admin@divypower.com</li>
                 <li className="flex items-center gap-2"><FaEnvelope /> Info@divypower.com
                 </li>
-                <li className="flex items-center gap-2"><FaEnvelope /> 
+                <li className="flex items-center gap-2"><FaEnvelope />
 
                   sales@divypower.com</li>
               </ul>
@@ -112,8 +114,14 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-[#B0B9D1] text-xs text-center">
-            &copy; {new Date().getFullYear()} DIVY POWER. All rights reserved.
+            &copy; {new Date().getFullYear()} DIVY POWER. All rights reserved.  <span
+              className="text-[#B0B9D1] text-xs text-end ml-14 cursor-pointer"
+              onClick={() => navigate("/privacy")}
+            >
+              Privacy Policy
+            </span>
           </p>
+
         </footer>
       </div>
     </div>
