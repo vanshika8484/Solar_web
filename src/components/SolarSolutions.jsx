@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Sol from '../Images/Sol.jpg'
 
 const solutionData = [
   {
@@ -44,7 +45,7 @@ const SolarSolutions = () => {
   };
 
   return (
-    <main className="bg-white text-black max-w-[1500px] mx-auto p-6 sm:p-10 About ml-4 mr-4 sm:ml-12 sm:mr-12 -mt-24" >
+    <main className="bg-white text-black max-w-full mx-auto p-6 sm:p-10 About ml-4 mr-4 sm:ml-12 sm:mr-12 -mt-24" >
       {/* Top Section Animation */}
       <motion.section
         className="flex flex-col lg:flex-row items-center lg:items-start gap-6 mt-9"
@@ -62,9 +63,9 @@ const SolarSolutions = () => {
           viewport={{ once: true }}
         >
           <img
-            src="https://storage.googleapis.com/a1aa/image/e9519b91-9347-4552-5dab-d16eaf280dab.jpg"
+            src={Sol}
             alt="Solar energy panel"
-            className="w-[400px] h-[500px] rounded-lg object-cover shadow-lg"
+            className="w-[400px] h-full rounded-lg object-cover shadow-xl"
             loading="lazy"
           />
         </motion.div>
