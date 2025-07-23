@@ -166,7 +166,7 @@ const ProjectDetails = () => {
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Email:</span>
                                 <a href="mailto:info@example.com" className="text-green-700 hover:underline">
-                                    info@example.com
+                                    info@divypower.com
                                 </a>
                             </div>
 
@@ -185,7 +185,7 @@ Uttar Pradesh 201001</span>
 
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Hours:</span>
-                                <span>Mon–Sat: 19:00 - 6:00<br /></span>
+                                <span>Mon–Sat: 10:00 am - 6:00 pm<br /></span>
                             </div>
                         </motion.div>
 
