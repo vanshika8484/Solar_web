@@ -16,7 +16,12 @@ import Project10 from "../Images/Project10.jpg";
 import Project11 from "../Images/Project11.jpg";
 import stall4 from "../Images/stall4.JPG";
 import stall7 from "../Images/stall7.JPG";
-import stall8 from "../Images/stall8.JPG"
+import stall8 from "../Images/stall8.JPG";
+import so1 from "../Images/so1.JPG";
+import so2 from "../Images/so2.JPG";
+import so3 from "../Images/so3.JPG";
+import so4 from "../Images/so4.jpg";
+import so5 from "../Images/so5.jpg";
 
 
 
@@ -114,6 +119,41 @@ export const projects = [
     category: "Exhibitions and stalls",
     kwp: "N/A",
     image: stall7
-  }
+  },
+  {
+  id: 12,
+  title: "Build Bharat Expo",
+  category: "Exhibitions and stalls",
+  kwp: "N/A",
+  image: so1
+},
+{
+  id: 13,
+  title: "Stall",
+  category: "Exhibitions and stalls",
+  kwp: "N/A",
+  image: so2
+},
+{
+  id: 14,
+  title: "MGR Exhibition",
+  category: "Exhibitions and stalls",
+  kwp: "N/A",
+  image: so3
+},
+{
+  id: 15,
+  title: "Rooftop",
+  category: "Residential",
+  kwp: "N/A",
+  image: so4
+},
+{
+  id: 16,
+  title: "OS cool Home",
+  category: "Residential",
+  kwp: "N/A",
+  image: so5
+}
 ];
 
