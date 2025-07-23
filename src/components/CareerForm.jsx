@@ -33,7 +33,7 @@ function CareerForm() {
         formData.append("CV", CV);
       }
 
-      await axios.post(`https://solar-4-8a9b.onrender.com/api/CareerApi`, formData, {
+      await axios.post(`https://solar-6.onrender.com/api/CareerApi`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
