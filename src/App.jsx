@@ -28,6 +28,8 @@ import SecondService from './components/SecondService'
 import SolarLanding from './components/SolarLanding'
 import Career from './components/Career'
 import PrivacySection from './components/PrivacySection'
+import SolarArticle from './components/SolarArticle'
+import SustainableProfitability from './components/SustainableProfitability'
 
 
 
@@ -40,8 +42,8 @@ function App() {
       <SolarLanding />
       <Cursor />
 
- 
-      
+
+
       <ScrollToTop />
 
       <Routes>
@@ -52,7 +54,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/products" element={<Product />} />
         <Route path="/career" element={<Career />} />
-        <Route path="/workwithus" element={<NewWorkWithUs/>} />
+        <Route path="/workwithus" element={<NewWorkWithUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Solar-pannel" element={<SolarPanelPage />} />
         <Route path="/Solar-Pump" element={<SolarPumpPage />} />
@@ -61,12 +63,14 @@ function App() {
         <Route path="/LA" element={<La />} />
         <Route path="/Diesel/Petrol Genset" element={<Diesel />} />
         <Route path="/ProjectDetails" element={<ProjectDetails />} />
-        <Route path="/Installation_&_Commissioning_(INC)" element={<FirstService/>} />
+        <Route path="/Installation_&_Commissioning_(INC)" element={<FirstService />} />
         <Route path="/Engineering_Procurement_and_Construction_(EPC)" element={<SecondService />} />
         <Route path="/Operations_&_Maintenance_(O&M)" element={<ThirdService />} />
         <Route path="/Annual_Maintenance_Contracts(AMC)" element={<FourService />} />
         <Route path="/Health_Check_ups" element={<FiveService />} />
-          <Route path="/privacy" element={<PrivacySection />} />
+        <Route path="/privacy" element={<PrivacySection />} />
+        <Route path="/Blog1" element={<SolarArticle />} />
+        <Route path="/Blog2" element={<SustainableProfitability />} />
       </Routes>
 
     </>
