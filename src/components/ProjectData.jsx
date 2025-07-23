@@ -22,6 +22,11 @@ import so2 from "../Images/so2.JPG";
 import so3 from "../Images/so3.JPG";
 import so4 from "../Images/so4.jpg";
 import so5 from "../Images/so5.jpg";
+import gov1 from "../Images/gov1.JPG";
+import gov2 from "../Images/gov2.JPG";
+import gov3 from "../Images/gov3.JPG";
+import gov4 from "../Images/gov4.JPG";
+import gov5 from "../Images/gov5.JPG";
 
 
 
@@ -62,21 +67,21 @@ export const projects = [
     title: "BSL Casting Commercial",
     category: "Govt Affiliates",
     kwp: "1440",
-    image: Project3
+    image: gov1
   },
   {
     id: 4,
     title: "DPS Panipat",
     category: "Govt Affiliates",
     kwp: "450",
-    image: Project4
+    image: gov2
   },
   {
     id: 5,
     title: "Hindu College",
     category: "Govt Affiliates",
     kwp: "800",
-    image: Project5
+    image: gov3
   },
   {
     id: 6,
