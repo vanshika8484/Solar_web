@@ -191,7 +191,11 @@ export default function About() {
         <ContactCards />
       </section>
 
-      <section className=" mt-20 lg:min-w-[1600px]  md:min-w-[1600px] xl:min-w-[1600px] 2xl:min-w-[1600px] ">
+      <section className=" mt-16">
+        <SolarCards/>
+      </section>
+
+      <section className=" -mt-24 lg:min-w-[1300px]  md:min-w-[1300px] xl:min-w-[1300px] 2xl:min-w-[1600px] ">
         <Footer />
       </section>
 
