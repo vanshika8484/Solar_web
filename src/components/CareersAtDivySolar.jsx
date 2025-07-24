@@ -9,7 +9,7 @@ const CareersAtDivySolar = () => {
       </h1>
 
       {/* Power Your Future */}
-      <h2 className="text-xl font-semibold text-brandBlue mb-3">Power Your Future with Us</h2>
+      
       <p className="text-base leading-relaxed text-justify mb-6">
         At <strong>DIVY Solar</strong>, we are not just building solar systems — we’re building a sustainable future.
         We believe in the power of clean energy and the people behind it. If you’re passionate about renewable energy,
@@ -18,7 +18,7 @@ const CareersAtDivySolar = () => {
 
       {/* Why Work with DIVY */}
       <h2 className="text-xl font-semibold text-brandBlue mb-3">Why Work with DIVY Solar?</h2>
-      <ul className="list-disc list-inside space-y-3 text-base leading-relaxed text-justify mb-6">
+      <ul className="list-disc list-inside space-y-1 text-base leading-relaxed text-justify mb-6">
         <li>
           <strong>Purpose-Driven Work:</strong> Contribute to India’s transition toward a greener tomorrow.
         </li>
@@ -38,7 +38,7 @@ const CareersAtDivySolar = () => {
       <p className="text-base leading-relaxed text-justify mb-4">
         We’re on the lookout for individuals who are:
       </p>
-      <ul className="list-disc list-inside space-y-3 text-base leading-relaxed text-justify mb-6">
+      <ul className="list-disc list-inside space-y-1 text-base leading-relaxed text-justify mb-6">
         <li>Passionate about clean energy and sustainability</li>
         <li>Self-motivated and eager to grow</li>
         <li>Technically sound and solution-oriented</li>
@@ -47,7 +47,7 @@ const CareersAtDivySolar = () => {
 
       {/* Open Positions */}
       <h2 className="text-xl font-semibold text-brandBlue mb-3">Open Positions</h2>
-      <ul className="list-disc list-inside space-y-3 text-base leading-relaxed text-justify mb-6">
+      <ul className="list-disc list-inside space-y-1 text-base leading-relaxed text-justify mb-6">
         <li>Sales executive</li>
         <li>Sales manager</li>
         <li>Operation manager</li>
