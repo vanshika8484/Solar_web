@@ -15,7 +15,9 @@ const videoData = [
 
 const WorkCultureReels = () => {
   const scrollRef = useRef(null);
+  const videoRefs = useRef([]);
 
+  // Scroll horizontally
   const scroll = (direction) => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
@@ -26,46 +28,60 @@ const WorkCultureReels = () => {
     }
   };
 
+  // Pause all other videos when one starts playing
+  const handlePlay = (currentIndex) => {
+    videoRefs.current.forEach((video, index) => {
+      if (video && index !== currentIndex) {
+        video.pause();
+      }
+    });
+  };
+
   return (
-    <section className="mt-20 px-6 md:px-10">
-      <h2 className="text-3xl font-bold text-center mb-8">Work Culture at DIVY</h2>
+    <section className="mt-16 px-4 md:px-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-gray-800">
+        Work Culture at DIVY
+      </h2>
       <div className="relative">
-        {/* Left button */}
+        {/* Left Button */}
         <button
           onClick={() => scroll("left")}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-600"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="w-5 h-5" />
         </button>
 
         {/* Video Scroll Section */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-10"
+          className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-8"
         >
           {videoData.map((item, index) => (
             <div
               key={index}
-              className="w-64 md:w-72 flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-300"
+              className="w-60 h-[400px] sm:w-56 md:w-64 flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden group transition-transform duration-300"
             >
               <video
+                ref={(el) => (videoRefs.current[index] = el)}
                 src={item.video}
                 controls
-                className="w-full h-full object-cover rounded-t-2xl"
+                playsInline
+                onPlay={() => handlePlay(index)}
+                className="w-60 h-[400px] object-cover rounded-t-xl"
               />
-              <div className="py-2 text-center font-semibold text-gray-800 group-hover:text-indigo-600">
+              <div className="py-2 text-center text-sm font-semibold text-gray-700 group-hover:text-green-600">
                 {item.name}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Right button */}
+        {/* Right Button */}
         <button
           onClick={() => scroll("right")}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-600"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="w-5 h-5" />
         </button>
       </div>
     </section>
