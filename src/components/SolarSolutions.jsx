@@ -65,7 +65,7 @@ const SolarSolutions = () => {
           <img
             src={Sol}
             alt="Solar energy panel"
-            className="w-[400px] h-full rounded-lg object-cover shadow-xl"
+            className="w-[400px] mt-16 2xl:ml-48 ml-16 h-full rounded-lg object-cover shadow-xl"
             loading="lazy"
           />
         </motion.div>
