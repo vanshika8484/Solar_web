@@ -3,56 +3,69 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const reelsData = [
   {
-    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180180/Riddhi_Go_Solar_Save_Environment_kroi64.mp4",
+    videoSrc:
+      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180180/Riddhi_Go_Solar_Save_Environment_kroi64.mp4",
     username: "Riddhi Agarwal",
-    caption: "Reel 1: Go Solar, Save Environment",
+    caption: "Topic: Go Solar, Save Environment",
   },
   {
-    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180182/Kaushlesh_Source_Of_Renewable_Energy_wvveuh.mp4",
+    videoSrc:
+      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180182/Kaushlesh_Source_Of_Renewable_Energy_wvveuh.mp4",
     username: "Kaushlesh Sharma",
-    caption: "Reel 2: Source of Renewable Energy",
+    caption: "Topic: Source of Renewable Energy",
   },
   {
-    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Ateesh_Make_Your_Future_Bright_With_Solar_jhgwuu.mp4",
+    videoSrc:
+      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Ateesh_Make_Your_Future_Bright_With_Solar_jhgwuu.mp4",
     username: "Ateesh Kumar",
-    caption: "Reel 3: Make Your Future Bright With Solar",
+    caption: "Topic: Make Your Future Bright With Solar",
   },
   {
-    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Founder_And_Friends_Save_Environment_With_Solar_sqldlz.mp4",
+    videoSrc:
+      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Founder_And_Friends_Save_Environment_With_Solar_sqldlz.mp4",
     username: "Divy Power Team",
-    caption: "Reel 4: Founder and Friends Save Environment",
+    caption: "Topic: Founder and Friends Save Environment",
   },
   {
-    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180180/Shivam_Go_Solar_Save_Environment_asbrgo.mp4",
+    videoSrc:
+      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180180/Shivam_Go_Solar_Save_Environment_asbrgo.mp4",
     username: "Shivam Singh",
-    caption: "Reel 5: Go Solar, Save Environment",
+    caption: "Topic: Go Solar, Save Environment",
   },
   {
-    videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Ateesh_Breaking_The_Myth_oifrah.mp4",
+    videoSrc:
+      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Ateesh_Breaking_The_Myth_oifrah.mp4",
     username: "Ateesh Kumar",
-    caption: "Reel 6: Breaking The Myth About Solar",
+    caption: "Topic: Breaking The Myth About Solar",
   },
 ];
 
-
 const FiguringOut1 = () => {
   const scrollRef = useRef(null);
+  const videoRefs = useRef([]); // Store all video refs
 
   const scrollBy = (direction) => {
     if (!scrollRef.current) return;
-    const scrollAmount = 300;
+    const scrollAmount = 250; // Reduced scroll step to match smaller reels
     scrollRef.current.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
   };
 
-  return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-12 relative -mt-[120px]">
-      <div className="max-w-7xl mx-auto relative">
-        <h2 className="text-center text-2xl sm:text-3xl font-bold text-green-800 mb-10">
-        Breaking the Myth, Switch to Solar
+  const handlePlay = (currentIndex) => {
+    videoRefs.current.forEach((video, i) => {
+      if (i !== currentIndex && video && !video.paused) {
+        video.pause();
+      }
+    });
+  };
 
+  return (
+    <div className="bg-white py-10 px-4 sm:px-6 lg:px-12 relative -mt-[100px]">
+      <div className="max-w-7xl mx-auto relative">
+        <h2 className="text-center text-xl sm:text-2xl font-bold text-green-800 mb-8">
+          Breaking the Myth, Switch to Solar
         </h2>
 
         {/* Desktop/Tablet Arrows */}
@@ -76,24 +89,29 @@ const FiguringOut1 = () => {
         {/* Scrollable Video Row */}
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide py-4"
+          className="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide py-3"
         >
           {reelsData.map((reel, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-60 sm:w-72 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all"
+              className="flex-shrink-0 w-44 sm:w-56 bg-white rounded-lg shadow-md p-2 hover:shadow-lg transition-all"
             >
-              <div className="relative rounded-lg overflow-hidden">
+              <div className="relative rounded-md overflow-hidden">
                 <video
+                  ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.videoSrc}
-                  className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                  className="w-full aspect-[9/16] object-cover rounded-md hover:scale-105 transition-transform duration-300"
                   controls
+                  onPlay={() => handlePlay(index)}
+                  playsInline
                 />
               </div>
-              <div className="mt-3 text-sm text-gray-700 font-semibold">
-               
+              <div className="mt-2 text-xs sm:text-sm text-gray-700 font-semibold">
+              
               </div>
-              <p className="text-xs text-gray-500">{reel.caption}</p>
+              <p className="text-[10px] sm:text-xs text-gray-500">
+                {reel.caption}
+              </p>
             </div>
           ))}
         </div>
