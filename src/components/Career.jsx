@@ -5,6 +5,7 @@ import CareerForm from './CareerForm';
 import WorkCultureReels from './WorkCultureReels';
 import SafetySecurityReels from './SafetySecurityReels';
 import ImageSlider from './ImageSlider';
+import CareersAtDivySolar from './CareersAtDivySolar';
 
 
 const Career = () => {
@@ -31,6 +32,10 @@ const Career = () => {
         </p>
       </motion.div>
 
+      <section>
+        <CareersAtDivySolar/>
+      </section>
+
       <section className=' -mt-8'>
         <CareerForm />
       </section>
@@ -43,7 +48,7 @@ const Career = () => {
 
             className="w-[200px] lg:w-[300px] md:w-[300px] xl:w-[400px] 2xl:w-[500px] text-center bg-gray-900 text-white  hover:shadow-xl font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-200"
           >
- <span className=' text-xl'>Click Here to Access Sampark</span> <br/> For Internal Team only
+            <span className=' text-xl'>Click Here to Access Sampark</span> <br /> For Internal Team only
           </button>
         </a>
       </section>
