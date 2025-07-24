@@ -220,7 +220,7 @@ export default function Services() {
      
     </section>
 
-    <section>
+    <section className=" -mt-64 ">
       <Footer/>
     </section>
 
