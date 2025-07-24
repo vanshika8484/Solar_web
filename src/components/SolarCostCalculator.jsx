@@ -115,9 +115,9 @@ const SolarCostCalculator = () => {
             <>
               <p className="text-green-800 text-xs uppercase tracking-widest mb-1 flex items-center space-x-2">
                 <span className="w-2 h-2 rounded-full bg-green-800 inline-block"></span>
-                <span>About Calculator</span>
+                <span className=" text-lg">Solar Cost Calculator</span>
               </p>
-              <h3 className="text-xl font-semibold text-[#1e1e1e] mb-4">Solar Cost Calculator</h3>
+              <h3 className="text-xl font-semibold text-[#1e1e1e] mb-4">Monthly Electricity Bill</h3>
               <form
                 className="space-y-3 text-sm text-gray-700 flex-1 flex flex-col justify-between"
                 onSubmit={handleSubmit}
@@ -130,7 +130,7 @@ const SolarCostCalculator = () => {
                       type="text"
                       value={formData.bill}
                       onChange={handleChange}
-                      placeholder="Monthly Electricity Bill (₹)"
+                      placeholder="Enter Your Electricity Bill Value (₹)"
                       className="w-full outline-none text-gray-700 placeholder-gray-500 bg-transparent text-sm"
                     />
                   </div>
