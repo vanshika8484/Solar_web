@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const reelsData = [
   {
@@ -28,28 +28,38 @@ const reelsData = [
 ];
 
 const HoverVideoCard2 = () => {
+  const videoRefs = useRef([]);
+
+  const handlePlay = (currentIndex) => {
+    videoRefs.current.forEach((v, i) => {
+      if (i !== currentIndex && v && !v.paused) v.pause();
+    });
+  };
+
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-12">
+    <div className="bg-white py-8 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-2xl sm:text-3xl About1 text-green-800 mb-10">
+        <h2 className="text-center text-xl sm:text-2xl text-green-800 mb-8">
           Our Founder Philosophy
         </h2>
 
-        {/* Grid: 2 cols on mobile, 3 cols on large screen */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
           {reelsData.map((reel, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all"
+              className="bg-white rounded-lg shadow-md p-2 hover:shadow-lg transition-all w-60 h-full"
             >
-              <div className="relative rounded-lg overflow-hidden">
+              <div className="relative rounded-md overflow-hidden ">
                 <video
+                  ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.reel}
-                  className="w-full aspect-[9/16] object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                  className="w-full aspect-[9/16] object-cover rounded-md hover:scale-105 transition-transform duration-300"
                   controls
+                  onPlay={() => handlePlay(index)}
+                  playsInline
                 />
               </div>
-              <p className="mt-3 text-xs text-gray-500 text-center font-medium">
+              <p className="mt-2 text-[10px] sm:text-xs text-gray-600 text-center font-medium">
                 {reel.role}
               </p>
             </div>
