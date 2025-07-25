@@ -81,7 +81,7 @@ const SolarLanding = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const overlayRef = useRef(null);
-  const location = useLocation(); // Detect route changes
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -89,7 +89,7 @@ const SolarLanding = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdown when route changes
+  // Close dropdown on route change
   useEffect(() => {
     setActiveDropdown(null);
   }, [location.pathname]);
@@ -102,6 +102,7 @@ const SolarLanding = () => {
 
   return (
     <>
+      {/* NAVBAR */}
       <div
         className={`w-full sticky top-0 z-50 transition-all duration-300 ${
           isScrolled ? "bg-white shadow-lg" : "bg-transparent"
@@ -123,15 +124,22 @@ const SolarLanding = () => {
                   className="relative group"
                   onMouseEnter={() => setActiveDropdown(link.name)}
                 >
-                  <span
-                    className={`flex items-center gap-1 cursor-pointer ${
-                      activeDropdown === link.name
-                        ? "text-green-00 font-semibold"
-                        : "hover:text-orange-400"
-                    }`}
+                  {/* Parent Link (click navigates, hover opens dropdown) */}
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `flex items-center gap-1 cursor-pointer ${
+                        isActive
+                          ? "text-orange-500 font-semibold underline underline-offset-4"
+                          : activeDropdown === link.name
+                          ? "text-orange-500 font-semibold"
+                          : "hover:text-orange-400"
+                      }`
+                    }
+                    onClick={() => setActiveDropdown(null)}
                   >
                     {link.name} <IoIosArrowDown className="text-sm" />
-                  </span>
+                  </NavLink>
                 </div>
               ) : (
                 <NavLink
@@ -171,7 +179,7 @@ const SolarLanding = () => {
         </div>
       </div>
 
-      {/* Full-screen Dropdown */}
+      {/* Dropdown Panel for Desktop */}
       <AnimatePresence>
         {activeDropdown && (
           <motion.div
@@ -182,10 +190,10 @@ const SolarLanding = () => {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.2 }}
-            className="absolute left-0 top-[64px] w-full h-[300px] bg-white shadow-lg z-40"
+            className="absolute left-0 top-[64px] w-full bg-white shadow-lg z-40"
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <div className="max-w-7xl mx-auto px-5 md:px-8 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
+            <div className="max-w-7xl mx-auto px-5 md:px-8 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {navLinks
                 .find((l) => l.name === activeDropdown)
                 ?.dropdown?.map((subLink) => (
