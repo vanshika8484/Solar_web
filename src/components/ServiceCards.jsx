@@ -55,19 +55,19 @@ const ServiceCards = () => {
       {services.map((service, index) => (
         <div
           key={index}
-          className="card"
+          className="cardd"
           onClick={() => navigate(service.path)}
         >
           {/* Icon and Title */}
-          <div className="card__front">
-            <div className="card__icon">{service.icon}</div>
-            <p className="card__title text-white">{service.title}</p>
+          <div className="cardd__front">
+            <div className="cardd__icon">{service.icon}</div>
+            <p className="cardd__title text-white">{service.title}</p>
           </div>
 
           {/* Hover Content */}
-          <div className="card__content">
-            <p className="card__title">{service.title}</p>
-            <p className="card__description">{service.description}</p>
+          <div className="cardd__content">
+            <p className="cardd__title">{service.title}</p>
+            <p className="cardd__description">{service.description}</p>
           </div>
         </div>
       ))}
