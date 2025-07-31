@@ -265,34 +265,34 @@ const SolarCostCalculator = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
         {/* Info Card - Blue Theme */}
         <motion.section
-          className="bg-blue-100 rounded-xl px-6 py-5 h-full flex flex-col hover:shadow-xl transition"
+          className="bg-[#111827] rounded-xl px-6 py-5 h-full flex flex-col hover:shadow-xl transition"
           variants={cardVariants}
         >
-          <h2 className="text-xl font-semibold text-blue-900 mb-3">
+          <h2 className="text-xl font-semibold text-white mb-3">
             Power Your Home With Solar
           </h2>
-          <p className="text-blue-800 text-sm leading-relaxed mb-3">
+          <p className="text-white text-sm leading-relaxed mb-3">
             Discover how affordable solar can be. Enter your details below to
             get your personalized cost estimate and start saving!
           </p>
-          <ul className="list-disc list-inside text-blue-700 text-sm space-y-1.5 mb-5">
+          <ul className="list-disc list-inside text-white text-sm space-y-1.5 mb-5">
             <li>Reduce your carbon footprint</li>
             <li>Lock in energy savings</li>
             <li>Maximize your roof potential</li>
           </ul>
           <div className="flex flex-wrap gap-4 mt-auto">
             <div className="flex items-center space-x-3">
-              <i className="fas fa-solar-panel text-blue-700 text-xl"></i>
+              <i className="fas fa-solar-panel text-white text-xl"></i>
               <div>
-                <p className="text-blue-900 font-semibold text-base">2500+</p>
-                <p className="text-blue-700 text-xs">Systems Installed</p>
+                <p className="text-white font-semibold text-base">2500+</p>
+                <p className="text-white text-xs">Systems Installed</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <i className="fas fa-leaf text-blue-700 text-xl"></i>
+              <i className="fas fa-leaf text-white text-xl"></i>
               <div>
-                <p className="text-blue-900 font-semibold text-base">45%</p>
-                <p className="text-blue-700 text-xs">Avg. Savings</p>
+                <p className="text-white font-semibold text-base">45%</p>
+                <p className="text-white text-xs">Avg. Savings</p>
               </div>
             </div>
           </div>
@@ -300,7 +300,7 @@ const SolarCostCalculator = () => {
 
         {/* Calculator or Results - Red Theme */}
         <motion.section
-          className="bg-red-100 rounded-xl px-6 py-5 h-full flex flex-col hover:shadow-xl transition"
+          className="bg-red-200 rounded-xl px-6 py-5 h-full flex flex-col hover:shadow-xl transition"
           variants={cardVariants}
         >
           {!showResults ? (
