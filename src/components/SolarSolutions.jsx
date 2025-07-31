@@ -7,61 +7,61 @@ const solutionData = [
   {
     title: "Homeowner Solutions",
     content: `
-      We provide rooftop solar systems with battery backups designed to reduce your energy bills by up to 80%.
-      Our package includes:
-      • Free site survey & consultation  
-      • Government subsidy assistance  
-      • Net metering setup & documentation  
-      • Long-term maintenance & monitoring support  
-      This is your first step towards complete energy freedom at home.
+Enjoy reliable, eco-friendly energy at home while cutting down your electricity bills and ensuring your family’s comfort.
+
+• Save up to 80% on monthly electricity costs  
+• Battery backup for uninterrupted power during outages  
+• Free site survey and customized solar system design  
+• Net metering support to earn credits from surplus energy  
+• Guidance on government subsidies to reduce upfront costs
     `,
   },
   {
     title: "Business Owner Solutions",
     content: `
-      Tailored solar energy systems for SMEs, warehouses, and factories to cut operational costs significantly.
-      Services include:
-      • Custom system design for maximum ROI  
-      • Hybrid or grid-tied solutions  
-      • Load analysis & efficiency optimization  
-      • 24/7 monitoring for energy performance  
-      Boost your business efficiency with sustainable energy.
+Empower your business with solar energy that lowers costs, boosts profits, and strengthens your green image.
+
+• Reduce operational costs with long-term energy savings  
+• Scalable systems tailored to your business size and needs  
+• Show customers your commitment to a sustainable future  
+• Stay productive with battery backup and uninterrupted power  
+• Assistance with government incentives and easy financing options
     `,
   },
   {
     title: "Utility-Scale Owner Solutions",
     content: `
-      We provide EPC (Engineering, Procurement, and Construction) services for large solar farms.
-      We ensure:
-      • Complete grid compliance  
-      • SCADA system integration  
-      • Remote performance monitoring  
-      • Operational & maintenance contracts  
-      Ideal for large-scale power generation projects.
+Harness the power of solar for large-scale energy production and long-term profitability.
+
+• High-capacity solar farms for maximum energy generation  
+• Advanced grid integration and net metering solutions  
+• Smart monitoring systems for real-time performance tracking  
+• Reduced carbon footprint with renewable, clean energy  
+• Support with policy compliance, land use, and subsidy benefits
     `,
   },
   {
     title: "Smart String ESS Solutions",
     content: `
-      Advanced Energy Storage Systems (ESS) designed for dynamic power backup and load balancing.
-      Features include:
-      • Intelligent battery management  
-      • Peak shaving & demand response  
-      • Seamless integration with solar arrays  
-      • Remote control & diagnostics  
-      Keep your operations running even during outages.
+Maximize efficiency and reliability with next-generation Energy Storage Systems (ESS) that keep you powered, always.
+
+• High-efficiency battery storage for consistent power supply  
+• Optimized to reduce energy wastage and lower costs  
+• Seamless integration with rooftop and utility-scale systems  
+• Intelligent load management for peak and off-peak hours  
+• Reliable and safe with advanced protection technology
     `,
   },
   {
     title: "Smart Micro-grid Solutions",
     content: `
-      AI-powered micro-grid solutions combining solar, ESS, and smart management software.
-      Benefits include:
-      • Decentralized energy distribution  
-      • Grid independence for communities  
-      • Real-time energy balancing  
-      • Disaster-resilient power supply  
-      Ideal for housing societies, campuses, and smart cities.
+Build self-sustaining communities and businesses with micro-grids that deliver energy independence and resilience.
+
+• Localized power grids for homes, businesses, and communities  
+• Energy independence from unpredictable power cuts  
+• Integration with renewable sources like solar and wind  
+• Efficient energy distribution with minimal transmission losses  
+• Smart monitoring for stable, uninterrupted electricity supply
     `,
   },
 ];
