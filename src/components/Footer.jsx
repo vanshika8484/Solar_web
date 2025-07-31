@@ -1,132 +1,204 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import {
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaAngleRight,
-  FaFacebookF,
-  FaInstagram,
-  FaDribbble,
-} from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-import CallBackSection from "./CallBackSection";
+import { motion } from "framer-motion";
+import ProcessSteps from "./ProcessSteps";
+import ExpertTeam from "./ExpertTeam";
+import FiguringOut from "./FiguringOut";
+import SolarCards from "./SolarCards";
+import ContactCards from "./ContactCards";
+import Footer from "./Footer";
+import CompanySection from "./CompanySection";
+import ChatUI4 from "./ChatUI4";
 
-const routes = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Projects", path: "/projects" },
-  { name: "Products", path: "/products" },
-  { name: "Work With Us", path: "/workwithus" },
-  { name: "Contact", path: "/contact" },
+import sunImage from "../Images/didi.png";
+import sunPhoto from "../Images/chacha.png";
+import ScrollStackingCards from "./ScrollStackingCards"; // <-- Imported here
+import "./ScrollStackingCards.css"; // <-- Include CSS
+import HoverVideoCard2 from "./HoverVideoCard2";
+import HoverVideoCard3 from "./HoverVideoCard3";
+import "./Home.css"; // Ensure this CSS file is imported for styles
+import HoverVideoCard from "./HoverVideoCard";
+import ImageWithOverlay from "./ImageWithOverlay";
+
+const aboutUsContent = [
+  {
+    heading: "Not Just Selling Solar We are a Partner in Your Journey",
+    subheading:
+      "At Divy Power Pvt. Ltd., we don’t just sell solar panels. We listen, understand, and build solutions.",
+    points: [
+      "Every home, business, or factory has a unique energy we begin by understanding yours",
+      "Our approach is not sales-driven, it’s solution-focused.",
+      "We help you avoid costly mistakes caused by all solar kits.",
+      "We design systems that fit your life, not force you to adapt to them.",
+    ],
+    img: "https://storage.googleapis.com/a1aa/image/b08acab3-6b8b-47a9-3cc6-092bfccc4ded.jpg",
+    alt: "Team discussing solar design solution on paper with panels in background",
+  },
+  {
+    heading: "What If You Delay Solar? The Hidden Cost of Waiting",
+    subheading:
+      "We believe in honesty – waiting to switch to solar can cost more than you think.",
+    points: [
+      "Every electricity bill is money lost that could’ve been saved.",
+      "Electricity prices are rising, and power cuts are more frequent.",
+      "Delaying solar means losing not just money, but energy independence.",
+      "Going solar isn’t just smart, it’s urgent and we help you act now.",
+    ],
+    img: "https://storage.googleapis.com/a1aa/image/a6bb9ba5-9710-4d97-6623-f283a7ce4df1.jpg",
+    alt: "Clock with electric cables symbolizing urgency",
+  },
+  {
+    heading: "Powering Every Home from Rooftops to Rural Villages",
+    subheading:
+      "We deliver energy solutions for everyon high-rises to rural India",
+    points: [
+      "No terrain or challenge is too complex we deliver where it’s needed.",
+      "Our systems are designed to endure Indian conditions: dust, heat, and rain.",
+      "Be it a home, farm, or school our mission is to light it up, cleanly and reliably.",
+      "We believe clean energy is a right, not a luxury.",
+    ],
+    img: "https://storage.googleapis.com/a1aa/image/72f5a45b-2e30-45fc-b276-a06c6a12a64e.jpg",
+    alt: "Solar panels on rooftops and rural homes",
+  },
+  {
+    heading: "A Legacy You Can Rely On",
+    subheading:
+      "With over 25 years in the energy sector, trust is not claimed – it’s earned.",
+    points: [
+      "We’ve grown with the solar industry and bring decades of expertise.",
+      "Our systems are known for longevity and reliability.",
+      "We focus on doing what’s right, not just what sells.",
+      "Our client relationships last because we deliver consistent results.",
+    ],
+    img: "https://storage.googleapis.com/a1aa/image/a6bb9ba5-9710-4d97-6623-f283a7ce4df1.jpg",
+    alt: "Old and new solar projects representing legacy and evolution",
+  },
+  {
+    heading: "Creating Real Change Through Government Collaborations",
+    subheading:
+      "We don’t just talk about impact – we create it, in partnership with the Government.",
+    points: [
+      "As a UPNEDA-approved vendor, we drive solar adoption at scale.",
+      "We power not just homes, but hospitals, schools, and public infrastructure.",
+      "We empower communities to control their energy future.",
+      "We act on our mission to build a better, solar-powered India.",
+    ],
+    img: "https://storage.googleapis.com/a1aa/image/72f5a45b-2e30-45fc-b276-a06c6a12a64e.jpg",
+    alt: "Government officials and solar technicians inspecting installation",
+  },
 ];
 
-const Footer = () => {
-  const navigate = useNavigate();
+export default function About() {
   return (
-    <div className="bg-[#00122E] text-white GetfontHomeDash">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Call Back Box - reduced padding and margin */}
-        <CallBackSection />
+    <div className="bg-white  h-[8300px] text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 About">
+      {/* Banner Image */}
+     
+      <ImageWithOverlay/>
+      
+      <section className="mt-8">
+        <ChatUI4 />
+      </section>
 
-        {/* Main Footer */}
-        <footer className="pb-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {/* Contact Info */}
-            <div>
-              <h3 className="text-sm font-semibold border-b border-green-800 pb-1 mb-3">Contact Info</h3>
-              <ul className="space-y-1 text-sm text-[#B0B9D1]">
-                <li className="flex items-center gap-2"><FaPhoneAlt /> +91 9310259325</li>
-
-                <li className="flex items-center gap-2"><FaEnvelope /> admin@divypower.com</li>
-                <li className="flex items-center gap-2"><FaEnvelope /> Info@divypower.com
-                </li>
-                <li className="flex items-center gap-2"><FaEnvelope />
-
-                  sales@divypower.com</li>
-              </ul>
-            </div>
-
-            {/* Useful Links */}
-            <div>
-              <h3 className="text-sm font-semibold border-b border-green-800 pb-1 mb-3">Useful Links</h3>
-              <div className="grid grid-cols-2 gap-1 text-[#B0B9D1] text-sm">
-                {routes.map((route) => (
-                  <NavLink key={route.name} to={route.path} className="flex items-center gap-1 hover:text-white">
-                    <FaAngleRight /> {route.name}
-                  </NavLink>
-                ))}
-              </div>
-            </div>
-
-            {/* Our Solutions + Social */}
-            <div>
-              <h3 className="text-sm font-semibold border-b border-green-800 pb-1 mb-3">Our Solutions</h3>
-              <ul className="text-[#B0B9D1] text-sm space-y-1">
-                {[
-                  "Solar Rooftop",
-                  "Battery Storage",
-                  "Solar Street Lights",
-                  "Hybrid Solar Systems",
-                  "Solar Water Pump",
-                  "EV Charging Stations",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-1 hover:text-white">
-                    <FaAngleRight /> {item}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Social */}
-              <div className="flex gap-2 mt-3">
-                {[FaFacebookF, FaInstagram, FaDribbble].map((Icon, idx) => (
-                  <a key={idx} href="#" className="bg-white text-[#00122E] w-7 h-7 rounded-full flex items-center justify-center hover:bg-gray-200">
-                    <Icon size={13} />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Subscribe */}
-          <div className="bg-green-800 rounded-full max-w-md flex items-center px-4 py-2 gap-3 mb-5">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/7b3a6d02-f780-4d75-352b-f382cb430dec.jpg"
-              alt="Newsletter Icon"
-              className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0"
-            />
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="rounded-full flex-grow px-3 py-1.5 text-sm text-white placeholder-white bg-green-800 focus:outline-none"
-            />
-            <button className="bg-green-800 border border-white rounded-full px-3 py-1 text-white text-sm font-medium hover:bg-white hover:text-green-800 transition">
-              Subscribe
-            </button>
-          </div>
-
-          {/* Address */}
-          <p className="text-[#B0B9D1] text-xs flex items-center gap-2 mb-2">
-            <FaMapMarkerAlt />
-            53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar, Nai Basti Dundaher Ghaziabad, Uttar Pradesh 201001
-          </p>
-
-          {/* Copyright */}
-          <p className="text-[#B0B9D1] text-xs text-center">
-            &copy; {new Date().getFullYear()} DIVY POWER. All rights reserved.  <span
-              className="text-[#B0B9D1] text-xs text-end ml-14 cursor-pointer"
-              onClick={() => navigate("/privacy")}
-            >
-              Privacy Policy
-            </span>
-          </p>
-
-        </footer>
+      {/* Scroll Stacking Cards */}
+      <div className="-mt-[550px] 2xl:-mt-[700px] mb-24">
+        <ScrollStackingCards content={aboutUsContent} />
       </div>
+
+      <section className="-mt-[290px]">
+        <CompanySection />
+      </section>
+      
+      <section className="">
+        <HoverVideoCard2 />
+      </section>
+      <section>
+        <ProcessSteps />
+      </section>
+      <section className="  -mt-16 md:-mt-44 xl:-mt-64 2xl:-mt-96 lg:-mt-72">
+        <HoverVideoCard3 />
+      </section>
+
+
+
+      {/* Why Choose Us Section */}
+      <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[10px] About">
+        <div className="bg-[#fdf6ee] shadow-xl overflow-x-hidden rounded-xl p-5 sm:p-8 md:p-12 max-w-[300px] sm:max-w-[300px] md:max-w-[1000px] mx-auto">
+          {/* Heading with icons - responsive layout */}
+          <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 text-center sm:text-left">
+            <div className="flex items-center gap-3">
+              <img
+                src={sunPhoto}
+                alt="Chacha"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+              />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-red-700 leading-snug">
+                Why Choose Us <br className="sm:hidden" />
+                as Your Solar Partner?
+              </h2>
+              <img
+                src={sunImage}
+                alt="Didi"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-4">
+            <p className="text-center sm:text-left">
+              At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install
+              solar systems — we build{" "}
+              <span className="text-green-600 font-semibold">
+                lasting energy partnerships
+              </span>
+              .
+            </p>
+
+            <ul className="list-disc list-inside space-y-3 pl-4">
+              <li>
+                <strong>
+                  Committed to quality, accountability, and long-term service.
+                </strong>
+              </li>
+              <li>
+                <strong>Post-installation support:</strong> Real-time
+                maintenance and performance monitoring throughout the system's
+                lifecycle.
+              </li>
+              <li>
+                <strong>
+                  Top-grade components, certified engineers &
+                  government-approved materials
+                </strong>{" "}
+                ensure maximum durability and safety.
+              </li>
+              <li>
+                <strong>MNRE-approved & UPNEDA-certified;</strong> officially
+                recognized by the government of India.
+              </li>
+              <li>
+                <strong>Proven track record</strong> with solar projects across
+                villages, schools, societies, and institutions.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className=" mt-30 ">
+        <FiguringOut />
+      </section>
+<section className=" mt-52  ">
+        <ContactCards />
+      </section>
+
+      <section className=" mt-16">
+        <SolarCards/>
+      </section>
+
+      <section className=" -mt-24 min-w-full lg:min-w-[1300px]  md:min-w-[1300px] xl:min-w-[1450px] 2xl:min-w-[1600px] ">
+        <Footer />
+      </section>
+
     </div>
-
   );
-};
-
-export default Footer;
+}
