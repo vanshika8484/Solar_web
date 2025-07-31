@@ -2,31 +2,31 @@ import React, { useRef } from "react";
 
 const teamMembers = [
   {
-    name: "Mark Makana",
-    role: "Solar Specialist",
+    name: "Architect",
+    role: "Architect",
     image:
       "https://storage.googleapis.com/a1aa/image/249ae767-68b3-4bcd-1521-265ee80c5d7b.jpg",
     reel:
       "https://res.cloudinary.com/drz2uocug/video/upload/v1753181164/Architecture_Interviews_Cosmopolitan_Development_2_zbw4s1.mp4",
   },
   {
-    name: "John Makana",
-    role: "Solar Specialist",
+    name: "Architect",
+    role: "Architect",
     image:
       "https://storage.googleapis.com/a1aa/image/ba2e056b-5797-4eaa-d680-7a78a84778c0.jpg",
     reel:
       "https://res.cloudinary.com/drz2uocug/video/upload/v1753181164/Architecture_Interviews_Evolving_Tech_Using_Solar_1_r7eqrw.mp4",
   },
   {
-    name: "Arvvani Joe",
-    role: "Solar Specialist",
+    name: "Entrepreneur",
+    role: "Entrepreneur",
     image:
       "https://storage.googleapis.com/a1aa/image/d8ee8bcd-44eb-4126-73ad-adb857ac13a5.jpg",
     reel:
       "https://res.cloudinary.com/drz2uocug/video/upload/v1753181164/Founder_And_Friends_Solar_And_Hesitation_vzvned.mp4",
   },
   {
-    name: "Matchine Mue",
+    name: "Head of Architect",
     role: "Solar Specialist",
     image:
       "https://storage.googleapis.com/a1aa/image/5b4ec894-2c46-41d5-4e01-bd02f1629da7.jpg",
@@ -50,7 +50,7 @@ const FiguringOut = () => {
     <div className="py-8 px-4 sm:px-6 lg:px-8 -mt-8">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-8 text-red-800">
-          Figuring Out with Divy
+         Figuring out with DIVY with Architects
         </h2>
 
         {/* Responsive Grid: 2 columns on mobile, 4 on desktop */}
