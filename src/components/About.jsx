@@ -195,7 +195,7 @@ export default function About() {
         <SolarCards/>
       </section>
 
-      <section className=" -mt-24 lg:min-w-[1300px]  md:min-w-[1300px] xl:min-w-[1300px] 2xl:min-w-[1600px] ">
+      <section className=" -mt-24 min-w-full lg:min-w-[1300px]  md:min-w-[1300px] xl:min-w-[1450px] 2xl:min-w-[1600px] ">
         <Footer />
       </section>
 
