@@ -3,9 +3,9 @@ import { FaBolt } from "react-icons/fa";
 
 const ElectricitySavedCard = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg flex items-center justify-center h-[400px] lg:h-[320px] md:h-[320px] xl:h-[320px] 2xl:h-[320px]  p-4 font-['Inter'] w-full 2xl:w-[460px]">
+    <div className="bg-blue-600 rounded-2xl shadow-lg flex items-center justify-center h-[400px] lg:h-[320px] md:h-[320px] xl:h-[320px] 2xl:h-[320px]  p-4 font-['Inter'] w-full 2xl:w-[460px]">
       <div className="flex flex-col items-center justify-center p-6 w-72 sm:w-80">
-        <h2 className="text-gray-700 font-semibold text-lg mb-4">
+        <h2 className="text-gray-100 font-semibold text-lg mb-4">
           Electricity Saved
         </h2>
 
@@ -47,11 +47,11 @@ const ElectricitySavedCard = () => {
 
           {/* Center Icon and Text */}
           <div className="absolute flex flex-col items-center -mt-2">
-            <FaBolt className="text-black text-2xl mb-1" />
-            <span className="text-black font-semibold text-2xl leading-none">
+            <FaBolt className="text-white text-2xl mb-1" />
+            <span className="text-white font-semibold text-2xl leading-none">
               75%
             </span>
-            <span className="text-gray-400 text-xs mt-1">Electricity</span>
+            <span className="text-white text-xs mt-1">Electricity</span>
           </div>
         </div>
 
@@ -62,18 +62,18 @@ const ElectricitySavedCard = () => {
               className="w-4 h-4 rounded-sm"
               style={{ backgroundColor: "#EF4444" }}
             ></div>
-            <span className="text-gray-700 text-xs">Electricity</span>
+            <span className="text-white text-xs">Electricity</span>
           </div>
           <div className="flex items-center space-x-2">
             <div
               className="w-4 h-4 rounded-sm"
               style={{ backgroundColor: "#22C55E" }}
             ></div>
-            <span className="text-gray-700 text-xs">Solar Energy</span>
+            <span className="text-white text-xs">Solar Energy</span>
           </div>
         </div>
 
-        <p className="text-gray-700 font-semibold text-sm text-center">
+        <p className="text-white font-semibold text-sm text-center">
           75% <span className="font-normal">electricity saved</span>
         </p>
       </div>
