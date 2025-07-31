@@ -131,9 +131,7 @@ function Home() {
         <SolarCostCalculator />
 
       </section>
-      <section className="-mt-20 2xl:-mt-[270px] About1 ">
-        <Dashboard />
-      </section>
+      
       <section className=" h-72">
         <div className="text-center About1  py-6 mb-10  -mt-36 lg:-mt-44 md:-mt-40 ">
           <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
