@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import solar from "../Images/Solar3.jpg";
+import localImage from "../Images/Sv.JPG";
 import {
   FaTools,
   FaSolarPanel,
@@ -100,8 +101,12 @@ export default function Services() {
 
   return (
     <>
+
+
       <ToastContainer />
       <main className="bg-white">
+
+      
         {/* HERO */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
           <motion.h1
@@ -113,7 +118,14 @@ export default function Services() {
             <span className="text-black">Our Green</span> Services
           </motion.h1>
 
-       
+        <motion.img
+              src={localImage}
+              alt="banner"
+              className="w-full h-[400px] object-cover mt-20"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            />
         </section>
 
         {/* SERVICES TIMELINE */}
