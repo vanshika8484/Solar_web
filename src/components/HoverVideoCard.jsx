@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-
 const reelsData = [
   { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179478/C10_zcceyn.mp4" },
   { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179478/C7_Check_clbniv.mp4" },
@@ -87,7 +86,7 @@ const HoverVideoCard = () => {
         {reelsData.map((reel, index) => (
           <motion.div
             key={index}
-            className="relative snap-start flex-shrink-0 w-[220px] h-[400px] bg-black rounded-xl overflow-hidden shadow-md"
+            className="relative snap-start flex-shrink-0 w-[220px] h-[350px] bg-black rounded-xl overflow-hidden shadow-md"
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
