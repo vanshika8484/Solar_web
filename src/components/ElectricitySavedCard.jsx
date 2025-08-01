@@ -3,7 +3,7 @@ import { FaBolt } from "react-icons/fa";
 
 const ElectricitySavedCard = () => {
   return (
-    <div className="bg-blue-600 rounded-2xl shadow-lg flex items-center justify-center h-[400px] lg:h-[320px] md:h-[320px] xl:h-[320px] 2xl:h-[320px]  p-4 font-['Inter'] w-full 2xl:w-[460px]">
+    <div className="bg-[#111827] rounded-2xl shadow-lg flex items-center justify-center h-[400px] lg:h-[320px] md:h-[320px] xl:h-[320px] 2xl:h-[320px]  p-4 font-['Inter'] w-full 2xl:w-[460px]">
       <div className="flex flex-col items-center justify-center p-6 w-72 sm:w-80">
         <h2 className="text-gray-100 font-semibold text-lg mb-4">
           Electricity Saved
