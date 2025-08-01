@@ -17,6 +17,13 @@ const fadeUp = {
 };
 
 export default function SolarPanelPage() {
+    const comingSoonData = [
+        { title: "Open Axis", description: "Coming Soon" },
+        { title: "Carbon Credit Mechanism", description: "Coming Soon" },
+        { title: "Ground Mount/Utility Scale Service", description: "Coming Soon" },
+        { title: "Agri PV", description: "Coming Soon" },
+    ];
+
     return (
         <>
             <div className="bg-gray-50 text-gray-800 font-sans py-20">
@@ -55,32 +62,31 @@ export default function SolarPanelPage() {
                         </motion.section>
 
                         <div className="flex items-start gap-6">
-                        <motion.img
-                            initial="hidden"
-                            animate="visible"
-                            variants={fadeUp}
-                            src="https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=600"
-                            alt="Solar Panels Field"
-                            className="w-[380px] h-[270px] rounded shadow"
-                        />
+                            <motion.img
+                                initial="hidden"
+                                animate="visible"
+                                variants={fadeUp}
+                                src="https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="Solar Panels Field"
+                                className="w-[380px] h-[270px] rounded shadow"
+                            />
 
-                        <motion.section
-                            initial="hidden"
-                            animate="visible"
-                            variants={fadeUp}
-                        >
-                            <p className=" text-gray-500">
-                                Longevity and durability are at the core of our solar panel offerings. Built to withstand harsh weather conditions and maintain consistent output over years of use, our panels provide a dependable energy solution. Their robust construction and high-quality components ensure minimal degradation, offering long-lasting power generation with minimal maintenance.
-                            </p>
-                            
-                        </motion.section>
-                        </div>  
+                            <motion.section
+                                initial="hidden"
+                                animate="visible"
+                                variants={fadeUp}
+                            >
+                                <p className=" text-gray-500">
+                                    Longevity and durability are at the core of our solar panel offerings. Built to withstand harsh weather conditions and maintain consistent output over years of use, our panels provide a dependable energy solution. Their robust construction and high-quality components ensure minimal degradation, offering long-lasting power generation with minimal maintenance.
+                                </p>
+                            </motion.section>
+                        </div>
+
                         <p className="mt-4 text-gray-500">
-                                Beyond financial savings, adopting solar energy contributes significantly to environmental preservation. By reducing carbon emissions and reliance on fossil fuels, our panels help create a cleaner, greener future. Investing in solar is not just a smart choice for energy efficiency—it’s a commitment to sustainability and responsible energy consumption
+                            Beyond financial savings, adopting solar energy contributes significantly to environmental preservation. By reducing carbon emissions and reliance on fossil fuels, our panels help create a cleaner, greener future. Investing in solar is not just a smart choice for energy efficiency—it’s a commitment to sustainability and responsible energy consumption
+                        </p>
 
-                                01
-                            </p>
-
+                        {/* Step Section */}
                         <motion.div
                             initial="hidden"
                             animate="visible"
@@ -96,7 +102,9 @@ export default function SolarPanelPage() {
                                     animate="visible"
                                     className="bg-white p-6 rounded shadow text-center"
                                 >
-                                    <div className="text-green-600 text-2xl font-bold">0{i + 1}</div>
+                                    <div className="text-green-600 text-2xl font-bold">
+                                        0{i + 1}
+                                    </div>
                                     <div className="mt-2 font-semibold">{step}</div>
                                     <p className="text-sm text-gray-600 mt-1">
                                         Tactical services through market web services
@@ -104,8 +112,40 @@ export default function SolarPanelPage() {
                                 </motion.div>
                             ))}
                         </motion.div>
+
+                        {/* Coming Soon Section */}
+                        <motion.section
+                            initial="hidden"
+                            animate="visible"
+                            variants={fadeUp}
+                            className="mt-12"
+                        >
+                            <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">
+                                Coming Soon
+                            </h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {comingSoonData.map((item, i) => (
+                                    <motion.div
+                                        key={i}
+                                        custom={i}
+                                        variants={fadeUp}
+                                        initial="hidden"
+                                        animate="visible"
+                                        className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-md transition"
+                                    >
+                                        <h3 className="text-lg font-semibold text-gray-800">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-sm text-gray-500 mt-2">
+                                            {item.description}
+                                        </p>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.section>
                     </div>
 
+                    {/* Sidebar */}
                     <aside className="space-y-8">
                         <motion.div
                             initial="hidden"
@@ -126,13 +166,14 @@ export default function SolarPanelPage() {
                             variants={fadeUp}
                             className="bg-white p-6 rounded-2xl shadow-md space-y-4"
                         >
-                            <h3 className="text-2xl font-bold text-gray-800 border-b pb-2 mb-2">Our Products</h3>
+                            <h3 className="text-2xl font-bold text-gray-800 border-b pb-2 mb-2">
+                                Our Products
+                            </h3>
                             {[
                                 "Solar-Pump",
                                 "Micro-Inverter",
                                 "Earthing",
                                 "LA",
-                        
                                 "Diesel/Petrol Genset",
                             ].map((product, i) => (
                                 <Link
@@ -145,20 +186,17 @@ export default function SolarPanelPage() {
                             ))}
                         </motion.div>
 
-                        
-
                         <motion.div className="bg-white p-6 rounded shadow text-sm space-y-3">
                             <div className="flex items-start gap-2">
                                 <span className="font-bold text-gray-700 w-20">Email:</span>
-                                <a href="mailto:info@example.com" className="text-green-700 hover:underline">
-                                  Info@divypower.com
-
+                                <a
+                                    href="mailto:Info@divypower.com"
+                                    className="text-green-700 hover:underline"
+                                >
+                                    Info@divypower.com
                                 </a>
                             </div>
-
-                            
                         </motion.div>
-
                     </aside>
                 </div>
             </div>
