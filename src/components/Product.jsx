@@ -6,8 +6,6 @@ import { Package } from "lucide-react";
 import Genset1 from '../Images/Genset.jpg'
 import Micro from '../Images/Micro.jpg'
 import SolarP from '../Images/SolarP.jpg'
-import pump from '../Images/pump.jpg'
-import light1 from '../Images/light1.jpg'
 
 
 // Animation variants
@@ -40,7 +38,7 @@ function Product() {
       description:
         "Divy Power’s solar pumps offer an efficient, eco-friendly solution for water needs in remote and rural areas—ideal for irrigation, water supply, and livestock, with low maintenance and long-lasting performance.",
       icon: "https://media.istockphoto.com/id/1458358486/photo/3d-rendering-of-water-pump-station-on-rooftop-factory-include-centrifugal-pump-electric-motor.jpg?b=1&s=612x612&w=0&k=20&c=naJgq6F77-J77u3AQzz2k64ZH1KRFq7jx-fPJHLJHjg=",
-      image: pump,
+      image: "https://media.istockphoto.com/id/1458358486/photo/3d-rendering-of-water-pump-station-on-rooftop-factory-include-centrifugal-pump-electric-motor.jpg?b=1&s=612x612&w=0&k=20&c=naJgq6F77-J77u3AQzz2k64ZH1KRFq7jx-fPJHLJHjg=",
       to: "/Solar-Pump",
     },
     {
@@ -65,7 +63,7 @@ function Product() {
       title: "Lightning Arrestor (LA)",
       description: "Our lightning arrestors provide strong protection by safely redirecting lightning strikes, ensuring your electrical systems and infrastructure stay secure from unpredictable hazards.",
       icon: "https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg",
-      image: light1,
+      image: "https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg",
       to: "/LA",
     },
 
@@ -237,17 +235,28 @@ function Product() {
 
 
 
+            <section className="max-w-4xl mx-auto text-center py-16 px-6 bg-gray-50 rounded-xl shadow-sm ">
+              <h2 className="text-3xl font-bold text-green-800 mb-4">Coming Soon!</h2>
+              <p className="text-gray-600 max-w-lg mx-auto">
+                Exciting products are on the way. Stay tuned for updates and be the first to know when they launch.
+              </p>
+            </section>
+
+            {/* Last Section */}
+            
           </section>
         </div>
 
 
       </div>
 
-       <section className=' mt-[1500px] xl:mt-[1600px]' >
+
+
+      <section className=' mt-[1900px] xl:mt-[1900px]' >
         <Footer />
       </section>
 
-     
+
     </div>
   );
 }
