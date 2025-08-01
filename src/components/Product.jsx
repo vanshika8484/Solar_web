@@ -2,11 +2,9 @@ import React from 'react';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Package } from "lucide-react";
-import Genset1 from '../Images/Genset.jpg'
-import Micro from '../Images/Micro.jpg'
-import SolarP from '../Images/SolarP.jpg'
-
+import Genset1 from '../Images/Genset.jpg';
+import Micro from '../Images/Micro.jpg';
+import SolarP from '../Images/SolarP.jpg';
 
 // Animation variants
 const containerVariants = {
@@ -26,88 +24,90 @@ const cardVariants = {
 function Product() {
   const solarData = [
     {
-      title: "SOLAR PANEL",
+      title: 'SOLAR PANEL',
       description:
-        "Our solar panels efficiently convert sunlight into electricity, ensuring long-lasting performance and reduced environmental impact for homes, businesses, and industries.",
-      icon: "https://divyby.redspace.in/assets/images/updated-images/img%203.png",
+        'Our solar panels efficiently convert sunlight into electricity, ensuring long-lasting performance and reduced environmental impact for homes, businesses, and industries.',
       image: SolarP,
-      to: "/Solar-pannel",
+      to: '/Solar-pannel',
     },
     {
-      title: "SOLAR PUMP",
+      title: 'SOLAR PUMP',
       description:
-        "Divy Power’s solar pumps offer an efficient, eco-friendly solution for water needs in remote and rural areas—ideal for irrigation, water supply, and livestock, with low maintenance and long-lasting performance.",
-      icon: "https://media.istockphoto.com/id/1458358486/photo/3d-rendering-of-water-pump-station-on-rooftop-factory-include-centrifugal-pump-electric-motor.jpg?b=1&s=612x612&w=0&k=20&c=naJgq6F77-J77u3AQzz2k64ZH1KRFq7jx-fPJHLJHjg=",
-      image: "https://media.istockphoto.com/id/1458358486/photo/3d-rendering-of-water-pump-station-on-rooftop-factory-include-centrifugal-pump-electric-motor.jpg?b=1&s=612x612&w=0&k=20&c=naJgq6F77-J77u3AQzz2k64ZH1KRFq7jx-fPJHLJHjg=",
-      to: "/Solar-Pump",
+        'Divy Power’s solar pumps offer an efficient, eco-friendly solution for water needs in remote and rural areas—ideal for irrigation, water supply, and livestock, with low maintenance and long-lasting performance.',
+      image: 'https://media.istockphoto.com/id/1458358486/photo/3d-rendering-of-water-pump-station-on-rooftop-factory-include-centrifugal-pump-electric-motor.jpg',
+      to: '/Solar-Pump',
     },
     {
-      title: "MICRO INVERTER",
+      title: 'MICRO INVERTER',
       description:
-        "Our compact, reliable micro inverters optimize solar performance by converting energy per panel, ensuring maximum output even with shading—ideal for homes and businesses seeking top solar returns.",
-      icon: "https://divyby.redspace.in/assets/images/updated-images/Inverter%20img-min.jpg",
+        'Our compact, reliable micro inverters optimize solar performance by converting energy per panel, ensuring maximum output even with shading—ideal for homes and businesses seeking top solar returns.',
       image: Micro,
-      to: "/Micro-Inverter",
+      to: '/Micro-Inverter',
     },
   ];
 
   const saftyData = [
     {
-      title: "Earthing",
-      description: "Divy Power provides high-quality earthing solutions to protect against shocks, fires, and equipment damage—ensuring safety for homes, businesses, and industrial setups.",
-      icon: "https://divyby.redspace.in/assets/images/updated-images/img%20earthing.png",
-      image: "https://divyby.redspace.in/assets/images/updated-images/img%20earthing.png",
-      to: "/Earthing",
+      title: 'Earthing',
+      description:
+        'Divy Power provides high-quality earthing solutions to protect against shocks, fires, and equipment damage—ensuring safety for homes, businesses, and industrial setups.',
+      image: 'https://divyby.redspace.in/assets/images/updated-images/img%20earthing.png',
+      to: '/Earthing',
     },
     {
-      title: "Lightning Arrestor (LA)",
-      description: "Our lightning arrestors provide strong protection by safely redirecting lightning strikes, ensuring your electrical systems and infrastructure stay secure from unpredictable hazards.",
-      icon: "https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg",
-      image: "https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg",
-      to: "/LA",
+      title: 'Lightning Arrestor (LA)',
+      description:
+        'Our lightning arrestors provide strong protection by safely redirecting lightning strikes, ensuring your electrical systems and infrastructure stay secure from unpredictable hazards.',
+      image: 'https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg',
+      to: '/LA',
     },
-
   ];
 
   const Genset = [
-
     {
-      title: "Diesel/Petrol Genset",
-      description: "Our diesel and petrol gensets provide reliable, high-performance power for homes, businesses, and remote sites—built for durability, efficiency, and dependable backup in any situation.",
-      icon: "https://divyby.redspace.in/assets/images/updated-images/genset%201.jpg",
+      title: 'Diesel/Petrol Genset',
+      description:
+        'Our diesel and petrol gensets provide reliable, high-performance power for homes, businesses, and remote sites—built for durability, efficiency, and dependable backup in any situation.',
       image: Genset1,
-      to: "/Diesel/Petrol Genset",
+      to: '/Diesel/Petrol Genset',
     },
+  ];
 
+  const gasificationData = [
+    { title: 'Green Hydrogen', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=Green+Hydrogen' },
+    { title: 'CBG (Compressed Biogas)', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=CBG' },
+    { title: 'Bio Diesel', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=Bio+Diesel' },
+    { title: 'EV Charging', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=EV+Charging' },
+    { title: 'Home Automation', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=Home+Automation' },
   ];
 
   return (
     <div>
-      <div className='flex items-center justify-center min-h-screen '>
+      <div className="flex items-center justify-center min-h-screen">
         <div>
-          <section className=" max-h-screen relative py-20 text-center  bg-gradient-to-br from-white to-gray-100 GetFontSol   max-w-7xl ">
-            <div className="absolute inset-0 opacity-5 bg-[url('https://example.com/your-background.svg')] bg-cover bg-center pointer-events-none" />
-
-            <div className="relative z-10 ">
+          <section className="max-h-screen relative py-20 text-center bg-gradient-to-br from-white to-gray-100 GetFontSol max-w-7xl">
+            {/* Heading */}
+            <div className="relative z-10">
               <motion.h1
-                className="text-4xl font-bold text-black mb-2 "
+                className="text-4xl font-bold text-black mb-2"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-
-                Our <span className='text-green-800'>Products</span>
+                Our <span className="text-green-800">Products</span>
               </motion.h1>
             </div>
 
             {/* Solar Solutions */}
-            <motion.section className="py-20 px-6 text-white  bg-gradient-to-br from-white to-gray-100 "
+            <motion.section
+              className="py-20 px-6 bg-gradient-to-br from-white to-gray-100"
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
               variants={containerVariants}
             >
-              <motion.div className="max-w-7xl mx-auto text-center mb-10"
+              <motion.div
+                className="max-w-7xl mx-auto text-center mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -119,24 +119,23 @@ function Product() {
                 {solarData.map((item, index) => (
                   <motion.div
                     key={index}
-                    className=" text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
+                    className="text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
                     variants={cardVariants}
                   >
                     <img src={item.image} alt={item.title} className="h-70 w-full object-cover" />
                     <div className="p-6 flex-1 flex flex-col justify-between">
                       <div>
-                        {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
-                    <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
-                  </div> */}
                         <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                         <p className="text-sm text-gray-700">{item.description}</p>
                       </div>
                       <div className="mt-6 flex justify-center">
-                        <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-                          <Link to={item.to}>Read More</Link>
-                        </button>
+                        <Link
+                          to={item.to}
+                          className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
+                        >
+                          Read More
+                        </Link>
                       </div>
-
                     </div>
                   </motion.div>
                 ))}
@@ -144,22 +143,23 @@ function Product() {
             </motion.section>
 
             {/* Safety Solutions */}
-            {/* Safety Solutions */}
-            <motion.section className="bg-[#000000] rounded-sm py-20  text-white"
+            <motion.section
+              className="bg-[#000000] rounded-sm py-20 text-white"
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
               variants={containerVariants}
             >
-              <motion.div className="max-w-7xl mx-auto text-center mb-10 "
+              <motion.div
+                className="max-w-7xl mx-auto text-center mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-4xl  text-green-700 font-bold">Safety Solutions</h2>
+                <h2 className="text-4xl text-green-700 font-bold">Safety Solutions</h2>
               </motion.div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 {saftyData.map((item, index) => (
                   <motion.div
                     key={index}
@@ -169,16 +169,16 @@ function Product() {
                     <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
                     <div className="p-6 flex-1 flex flex-col justify-between">
                       <div>
-                        {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
-              <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
-            </div> */}
                         <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                         <p className="text-sm text-gray-700">{item.description}</p>
                       </div>
                       <div className="mt-6 flex justify-center">
-                        <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-                          <Link to={item.to}>Read More</Link>
-                        </button>
+                        <Link
+                          to={item.to}
+                          className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
+                        >
+                          Read More
+                        </Link>
                       </div>
                     </div>
                   </motion.div>
@@ -186,17 +186,16 @@ function Product() {
               </div>
             </motion.section>
 
-
-
-
-
-            <motion.section className="bg-white py-20 px-6 text-white"
+            {/* Genset Solutions */}
+            <motion.section
+              className="bg-white py-20 px-6"
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
               variants={containerVariants}
             >
-              <motion.div className="max-w-7xl mx-auto text-center mb-10"
+              <motion.div
+                className="max-w-7xl mx-auto text-center mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -204,7 +203,7 @@ function Product() {
                 <h2 className="text-4xl text-black font-bold">Genset Solutions</h2>
               </motion.div>
 
-              <div className="grid  grid-cols-1 justify-center align-middle items-center gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
                 {Genset.map((item, index) => (
                   <motion.div
                     key={index}
@@ -214,16 +213,16 @@ function Product() {
                     <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
                     <div className="p-6 flex-1 flex flex-col justify-between">
                       <div>
-                        {/* <div className="bg-white p-2 inline-block rounded shadow w-10 h-10 mb-4">
-              <img src={item.icon} alt="icon" className="w-full h-full object-contain" />
-            </div> */}
                         <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                         <p className="text-sm text-gray-900">{item.description}</p>
                       </div>
                       <div className="mt-6 flex justify-center">
-                        <button className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">
-                          <Link to={item.to}>Read More</Link>
-                        </button>
+                        <Link
+                          to={item.to}
+                          className="flex items-center justify-center gap-2 bg-green-800 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition"
+                        >
+                          Read More
+                        </Link>
                       </div>
                     </div>
                   </motion.div>
@@ -231,32 +230,47 @@ function Product() {
               </div>
             </motion.section>
 
+            {/* Gasification Section */}
+            <motion.section
+              className=" py-20 px-6"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={containerVariants}
+            >
+              <motion.div
+                className="max-w-7xl mx-auto text-center mb-10"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+               <h2 className=" text-red-600  text-5xl font-bold">COMMING SOON</h2>
+                <h2 className="text-4xl mt-10 text-green-800 font-bold">Gasification</h2>
+              </motion.div>
 
-
-
-
-            <section className="max-w-4xl mx-auto text-center py-16 px-6 bg-gray-50 rounded-xl shadow-sm ">
-              <h2 className="text-3xl font-bold text-green-800 mb-4">Coming Soon!</h2>
-              <p className="text-gray-600 max-w-lg mx-auto">
-                Exciting products are on the way. Stay tuned for updates and be the first to know when they launch.
-              </p>
-            </section>
-
-            {/* Last Section */}
-            
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {gasificationData.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
+                    variants={cardVariants}
+                  >
+                    <div   className="h-60 w-full object-cover" />
+                    <div className="p-6 flex-1 flex flex-col justify-between text-center">
+                      <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                      <p className="text-sm text-gray-700">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.section>
           </section>
         </div>
-
-
       </div>
 
-
-
-      <section className=' mt-[1900px] xl:mt-[1900px]' >
+      <section className="mt-[2600px] xl:mt-[2600px]">
         <Footer />
       </section>
-
-
     </div>
   );
 }
