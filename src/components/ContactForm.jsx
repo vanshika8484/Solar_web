@@ -56,7 +56,7 @@ const ContactForm = () => {
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat -mt-2 md:-mt-5 lg:-mt-5 xl:-mt-5 ml-0 2xl:ml-64  ">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat -mt-2 md:-mt-5 lg:-mt-5 xl:-mt-5 ml-0 2xl:ml-64 xl:ml-40 lg:ml-0  ">
         {/* Form Section */}
         <form
           onSubmit={handelSubmit}
@@ -144,7 +144,8 @@ const ContactForm = () => {
             <p className="flex items-center justify-center md:justify-start gap-3">
               <i className="fas fa-envelope text-green-800"></i>
               <a className="font-semibold hover:text-[#3a8e3a]" href="mailto:info@divypower.in">
-                info@divypower.in
+               sales@divypower.com
+
               </a>
             </p>
           </div>
