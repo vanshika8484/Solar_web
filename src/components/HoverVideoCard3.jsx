@@ -51,13 +51,13 @@ const HoverVideoCard3 = () => {
           {reelsData.map((reel, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg w-56 shadow p-2 hover:shadow-lg transition-all"
+              className="bg-white  w-56 shadow p-2 hover:shadow-lg transition-all"
             >
-              <div className="relative rounded-md overflow-hidden">
+              <div className="relative  overflow-hidden">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.reel}
-                  className="w-full aspect-[9/16] object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                  className="w-full aspect-[9/16] object-cover  hover:scale-105 transition-transform duration-300"
                   controls
                   playsInline
                   onPlay={() => handlePlay(index)}
