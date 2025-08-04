@@ -94,13 +94,13 @@ const FiguringOut1 = () => {
           {reelsData.map((reel, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-44 sm:w-56 bg-white rounded-lg shadow-md p-2 hover:shadow-lg transition-all"
+              className="flex-shrink-0 w-44 sm:w-56 bg-white shadow-md p-2 hover:shadow-lg transition-all"
             >
-              <div className="relative rounded-md overflow-hidden">
+              <div className="relative  overflow-hidden">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.videoSrc}
-                  className="w-full aspect-[9/16] object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                  className="w-full aspect-[9/16] object-cover  hover:scale-105 transition-transform duration-300"
                   controls
                   onPlay={() => handlePlay(index)}
                   playsInline
