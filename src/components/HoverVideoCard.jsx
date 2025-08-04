@@ -86,7 +86,7 @@ const HoverVideoCard = () => {
         {reelsData.map((reel, index) => (
           <motion.div
             key={index}
-            className="relative snap-start flex-shrink-0 w-[220px] h-[350px] bg-black rounded-xl overflow-hidden shadow-md"
+            className="relative snap-start flex-shrink-0 w-[220px] h-[350px] bg-black  overflow-hidden shadow-md"
             whileHover={{ scale: 1.05 }}
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
