@@ -58,12 +58,12 @@ const FiguringOut = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all overflow-hidden"
+              className="bg-white  shadow-md hover:shadow-lg transition-all overflow-hidden"
             >
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 src={member.reel}
-                className="w-full max-h-[300px] aspect-[9/16] object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                className="w-full max-h-[300px] aspect-[9/16] object-cover  hover:scale-105 transition-transform duration-300"
                 controls
                 playsInline
                 onPlay={() => handlePlay(index)}
