@@ -75,7 +75,7 @@ const HoverVideoCard1 = () => {
   return (
     <div className="bg-white py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto relative">
-        <h2 className="text-center text-2xl sm:text-3xl text-red-800 mb-10 About1">
+        <h2 className="text-center text-2xl sm:text-2xl text-green-800 mb-10 About1">
           Choose DIVY as your Solar Partner
         </h2>
 
@@ -105,13 +105,13 @@ const HoverVideoCard1 = () => {
           {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-44 sm:w-56 bg-white rounded-lg shadow-md hover:shadow-lg transition-all p-2"
+            className="flex-shrink-0 w-44 sm:w-56 bg-white  shadow-md hover:shadow-lg transition-all p-2"
           >
-            <div className="rounded-md overflow-hidden">
+            <div className=" overflow-hidden">
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 src={member.reel}
-                className="w-full aspect-[9/16] object-cover rounded-md hover:scale-105 transition-transform duration-300"
+                className="w-full aspect-[9/16] object-cover  hover:scale-105 transition-transform duration-300"
                 controls
                 onPlay={() => handlePlay(index)}
                 playsInline
