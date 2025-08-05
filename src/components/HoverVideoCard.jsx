@@ -62,7 +62,7 @@ const HoverVideoCard = () => {
   return (
     <section className="relative 2xl:w-[1100px]  w-full  px-4 py-12 bg-gradient-to-r from-[#fefefe] to-[#ffffff]">
       <h2 className="text-center text-3xl font-bold text-green-800 mb-10">Stories Of Change We're Proud of
-        <p className=" p-5 text-sm text-black font-medium">Our client belived in us - and so can you,See how solar changed their lives.</p></h2>
+        <p className=" p-5 text-lg text-black font-medium">Our client belived in us and so can you,See how solar changed their lives.</p></h2>
 
 
       {/* Reels Container */}
@@ -133,7 +133,7 @@ const HoverVideoCard = () => {
         ))}
       </div>
       <div>
-        <p className=" mt-8 text-orange-400 font-semibold text-center">Aap kis cheez intezaar kar rahe hai ? Aaj hi contact karein Divy power ko-Trust bhi,Bachat bhi.</p>
+        <p className=" mt-8 text-orange-400 text-lg font-semibold text-center">Aap kis cheez intezaar kar rahe hai ? Aaj hi contact karein Divy power ko-Trust bhi,Bachat bhi.</p>
       </div>
     </section>
   );
