@@ -2,16 +2,16 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const reelsData = [
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179478/C10_zcceyn.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179478/C7_Check_clbniv.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179478/C9_Check_bz0sn0.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179477/C8_Xmcheck_eqchqo.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179477/C6_u3oakv.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179476/C2_Check_jcidtc.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179476/C5_Check_bcoqoj.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179476/C3_fdmvns.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179476/C4_snosg4.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1753179476/C1_nwahcx.mp4" }
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415747/5_gbgy6r.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415747/10_sjpvyf.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415747/11_nrjqi4.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/1_1_rn9fhi.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/4_n95vwy.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/3_oggubc.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/14_imdn4w.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/12_hjoqh1.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/2_ai876e.mp4" },
+  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415747/7_yusagh.mp4" }
 ];
 
 const HoverVideoCard = () => {
