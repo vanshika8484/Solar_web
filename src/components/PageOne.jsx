@@ -66,7 +66,7 @@ const PageOne = () => {
 
       {/* Bottom Feature Icons Section */}
      <motion.section
-  className="hidden sm:block mt-20 mx-4 sm:mx-10"
+  className="hidden mt-20 mx-4 sm:mx-10"
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true, amount: 0.2 }}
