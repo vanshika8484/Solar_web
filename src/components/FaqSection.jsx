@@ -114,13 +114,15 @@ const FaqSection = () => {
               {openIndex === index && (
                 <motion.div
                   key="content"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden px-6 pb-5 text-gray-800 text-sm sm:text-base"
+                  initial={{ opacity: 0, maxHeight: 0 }}
+                  animate={{ opacity: 1, maxHeight: 500 }}
+                  exit={{ opacity: 0, maxHeight: 0 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="overflow-hidden"
                 >
-                  {faq.answer}
+                  <div className="px-6 pb-5 text-gray-800 text-sm sm:text-base">
+                    {faq.answer}
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
