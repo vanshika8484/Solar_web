@@ -2,13 +2,7 @@ import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
-  {
-    name: "Asha Gupta",
-    role: "Safety Advocate",
-    image: "https://storage.googleapis.com/a1aa/image/asha-profile.jpg",
-    reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180383/Asha_Cheaper_Is_Not_Always_Safer_vuzxb7.mp4",
-  },
+  
   {
     name: "Ateesh Kumar",
     role: "TATA Solar Partner",
@@ -44,13 +38,7 @@ const teamMembers = [
     reel:
       "https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Rajeev_Arora_Our_Quality_Is_Our_Legacy_gejaps.mp4",
   },
-  {
-    name: "Asha Gupta",
-    role: "SOP Trainer",
-    image: "https://storage.googleapis.com/a1aa/image/asha-profile.jpg",
-    reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Asha_Divy_Power_Sop_s_a7v2yo.mp4",
-  },
+  
 ];
 
 const HoverVideoCard1 = () => {
@@ -105,7 +93,7 @@ const HoverVideoCard1 = () => {
           {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-44 sm:w-56 bg-white  shadow-md hover:shadow-lg transition-all p-2"
+            className="flex-shrink-0 w-44 sm:w-56 bg-[#918f8f]  shadow-md hover:shadow-lg transition-all p-2"
           >
             <div className=" overflow-hidden">
               <video
@@ -118,10 +106,10 @@ const HoverVideoCard1 = () => {
               />
             </div>
             <div className="text-left mt-2 px-1 pb-1">
-              <p className="text-xs sm:text-sm font-semibold text-gray-800">
+              <p className="text-xs sm:text-sm font-semibold text-gray-100">
                 {member.name}
               </p>
-              <p className="text-[10px] sm:text-xs text-gray-500">
+              <p className="text-[10px] sm:text-xs text-gray-100">
                 {member.role}
               </p>
             </div>
