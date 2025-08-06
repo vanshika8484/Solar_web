@@ -73,9 +73,7 @@ const HoverVideoCard2 = () => {
                   Play / Pause
                 </button>
               </div>
-              <p className="mt-2 text-[9px] sm:text-xs text-gray-600 text-center font-medium">
-                {reel.role}
-              </p>
+              
             </div>
           ))}
         </div>
