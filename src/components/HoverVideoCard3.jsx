@@ -30,47 +30,55 @@ const reelsData = [
 const HoverVideoCard3 = () => {
   const videoRefs = useRef([]);
 
-  // Pause all videos except the current one
-  const handlePlay = (currentIndex) => {
-    videoRefs.current.forEach((video, index) => {
-      if (index !== currentIndex && video && !video.paused) {
+  const handlePlayPause = (index) => {
+    videoRefs.current.forEach((video, i) => {
+      if (i !== index && video && !video.paused) {
         video.pause();
       }
     });
+
+    const video = videoRefs.current[index];
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
   };
 
   return (
-    <div className="bg-white py-10 px-4 sm:px-6 lg:px-10">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-white py-10 px-4 sm:px-6 lg:px-12 w-full">
+      <div className="max-w-[100%] mx-auto">
         <h2 className="text-center text-xl sm:text-2xl font-bold text-green-800 mb-8">
           Growth At Divy
         </h2>
 
-        {/* Grid Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
+        {/* Mobile: 3-cols grid | Desktop: Centered row */}
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:flex md:justify-center gap-4">
           {reelsData.map((reel, index) => (
             <div
               key={index}
-              className="bg-white  w-56 shadow p-2 hover:shadow-lg transition-all"
+              className="bg-white shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[180px] flex-shrink-0"
             >
-              <div className="relative  overflow-hidden">
+              <div className="relative overflow-hidden rounded-lg">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.reel}
-                  className="w-full aspect-[9/16] object-cover  hover:scale-105 transition-transform duration-300"
-                  controls
+                  className="w-full aspect-[9/16] object-cover"
                   playsInline
-                  onPlay={() => handlePlay(index)}
                 />
+                <button
+                  onClick={() => handlePlayPause(index)}
+                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-[10px] px-2 py-1 rounded-full hover:bg-green-700 transition"
+                >
+                  Play / Pause
+                </button>
               </div>
-              <p className="mt-2 text-[10px] sm:text-xs text-gray-600 text-center font-medium">
-                {reel.role}
-              </p>
+              
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
