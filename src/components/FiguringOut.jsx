@@ -38,42 +38,55 @@ const teamMembers = [
 const FiguringOut = () => {
   const videoRefs = useRef([]);
 
-  const handlePlay = (currentIndex) => {
-    videoRefs.current.forEach((video, index) => {
-      if (index !== currentIndex && video && !video.paused) {
+  const handlePlayPause = (index) => {
+    videoRefs.current.forEach((video, i) => {
+      if (i !== index && video && !video.paused) {
         video.pause();
       }
     });
+
+    const video = videoRefs.current[index];
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
   };
 
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8 -mt-8">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-8 text-red-800">
-         Figuring out with DIVY with Architects
+    <section className="bg-white py-8 px-4 sm:px-6 lg:px-12 w-full">
+      <div className="max-w-[100%] mx-auto">
+        <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold mb-8 text-red-800">
+          Figuring out with DIVY with Architects
         </h2>
 
-        {/* Responsive Grid: 2 columns on mobile, 4 on desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-2 sm:px-0">
+        {/* Mobile: Grid 3 cols | Desktop: One centered row */}
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:flex md:justify-center gap-4">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white  shadow-md hover:shadow-lg transition-all overflow-hidden"
+              className="bg-white shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[180px] flex-shrink-0"
             >
-              <video
-                ref={(el) => (videoRefs.current[index] = el)}
-                src={member.reel}
-                className="w-full max-h-[300px] aspect-[9/16] object-cover  hover:scale-105 transition-transform duration-300"
-                controls
-                playsInline
-                onPlay={() => handlePlay(index)}
-              />
-              <p className="mt-2 text-xs text-gray-600">{member.name}</p>
+              <div className="relative overflow-hidden rounded-lg">
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  src={member.reel}
+                  className="w-full aspect-[9/16] object-cover"
+                  playsInline
+                />
+                <button
+                  onClick={() => handlePlayPause(index)}
+                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-[10px] px-2 py-1 rounded-full hover:bg-green-700 transition"
+                >
+                  Play / Pause
+                </button>
+              </div>
+             
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
