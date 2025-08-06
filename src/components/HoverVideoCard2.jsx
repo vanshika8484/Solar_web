@@ -57,7 +57,7 @@ const HoverVideoCard2 = () => {
           {reelsData.map((reel, index) => (
             <div
               key={index}
-              className="bg-white shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[180px] flex-shrink-0"
+              className="bg-white shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[170px] flex-shrink-0"
             >
               <div className="relative overflow-hidden rounded-lg">
                 <video
@@ -73,7 +73,11 @@ const HoverVideoCard2 = () => {
                   Play / Pause
                 </button>
               </div>
-              
+
+              {/* Text under video */}
+              <p className="mt-2 text-[10px] sm:text-xs text-gray-800 text-center font-medium">
+                {reel.role}
+              </p>
             </div>
           ))}
         </div>
