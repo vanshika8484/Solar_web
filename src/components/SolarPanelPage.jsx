@@ -128,42 +128,47 @@ Ground Mount or Utility Scale solar systems are large-scale installations set up
                         </motion.div>
 
                         {/* Coming Soon: One Card → One Content */}
-                        <motion.section
-                            initial="hidden"
-                            animate="visible"
-                            variants={fadeUp}
-                            className="mt-12 space-y-8"
-                        >
-                            <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">
-                                Coming Soon
-                            </h2>
-                            {comingSoonData.map((item, i) => (
-                                <div key={i} className="space-y-4">
-                                    {/* Card */}
-                                    <motion.div
-                                        custom={i}
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        animate="visible"
-                                        className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-md transition"
-                                    >
-                                        <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
-                                        <p className="text-sm text-gray-500 mt-2">{item.description}</p>
-                                    </motion.div>
+                        {/* Coming Soon: One Card → One Content */}
+<motion.section
+  initial="hidden"
+  animate="visible"
+  variants={fadeUp}
+  className="mt-12 space-y-8"
+>
+  <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">
+    Coming Soon
+  </h2>
+  {comingSoonData.map((item, i) => (
+    <div key={i} className="space-y-4">
+      {/* Title & Short Description */}
+      <motion.div
+        custom={i}
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        className="text-center"
+      >
+        <h3 className="text-lg font-semibold text-gray-800">
+          {item.title}
+        </h3>
+        <p className="text-sm text-gray-500 mt-1">
+          {item.description}
+        </p>
+      </motion.div>
 
-                                    {/* Content */}
-                                    <motion.div
-                                        custom={i}
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        animate="visible"
-                                        className="bg-white p-6 rounded shadow"
-                                    >
-                                        <p className="text-gray-600 whitespace-pre-line">{item.content}</p>
-                                    </motion.div>
-                                </div>
-                            ))}
-                        </motion.section>
+      {/* Long Content */}
+      <motion.div
+        custom={i}
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+      >
+        <p className="text-gray-600 whitespace-pre-line">{item.content}</p>
+      </motion.div>
+    </div>
+  ))}
+</motion.section>
+
                     </div>
 
                     {/* Sidebar */}
