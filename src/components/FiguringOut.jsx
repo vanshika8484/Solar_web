@@ -70,7 +70,7 @@ const FiguringOut = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[180px] flex-shrink-0"
+              className="bg-[#787878] shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[180px] flex-shrink-0"
             >
               <div className="relative overflow-hidden rounded-lg">
                 <video
@@ -81,7 +81,7 @@ const FiguringOut = () => {
                 />
                 <button
                   onClick={() => handlePlayPause(index)}
-                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition"
+                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-[#787878] text-white p-2 rounded-full hover:bg-[#787878] transition"
                 >
                   {playingIndex === index ? (
                     <FaPause size={12} />
@@ -90,7 +90,7 @@ const FiguringOut = () => {
                   )}
                 </button>
               </div>
-              <p className="mt-2 text-[9px] sm:text-xs text-gray-600 text-center font-medium">
+              <p className="mt-2 text-[9px] sm:text-xs text-gray-100 text-center font-medium">
                 {member.name}
               </p>
             </div>
