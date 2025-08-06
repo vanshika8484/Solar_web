@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { FaPlay, FaPause } from "react-icons/fa";
 
 const teamMembers = [
   {
@@ -37,8 +38,10 @@ const teamMembers = [
 
 const FiguringOut = () => {
   const videoRefs = useRef([]);
+  const [playingIndex, setPlayingIndex] = useState(null);
 
   const handlePlayPause = (index) => {
+    // Pause all other videos
     videoRefs.current.forEach((video, i) => {
       if (i !== index && video && !video.paused) {
         video.pause();
@@ -48,8 +51,10 @@ const FiguringOut = () => {
     const video = videoRefs.current[index];
     if (video.paused) {
       video.play();
+      setPlayingIndex(index);
     } else {
       video.pause();
+      setPlayingIndex(null);
     }
   };
 
@@ -76,9 +81,13 @@ const FiguringOut = () => {
                 />
                 <button
                   onClick={() => handlePlayPause(index)}
-                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-[10px] px-2 py-1 rounded-full hover:bg-green-700 transition"
+                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition"
                 >
-                  Play / Pause
+                  {playingIndex === index ? (
+                    <FaPause size={12} />
+                  ) : (
+                    <FaPlay size={12} />
+                  )}
                 </button>
               </div>
               <p className="mt-2 text-[9px] sm:text-xs text-gray-600 text-center font-medium">
