@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { FaPlay, FaPause } from "react-icons/fa"; // Play / Pause icons
 
 const reelsData = [
   {
@@ -29,6 +30,7 @@ const reelsData = [
 
 const HoverVideoCard2 = () => {
   const videoRefs = useRef([]);
+  const [playingIndex, setPlayingIndex] = useState(null);
 
   const handlePlayPause = (index) => {
     videoRefs.current.forEach((video, i) => {
@@ -40,8 +42,10 @@ const HoverVideoCard2 = () => {
     const video = videoRefs.current[index];
     if (video.paused) {
       video.play();
+      setPlayingIndex(index);
     } else {
       video.pause();
+      setPlayingIndex(null);
     }
   };
 
@@ -59,18 +63,22 @@ const HoverVideoCard2 = () => {
               key={index}
               className="bg-white shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[170px] flex-shrink-0"
             >
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-lg aspect-square">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.reel}
-                  className="w-full aspect-[9/16] object-cover"
+                  className="w-full h-full object-cover"
                   playsInline
                 />
                 <button
                   onClick={() => handlePlayPause(index)}
-                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-[10px] px-2 py-1 rounded-full hover:bg-green-700 transition"
+                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition"
                 >
-                  Play / Pause
+                  {playingIndex === index ? (
+                    <FaPause size={12} />
+                  ) : (
+                    <FaPlay size={12} />
+                  )}
                 </button>
               </div>
 
