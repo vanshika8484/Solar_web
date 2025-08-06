@@ -61,7 +61,7 @@ const HoverVideoCard2 = () => {
           {reelsData.map((reel, index) => (
             <div
               key={index}
-              className="bg-white shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[170px] flex-shrink-0"
+              className="bg-[#787878] shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[170px] flex-shrink-0"
             >
               <div className="relative overflow-hidden rounded-lg aspect-square">
                 <video
@@ -72,7 +72,7 @@ const HoverVideoCard2 = () => {
                 />
                 <button
                   onClick={() => handlePlayPause(index)}
-                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition"
+                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-[#787878] text-white p-2 rounded-full hover:bg-[#787878] transition"
                 >
                   {playingIndex === index ? (
                     <FaPause size={12} />
@@ -83,7 +83,7 @@ const HoverVideoCard2 = () => {
               </div>
 
               {/* Text under video */}
-              <p className="mt-2 text-[10px] sm:text-xs text-gray-800 text-center font-medium">
+              <p className="mt-2 text-[10px] sm:text-xs text-gray-100 text-center font-medium">
                 {reel.role}
               </p>
             </div>
