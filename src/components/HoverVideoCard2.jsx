@@ -3,70 +3,84 @@ import React, { useRef } from "react";
 const reelsData = [
   {
     role: "Employees Are Our Partners",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180630/Founder_And_Friends_Our_Employees_Are_Our_Partners_q8rdvn.mp4",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415925/Our_Employees_Are_Our_Partner_yvsc5j.mp4",
   },
   {
     role: "25 Years into Energy",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180629/Founder_1_mlm9ac.mp4",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415925/We_Believe_In_Solution_Based_Approach_jsbzhw.mp4",
   },
   {
     role: "Company is a Group Company",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180628/Founder_And_Friends_Company_Is_A_Group_Company_rjj1dj.mp4",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415924/Our_Company_Is_A_Group_Company_cfa3ux.mp4",
   },
   {
     role: "I Am A Worker Not Owner",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180628/Founder_I_Am_A_Worker_Not_Owner_k2jg2k.mp4",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415924/Mission_And_Vision_ihqskf.mp4",
   },
   {
     role: "Mission & Vision",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180628/Founder_Mission_And_Vision_dtyyay.mp4",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415924/I_Am_A_Worker_Not_A_Owner_cysvpa.mp4",
   },
   {
     role: "We Believe in Solution",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180628/Founder_We_Believe_In_Solution_avwksa.mp4",
+    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415924/1_s7ae04.mp4",
   },
 ];
 
 const HoverVideoCard2 = () => {
   const videoRefs = useRef([]);
 
-  const handlePlay = (currentIndex) => {
-    videoRefs.current.forEach((v, i) => {
-      if (i !== currentIndex && v && !v.paused) v.pause();
+  const handlePlayPause = (index) => {
+    videoRefs.current.forEach((video, i) => {
+      if (i !== index && video && !video.paused) {
+        video.pause();
+      }
     });
+
+    const video = videoRefs.current[index];
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
   };
 
   return (
-    <div className="bg-white py-8 px-4 sm:px-6 lg:px-12">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-xl sm:text-2xl text-green-800 mb-8">
+    <section className="bg-white py-8 px-4 sm:px-6 lg:px-12 w-full">
+      <div className="max-w-[100%] mx-auto">
+        <h2 className="text-center text-xl sm:text-2xl text-green-800 mb-8 font-bold">
           Our Founder Philosophy
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
+        {/* Mobile: Grid 3 cols, Desktop: Centered row */}
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:flex md:justify-center gap-4">
           {reelsData.map((reel, index) => (
             <div
               key={index}
-              className="bg-white  shadow-md p-2 hover:shadow-lg transition-all w-60 h-full"
+              className="bg-white shadow-md p-2 rounded-lg hover:shadow-lg transition-all w-full sm:w-full md:w-[180px] flex-shrink-0"
             >
-              <div className="relative overflow-hidden ">
+              <div className="relative overflow-hidden rounded-lg">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={reel.reel}
-                  className="w-full aspect-[9/16] object-cover  hover:scale-105 transition-transform duration-300"
-                  controls
-                  onPlay={() => handlePlay(index)}
+                  className="w-full aspect-[9/16] object-cover"
                   playsInline
                 />
+                <button
+                  onClick={() => handlePlayPause(index)}
+                  className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-[10px] px-2 py-1 rounded-full hover:bg-green-700 transition"
+                >
+                  Play / Pause
+                </button>
               </div>
-              <p className="mt-2 text-[10px] sm:text-xs text-gray-600 text-center font-medium">
+              <p className="mt-2 text-[9px] sm:text-xs text-gray-600 text-center font-medium">
                 {reel.role}
               </p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
