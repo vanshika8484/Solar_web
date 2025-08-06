@@ -21,25 +21,25 @@ export default function SolarPanelPage() {
         {
             title: "Agri PV",
             description: "Coming Soon",
-            content: `1. About Agri-Voltaic Systems  
+            content: `
 Agri-Voltaic (Agri-PV) systems integrate solar energy generation with traditional agriculture, allowing dual use of the same land area. This innovative model enables farmers to continue cultivating crops while solar panels above produce clean, renewable energy. Agri-Voltaics enhances land-use efficiency, improves crop resilience, and promotes sustainable energy production—all without compromising food security.`
         },
         {
             title: "Open Axis",
             description: "Coming Soon",
-            content: `Open Access  
+            content: `
 India’s renewable energy landscape is rapidly evolving, and one of the most powerful tools accelerating this transition is Open Access (OA). Open Access in the electricity sector empowers consumers to purchase electricity directly from power generators, bypassing local distribution companies (Discoms). This system offers substantial benefits to industries, commercial establishments, and even large residential communities. Here is a comprehensive guide on Open Access—its definition, rules, state-wise policies, benefits, and implications.`
         },
         {
             title: "Carbon Credit Mechanism",
             description: "Coming Soon",
-            content: `Carbon Credit Mechanism  
+            content: ` 
 The Carbon Credit Mechanism provides financial incentives for reducing greenhouse gas emissions. By switching to renewable energy like solar, businesses can earn tradable carbon credits, which create additional revenue while advancing their sustainability goals. This approach not only offsets unavoidable emissions but also strengthens global efforts against climate change. It’s a win-win for the environment and for organizations seeking to make a lasting impact.`
         },
         {
             title: "Ground Mount/Utility Scale Service",
             description: "Coming Soon",
-            content: `Ground Mount / Utility Scale Service  
+            content: `  
 Ground Mount or Utility Scale solar systems are large-scale installations set up on open land to generate significant amounts of renewable energy. These solar farms are designed for maximum efficiency, often serving industries, utilities, and government projects. By supplying clean power to thousands of homes and businesses, they reduce reliance on fossil fuels while ensuring energy security. With their scalability and cost-effectiveness, they are a cornerstone of achieving future renewable energy targets.`
         }
     ];
@@ -135,7 +135,7 @@ Ground Mount or Utility Scale solar systems are large-scale installations set up
   variants={fadeUp}
   className="mt-12 space-y-8"
 >
-  <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">
+  <h2 className="text-4xl font-bold text-green-800 mb-6 text-center">
     Coming Soon
   </h2>
   {comingSoonData.map((item, i) => (
@@ -151,9 +151,7 @@ Ground Mount or Utility Scale solar systems are large-scale installations set up
         <h3 className="text-lg font-semibold text-gray-800">
           {item.title}
         </h3>
-        <p className="text-sm text-gray-500 mt-1">
-          {item.description}
-        </p>
+       
       </motion.div>
 
       {/* Long Content */}
