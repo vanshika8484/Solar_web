@@ -20,7 +20,11 @@ const Projects = () => {
   const [active, setActive] = useState("All");
   const navigate = useNavigate();
 
-  const filtered = active === "All" ? projects : projects.filter(p => p.category === active);
+  // Split projects
+  const exhibitionProjects = projects.filter(p => p.category === "Exhibitions and stalls");
+  const filtered = active === "All"
+    ? projects.filter(p => p.category !== "Exhibitions and stalls")
+    : projects.filter(p => p.category === active);
 
   const handleClick = () => {
     navigate("/ProjectDetails");
@@ -48,7 +52,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Cards */}
+        {/* Main Projects Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4">
           <AnimatePresence>
             {filtered.map(project => (
@@ -80,9 +84,43 @@ const Projects = () => {
         </div>
       </section>
 
+        <section className="max-w-7xl mx-auto px-6 py-16 mt-10 GetFontSol">
+        <h2 className="text-3xl font-bold text-center text-green-800 mb-10">
+          Exhibitions and Stalls
+        </h2>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4">
+          <AnimatePresence>
+            {exhibitionProjects.map(project => (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+                className="relative overflow-hidden rounded-2xl shadow-md border bg-white p-6 hover:shadow-xl"
+              >
+                <SVGAccent />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="rounded-xl mb-4 w-full h-48 object-cover"
+                />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-blue-500">{iconMap["All"]}</div>
+                  <span className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded-full">
+                    {project.category}
+                  </span>
+                </div>
+                <h2 className="text-lg font-semibold text-gray-800 mb-2">{project.title}</h2>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="max-w-7xl mx-auto px-6 py-16 mt-14 flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-20 GetFontSol md:px-12 lg:px-20 xl:px-32">
-        {/* Left image */}
         <motion.div
           className="flex-shrink-0 w-full md:w-1/2"
           initial={{ opacity: 0, x: -50 }}
@@ -97,7 +135,6 @@ const Projects = () => {
           />
         </motion.div>
 
-        {/* Right text content */}
         <motion.div
           className="w-full md:w-1/2 flex flex-col justify-center"
           initial={{ opacity: 0, y: 30 }}
@@ -133,12 +170,15 @@ const Projects = () => {
         </motion.div>
       </section>
 
-      {/* New Box after Why Choose Us */}
+      {/* Exhibitions and Stalls Section */}
+    
+
+      {/* Gallery */}
       <section className="max-w-7xl mx-auto px-6 py-12 text-center bg-gray-50 rounded-xl shadow-sm my-10">
         <Gallery />
       </section>
 
-      {/* Footer at last */}
+      {/* Footer */}
       <Footer />
     </>
   );
