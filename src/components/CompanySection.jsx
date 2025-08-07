@@ -37,7 +37,7 @@ const CompanySection = () => {
     <section className="py-10 px-4 sm:px-6 md:px-10 lg:px-20 bg-white relative">
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-800 mb-10">
-        Our <span className="text-black About">Company</span>
+        Our <span className="text-black ">Company</span>
       </h2>
 
       <div className="flex flex-col lg:flex-row items-center gap-10">
@@ -52,7 +52,7 @@ const CompanySection = () => {
 
         {/* Right Content */}
         <div className="w-full lg:w-1/2 flex flex-col ">
-          <h3 className="text-2xl sm:text-3xl About text-black mb-6 text-center lg:text-left leading-snug">
+          <h3 className="text-2xl sm:text-3xl font-semibold text-black mb-6 text-center lg:text-left leading-snug">
             Produce Your Own <br />
             <span className="text-green-700 About">Clean Energy</span> <br />
             Save The Environment
