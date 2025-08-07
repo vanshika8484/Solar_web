@@ -32,15 +32,13 @@ import gove2 from "../Images/gove2.png";
 import gove3 from "../Images/gove3.jpg";
 
 
-
-
 export const categories = [
   "All",
   "Residential",
   "Commercial",
-  "Govt Affiliates",
-  "Exhibitions and stalls",
+  "Govt Affiliates"
 ];
+
 
 export const iconMap = {
   Residential: <Home className="text-blue-500 w-6 h-6" />,
