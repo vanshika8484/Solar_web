@@ -130,7 +130,7 @@ export default function About() {
           alt="Chacha"
           className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
         />
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-red-700 leading-snug">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-red-700 leading-snug">
           Why Choose Us <br className="sm:hidden" />
           as Your Solar Partner?
         </h2>
