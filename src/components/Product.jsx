@@ -244,7 +244,7 @@ function Product() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-               <h2 className=" text-red-600  text-5xl font-bold">COMMING SOON</h2>
+               <h2 className=" text-red-600  text-5xl font-bold">COMING SOON</h2>
                 <h2 className="text-4xl mt-10 text-green-800 font-bold">Gasification</h2>
               </motion.div>
 
