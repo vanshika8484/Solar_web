@@ -52,7 +52,7 @@ const HoverVideoCard3 = () => {
   return (
     <section className="bg-white py-10 px-4 sm:px-6 lg:px-12 w-full">
       <div className="max-w-[100%] mx-auto">
-        <h2 className="text-center text-xl sm:text-2xl font-bold text-green-800 mb-8">
+        <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-green-800 mb-8">
           Growth At Divy
         </h2>
 
@@ -81,9 +81,7 @@ const HoverVideoCard3 = () => {
                   )}
                 </button>
               </div>
-              <p className="mt-2 text-[9px] sm:text-xs text-gray-100 text-center font-medium">
-                {reel.role}
-              </p>
+             
             </div>
           ))}
         </div>
