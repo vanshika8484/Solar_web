@@ -67,7 +67,7 @@ export default function Ctpage() {
         {/* <p className="text-green-800 font-semibold mb-2 uppercase tracking-widest">
           Testimonials
         </p> */}
-        <h3 className="text-2xl sm:text-3xl text-black font-bold">
+        <h3 className="lg:text-[30px] xl:text-[30px] 2xl:text-[30px] text-2xl text-green-800 font-bold">
           What Our Happy Customers Say
         </h3>
       </div>
