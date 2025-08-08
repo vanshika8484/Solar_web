@@ -59,7 +59,7 @@ const FiguringOut1 = () => {
   return (
     <div className="bg-white py-10 px-4 sm:px-6 lg:px-12 relative -mt-[100px]">
       <div className="max-w-7xl mx-auto relative">
-        <h2 className="text-center text-xl sm:text-2xl font-bold text-green-800 mb-8">
+        <h2 className="text-center text-[30px] sm:text-2xl font-bold text-green-800 mb-8">
           Breaking the Myth, Switch to Solar
         </h2>
 
