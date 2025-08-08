@@ -5,6 +5,12 @@ import { Link } from 'react-router-dom';
 import Genset1 from '../Images/Genset.jpg';
 import Micro from '../Images/Micro.jpg';
 import SolarP from '../Images/SolarP.jpg';
+import LL1 from '../Images/LL1.jpg';
+import LL2 from '../Images/LL2.jpg';
+import LL3 from '../Images/LL3.jpg';
+import LL4 from '../Images/LL4.jpg';
+import LL5 from '../Images/LL5.jpg';
+import LL6 from '../Images/LL6.jpg';
 
 // Animation variants
 const containerVariants = {
@@ -34,7 +40,7 @@ function Product() {
       title: 'SOLAR PUMP',
       description:
         'Divy Power’s solar pumps offer an efficient, eco-friendly solution for water needs in remote and rural areas—ideal for irrigation, water supply, and livestock, with low maintenance and long-lasting performance.',
-      image: 'https://media.istockphoto.com/id/1458358486/photo/3d-rendering-of-water-pump-station-on-rooftop-factory-include-centrifugal-pump-electric-motor.jpg',
+      image: LL5,
       to: '/Solar-Pump',
     },
     {
@@ -74,11 +80,11 @@ function Product() {
   ];
 
   const gasificationData = [
-    { title: 'Green Hydrogen', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=Green+Hydrogen' },
-    { title: 'CBG (Compressed Biogas)', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=CBG' },
-    { title: 'Bio Diesel', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=Bio+Diesel' },
-    { title: 'EV Charging', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=EV+Charging' },
-    { title: 'Home Automation', description: 'Coming Soon', image: 'https://via.placeholder.com/400x250?text=Home+Automation' },
+    { title: 'Green Hydrogen', description: 'Coming Soon', image: LL3 },
+    { title: 'CBG (Compressed Biogas)', description: 'Coming Soon', image: LL1 },
+    { title: 'Bio Diesel', description: 'Coming Soon', image: LL2 },
+    { title: 'EV Charging', description: 'Coming Soon', image: LL6 },
+    { title: 'Home Automation', description: 'Coming Soon', image: LL4 },
   ];
 
   return (
@@ -232,7 +238,7 @@ function Product() {
 
             {/* Gasification Section */}
             <motion.section
-              className=" py-20 px-6"
+              className="py-20 px-6"
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
@@ -244,7 +250,7 @@ function Product() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-               <h2 className=" text-red-600  text-5xl font-bold">COMING SOON</h2>
+                <h2 className="text-red-600 text-5xl font-bold">COMING SOON</h2>
                 <h2 className="text-4xl mt-10 text-green-800 font-bold">Gasification</h2>
               </motion.div>
 
@@ -255,7 +261,14 @@ function Product() {
                     className="bg-white text-black rounded-2xl overflow-hidden shadow-md hover:shadow-2xl flex flex-col"
                     variants={cardVariants}
                   >
-                    <div   className="h-60 w-full object-cover" />
+                    {/* Image Section */}
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="h-60 w-full object-cover"
+                    />
+
+                    {/* Text Section */}
                     <div className="p-6 flex-1 flex flex-col justify-between text-center">
                       <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                       <p className="text-sm text-gray-700">{item.description}</p>
