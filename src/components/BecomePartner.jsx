@@ -56,8 +56,8 @@ const BecomePartner = () => {
       </ul>
 
       {/* Call to Action */}
-      <p className="text-base font-semibold mt-6">
-        Ready to Partner with Us? <span className="text-brandBlue underline cursor-pointer">Click the Link Below</span>
+      <p className="text-base font-bold mt-6">
+        Ready to Partner with Us? <span className="text-brandBlue underline cursor-pointer font-bold">Click the Link Below</span>
       </p>
     </div>
   );
