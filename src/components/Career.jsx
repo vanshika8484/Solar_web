@@ -53,12 +53,7 @@ const Career = () => {
         </a>
       </section>
 
-      <section className=' -mt-12'>
-        <WorkCultureReels />
-      </section>
-
-      {/* Benefits Section */}
-      <motion.div
+ <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -129,6 +124,12 @@ const Career = () => {
         </div>
       </motion.div>
 
+      <section className=' -mt-12'>
+        <WorkCultureReels />
+      </section>
+
+      {/* Benefits Section */}
+     
       <section>
         <SafetySecurityReels />
       </section>
