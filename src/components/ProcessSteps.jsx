@@ -39,7 +39,7 @@ export default function ProcessSteps() {
   return (
     <div className="bg-white min-h-screen flex flex-col GetFontSol">
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
-        <h1 className="text-center  text-gray-900 leading-snug max-w-4xl text-xl sm:text-2xl md:text-3xl font-bold mx-auto ">
+        <h1 className="text-center  text-green-800 leading-snug max-w-4xl text-xl sm:text-2xl md:text-3xl font-bold mx-auto ">
           Quality Handyman Solution
         </h1>
 
