@@ -30,6 +30,8 @@ import Career from './components/Career'
 import PrivacySection from './components/PrivacySection'
 import SolarArticle from './components/SolarArticle'
 import SustainableProfitability from './components/SustainableProfitability'
+import BecomeOurIndividualPartner from './components/BecomeOurIndividualPartner'
+import AddOurServices from './components/AddOurServices'
 
 
 
@@ -71,6 +73,8 @@ function App() {
         <Route path="/privacy" element={<PrivacySection />} />
         <Route path="/Blog1" element={<SolarArticle />} />
         <Route path="/Blog2" element={<SustainableProfitability />} />
+         <Route path="/become-partner" element={<BecomeOurIndividualPartner />} />
+        <Route path="/add-our-services" element={<AddOurServices />} />
       </Routes>
 
     </>
