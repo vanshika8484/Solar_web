@@ -9,7 +9,6 @@ import {
   FaStethoscope,
   FaHandshake,
   FaGasPump,
-  FaBolt,
 } from "react-icons/fa";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
@@ -18,40 +17,23 @@ import { GiLightningTrio, GiGroundSprout, GiWaterDrop } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import solarlogo from "../Images/logo2.png";
 
+// Navigation Links
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   {
     name: "Services",
-    path: "/services",
     dropdown: [
-      {
-        name: "Installation & Commissioning (INC)",
-        path: "/Installation_&_Commissioning_(INC)",
-        icon: <FaTools />,
-      },
-      {
-        name: "Engineering, Procurement, and Construction (EPC)",
-        path: "/Engineering_Procurement_and_Construction_(EPC)",
-        icon: <FaProjectDiagram />,
-      },
-      {
-        name: "Operations & Maintenance (O&M)",
-        path: "/Operations_&_Maintenance_(O&M)",
-        icon: <FaCog />,
-      },
-      {
-        name: "Annual Maintenance Contracts (AMC)",
-        path: "/Annual_Maintenance_Contracts(AMC)",
-        icon: <FaRecycle />,
-      },
+      { name: "Installation & Commissioning (INC)", path: "/Installation_&_Commissioning_(INC)", icon: <FaTools /> },
+      { name: "Engineering, Procurement, and Construction (EPC)", path: "/Engineering_Procurement_and_Construction_(EPC)", icon: <FaProjectDiagram /> },
+      { name: "Operations & Maintenance (O&M)", path: "/Operations_&_Maintenance_(O&M)", icon: <FaCog /> },
+      { name: "Annual Maintenance Contracts (AMC)", path: "/Annual_Maintenance_Contracts(AMC)", icon: <FaRecycle /> },
       { name: "Health Check ups", path: "/Health_Check_ups", icon: <FaStethoscope /> },
     ],
   },
   { name: "Projects", path: "/projects" },
   {
     name: "Products",
-    path: "/products",
     dropdown: [
       { name: "SOLAR PANEL", path: "/Solar-pannel", icon: <MdSolarPower /> },
       { name: "SOLAR PUMP", path: "/solar-pump", icon: <GiWaterDrop /> },
@@ -63,162 +45,213 @@ const navLinks = [
   },
   {
     name: "Work With Us",
-    path: "/workwithus",
     dropdown: [{ name: "Become our Dealer", path: "/workwithus", icon: <FaHandshake /> }],
   },
   { name: "Career", path: "/career" },
   { name: "Contact", path: "/contact" },
 ];
 
-const overlayVariants = {
-  hidden: { opacity: 0, y: -10 },
-  visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -10 },
-};
-
-const SolarLanding = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+export default function SolarLanding() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const overlayRef = useRef(null);
+  const [desktopDropdown, setDesktopDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
   const location = useLocation();
+  const dropdownRef = useRef(null);
 
+  // Sticky navbar effect
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdown on route change
+  // Close menus when route changes
   useEffect(() => {
-    setActiveDropdown(null);
+    setDesktopDropdown(null);
+    setMobileMenuOpen(false);
+    setMobileDropdown(null);
   }, [location.pathname]);
 
-  const handleMouseLeave = (e) => {
-    if (overlayRef.current && !overlayRef.current.contains(e.relatedTarget)) {
-      setActiveDropdown(null);
+  // Close desktop dropdown if mouse leaves menu
+  const closeDropdownOnOutsideHover = (e) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.relatedTarget)) {
+      setDesktopDropdown(null);
     }
   };
 
   return (
-    <>
-      {/* NAVBAR */}
-      <div
-        className={`w-full sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-lg" : "bg-transparent"
-        }`}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-8 py-3">
-          {/* Logo */}
-          <Link to="/" className="flex items-center" onClick={() => setActiveDropdown(null)}>
-            <img src={solarlogo} alt="Logo" className="w-12 h-12 object-contain" />
-          </Link>
+    <header
+      className={`sticky top-0 z-50 transition-all ${isScrolled ? "bg-white shadow-lg" : "bg-transparent"}`}
+      onMouseLeave={closeDropdownOnOutsideHover}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-8 py-3">
+        
+        {/* Logo */}
+        <Link to="/" className="flex items-center">
+          <img src={solarlogo} alt="Logo" className="w-12 h-12 object-contain" />
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 text-base font-medium">
-            {navLinks.map((link) =>
-              link.dropdown ? (
-                <div
-                  key={link.name}
-                  className="relative group"
-                  onMouseEnter={() => setActiveDropdown(link.name)}
-                >
-                  {/* Parent Link (click navigates, hover opens dropdown) */}
-                  <NavLink
-                    to={link.path}
-                    className={({ isActive }) =>
-                      `flex items-center gap-1 cursor-pointer ${
-                        isActive
-                          ? "text-orange-500 font-semibold underline underline-offset-4"
-                          : activeDropdown === link.name
-                          ? "text-orange-500 font-semibold"
-                          : "hover:text-orange-400"
-                      }`
-                    }
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    {link.name} <IoIosArrowDown className="text-sm" />
-                  </NavLink>
-                </div>
-              ) : (
-                <NavLink
-                  key={link.name}
-                  to={link.path}
-                  onClick={() => setActiveDropdown(null)}
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-orange-500 font-semibold underline underline-offset-4"
-                      : "hover:text-orange-400"
-                  }
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-8 text-base font-medium">
+          {navLinks.map((link) =>
+            link.dropdown ? (
+              <div
+                key={link.name}
+                className="relative"
+                onMouseEnter={() => setDesktopDropdown(link.name)}
+              >
+                <span
+                  className={`flex items-center gap-1 cursor-pointer ${
+                    desktopDropdown === link.name ? "text-orange-500 font-semibold" : "hover:text-orange-400"
+                  }`}
                 >
                   {link.name}
-                </NavLink>
-              )
-            )}
-          </div>
+                  <IoIosArrowDown className="text-sm" />
+                </span>
+              </div>
+            ) : (
+              <NavLink
+                key={link.name}
+                to={link.path}
+                className={({ isActive }) =>
+                  isActive ? "text-orange-500 font-semibold" : "hover:text-orange-400"
+                }
+              >
+                {link.name}
+              </NavLink>
+            )
+          )}
+        </nav>
 
-          {/* Call & Mobile Menu */}
-          <div className="flex items-center gap-4">
-            <a href="tel:+919310259325" className="hidden md:flex items-center gap-2">
-              <div className="bg-white p-2 rounded-full shadow">
-                <FaPhoneAlt className="text-green-800" />
-              </div>
-              <div className="text-sm text-black">
-                <p className="font-medium">Requesting A Call:</p>
-                <p className="font-bold">+91 9310259325</p>
-              </div>
-            </a>
-            <button
-              className="md:hidden text-2xl text-black"
-              onClick={() => setIsMenuOpen((prev) => !prev)}
-            >
-              {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
-            </button>
-          </div>
+        {/* Call Button & Mobile Toggle */}
+        <div className="flex items-center gap-4">
+          <a href="tel:+919310259325" className="hidden md:flex items-center gap-2">
+            <div className="bg-white p-2 rounded-full shadow">
+              <FaPhoneAlt className="text-green-800" />
+            </div>
+            <div className="text-sm text-black">
+              <p className="font-medium">Requesting A Call:</p>
+              <p className="font-bold">+91 9310259325</p>
+            </div>
+          </a>
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden text-2xl"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <HiOutlineMenu />
+          </button>
         </div>
       </div>
 
-      {/* Dropdown Panel for Desktop */}
+      {/* Desktop Dropdown */}
       <AnimatePresence>
-        {activeDropdown && (
+        {desktopDropdown && (
           <motion.div
-            ref={overlayRef}
-            key={activeDropdown}
-            variants={overlayVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
+            ref={dropdownRef}
+            key={desktopDropdown}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 top-[64px] w-full bg-white shadow-lg z-40"
-            onMouseLeave={() => setActiveDropdown(null)}
+            className="absolute top-full left-0 w-full bg-white shadow-lg z-40"
           >
-            <div className="max-w-7xl mx-auto px-5 md:px-8 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="max-w-7xl mx-auto px-5 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {navLinks
-                .find((l) => l.name === activeDropdown)
-                ?.dropdown?.map((subLink) => (
+                .find((l) => l.name === desktopDropdown)
+                ?.dropdown?.map((sub) => (
                   <Link
-                    key={subLink.name}
-                    to={subLink.path}
-                    onClick={() => setActiveDropdown(null)}
-                    className="flex items-start gap-4 p-5 hover:bg-gray-100 hover:rounded-xl hover:shadow-lg transition group"
+                    key={sub.name}
+                    to={sub.path}
+                    className="flex items-start gap-4 p-5 hover:bg-gray-100 rounded-xl transition"
                   >
-                    <span className="text-3xl text-green-700 group-hover:scale-110 transition-transform">
-                      {subLink.icon || <FaBolt />}
-                    </span>
-                    <div>
-                      <p className="font-semibold text-gray-900 group-hover:text-black">
-                        {subLink.name}
-                      </p>
-                    </div>
+                    <span className="text-3xl text-green-700">{sub.icon}</span>
+                    <p className="font-semibold text-gray-900">{sub.name}</p>
                   </Link>
                 ))}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
-  );
-};
 
-export default SolarLanding;
+      {/* Mobile Menu */}
+     <AnimatePresence>
+  {mobileMenuOpen && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="fixed inset-0 bg-white z-50 flex flex-col"
+    >
+      {/* Top Bar with Logo + Close */}
+      <div className="flex justify-between items-center p-5 border-b">
+        <img src={solarlogo} alt="Logo" className="w-12 h-12 object-contain" />
+        <button
+          onClick={() => setMobileMenuOpen(false)}
+          className="text-3xl"
+        >
+          <HiOutlineX />
+        </button>
+      </div>
+
+      {/* Menu Items */}
+      <div className="flex-1 overflow-y-auto p-6 space-y-4">
+        {navLinks.map((link) =>
+          link.dropdown ? (
+            <div key={link.name}>
+              <button
+                onClick={() =>
+                  setMobileDropdown(
+                    mobileDropdown === link.name ? null : link.name
+                  )
+                }
+                className="flex justify-between items-center w-full text-lg font-semibold py-2"
+              >
+                {link.name}
+                <IoIosArrowDown
+                  className={`transition-transform ${
+                    mobileDropdown === link.name ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <AnimatePresence>
+                {mobileDropdown === link.name && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="pl-4 space-y-2"
+                  >
+                    {link.dropdown.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        to={sub.path}
+                        className="block py-1 text-gray-600 text-base"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ) : (
+            <Link
+              key={link.name}
+              to={link.path}
+              className="block text-lg font-semibold py-2"
+            >
+              {link.name}
+            </Link>
+          )
+        )}
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
+    </header>
+  );
+}
