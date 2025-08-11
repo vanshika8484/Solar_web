@@ -9,6 +9,8 @@ import {
   FaStethoscope,
   FaHandshake,
   FaGasPump,
+  FaBriefcase,
+  FaUserTie,
 } from "react-icons/fa";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
@@ -45,7 +47,11 @@ const navLinks = [
   },
   {
     name: "Work With Us",
-    dropdown: [{ name: "Become our Dealer", path: "/workwithus", icon: <FaHandshake /> }],
+    dropdown: [
+      { name: "Become our Dealer", path: "/workwithus", icon: <FaHandshake /> },
+      { name: "Become Our Individual Partner", path: "/become-partner", icon: <FaUserTie/> },
+      { name: "Add Our Services to Your Existing Business", path: "/add-our-services", icon: <FaBriefcase /> },
+    ],
   },
   { name: "Career", path: "/career" },
   { name: "Contact", path: "/contact" },
