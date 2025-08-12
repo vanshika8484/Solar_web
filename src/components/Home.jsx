@@ -1,40 +1,31 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
+
 import { Suspense, lazy } from "react";
-import { Sun, X } from "lucide-react";
-import solar from "../Images/solar.jpg";
-import solarch from "../Images/chacha.png";
-import img1 from "../Images/Img1.png";
+
+
 import DivyRedesign from "../Images/DivyRedesign.png";
 
 import "./Home.css";
 
 // import { FaRobot } from "react-icons/fa";
-import { RiRobotLine } from "react-icons/ri";
-import ChatUI from "./ChatUI";
+
 
 const Dashboard = lazy(() => import("./Dashboard"));
 import { useState } from "react";
-import StatsSection from "./StatsSection";
-import ChartCard from "./ChartCard";
-import SolarCarousel from "./SolarCarousel";
-import SolarServices from "./SolarServices";
+
+
 import SolarProduct from "./SolarProduct";
 import SolarCostCalculator from "./SolarCostCalculator";
 import FaqSection from "./FaqSection";
 import SolarPortfolio from "./SolarPortfolio";
-import CustomerCarousel from "./CustomerCarousel";
-import ExactMatchPage from "./ExactMatchPage";
+
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
-import bg from "../Images/bg1.jpg";
-import frongimg from "../Images/SolarChahaFront.png";
-import ChatbotPopup from "./ChatbotPopup";
+
 import ChatbotToggle from "./ChatbotToggle";
 import SolarSolutions from "./SolarSolutions";
-import Solarabout from "./Solarabout";
-import Hero from "./Hero";
+
+
 import ChatUI1 from "./ChatUI1";
 
 import Ctpage from "./Ctpage";
@@ -43,11 +34,10 @@ import { Link, Links } from "react-router-dom";
 import Conversation from "./Conversation";
 import Homestart from "./Homestart";
 import HomeStart2 from "./HomeStart2";
-import ExpertTeam from "./ExpertTeam";
+
 import HoverVideoCard1 from "./HoverVideoCard1";
 import FiguringOut1 from "./FiguringOut1";
 import ExactMatchPage1 from "./ExactMatchPage1";
-import InfiniteTiltSlider from "./InfiniteTiltSlider";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -186,9 +176,7 @@ function Home() {
 
 
        
-      <section>
-        <InfiniteTiltSlider/>
-      </section>
+      
         <section className=" About -mt-11">
           <Footer />
         </section>
