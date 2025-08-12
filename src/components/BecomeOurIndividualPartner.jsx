@@ -4,16 +4,16 @@ import Footer from "./Footer";
 
 const BecomeOurIndividualPartner = () => {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-[#f8f7f0] text-gray-800">
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-green-700"
+          className="text-4xl font-bold text-gray-800"
         >
-          Earn with Divy Power. No Investment Required.
+          Earn with Divy Power. <span className=" text-green-800">No Investment Required.</span>
         </motion.h1>
         <p className="mt-4 text-lg text-gray-600">
           Turn your network into income while contributing to India’s clean
@@ -22,9 +22,9 @@ const BecomeOurIndividualPartner = () => {
       </section>
 
       {/* How It Works */}
-      <section className="bg-gray-50 py-12">
+      <section className="bg-[#f8f7f0] py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-4 text-green-700">
+          <h2 className="text-2xl font-bold mb-4 text-black">
             How It Works
           </h2>
           <ul className="list-disc list-inside space-y-2">
@@ -37,7 +37,7 @@ const BecomeOurIndividualPartner = () => {
 
       {/* Work Models */}
       <section className="py-12 max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-4 text-green-700">
+        <h2 className="text-2xl font-bold mb-4 text-black">
           Work Models Available
         </h2>
         <ul className="list-disc list-inside space-y-2">
@@ -54,9 +54,9 @@ const BecomeOurIndividualPartner = () => {
       </section>
 
       {/* Benefits */}
-      <section className="bg-gray-50 py-12">
+      <section className="bg-[#f8f7f0] py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-4 text-green-700">
+          <h2 className="text-2xl font-bold mb-4 text-black">
             Benefits for You
           </h2>
           <ul className="list-disc list-inside space-y-2">
@@ -71,7 +71,7 @@ const BecomeOurIndividualPartner = () => {
 
       {/* Who Can Join */}
       <section className="py-12 max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-4 text-green-700">
+        <h2 className="text-2xl font-bold mb-4 text-black">
           Who Can Join
         </h2>
         <ul className="list-disc list-inside space-y-2">
