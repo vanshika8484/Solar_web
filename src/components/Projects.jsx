@@ -4,7 +4,8 @@ import { categories, projects, iconMap } from "./ProjectData";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
-
+import BlackWhiteGallery from "./BlackWhiteGallery";
+import InfiniteTiltSlider from "./InfiniteTiltSlider";
 const SVGAccent = () => (
   <svg
     className="absolute top-2 right-2 w-16 h-16 text-gray-100 opacity-20"
@@ -176,6 +177,12 @@ const Projects = () => {
       {/* Gallery */}
       <section className="max-w-7xl mx-auto px-6 py-12 text-center bg-gray-50 rounded-xl shadow-sm my-10">
         <Gallery />
+      </section>
+       <section>
+        <InfiniteTiltSlider/>
+      </section>
+      <section>
+        <BlackWhiteGallery/>
       </section>
 
       {/* Footer */}
