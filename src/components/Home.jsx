@@ -47,6 +47,7 @@ import ExpertTeam from "./ExpertTeam";
 import HoverVideoCard1 from "./HoverVideoCard1";
 import FiguringOut1 from "./FiguringOut1";
 import ExactMatchPage1 from "./ExactMatchPage1";
+import InfiniteTiltSlider from "./InfiniteTiltSlider";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -133,7 +134,7 @@ function Home() {
       </section>
       
       <section className=" h-72">
-        <div className="text-center About1  py-6 mb-10  -mt-56 lg:-mt-48 md:-mt-56 ">
+        <div className="text-center About1  py-6 mb-10  -mt-9 lg:-mt-48 xl:-mt-28 2xl:-mt-24 md:-mt-56 ">
           <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
             <Link to="./contact">Adhik jaankari ke liye click krein</Link>
           </button>
@@ -185,7 +186,9 @@ function Home() {
 
 
        
-
+      <section>
+        <InfiniteTiltSlider/>
+      </section>
         <section className=" About -mt-11">
           <Footer />
         </section>
