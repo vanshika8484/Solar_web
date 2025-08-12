@@ -17,7 +17,7 @@ const AddOurServices = () => {
       {/* Why Add Our Services */}
       <section className="bg-[#f8f7f0] py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold mb-6 text-green-700">
+          <h2 className="text-3xl font-semibold mb-6 text-black">
             Why Add Our Services
           </h2>
           <ul className="list-disc list-inside space-y-3 text-lg text-gray-700">
@@ -32,7 +32,7 @@ const AddOurServices = () => {
 
       {/* Work Models */}
       <section className="py-12 max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-semibold mb-6 text-green-700">
+        <h2 className="text-3xl font-semibold mb-6 text-black">
           Work Models Available
         </h2>
         <ul className="list-disc list-inside space-y-3 text-lg text-gray-700">
@@ -45,10 +45,10 @@ const AddOurServices = () => {
       {/* Industries */}
       <section className="bg-[#f8f7f0] py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold mb-6 text-green-700">
+          <h2 className="text-3xl font-semibold mb-6 text-black">
             Industries That Benefit Most
           </h2>
-          <ul className="list-disc list-inside space-y-3 text-lg text-gray-700">
+          <ul className="list-disc list-inside space-y-3 text-lg text-black">
             <li>Electrical shops</li>
             <li>Hardware retailers</li>
             <li>Appliance stores</li>
@@ -60,10 +60,10 @@ const AddOurServices = () => {
 
       {/* Authorization Steps */}
       <section className="py-12 max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-semibold mb-6 text-green-700">
+        <h2 className="text-3xl font-semibold mb-6 text-black">
           Authorization Steps
         </h2>
-        <ol className="list-decimal list-inside space-y-3 text-lg text-gray-700 max-w-3xl mx-auto">
+        <ol className="list-decimal list-inside space-y-3 text-lg text-black max-w-3xl mx-auto">
           <li>Submit your business details.</li>
           <li>Get approved and sign the agreement.</li>
           <li>Receive certification and co-branded marketing material.</li>
