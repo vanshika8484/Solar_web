@@ -32,12 +32,11 @@ import Ctpage from "./Ctpage";
 import PageOne from "./PageOne";
 import { Link, Links } from "react-router-dom";
 import Conversation from "./Conversation";
-import Homestart from "./Homestart";
 import HomeStart2 from "./HomeStart2";
-
 import HoverVideoCard1 from "./HoverVideoCard1";
 import FiguringOut1 from "./FiguringOut1";
 import ExactMatchPage1 from "./ExactMatchPage1";
+import FullScreenVideo from "./FullScreenVideo";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -99,7 +98,7 @@ function Home() {
       <ChatbotToggle />
       <div>
         <section className="About">
-          <Homestart />
+          <FullScreenVideo />
           <HomeStart2 />
 
 
