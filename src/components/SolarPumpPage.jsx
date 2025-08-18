@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
-import Lap from '../Images/PHOTO-2025-08-18-12-26-39.jpg'
+import Lap from '../Images/IMG-20250805-WA0071(1).jpg'
 
 
 const fadeUp = {
@@ -157,4 +157,5 @@ const SolarPumpPage = () => {
 };
 
 export default SolarPumpPage;
+
 
