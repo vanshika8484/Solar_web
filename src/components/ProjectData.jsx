@@ -65,14 +65,14 @@ export const projects = [
   },
   {
     id: 3,
-    title: "BSL Casting Commercial",
+    title: "Kumheera Net Zero Village",
     category: "Govt Affiliates",
     kwp: "1440",
     image: gove1
   },
   {
     id: 4,
-    title: "DPS Panipat",
+    title: "Kumheera Net Zero Village",
     category: "Govt Affiliates",
     kwp: "450",
     image: gove2
