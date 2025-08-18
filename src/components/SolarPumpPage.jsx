@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
+import Lap from '../Images/PHOTO-2025-08-18-12-26-39.jpg'
+
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -58,8 +60,7 @@ const SolarPumpPage = () => {
                             initial="hidden"
                             animate="visible"
                             variants={fadeUp}
-                            src="https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=600"
-                            alt="Solar Panels Field"
+                            src={Lap}
                             className="w-[380px] h-[270px] rounded shadow"
                         />
 
@@ -156,3 +157,4 @@ const SolarPumpPage = () => {
 };
 
 export default SolarPumpPage;
+
