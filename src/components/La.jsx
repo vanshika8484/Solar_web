@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
+import Lap from '../Images/PHOTO-2025-08-18-12-26-39.jpg'
+
 
 const La = () => {
     return (
@@ -29,7 +31,7 @@ const La = () => {
                         </section>
 
                         <img
-                            src="https://divyby.redspace.in/assets/images/updated-images/LA%202.jpg"
+                            src={Lap}
                             alt="Solar Panels Field"
                             className="w-full h-auto rounded shadow"
                         />
