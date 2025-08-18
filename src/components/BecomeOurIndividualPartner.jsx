@@ -22,7 +22,7 @@ const BecomeOurIndividualPartner = () => {
       </section>
 
       {/* How It Works */}
-      <section className="bg-[#f8f7f0] py-12">
+      <section className="bg-[#f8f7f0] ">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-4 text-black">
             How It Works
@@ -54,7 +54,7 @@ const BecomeOurIndividualPartner = () => {
       </section>
 
       {/* Benefits */}
-      <section className="bg-[#f8f7f0] py-12">
+      <section className="bg-[#f8f7f0] ">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-4 text-black">
             Benefits for You
