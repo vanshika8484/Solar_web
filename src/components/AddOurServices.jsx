@@ -15,7 +15,7 @@ const AddOurServices = () => {
       </section>
 
       {/* Why Add Our Services */}
-      <section className="bg-[#f8f7f0] py-12">
+      <section className="bg-[#f8f7f0] ">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-6 text-black">
             Why Add Our Services
@@ -43,7 +43,7 @@ const AddOurServices = () => {
       </section>
 
       {/* Industries */}
-      <section className="bg-[#f8f7f0] py-12">
+      <section className="bg-[#f8f7f0] ">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-6 text-black">
             Industries That Benefit Most
