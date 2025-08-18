@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
+import Lap from '../Images/PHOTO-2025-08-18-12-28-23.jpg'
+
+
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -87,7 +90,7 @@ Ground Mount or Utility Scale solar systems are large-scale installations set up
                                 initial="hidden"
                                 animate="visible"
                                 variants={fadeUp}
-                                src="https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                src={Lap}
                                 alt="Solar Panels Field"
                                 className="w-[380px] h-[270px] rounded shadow"
                             />
@@ -201,3 +204,4 @@ Ground Mount or Utility Scale solar systems are large-scale installations set up
         </>
     );
 }
+
