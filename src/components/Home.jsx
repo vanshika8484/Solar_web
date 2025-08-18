@@ -28,7 +28,7 @@ import SolarSolutions from "./SolarSolutions";
 
 import ChatUI1 from "./ChatUI1";
 
-import Ctpage from "./Ctpage";
+
 import PageOne from "./PageOne";
 import { Link, Links } from "react-router-dom";
 import Conversation from "./Conversation";
@@ -37,6 +37,7 @@ import HoverVideoCard1 from "./HoverVideoCard1";
 import FiguringOut1 from "./FiguringOut1";
 import ExactMatchPage1 from "./ExactMatchPage1";
 import FullScreenVideo from "./FullScreenVideo";
+import RatingWorks from "./RatingWorks";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -157,11 +158,13 @@ function Home() {
       </section>
       <section className=" mt-16 About1">
       <ExactMatchPage1/>
-        <Ctpage />
+
 
 
       </section>
-      
+      <section className=" -mt-96">
+         <RatingWorks/>
+      </section>
 
       <section className="bg-[#f8f7f0] About1 mt-96 md:mt-96 lg:mt-96 xl:mt-96 2xl:mt-[430px]">
         <SolarPortfolio />
