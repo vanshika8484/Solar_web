@@ -1,16 +1,46 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// Import all 32 images
+import W1 from "../Images/W1.jpg";
+import W2 from "../Images/W2.JPG";
+import W3 from "../Images/W3.JPG";
+import W4 from "../Images/W4.JPG";
+import W5 from "../Images/W5.JPG";
+import W6 from "../Images/W6.JPG";
+import W7 from "../Images/W7.JPG";
+import W8 from "../Images/W8.JPG";
+import W9 from "../Images/W9.JPG";
+import W10 from "../Images/W10.JPG";
+import W11 from "../Images/W11.JPG";
+import W12 from "../Images/W12.JPG";
+import W13 from "../Images/W13.JPG";
+import W14 from "../Images/W14.JPG";
+import W15 from "../Images/W15.JPG";
+import W16 from "../Images/W16.JPG";
+import W17 from "../Images/W17.JPG";
+import W18 from "../Images/W18.JPG";
+import W19 from "../Images/W19.JPG";
+import W20 from "../Images/W20.JPG";
+import W21 from "../Images/W21.JPG";
+import W22 from "../Images/W22.JPG";
+import W23 from "../Images/W23.JPG";
+import W24 from "../Images/W24.JPG";
+import W25 from "../Images/W25.JPG";
+import W26 from "../Images/W26.JPG";
+import W27 from "../Images/W27.JPG";
+import W28 from "../Images/W28.JPG";
+import W29 from "../Images/W29.JPG";
+import W30 from "../Images/W30.JPG";
+import W31 from "../Images/W31.JPG";
+import W32 from "../Images/W32.JPG";
+
+// Add all into array
 const images = [
-  "https://source.unsplash.com/random/400x300?technology",
-  "https://source.unsplash.com/random/400x300?dark",
-  "https://source.unsplash.com/random/400x300?design",
-  "https://source.unsplash.com/random/400x300?abstract",
-  "https://source.unsplash.com/random/400x300?coding",
-  "https://source.unsplash.com/random/400x300?art",
-  "https://source.unsplash.com/random/400x300?space",
-  "https://source.unsplash.com/random/400x300?data",
-  "https://source.unsplash.com/random/400x300?innovation",
+  W1, W2, W3, W4, W5, W6, W7, W8,
+  W9, W10, W11, W12, W13, W14, W15, W16,
+  W17, W18, W19, W20, W21, W22, W23, W24,
+  W25, W26, W27, W28, W29, W30, W31, W32,
 ];
 
 // Single column with infinite scroll
