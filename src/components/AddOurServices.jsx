@@ -112,13 +112,16 @@ const AddOurServices = () => {
 
       {/* Call to Action */}
       <section className="text-center py-12">
-        <motion.button
+      <a href="https://forms.gle/qkyuDXiMSBF4Y9gq5
+">
+        <motion.button 
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           className="bg-green-700 text-white px-10 py-4 rounded-full text-xl font-semibold hover:bg-green-800 transition"
         >
           Add Solar to Your Business Today
         </motion.button>
+        </a>
       </section>
 
       {/* Footer */}
