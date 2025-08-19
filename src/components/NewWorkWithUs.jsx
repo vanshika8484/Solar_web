@@ -27,10 +27,10 @@ function NewWorkWithUs() {
           <BecomePartner />
         </section>
 
-        <section className=' mt-20 mr-16 ml-16'>
+        <section className=' mt-20 '>
           <ReelsSection />
         </section>
-        <section className=' mr-20 ml-20'>
+        <section className=' '>
           <MasonryGallery />
           <RatingWorks />
         </section>
