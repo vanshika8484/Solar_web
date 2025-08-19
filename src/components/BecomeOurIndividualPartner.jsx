@@ -170,6 +170,8 @@ const BecomeOurIndividualPartner = () => {
 
       {/* CTA */}
       <section className="text-center py-12">
+        <a href="https://forms.gle/qkyuDXiMSBF4Y9gq5
+">
         <motion.button
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.98 }}
@@ -177,6 +179,7 @@ const BecomeOurIndividualPartner = () => {
         >
           Start Earning as a Partner
         </motion.button>
+        </a>
       </section>
 
       <Footer />
