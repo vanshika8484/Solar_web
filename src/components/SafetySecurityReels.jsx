@@ -2,13 +2,34 @@ import React, { useRef, useState } from "react";
 import { FaPlay, FaPause } from "react-icons/fa";
 
 const safetyVideos = [
-  { name: "Lal Singh - Safety & Security", video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181458/Lal_Singh_Safety_And_Security_At_Divy_nk2xbw.mp4" },
-  { name: "Lal Singh - Team Safety", video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181457/Lal_Singh_Team_Safety_b0r83u.mp4" },
-  { name: "Kaushlesh Singh - Precautions", video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181456/Kaushlesh_Singh_Safety_Precautions_At_Divy_ybrnwh.mp4" },
-  { name: "Kaushlesh - Employee Safety", video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181456/Kaushlesh_Employee_Safety_At_Divy_ogdq6o.mp4" },
-  { name: "Rajeev Arora - Safety & Benefits", video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181456/Rajeev_Arora_Safety_And_Benefit_At_Divy_mybckj.mp4" },
-  { name: "Asha - Employee Safety", video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181455/Asha_Employee_Safety_fnetk3.mp4" },
-  { name: "Riddhi - Team Safety", video: "https://res.cloudinary.com/drz2uocug/video/upload/v1753181455/Riddhi_Team_Safety_eouwll.mp4" },
+  { 
+    name: "Lal Singh - Safety & Security", 
+    video: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671269/Lal_Singh_Safety_And_Security_At_Divy_dqe8mr.mp4" 
+  },
+  { 
+    name: "Lal Singh - Team Safety", 
+    video: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671269/Lal_Singh_Safety_And_Security_At_Divy_dqe8mr.mp4" 
+  },
+  { 
+    name: "Kaushlesh Singh - Precautions", 
+    video: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671270/Kaushlesh_Singh_Safety_Precautions_At_Divy_dyhkar.mp4" 
+  },
+  { 
+    name: "Kaushlesh - Employee Safety", 
+    video: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671270/Kaushlesh_Employee_Safety_At_Divy_kagr69.mp4" 
+  },
+  { 
+    name: "Rajeev Arora - Safety & Benefits", 
+    video: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671269/Rajeev_Arora_Safety_And_Benefit_At_Divy_fi6p6g.mp4" 
+  },
+  { 
+    name: "Asha - Employee Safety", 
+    video: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671270/Asha_Employee_Safety_vigazb.mp4" 
+  },
+  { 
+    name: "Riddhi - Team Safety", 
+    video: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671269/Riddhi_Team_Safety_f12krk.mp4" 
+  },
 ];
 
 const SafetySecurityReels = () => {
