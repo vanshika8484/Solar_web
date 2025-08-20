@@ -8,7 +8,7 @@ const teamMembers = [
     image:
       "https://storage.googleapis.com/a1aa/image/249ae767-68b3-4bcd-1521-265ee80c5d7b.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753181164/Architecture_Interviews_Cosmopolitan_Development_2_zbw4s1.mp4",
+      "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671071/Architecture_Interviews_Cosmopolitan_Development_2_rtymwf.mp4",
   },
   {
     name: "Architect",
@@ -16,7 +16,7 @@ const teamMembers = [
     image:
       "https://storage.googleapis.com/a1aa/image/ba2e056b-5797-4eaa-d680-7a78a84778c0.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753181164/Architecture_Interviews_Evolving_Tech_Using_Solar_1_r7eqrw.mp4",
+      "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671071/Architecture_Interviews_Evolving_Tech_Using_Solar_1_p5jne5.mp4",
   },
   {
     name: "Entrepreneur",
@@ -24,7 +24,7 @@ const teamMembers = [
     image:
       "https://storage.googleapis.com/a1aa/image/d8ee8bcd-44eb-4126-73ad-adb857ac13a5.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753181164/Founder_And_Friends_Solar_And_Hesitation_vzvned.mp4",
+      "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671071/Founder_And_Friends_Divy_And_Founder_y7hena.mp4",
   },
   {
     name: "Head of Architect",
@@ -32,7 +32,7 @@ const teamMembers = [
     image:
       "https://storage.googleapis.com/a1aa/image/5b4ec894-2c46-41d5-4e01-bd02f1629da7.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753181163/Architecture_Interviews_Challenges_Among_Industries_1_nbvvzb.mp4",
+      "https://res.cloudinary.com/dlkwlywps/video/upload/v1755671071/Architecture_Interviews_Challenges_Among_Industries_1_kqfiap.mp4",
   },
 ];
 
