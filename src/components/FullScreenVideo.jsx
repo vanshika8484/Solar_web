@@ -7,7 +7,7 @@ const FullScreenVideo = ({ mode = "cover" }) => {
         className={`absolute top-0 left-0 w-full h-full 
           ${mode === "cover" ? "object-cover" : "object-contain"} 
           md:object-cover`}
-        src="https://res.cloudinary.com/drz2uocug/video/upload/v1754944688/Dji_0029_4_1_dcgw1c.mp4"
+        src="https://res.cloudinary.com/dcvmuus25/video/upload/v1755670067/Homepage_landing_video_asxqkt.mp4"
         autoPlay
         loop
         muted
