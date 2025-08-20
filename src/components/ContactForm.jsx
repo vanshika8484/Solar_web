@@ -17,7 +17,7 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
 
-     try {
+    try {
       const formData = new FormData();
       formData.append("name", name);
       formData.append("email", email);
@@ -26,7 +26,7 @@ const ContactForm = () => {
       formData.append("billFile", billFile);
 
       const { data } = await axios.post(
-        " https://solar-6.onrender.com/api/senddata",
+        "https://solar-6.onrender.com/api/senddata",
         formData,
         {
           headers: {
@@ -46,24 +46,26 @@ const ContactForm = () => {
   };
 
   return (
-    <main className="bg-gray-900 px-4 sm:px-8 md:px-16 py-20 -mt-16 About max-h-[1250px] lg:max-h-[650px] md:max-h-[650px] xl:max-h-[650px] 2xl:max-h-[650px] ">
+    <main className="bg-gray-900 px-4 sm:px-8 md:px-16 py-20 -mt-16 About max-h-auto">
       <ToastContainer position="top-right" autoClose={3000} />
 
-      <div className="text-center max-w-4xl mx-auto mb-12 -mt-[50px] ">
+      {/* Heading */}
+      <div className="text-center max-w-4xl mx-auto mb-12 -mt-[50px] px-4">
         <h2 className="text-xl md:text-3xl About text-white leading-snug About1">
-          Bijli ka bill bhejiye and Solar Chacha se jaaniye<br />
+          Bijli ka bill bhejiye and Solar Chacha se jaaniye <br />
           apne rooftop ke liye Best Solar Solution
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 GetFontHomeChat -mt-2 md:-mt-5 lg:-mt-5 xl:-mt-5 ml-0 2xl:ml-64 xl:ml-40 lg:ml-0  ">
+      {/* Main Container */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 px-4">
         {/* Form Section */}
         <form
           onSubmit={handelSubmit}
-          className="bg-white w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8 flex flex-col gap-5 shadow -mt-10" 
+          className="bg-white w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8 flex flex-col gap-5 shadow"
           encType="multipart/form-data"
         >
-          {/* Name & Phone side by side */}
+          {/* Name & Phone */}
           <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="text"
@@ -71,7 +73,7 @@ const ContactForm = () => {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="flex-1 rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
+              className="flex-1 w-full rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
             />
             <input
               type="tel"
@@ -79,31 +81,31 @@ const ContactForm = () => {
               required
               value={phoneNo}
               onChange={(e) => setPhone(e.target.value)}
-              className="flex-1 rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
+              className="flex-1 w-full rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
             />
           </div>
 
+          {/* Email & File Upload */}
           <div className="flex flex-col sm:flex-row gap-4">
-          <input
-            type="email"
-            placeholder="Your Email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow w-full"
-          />
-
-          {/* Upload Bijli Bill */}
-          <div className="w-full">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Upload Your Bijli Bill
-            </label>
             <input
-              type="file"
-              onChange={(e) => setBillFile(e.target.files[0])}
-              className="w-full py-2 px-3 bg-white rounded-xl shadow focus:outline-none"
+              type="email"
+              placeholder="Your Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 w-full rounded-2xl py-3 px-5 placeholder-gray-500 focus:outline-none bg-white shadow"
             />
-          </div>
+
+            <div className="flex-1 w-full">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Upload Your Bijli Bill
+              </label>
+              <input
+                type="file"
+                onChange={(e) => setBillFile(e.target.files[0])}
+                className="w-full py-2 px-3 bg-white rounded-xl shadow focus:outline-none"
+              />
+            </div>
           </div>
 
           {/* Message */}
@@ -127,31 +129,35 @@ const ContactForm = () => {
         </form>
 
         {/* Contact Info Section */}
-        <section className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start gap-6 text-center md:text-left px-2 sm:px-0">
+        <section className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start gap-6 text-center md:text-left">
           <div className="flex flex-col gap-4 text-lg text-white">
             <p className="flex items-center justify-center md:justify-start gap-3">
               <i className="fas fa-phone-alt text-green-800"></i>
-              <a className=" " href="tel:+91 9310259325">
-                +91 9310259325
-              </a>
+              <a href="tel:+91 9310259325">+91 9310259325</a>
             </p>
             <p className="flex items-center justify-center md:justify-start gap-3">
               <i className="fas fa-map-marker-alt text-green-800"></i>
-              53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar,<br />
-              Nai Basti Dundaher Ghaziabad,<br />
+              53, Ramte Ram Rd, Ekta Vihar, Arjun Nagar, <br />
+              Nai Basti Dundaher Ghaziabad, <br />
               Uttar Pradesh 201001
             </p>
             <p className="flex items-center justify-center md:justify-start gap-3">
               <i className="fas fa-envelope text-green-800"></i>
-              <a className="font-semibold hover:text-[#3a8e3a]" href="mailto:info@divypower.in">
-               sales@divypower.com
-
+              <a
+                className="font-semibold hover:text-[#3a8e3a]"
+                href="mailto:sales@divypower.com"
+              >
+                sales@divypower.com
               </a>
             </p>
           </div>
 
           <div className="mt-4">
-            <img src={solarg} alt="Solar Chacha" className="max-w-[250px] w-full" />
+            <img
+              src={solarg}
+              alt="Solar Chacha"
+              className="max-w-[250px] w-full"
+            />
           </div>
         </section>
       </div>
