@@ -4,32 +4,32 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const reelsData = [
   {
     videoSrc:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180180/Riddhi_Go_Solar_Save_Environment_kroi64.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670320/Riddhi_Go_Solar_Save_Environment_nnr6c1.mp4",
     username: "Riddhi Agarwal",
     caption: "Topic: Go Solar, Save Environment",
   },
   {
     videoSrc:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180182/Kaushlesh_Source_Of_Renewable_Energy_wvveuh.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670320/Kaushlesh_Source_Of_Renewable_Energy_sfsmbt.mp4",
     username: "Kaushlesh Sharma",
     caption: "Topic: Source of Renewable Energy",
   },
  
   {
     videoSrc:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Founder_And_Friends_Save_Environment_With_Solar_sqldlz.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670320/Founder_And_Friends_Save_Environment_With_Solar_p7vffm.mp4",
     username: "Divy Power Team",
     caption: "Topic: Founder and Friends Save Environment",
   },
   {
     videoSrc:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180180/Shivam_Go_Solar_Save_Environment_asbrgo.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670320/Shivam_Go_Solar_Save_Environment_kzafuo.mp4",
     username: "Shivam Singh",
     caption: "Topic: Go Solar, Save Environment",
   },
   {
     videoSrc:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180181/Ateesh_Breaking_The_Myth_oifrah.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670320/Ateesh_Breaking_The_Myth_fbazvn.mp4",
     username: "Ateesh Kumar",
     caption: "Topic: Breaking The Myth About Solar",
   },
