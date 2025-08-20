@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // Import all 32 images
-import W1 from "../Images/W1.JPG";
+import W1 from "../Images/W1.jpg";
 import W2 from "../Images/W2.JPG";
 import W3 from "../Images/W3.JPG";
 import W4 from "../Images/W4.JPG";
