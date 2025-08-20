@@ -4,29 +4,30 @@ import { FaPlay, FaPause } from "react-icons/fa"; // Icons
 const reelsData = [
   {
     role: "Solar Specialist",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180799/Kaushlesh_Singh_Growth_At_Divyy_b7cnhq.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670986/Asha_Growth_At_Divy_rm8u7t.mp4",
   },
   {
     role: "Solar Specialist",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180798/Kaushlesh_Growth_At_Divy_egqssb.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670987/Kaushlesh_Growth_At_Divy_l4rdbm.mp4",
   },
   {
     role: "Solar Specialist",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180798/Shruti_Growth_At_Divy_qolr0f.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670987/Rishika_Growth_At_Divy_xog75t.mp4",
   },
   {
     role: "Solar Specialist",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180798/Asha_Growth_At_Divy_gklhuy.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670987/Riddhi_Growth_At_Divy_mfjyez.mp4",
   },
   {
     role: "Solar Specialist",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180798/Rajeev_Arora_Growth_At_Divy_With_Updated_Tech_qmcrud.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670987/Kaushlesh_Singh_Growth_At_Divyy_emjd0y.mp4",
   },
   {
     role: "Solar Specialist",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1753180797/Riddhi_Growth_At_Divy_f94d23.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670988/Shruti_Growth_At_Divy_tfpcmy.mp4",
   },
 ];
+
 
 const HoverVideoCard3 = () => {
   const videoRefs = useRef([]);
