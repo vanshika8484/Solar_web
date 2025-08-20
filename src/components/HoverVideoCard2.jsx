@@ -4,29 +4,30 @@ import { FaPlay, FaPause } from "react-icons/fa"; // Play / Pause icons
 const reelsData = [
   {
     role: "Employees Are Our Partners",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415925/Our_Employees_Are_Our_Partner_yvsc5j.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670833/Our_Employees_Are_Our_Partner_easwe4.mp4",
   },
   {
     role: "25 Years into Energy",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415925/We_Believe_In_Solution_Based_Approach_jsbzhw.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670833/25_years_into_energry_xsxymp.mp4",
   },
   {
     role: "Company is a Group Company",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415924/Our_Company_Is_A_Group_Company_cfa3ux.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670830/Our_Company_Is_A_Group_Company_klspkt.mp4",
   },
   {
     role: "I Am A Worker Not Owner",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415924/Mission_And_Vision_ihqskf.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670831/I_Am_A_Worker_Not_A_Owner_rcslnv.mp4",
   },
   {
     role: "Mission & Vision",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415924/I_Am_A_Worker_Not_A_Owner_cysvpa.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670833/Mission_And_Vision_xcrjkt.mp4",
   },
   {
     role: "We Believe in Solution",
-    reel: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415924/1_s7ae04.mp4",
+    reel: "https://res.cloudinary.com/dlkwlywps/video/upload/v1755670833/We_Believe_In_Solution_Based_Approach_tinnqb.mp4",
   },
 ];
+
 
 const HoverVideoCard2 = () => {
   const videoRefs = useRef([]);
