@@ -6,11 +6,12 @@ import Genset1 from '../Images/Genset.jpg';
 import Micro from '../Images/Micro.jpg';
 import SolarP from '../Images/SolarP.jpg';
 import LL1 from '../Images/LL1.jpg';
+import LA from '../Images/LA.jpg';
 import LL2 from '../Images/LL2.jpg';
 import LL3 from '../Images/LL3.jpg';
 import LL4 from '../Images/LL4.jpg';
 import LL5 from '../Images/LL5.jpg';
-import LL6 from '../Images/LL6.jpg';
+import Ev from '../Images/Ev.jpg';
 
 // Animation variants
 const containerVariants = {
@@ -64,7 +65,7 @@ function Product() {
       title: 'Lightning Arrestor (LA)',
       description:
         'Our lightning arrestors provide strong protection by safely redirecting lightning strikes, ensuring your electrical systems and infrastructure stay secure from unpredictable hazards.',
-      image: 'https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg',
+      image: LA,
       to: '/LA',
     },
   ];
@@ -83,7 +84,7 @@ function Product() {
     { title: 'Green Hydrogen', description: 'Coming Soon', image: LL3 },
     { title: 'CBG (Compressed Biogas)', description: 'Coming Soon', image: LL1 },
     { title: 'Bio Diesel', description: 'Coming Soon', image: LL2 },
-    { title: 'EV Charging', description: 'Coming Soon', image: LL6 },
+    { title: 'EV Charging', description: 'Coming Soon', image: Ev },
     { title: 'Home Automation', description: 'Coming Soon', image: LL4 },
   ];
 
@@ -182,7 +183,7 @@ function Product() {
                     className="bg-white text-black rounded-2xl overflow-hidden shadow-md flex flex-col"
                     variants={cardVariants}
                   >
-                    <img src={item.image} alt={item.title} className="h-60 w-full object-cover" />
+                    <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
                     <div className="p-6 flex-1 flex flex-col justify-between">
                       <div>
                         <h3 className="text-lg font-bold mb-2">{item.title}</h3>
@@ -291,7 +292,7 @@ function Product() {
         </div>
       </div>
 
-      <section className="mt-[2600px] xl:mt-[2600px]">
+      <section className="mt-[2800px] xl:mt-[2700px]">
         <Footer />
       </section>
     </div>
