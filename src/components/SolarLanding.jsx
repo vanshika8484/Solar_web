@@ -25,6 +25,7 @@ const navLinks = [
   { name: "About", path: "/about" },
   {
     name: "Services",
+    path: "/services", // ✅ parent clickable
     dropdown: [
       { name: "Installation & Commissioning (INC)", path: "/Installation_&_Commissioning_(INC)", icon: <FaTools /> },
       { name: "Engineering, Procurement, and Construction (EPC)", path: "/Engineering_Procurement_and_Construction_(EPC)", icon: <FaProjectDiagram /> },
@@ -36,6 +37,7 @@ const navLinks = [
   { name: "Projects", path: "/projects" },
   {
     name: "Products",
+    path: "/products", // ✅ parent clickable
     dropdown: [
       { name: "SOLAR PANEL", path: "/Solar-pannel", icon: <MdSolarPower /> },
       { name: "SOLAR PUMP", path: "/solar-pump", icon: <GiWaterDrop /> },
@@ -47,6 +49,7 @@ const navLinks = [
   },
   {
     name: "Work With Us",
+    path: "/workwithus", // ✅ parent clickable
     dropdown: [
       { name: "Become our Dealer", path: "/workwithus", icon: <FaHandshake /> },
       { name: "Become Our Individual Partner", path: "/become-partner", icon: <FaUserTie/> },
@@ -67,7 +70,7 @@ export default function SolarLanding() {
 
   // Sticky navbar effect
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    const handleScroll = () => setIsScrolled(window.scrollY > -10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -105,16 +108,21 @@ export default function SolarLanding() {
               <div
                 key={link.name}
                 className="relative"
-                onMouseEnter={() => setDesktopDropdown(link.name)}
+                onMouseEnter={() => setDesktopDropdown(link.name)} // desktop hover
               >
-                <span
-                  className={`flex items-center gap-1 cursor-pointer ${
-                    desktopDropdown === link.name ? "text-orange-500 font-semibold" : "hover:text-orange-400"
-                  }`}
+                <NavLink
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `flex items-center gap-1 cursor-pointer ${
+                      isActive
+                        ? "text-orange-500 font-semibold"
+                        : "hover:text-orange-400"
+                    }`
+                  }
                 >
                   {link.name}
                   <IoIosArrowDown className="text-sm" />
-                </span>
+                </NavLink>
               </div>
             ) : (
               <NavLink
@@ -182,82 +190,81 @@ export default function SolarLanding() {
       </AnimatePresence>
 
       {/* Mobile Menu */}
-     <AnimatePresence>
-  {mobileMenuOpen && (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="fixed inset-0 bg-white z-50 flex flex-col"
-    >
-      {/* Top Bar with Logo + Close */}
-      <div className="flex justify-between items-center p-5 border-b">
-        <img src={solarlogo} alt="Logo" className="w-12 h-12 object-contain" />
-        <button
-          onClick={() => setMobileMenuOpen(false)}
-          className="text-3xl"
-        >
-          <HiOutlineX />
-        </button>
-      </div>
-
-      {/* Menu Items */}
-      <div className="flex-1 overflow-y-auto p-6 space-y-4">
-        {navLinks.map((link) =>
-          link.dropdown ? (
-            <div key={link.name}>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-white z-50 flex flex-col"
+          >
+            {/* Top Bar with Logo + Close */}
+            <div className="flex justify-between items-center p-5 border-b">
+              <img src={solarlogo} alt="Logo" className="w-12 h-12 object-contain" />
               <button
-                onClick={() =>
-                  setMobileDropdown(
-                    mobileDropdown === link.name ? null : link.name
-                  )
-                }
-                className="flex justify-between items-center w-full text-lg font-semibold py-2"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-3xl"
               >
-                {link.name}
-                <IoIosArrowDown
-                  className={`transition-transform ${
-                    mobileDropdown === link.name ? "rotate-180" : ""
-                  }`}
-                />
+                <HiOutlineX />
               </button>
-              <AnimatePresence>
-                {mobileDropdown === link.name && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="pl-4 space-y-2"
-                  >
-                    {link.dropdown.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        to={sub.path}
-                        className="block py-1 text-gray-600 text-base"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
             </div>
-          ) : (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="block text-lg font-semibold py-2"
-            >
-              {link.name}
-            </Link>
-          )
-        )}
-      </div>
-    </motion.div>
-  )}
-</AnimatePresence>
 
+            {/* Menu Items */}
+            <div className="flex-1 overflow-y-auto p-6 space-y-4">
+              {navLinks.map((link) =>
+                link.dropdown ? (
+                  <div key={link.name}>
+                    <button
+                      onClick={() =>
+                        setMobileDropdown(
+                          mobileDropdown === link.name ? null : link.name
+                        )
+                      }
+                      className="flex justify-between items-center w-full text-lg font-semibold py-2"
+                    >
+                      {link.name}
+                      <IoIosArrowDown
+                        className={`transition-transform ${
+                          mobileDropdown === link.name ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {mobileDropdown === link.name && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="pl-4 space-y-2"
+                        >
+                          {link.dropdown.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              to={sub.path}
+                              className="block py-1 text-gray-600 text-base"
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className="block text-lg font-semibold py-2"
+                  >
+                    {link.name}
+                  </Link>
+                )
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
