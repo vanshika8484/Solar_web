@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import Lap from '../Images/PHOTO-2025-08-18-12-26-39.jpg'
+import LA from '../Images/LA.jpg';
+
 
 
 const La = () => {
@@ -15,7 +17,7 @@ const La = () => {
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 pb-16">
                     <div className="md:col-span-2 space-y-6">
                         <img
-                            src="https://divyby.redspace.in/assets/images/updated-images/LA%201.jpg"
+                            src={LA}
                             alt="Solar Panel Installation"
                             className="w-full h-auto rounded shadow"
                         />
@@ -129,3 +131,4 @@ const La = () => {
 }
 
 export default La
+
