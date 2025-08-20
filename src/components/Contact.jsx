@@ -65,8 +65,7 @@ function Contact() {
             <h3 className="text-2xl font-semibold text-green-800 mb-6">Contact Information</h3>
             <div className="space-y-6 text-gray-700">
               <div>
-                <h4 className="font-bold text-gray-900"> Address</h4>
-                <p>53, Ramte Ram Rd, Exta Vihar, Arjun Nagar, Nai Basti Dundahera, Ghaziabad, Uttar Pradesh 201001</p>
+              
               </div>
               <div>
 
@@ -155,3 +154,4 @@ function Contact() {
 }
 
 export default Contact;
+
