@@ -59,14 +59,7 @@ const Gallery = () => {
               alt={image.alt}
               className="w-full h-auto rounded-xl object-cover"
             />
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileHover={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-white text-sm p-4 opacity-0 group-hover:opacity-100"
-            >
-              <p>{image.alt}</p>
-            </motion.div>
+            
           </motion.div>
         ))}
       </div>
