@@ -37,7 +37,7 @@ const SolarPumpPage = () => {
                             initial="hidden"
                             animate="visible"
                             variants={fadeUp}
-                            src="https://divyby.redspace.in/assets/images/updated-images/Pump%204-min.jpg"
+                            src={Lap}
                             alt="Solar Panel Installation"
                             className="w-full h-auto rounded shadow"
                         />
@@ -157,5 +157,6 @@ const SolarPumpPage = () => {
 };
 
 export default SolarPumpPage;
+
 
 
