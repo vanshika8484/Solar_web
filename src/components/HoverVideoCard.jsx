@@ -2,17 +2,18 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const reelsData = [
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415747/5_gbgy6r.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415747/10_sjpvyf.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415747/11_nrjqi4.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/1_1_rn9fhi.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/4_n95vwy.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/3_oggubc.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/14_imdn4w.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/12_hjoqh1.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415746/2_ai876e.mp4" },
-  { videoSrc: "https://res.cloudinary.com/drz2uocug/video/upload/v1754415747/7_yusagh.mp4" }
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670141/5_zwelbg.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670139/2_qfm0xv.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670140/11_coac58.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670140/1_1_t235c7.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670141/4_mve2il.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670140/3_ceqnss.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670140/14_goeklw.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670140/12_n4yx9s.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670138/7_e0sbyf.mp4" },
+  { videoSrc: "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670140/10_cusor7.mp4" }
 ];
+
 
 const HoverVideoCard = () => {
   const containerRef = useRef(null);
