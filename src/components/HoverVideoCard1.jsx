@@ -2,44 +2,43 @@ import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
-  
   {
     name: "Ateesh Kumar",
     role: "TATA Solar Partner",
     image: "https://storage.googleapis.com/a1aa/image/ateesh-profile.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Ateesh_Tata_Authorised_Solar_Partner_drukkj.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670542/Ateesh_Tata_Authorised_Solar_Partner_h9y61t.mp4",
   },
   {
     name: "Shivam Singh",
     role: "Solar Consultant",
     image: "https://storage.googleapis.com/a1aa/image/shivam-profile.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Shivam_Choose_Divy_As_Your_Solar_Partner_ag2l1a.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670542/Shivam_Choose_Divy_As_Your_Solar_Partner_vfzumc.mp4",
   },
   {
     name: "Kaushlesh Sharma",
     role: "Solar Analyst",
     image: "https://storage.googleapis.com/a1aa/image/kaushlesh-profile.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Kaushlesh_We_And_Our_Competitors_fksvib.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670542/Kaushlesh_We_And_Our_Competitors_nevpj5.mp4",
   },
   {
     name: "Asha Gupta",
     role: "Warranty Expert",
     image: "https://storage.googleapis.com/a1aa/image/asha-profile.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Asha_Warranty_On_Solars_pwji0y.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670542/Asha_Divy_Power_Sop_s_m4suai.mp4",
   },
   {
     name: "Rajeev Arora",
     role: "Quality Head",
     image: "https://storage.googleapis.com/a1aa/image/rajeev-profile.jpg",
     reel:
-      "https://res.cloudinary.com/drz2uocug/video/upload/v1753180381/Rajeev_Arora_Our_Quality_Is_Our_Legacy_gejaps.mp4",
+      "https://res.cloudinary.com/dcvmuus25/video/upload/v1755670542/Rajeev_Arora_Our_Quality_Is_Our_Legacy_trrams.mp4",
   },
-  
 ];
+
 
 const HoverVideoCard1 = () => {
   const scrollRef = useRef(null);
