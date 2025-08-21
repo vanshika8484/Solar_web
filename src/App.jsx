@@ -32,6 +32,8 @@ import SolarArticle from './components/SolarArticle'
 import SustainableProfitability from './components/SustainableProfitability'
 import BecomeOurIndividualPartner from './components/BecomeOurIndividualPartner'
 import AddOurServices from './components/AddOurServices'
+import WhatsAppButton from './components/WhatsAppButton'
+
 
 
 
@@ -44,7 +46,7 @@ function App() {
       <SolarLanding />
       <Cursor />
 
-
+<WhatsAppButton />
 
       <ScrollToTop />
 
