@@ -11,7 +11,7 @@ import Project5 from "../Images/Project5.JPG";
 import Project6 from "../Images/Project6.jpg";
 import Project7 from "../Images/Project7.jpg";
 import Project8 from "../Images/Project8.jpg";
-import Project9 from "../Images/Project9.jpeg";
+import Project9 from "../Images/Project9.jpg";
 import Project10 from "../Images/Project10.jpg";
 import Project11 from "../Images/Project11.jpg";
 import stall4 from "../Images/stall4.JPG";
@@ -94,7 +94,7 @@ export const projects = [
   {
     id: 8,
     title: "PVS Polymers",
-    category: "Residential",
+    category: "Commercial",
     kwp: "100",
     image: Project8
   },
@@ -150,7 +150,7 @@ export const projects = [
 {
   id: 16,
   title: "OS cool Home",
-  category: "Residential",
+  category: "Commercial",
   kwp: "N/A",
   image: so5
 }
