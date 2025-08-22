@@ -67,7 +67,7 @@ const SolarCostCalculator = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
-      <motion.div className="text-center mb-8" variants={cardVariants}>
+      <motion.div className="text-center mb-8 " variants={cardVariants}>
         <h1 className="text-xl sm:text-2xl md:text-xl font-bold text-[#E50C0C] leading-snug max-w-5xl mx-auto">
           Aaj hi Solar Lagwao, environment bachao <br />
           aur agle 5 saal me 3 lakh se jyada apne electricity bills par bhi Bachao
@@ -112,7 +112,7 @@ const SolarCostCalculator = () => {
 
         {/* Calculator or Results - Red Theme */}
         <motion.section
-          className="bg-red-200 rounded-xl px-6 py-5 h-full flex flex-col hover:shadow-xl transition"
+          className="bg-red-200 rounded-xl px-6 py-5 h-full flex flex-col hover:shadow-xl transition "
           variants={cardVariants}
         >
           {!showResults ? (
@@ -195,7 +195,7 @@ const SolarCostCalculator = () => {
           className=" rounded-xl flex justify-center items-center h-full  transition"
           variants={cardVariants}
         >
-          <div className="h-full flex">
+          <div className="h-full flex mt-12">
             <ElectricitySavedCard />
           </div>
         </motion.section>
