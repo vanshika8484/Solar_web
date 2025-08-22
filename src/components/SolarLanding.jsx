@@ -201,7 +201,9 @@ export default function SolarLanding() {
           >
             {/* Top Bar with Logo + Close */}
             <div className="flex justify-between items-center p-5 border-b">
-              <img src={solarlogo} alt="Logo" className="w-12 h-12 object-contain" />
+             <Link to={"/"}>
+               <img src={solarlogo} alt="Logo" className="w-12 h-12 object-contain" />
+             </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-3xl"
