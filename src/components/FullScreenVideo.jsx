@@ -1,4 +1,5 @@
 import React from "react";
+import SL from '../Images/SL.JPG'
 
 const FullScreenVideo = ({ mode = "cover" }) => {
   return (
@@ -13,7 +14,7 @@ const FullScreenVideo = ({ mode = "cover" }) => {
         muted
         playsInline
         preload="none"
-        poster="https://res.cloudinary.com/du6297ykk/image/upload/w_1920,q_auto,f_auto/v1755777863/Dji_0029_4_pa58sv.jpg"
+        poster={SL}
       />
     </div>
   );
