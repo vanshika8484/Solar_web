@@ -39,13 +39,12 @@ const navLinks = [
     name: "Products",
     path: "/products", // ✅ parent clickable
     dropdown: [
-      { name: "SOLAR PANEL", path: "/Solar-pannel", icon: <MdSolarPower /> },
-      { name: "SOLAR PUMP", path: "/solar-pump", icon: <GiWaterDrop /> },
-      { name: "MICRO INVERTER", path: "/micro-inverter", icon: <MdMemory /> },
+      { name: "Solar Panel", path: "/Solar-pannel", icon: <MdSolarPower /> },
+      { name: "Solar Pump", path: "/solar-pump", icon: <GiWaterDrop /> },
+      { name: "Micro Inverter", path: "/micro-inverter", icon: <MdMemory /> },
       { name: "Earthing", path: "/earthing", icon: <GiGroundSprout /> },
       { name: "Lightning Arrestor (LA)", path: "/LA", icon: <GiLightningTrio /> },
       { name: "Diesel/Petrol Genset", path: "/Diesel/Petrol%20Genset", icon: <FaGasPump /> },
-    ],
   },
   {
     name: "Work With Us",
