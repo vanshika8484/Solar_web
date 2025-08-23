@@ -45,6 +45,7 @@ const navLinks = [
       { name: "Earthing", path: "/earthing", icon: <GiGroundSprout /> },
       { name: "Lightning Arrestor (LA)", path: "/LA", icon: <GiLightningTrio /> },
       { name: "Diesel/Petrol Genset", path: "/Diesel/Petrol%20Genset", icon: <FaGasPump /> },
+    ],
   },
   {
     name: "Work With Us",
