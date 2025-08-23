@@ -1,5 +1,6 @@
 import React from "react";
 import SL from '../Images/F.webm'
+import SL1 from '../Images/SL.JPG'
 
 const FullScreenVideo = ({ mode = "cover" }) => {
   return (
@@ -14,6 +15,7 @@ const FullScreenVideo = ({ mode = "cover" }) => {
         muted
         playsInline
         preload="none"
+        poster={SL1}
       
       />
     </div>
