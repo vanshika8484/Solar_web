@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useEffect, useRef } from "react";
+import React, { Suspense, useState, useEffect, useRef } from "react";
 import img1 from "../Images/Img1.webp";
 import img2 from "../Images/img2.webp";
 import img3 from "../Images/img3.webp";
@@ -7,63 +7,76 @@ import sunImage from "../Images/didi.webp";
 import sunPhoto from "../Images/chacha.webp";
 import "./Home.css";
 import ImageWithOverlay from "./ImageWithOverlay";
+import ProcessSteps from "./ProcessSteps";
+import ExpertTeam from "./ExpertTeam";
+import FiguringOut from "./FiguringOut";
+import SolarCards from "./SolarCards";
+import ContactCards from "./ContactCards";
+import Footer from "./Footer";
+import CompanySection from "./CompanySection";
+import ChatUI4 from "./ChatUI4";
+import ScrollStackingCards from "./ScrollStackingCards"; // <-- Imported here
+import "./ScrollStackingCards.css"; // <-- Include CSS
+import HoverVideoCard2 from "./HoverVideoCard2";
+import HoverVideoCard3 from "./HoverVideoCard3";
+import HoverVideoCard from "./HoverVideoCard";
 
 // Lazy imports
-const ScrollStackingCards = lazy(() => import("./ScrollStackingCards"));
-const HoverVideoCard2 = lazy(() => import("./HoverVideoCard2"));
-const HoverVideoCard3 = lazy(() => import("./HoverVideoCard3"));
-const ProcessSteps = lazy(() => import("./ProcessSteps"));
-const SolarCards = lazy(() => import("./SolarCards"));
-const ChatUI4 = lazy(() => import("./ChatUI4"));
-const CompanySection = lazy(() => import("./CompanySection"));
-const FiguringOut = lazy(() => import("./FiguringOut"));
-const Footer = lazy(() => import("./Footer"));
+// const ScrollStackingCards = lazy(() => import("./ScrollStackingCards"));
+// const HoverVideoCard2 = lazy(() => import("./HoverVideoCard2"));
+// const HoverVideoCard3 = lazy(() => import("./HoverVideoCard3"));
+// const ProcessSteps = lazy(() => import("./ProcessSteps"));
+// const SolarCards = lazy(() => import("./SolarCards"));
+// const ChatUI4 = lazy(() => import("./ChatUI4"));
+// const CompanySection = lazy(() => import("./CompanySection"));
+// const FiguringOut = lazy(() => import("./FiguringOut"));
+// const Footer = lazy(() => import("./Footer"));
 
-// Intersection-based lazy load wrapper
-const LazySection = ({ children, height = "400px" }) => {
-  const ref = useRef();
-  const [isVisible, setIsVisible] = useState(false);
+// // Intersection-based lazy load wrapper
+// const LazySection = ({ children, height = "400px" }) => {
+//   const ref = useRef();
+//   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         if (entries[0].isIntersecting) {
+//           setIsVisible(true);
+//           observer.disconnect();
+//         }
+//       },
+//       { threshold: 0.2 }
+//     );
+//     if (ref.current) observer.observe(ref.current);
+//     return () => observer.disconnect();
+//   }, []);
 
-  return (
-    <div ref={ref} className="w-full min-h-[50px]">
-      {isVisible ? (
-        <Suspense
-          fallback={
-            <div
-              className="text-center flex items-center justify-center"
-              style={{ height }}
-            >
-              Loading...
-            </div>
-          }
-        >
-          {children}
-        </Suspense>
-      ) : (
-        <div
-          className="text-center flex items-center justify-center"
-          style={{ height }}
-        >
-          Loading...
-        </div>
-      )}
-    </div>
-  );
-};
+//   return (
+//     <div ref={ref} className="w-full min-h-[50px]">
+//       {isVisible ? (
+//         <Suspense
+//           fallback={
+//             <div
+//               className="text-center flex items-center justify-center"
+//               style={{ height }}
+//             >
+//               Loading...
+//             </div>
+//           }
+//         >
+//           {children}
+//         </Suspense>
+//       ) : (
+//         <div
+//           className="text-center flex items-center justify-center"
+//           style={{ height }}
+//         >
+//           Loading...
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
 
 // About content
 const aboutUsContent = [
@@ -142,42 +155,30 @@ export default function About() {
 
       {/* Chat UI */}
       <section className="mt-8 w-full">
-        <LazySection height="450px">
-          <ChatUI4 />
-        </LazySection>
+        <ChatUI4 />
       </section>
 
       {/* Scroll Stacking Cards */}
       <div className="-mt-[450px] 2xl:-mt-[700px] mb-24 w-full">
-        <LazySection height="900px">
-          <ScrollStackingCards content={aboutUsContent} />
-        </LazySection>
+        <ScrollStackingCards content={aboutUsContent} />
       </div>
 
       {/* Company Section */}
       <section className="-mt-[290px] w-full">
-        <LazySection height="500px">
-          <CompanySection />
-        </LazySection>
+        <CompanySection />
       </section>
 
       {/* Videos & Process */}
       <section className="w-full">
-        <LazySection height="500px">
-          <HoverVideoCard2 />
-        </LazySection>
+        <HoverVideoCard2 />
       </section>
 
       <section className="w-full">
-        <LazySection height="600px">
-          <ProcessSteps />
-        </LazySection>
+        <ProcessSteps />
       </section>
 
       <section className="-mt-16 md:-mt-44 xl:-mt-64 2xl:-mt-96 lg:-mt-72 w-full">
-        <LazySection height="500px">
-          <HoverVideoCard3 />
-        </LazySection>
+        <HoverVideoCard3 />
       </section>
 
       {/* Why Choose Us */}
@@ -242,23 +243,17 @@ export default function About() {
 
       {/* Figuring Out */}
       <section className="mt-30 w-full">
-        <LazySection height="500px">
-          <FiguringOut />
-        </LazySection>
+        <FiguringOut />
       </section>
 
       {/* Solar Cards */}
       <section className="mt-16 w-full">
-        <LazySection height="600px">
-          <SolarCards />
-        </LazySection>
+        <SolarCards />
       </section>
 
       {/* Footer */}
       <section className="mt-200 mb-[-50px] min-w-full lg:min-w-[1300px] xl:min-w-[1450px] 2xl:min-w-[1600px] w-full mb-0 pb-0">
-        <LazySection height="400px">
-          <Footer />
-        </LazySection>
+        <Footer />
       </section>
     </div>
   );
