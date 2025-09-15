@@ -76,29 +76,7 @@ const Earthing = () => {
                             </p>
                         </motion.section>
 
-                        <motion.div
-                            initial="hidden"
-                            animate="visible"
-                            variants={fadeUp}
-                            className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8"
-                        >
-                            {["STEP ONE", "STEP TWO", "STEP THREE"].map((step, i) => (
-                                <motion.div
-                                    key={i}
-                                    custom={i}
-                                    variants={fadeUp}
-                                    initial="hidden"
-                                    animate="visible"
-                                    className="bg-white p-6 rounded shadow text-center"
-                                >
-                                    <div className="text-green-600 text-2xl font-bold">0{i + 1}</div>
-                                    <div className="mt-2 font-semibold">{step}</div>
-                                    <p className="text-sm text-gray-600 mt-1">
-                                        Tactical services through market web services
-                                    </p>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                        
                     </div>
 
                     <aside className="space-y-8">

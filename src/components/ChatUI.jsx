@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import MessageBubble2 from "./MessageBubble2";
-import solarChachaImg from "../Images/chacha.png";
-import roshniDidiImg from "../Images/didi.png";
-import './Home.css';
+import solarChachaImg from "../Images/chacha.webp";
+import roshniDidiImg from "../Images/didi.webp";
+import "./Home.css";
 
 const conversationData = [
   {
@@ -76,7 +76,7 @@ const ChatUI = () => {
         </div>
 
         {/* Right Avatar - Roshni Didi */}
-         <div className="w-[140px] hidden sm:flex justify-center mt-24">
+        <div className="w-[140px] hidden sm:flex justify-center mt-24">
           <img
             src={roshniDidiImg}
             alt="Chacha"

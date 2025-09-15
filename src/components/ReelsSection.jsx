@@ -1,41 +1,45 @@
 import React, { useEffect, useState } from "react";
+import outdoor from "../Images/outdoor.webp";
+import solarLight from "../Images/solarLight.webp";
+import sustainable from "../Images/sustainable.webp";
+import solarRooftop from "../Images/solarRooftop.webp";
 
 const reelsData = [
   {
     id: 1,
-    title: "Smart Home Automation",
-    desc: "Control your entire home with smart technology and voice commands.",
-    img: "https://images.unsplash.com/photo-1545209463-e2825498edbf?w=800&auto=format&fit=crop&q=60",
+    title: "Solar Rooftop Systems",
+    desc: "High-efficiency rooftop PV solutions for homes and businesses.",
+    img: solarRooftop,
   },
   {
     id: 2,
     title: "Sustainable Building",
     desc: "Eco-friendly materials and solar panels for a greener future.",
-    img: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&auto=format&fit=crop&q=60",
+    img: sustainable,
   },
   {
     id: 3,
-    title: "Modern Minimalist Design",
-    desc: "Clean lines and functional spaces designed for simplicity.",
+    title: "Ground Mount/Utility Scale Service",
+    desc: "large-scale installations set up on open land to generate significant amounts of renewable energy.",
     img: "https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800&auto=format&fit=crop&q=60",
   },
   {
     id: 4,
     title: "Outdoor Living Spaces",
     desc: "Create relaxing patios and gardens that extend your living area.",
-    img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=60",
+    img: outdoor,
   },
   {
     id: 5,
-    title: "Luxury Interiors",
-    desc: "Experience elegance with high-end finishes and premium furniture.",
+    title: "Commercial Solar Solutions",
+    desc: "Reduce energy costs with reliable and scalable commercial solar.",
     img: "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=800&auto=format&fit=crop&q=60",
   },
   {
     id: 6,
-    title: "Smart Security Systems",
-    desc: "Advanced security for your peace of mind 24/7.",
-    img: "https://plus.unsplash.com/premium_photo-1668078530961-32f4a1107791?w=800&auto=format&fit=crop&q=60",
+    title: "Solar Street Lighting",
+    desc: "All-in-one solar street lights for roads, campuses, and societies.",
+    img: solarLight,
   },
 ];
 
@@ -98,7 +102,9 @@ const ReelsSection = () => {
                     <h3 className="text-[16px] font-bold text-gray-900 mb-2">
                       {title}
                     </h3>
-                    <p className="text-sm text-gray-600 mb-4">{desc}</p>
+                    <p className="text-sm text-gray-600 mb-4 font-bold">
+                      {desc}
+                    </p>
                   </div>
                   <button className="bg-[#f59e0b] text-black font-semibold rounded-full px-5 py-2 inline-flex items-center justify-center gap-2 hover:bg-yellow-500 transition">
                     <span>Get Quote</span>

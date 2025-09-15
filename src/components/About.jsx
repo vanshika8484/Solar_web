@@ -1,24 +1,71 @@
-import React from "react";
-import { motion } from "framer-motion";
-import ProcessSteps from "./ProcessSteps";
-import ExpertTeam from "./ExpertTeam";
-import FiguringOut from "./FiguringOut";
-import SolarCards from "./SolarCards";
-import ContactCards from "./ContactCards";
-import Footer from "./Footer";
-import CompanySection from "./CompanySection";
-import ChatUI4 from "./ChatUI4";
-
-import sunImage from "../Images/didi.png";
-import sunPhoto from "../Images/chacha.png";
-import ScrollStackingCards from "./ScrollStackingCards"; // <-- Imported here
-import "./ScrollStackingCards.css"; // <-- Include CSS
-import HoverVideoCard2 from "./HoverVideoCard2";
-import HoverVideoCard3 from "./HoverVideoCard3";
-import "./Home.css"; // Ensure this CSS file is imported for styles
-import HoverVideoCard from "./HoverVideoCard";
+import React, { lazy, Suspense, useState, useEffect, useRef } from "react";
+import img1 from "../Images/Img1.webp";
+import img2 from "../Images/img2.webp";
+import img3 from "../Images/img3.webp";
+import im1 from "../Images/im1.webp";
+import sunImage from "../Images/didi.webp";
+import sunPhoto from "../Images/chacha.webp";
+import "./Home.css";
 import ImageWithOverlay from "./ImageWithOverlay";
 
+// Lazy imports
+const ScrollStackingCards = lazy(() => import("./ScrollStackingCards"));
+const HoverVideoCard2 = lazy(() => import("./HoverVideoCard2"));
+const HoverVideoCard3 = lazy(() => import("./HoverVideoCard3"));
+const ProcessSteps = lazy(() => import("./ProcessSteps"));
+const SolarCards = lazy(() => import("./SolarCards"));
+const ChatUI4 = lazy(() => import("./ChatUI4"));
+const CompanySection = lazy(() => import("./CompanySection"));
+const FiguringOut = lazy(() => import("./FiguringOut"));
+const Footer = lazy(() => import("./Footer"));
+
+// Intersection-based lazy load wrapper
+const LazySection = ({ children, height = "400px" }) => {
+  const ref = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className="w-full min-h-[50px]">
+      {isVisible ? (
+        <Suspense
+          fallback={
+            <div
+              className="text-center flex items-center justify-center"
+              style={{ height }}
+            >
+              Loading...
+            </div>
+          }
+        >
+          {children}
+        </Suspense>
+      ) : (
+        <div
+          className="text-center flex items-center justify-center"
+          style={{ height }}
+        >
+          Loading...
+        </div>
+      )}
+    </div>
+  );
+};
+
+// About content
 const aboutUsContent = [
   {
     heading: "Not Just Selling Solar We are a Partner in Your Journey",
@@ -43,20 +90,20 @@ const aboutUsContent = [
       "Delaying solar means losing not just money, but energy independence.",
       "Going solar isn’t just smart, it’s urgent and we help you act now.",
     ],
-    img: "https://storage.googleapis.com/a1aa/image/a6bb9ba5-9710-4d97-6623-f283a7ce4df1.jpg",
-    alt: "Clock with electric cables symbolizing urgency",
+    img: img1,
+    alt: "New solar installation image",
   },
   {
     heading: "Powering Every Home from Rooftops to Rural Villages",
     subheading:
-      "We deliver energy solutions for everyon high-rises to rural India",
+      "We deliver energy solutions for everyone, high-rises to rural India",
     points: [
       "No terrain or challenge is too complex we deliver where it’s needed.",
       "Our systems are designed to endure Indian conditions: dust, heat, and rain.",
       "Be it a home, farm, or school our mission is to light it up, cleanly and reliably.",
       "We believe clean energy is a right, not a luxury.",
     ],
-    img: "https://storage.googleapis.com/a1aa/image/72f5a45b-2e30-45fc-b276-a06c6a12a64e.jpg",
+    img: img2,
     alt: "Solar panels on rooftops and rural homes",
   },
   {
@@ -69,7 +116,7 @@ const aboutUsContent = [
       "We focus on doing what’s right, not just what sells.",
       "Our client relationships last because we deliver consistent results.",
     ],
-    img: "https://storage.googleapis.com/a1aa/image/a6bb9ba5-9710-4d97-6623-f283a7ce4df1.jpg",
+    img: img3,
     alt: "Old and new solar projects representing legacy and evolution",
   },
   {
@@ -82,121 +129,137 @@ const aboutUsContent = [
       "We empower communities to control their energy future.",
       "We act on our mission to build a better, solar-powered India.",
     ],
-    img: "https://storage.googleapis.com/a1aa/image/72f5a45b-2e30-45fc-b276-a06c6a12a64e.jpg",
+    img: im1,
     alt: "Government officials and solar technicians inspecting installation",
   },
 ];
 
 export default function About() {
   return (
-    <div className="bg-white h-screen text-black px-6 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col items-center  mt-12 About">
-      {/* Banner Image */}
-     
-      <ImageWithOverlay/>
-      
-      <section className="mt-8">
-        <ChatUI4 />
+    <div className="bg-white text-black flex flex-col items-center mt-0 About">
+      {/* Banner */}
+      <ImageWithOverlay />
+
+      {/* Chat UI */}
+      <section className="mt-8 w-full">
+        <LazySection height="450px">
+          <ChatUI4 />
+        </LazySection>
       </section>
 
       {/* Scroll Stacking Cards */}
-      <div className="-mt-[550px] 2xl:-mt-[700px] mb-24">
-        <ScrollStackingCards content={aboutUsContent} />
+      <div className="-mt-[450px] 2xl:-mt-[700px] mb-24 w-full">
+        <LazySection height="900px">
+          <ScrollStackingCards content={aboutUsContent} />
+        </LazySection>
       </div>
 
-      <section className="-mt-[290px]">
-        <CompanySection />
-      </section>
-      
-      <section className="">
-        <HoverVideoCard2 />
-      </section>
-      <section>
-        <ProcessSteps />
-      </section>
-      <section className="  -mt-16 md:-mt-44 xl:-mt-64 2xl:-mt-96 lg:-mt-72">
-        <HoverVideoCard3 />
+      {/* Company Section */}
+      <section className="-mt-[290px] w-full">
+        <LazySection height="500px">
+          <CompanySection />
+        </LazySection>
       </section>
 
-
-
-      {/* Why Choose Us Section */}
-     <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[10px] About w-full">
-  <div className="bg-[#fdf6ee] shadow-xl overflow-x-hidden rounded-none p-5 sm:p-8 md:p-12 w-full ">
-    {/* Heading with icons - responsive layout */}
-    <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 text-center sm:text-left">
-      <div className="flex items-center gap-3">
-        <img
-          src={sunPhoto}
-          alt="Chacha"
-          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
-        />
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-red-700 leading-snug">
-          Why Choose Us <br className="sm:hidden" />
-          as Your Solar Partner?
-        </h2>
-        <img
-          src={sunImage}
-          alt="Didi"
-          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
-        />
-      </div>
-    </div>
-
-    {/* Content Section */}
-    <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-4">
-      <p className="text-center sm:text-left">
-        At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install
-        solar systems — we build{" "}
-        <span className="text-green-600 font-semibold">
-          lasting energy partnerships
-        </span>
-        .
-      </p>
-
-      <ul className="list-disc list-inside space-y-3 pl-4">
-        <li>
-          <strong>
-            Committed to quality, accountability, and long-term service.
-          </strong>
-        </li>
-        <li>
-          <strong>Post-installation support:</strong> Real-time
-          maintenance and performance monitoring throughout the system's
-          lifecycle.
-        </li>
-        <li>
-          <strong>
-            Top-grade components, certified engineers &
-            government-approved materials
-          </strong>{" "}
-          ensure maximum durability and safety.
-        </li>
-        <li>
-          <strong>MNRE-approved & UPNEDA-certified;</strong> officially
-          recognized by the government of India.
-        </li>
-        <li>
-          <strong>Proven track record</strong> with solar projects across
-          villages, schools, societies, and institutions.
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-      <section className=" mt-30 ">
-        <FiguringOut />
+      {/* Videos & Process */}
+      <section className="w-full">
+        <LazySection height="500px">
+          <HoverVideoCard2 />
+        </LazySection>
       </section>
 
-      <section className=" mt-16">
-        <SolarCards/>
+      <section className="w-full">
+        <LazySection height="600px">
+          <ProcessSteps />
+        </LazySection>
       </section>
 
-      <section className=" -mt-24 min-w-full lg:min-w-[1300px]  md:min-w-[1300px] xl:min-w-[1450px] 2xl:min-w-[1600px] ">
-        <Footer />
+      <section className="-mt-16 md:-mt-44 xl:-mt-64 2xl:-mt-96 lg:-mt-72 w-full">
+        <LazySection height="500px">
+          <HoverVideoCard3 />
+        </LazySection>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="bg-white py-8 px-4 sm:px-6 lg:px-8 -mt-[10px] About w-full">
+        <div className="bg-[#fdf6ee] shadow-xl rounded-none p-5 sm:p-8 md:p-12 w-full">
+          <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 text-center sm:text-left">
+            <div className="flex items-center gap-3">
+              <img
+                src={sunPhoto}
+                alt="Chacha"
+                className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 object-contain"
+              />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-red-700 leading-snug">
+                Why Choose Us <br className="sm:hidden" /> as Your Solar
+                Partner?
+              </h2>
+              <img
+                src={sunImage}
+                alt="Didi"
+                className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-4 text-left">
+            <p>
+              At <strong>Divy Power Pvt. Ltd.,</strong> we don't just install
+              solar systems — we build{" "}
+              <span className="text-green-600 font-semibold">
+                lasting energy partnerships
+              </span>
+              .
+            </p>
+            <ul className="list-disc space-y-3 pl-6">
+              <li>
+                <strong>
+                  Committed to quality, accountability, and long-term service.
+                </strong>
+              </li>
+              <li>
+                <strong>Post-installation support:</strong> Real-time
+                maintenance and monitoring.
+              </li>
+              <li>
+                <strong>
+                  Top-grade components, certified engineers & govt-approved
+                  materials
+                </strong>
+              </li>
+              <li>
+                <strong>MNRE-approved & UPNEDA-certified;</strong> officially
+                recognized by Govt. of India.
+              </li>
+              <li>
+                <strong>Proven track record</strong> across villages, schools,
+                societies, and institutions.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Figuring Out */}
+      <section className="mt-30 w-full">
+        <LazySection height="500px">
+          <FiguringOut />
+        </LazySection>
+      </section>
+
+      {/* Solar Cards */}
+      <section className="mt-16 w-full">
+        <LazySection height="600px">
+          <SolarCards />
+        </LazySection>
+      </section>
+
+      {/* Footer */}
+      <section className="mt-200 mb-[-50px] min-w-full lg:min-w-[1300px] xl:min-w-[1450px] 2xl:min-w-[1600px] w-full mb-0 pb-0">
+        <LazySection height="400px">
+          <Footer />
+        </LazySection>
+      </section>
     </div>
   );
 }

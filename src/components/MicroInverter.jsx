@@ -68,29 +68,7 @@ const MicroInverter = () => {
             <p className="mt-4 text-gray-500">
               Perfect for homeowners and businesses alike, our micro inverters offer a scalable and cost-effective solar solution. Whether you’re installing a residential system to lower electricity bills or implementing a commercial setup for sustainable energy use, micro inverters ensure the highest return on investment. Their ability to provide consistent power output, along with superior adaptability, makes them a smart choice for those looking to optimize their solar energy potential.
             </p>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8"
-            >
-              {["STEP ONE", "STEP TWO", "STEP THREE"].map((step, i) => (
-                <motion.div
-                  key={i}
-                  custom={i}
-                  variants={fadeUp}
-                  initial="hidden"
-                  animate="visible"
-                  className="bg-white p-6 rounded shadow text-center"
-                >
-                  <div className="text-green-600 text-2xl font-bold">0{i + 1}</div>
-                  <div className="mt-2 font-semibold">{step}</div>
-                  <p className="text-sm text-gray-600 mt-1">
-                    Tactical services through market web services
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
+            
           </div>
 
           <aside className="space-y-8">

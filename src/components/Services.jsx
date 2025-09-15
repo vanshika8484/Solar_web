@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import solar from "../Images/Solar3.jpg";
-import localImage from "../Images/Sv.JPG";
+import solar from "../Images/Solar3.webp";
+import localImage from "../Images/Sv.webp";
 import {
   FaTools,
   FaSolarPanel,
@@ -101,35 +101,67 @@ export default function Services() {
 
   return (
     <>
-
-
       <ToastContainer />
       <main className="bg-white">
-
-      
         {/* HERO */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
+        <section className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-1  pt-10 pb-12">
           <motion.h1
             className="text-2xl sm:text-4xl md:text-5xl About1 -mt-16 text-green-800 text-center leading-tight"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-black">Our Green</span> Services
+            {/* <span className="text-black">Our Green</span> Services */}
           </motion.h1>
 
-        <motion.img
+          <motion.div
+            className="relative w-full h-[520px] mt-10 rounded-lg shadow-2xl overflow-hidden group"
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              transition: {
+                duration: 0.8,
+                ease: [0.2, 0.8, 0.2, 1],
+              },
+            }}
+            whileHover={{
+              scale: 1.02,
+              transition: {
+                duration: 0.3,
+                ease: "easeOut",
+              },
+            }}
+            viewport={{ once: true }}
+          >
+            <img
               src={localImage}
               alt="banner"
-              className="w-full h-[400px] object-cover mt-20"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              className="w-full h-full object-cover opacity-80"
+              loading="lazy"
             />
+            <div className="absolute inset-0 bg-black/80 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+              <motion.h2
+                className="text-4xl md:text-6xl font-bold text-white text-center px-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.6,
+                  },
+                }}
+              >
+                <span className="text-green-800">Our Green</span> Services
+              </motion.h2>
+            </div>
+          </motion.div>
         </section>
 
         {/* SERVICES TIMELINE */}
-        <ServiceCards/>
+        <ServiceCards />
 
         {/* CONTACT SECTION */}
         <section
@@ -170,7 +202,8 @@ export default function Services() {
                 </h2>
                 <p className="text-gray-600 mb-8">
                   For your energy needs, we’ll do everything—advice, design,
-                  installation, and maintenance. Many customers choose us for our experience.
+                  installation, and maintenance. Many customers choose us for
+                  our experience.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">

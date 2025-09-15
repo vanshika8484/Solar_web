@@ -34,68 +34,67 @@ const Solarabout = () => {
 
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 flex flex-col md:flex-row md:items-start md:space-x-12">
-  {/* Left Image */}
-  <div className="md:w-1/2 flex justify-center md:justify-start md:sticky md:top-20">
-    <img
-      alt="Solar panels installed in a field with a clear sky at sunset"
-      className="rounded-lg w-full max-w-md object-cover"
-      src="https://storage.googleapis.com/a1aa/image/e26e09fe-5dfa-43ac-7811-3a13b62b268d.jpg"
-      width={600}
-      height={350}
-    />
-  </div>
+      {/* Left Image */}
+      <div className="md:w-1/2 flex justify-center md:justify-start md:sticky md:top-20">
+        <img
+          alt="Solar panels installed in a field with a clear sky at sunset"
+          className="rounded-lg w-full max-w-md object-cover"
+          src="https://storage.googleapis.com/a1aa/image/e26e09fe-5dfa-43ac-7811-3a13b62b268d.webp"
+          width={600}
+          height={350}
+        />
+      </div>
 
-  {/* Right FAQ */}
-  <section className="GetFontSol md:w-1/2 mt-10 md:mt-0">
-    <h2 className="text-2xl GetFontDash text-gray-800 mb-4 text-center md:text-left">
-      About <span className="text-green-800 rounded-lg">Solar</span>
-    </h2>
-    <h2 className="text-2xl font-extrabold text-gray-900 mb-8 text-center md:text-left">
-      Some General Questions?
-    </h2>
+      {/* Right FAQ */}
+      <section className="GetFontSol md:w-1/2 mt-10 md:mt-0">
+        <h2 className="text-2xl GetFontDash text-gray-800 mb-4 text-center md:text-left">
+          About <span className="text-green-800 rounded-lg">Solar</span>
+        </h2>
+        <h2 className="text-2xl font-extrabold text-gray-900 mb-8 text-center md:text-left">
+          Some General Questions?
+        </h2>
 
-    <div className="space-y-4">
-      {faqData.map((item, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-md shadow-sm p-6 transition-all"
-        >
-          <button
-            onClick={() => toggle(index)}
-            className="flex items-center justify-between w-full text-left font-semibold text-gray-900"
-          >
-            <span>{item.question}</span>
-            <span
-              className={`flex items-center justify-center w-7 h-7 rounded-full text-lg transition-all ${
-                openIndex === index
-                  ? "bg-green-800 text-white"
-                  : "bg-green-800 text-white"
-              }`}
+        <div className="space-y-4">
+          {faqData.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-md shadow-sm p-6 transition-all"
             >
-              {openIndex === index ? "−" : "+"}
-            </span>
-          </button>
-
-          <AnimatePresence initial={false}>
-            {openIndex === index && (
-              <motion.p
-                key="content"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="mt-3 text-gray-700 text-sm leading-relaxed max-w-prose overflow-hidden"
+              <button
+                onClick={() => toggle(index)}
+                className="flex items-center justify-between w-full text-left font-semibold text-gray-900"
               >
-                {item.answer}
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </div>
-      ))}
-    </div>
-  </section>
-</main>
+                <span>{item.question}</span>
+                <span
+                  className={`flex items-center justify-center w-7 h-7 rounded-full text-lg transition-all ${
+                    openIndex === index
+                      ? "bg-green-800 text-white"
+                      : "bg-green-800 text-white"
+                  }`}
+                >
+                  {openIndex === index ? "−" : "+"}
+                </span>
+              </button>
 
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.p
+                    key="content"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-3 text-gray-700 text-sm leading-relaxed max-w-prose overflow-hidden"
+                  >
+                    {item.answer}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 };
 

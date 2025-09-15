@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import Footer from './Footer';
-import { motion } from 'framer-motion';
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import Loader from "../Loader";
-import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function CareerForm() {
-  const [FirstName, setFirstName] = useState('');
-  const [LastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [Phone, setPhone] = useState('');
-  const [Position, setPosition] = useState('');
-  const [message, setMessage] = useState('');
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [Phone, setPhone] = useState("");
+  const [Position, setPosition] = useState("");
+  const [message, setMessage] = useState("");
   const [CV, setCv] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -35,20 +32,20 @@ function CareerForm() {
 
       await axios.post(`https://solar-6.onrender.com/api/CareerApi`, formData, {
         headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+          "Content-Type": "multipart/form-data",
+        },
       });
 
-      toast.success('Message sent successfully!');
-      setFirstName('');
-      setLastName('');
-      setEmail('');
-      setPhone('');
-      setPosition('');
-      setMessage('');
+      toast.success("Message sent successfully!");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhone("");
+      setPosition("");
+      setMessage("");
       setCv(null);
     } catch (error) {
-      toast.error('Something went wrong. Try again.');
+      toast.error("Something went wrong. Try again.");
     }
     setLoading(false);
   };
@@ -62,7 +59,9 @@ function CareerForm() {
 
         <form className="space-y-5" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              First Name
+            </label>
             <input
               type="text"
               value={FirstName}
@@ -73,7 +72,9 @@ function CareerForm() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Last Name
+            </label>
             <input
               type="text"
               value={LastName}
@@ -85,7 +86,9 @@ function CareerForm() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="w-full">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Email
+              </label>
               <input
                 type="email"
                 value={email}
@@ -95,7 +98,9 @@ function CareerForm() {
               />
             </div>
             <div className="w-full">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Phone No</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Phone No
+              </label>
               <input
                 type="tel"
                 value={Phone}
@@ -107,7 +112,9 @@ function CareerForm() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Position</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Position
+            </label>
             <select
               value={Position}
               onChange={(e) => setPosition(e.target.value)}
@@ -121,7 +128,7 @@ function CareerForm() {
               <option value="designer">Service engineer </option>
               <option value="frontend">Service manager </option>
               <option value="backend">Pre-sales executive </option>
-              <option value="fullstack">HR Manager  </option>
+              <option value="fullstack">HR Manager </option>
               <option value="designer">Purchase Manager </option>
             </select>
           </div>
@@ -137,7 +144,9 @@ function CareerForm() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Upload your CV (PDF, DOCX)</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Upload your CV (PDF, DOCX)
+            </label>
             <input
               type="file"
               accept=".pdf,.doc,.docx"
@@ -156,7 +165,7 @@ function CareerForm() {
               disabled={loading}
               className="w-full bg-green-700 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200"
             >
-              {loading ? 'Submitting...' : 'Submit'}
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </div>
         </form>

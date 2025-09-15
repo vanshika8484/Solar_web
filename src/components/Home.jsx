@@ -2,17 +2,14 @@ import React from "react";
 
 import { Suspense, lazy } from "react";
 
-
-import DivyRedesign from "../Images/DivyRedesign.png";
+import DivyRedesign from "../Images/DivyRedesign.webp";
 
 import "./Home.css";
 
 // import { FaRobot } from "react-icons/fa";
 
-
 const Dashboard = lazy(() => import("./Dashboard"));
 import { useState } from "react";
-
 
 import SolarProduct from "./SolarProduct";
 import SolarCostCalculator from "./SolarCostCalculator";
@@ -25,9 +22,7 @@ import Footer from "./Footer";
 import ChatbotToggle from "./ChatbotToggle";
 import SolarSolutions from "./SolarSolutions";
 
-
 import ChatUI1 from "./ChatUI1";
-
 
 import PageOne from "./PageOne";
 import { Link, Links } from "react-router-dom";
@@ -101,35 +96,27 @@ function Home() {
         <section className="About">
           <FullScreenVideo />
           <HomeStart2 />
-
-
         </section>
       </div>
 
       <section>
         <Conversation />
       </section>
-      <Suspense fallback={<div></div>}>
-
-      </Suspense>
-
-
+      <Suspense fallback={<div></div>}></Suspense>
 
       <section className=" -mt-72  md:-mt-72 lg:-mt-72 xl:-mt-72 2xl:-mt-[500px]  m-10">
         {/* <ChartCard /> */}
       </section>
       <section className="About mt-24">
         <SolarCostCalculator />
-
       </section>
-      
+
       <section className=" h-72">
         <div className="text-center About1  py-6 mb-10  mt-[600px] lg:-mt-48 xl:-mt-28 2xl:-mt-24 md:-mt-56 ">
           <button className="bg-[#E50C0C] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
             <Link to="./contact">Adhik jaankari ke liye click krein</Link>
           </button>
         </div>
-
       </section>
 
       <section className="About">
@@ -146,7 +133,6 @@ function Home() {
         <ChatUI1 />
       </section>
       <section className="bg-green-800  About  -mt-0 md:-mt-0 lg:-mt-0 xl:-mt-0 2xl:-mt-[10px]">
-
         <SolarProduct />
       </section>
 
@@ -157,28 +143,20 @@ function Home() {
         <FiguringOut1 />
       </section>
       <section className=" mt-16 About1">
-      <ExactMatchPage1/>
-
-
-
+        <ExactMatchPage1 />
       </section>
       <section className=" -mt-96">
-         <RatingWorks/>
+        <RatingWorks />
       </section>
 
       <section className="bg-[#f8f7f0] About1 mt-96 md:mt-96 lg:mt-96 xl:mt-96 2xl:mt-[430px]">
         <SolarPortfolio />
         <HoverVideoCard1 />
 
-
         <section className="About1 mt-20 2xl:mt-60">
           <FaqSection />
         </section>
 
-
-
-       
-      
         <section className=" About -mt-11">
           <Footer />
         </section>

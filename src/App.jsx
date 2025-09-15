@@ -1,37 +1,37 @@
-
-import Home from './components/Home'
+import React, { Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import About from './components/About'
-import Services from './components/Services'
-import Projects from './components/Projects'
-import Product from './components/Product'
-import Workwithus from './components/Workwithus'
-import Contact from './components/Contact'
+const Home = lazy(() => import('./components/Home'))
+const About = lazy(() => import('./components/About'))
+const Services = lazy(() => import('./components/Services'))
+const Projects = lazy(() => import('./components/Projects'))
+const Product = lazy(() => import('./components/Product'))
+const Workwithus = lazy(() => import('./components/Workwithus'))
+const Contact = lazy(() => import('./components/Contact'))
 // import Navbar2 from './components/Navbar2'
-import SolarPanelPage from './components/SolarPanelPage'
-import SolarPumpPage from './components/SolarPumpPage'
-import MicroInverter from './components/MicroInverter'
-import Earthing from './components/Earthing'
-import La from './components/La'
-import GasGenset from './components/GasGenset'
-import Diesel from './components/Diesel'
+const SolarPanelPage = lazy(() => import('./components/SolarPanelPage'))
+const SolarPumpPage = lazy(() => import('./components/SolarPumpPage'))
+const MicroInverter = lazy(() => import('./components/MicroInverter'))
+const Earthing = lazy(() => import('./components/Earthing'))
+const La = lazy(() => import('./components/La'))
+const GasGenset = lazy(() => import('./components/GasGenset'))
+const Diesel = lazy(() => import('./components/Diesel'))
 import Cursor from './components/Cursor'
 import SocialIcons from './components/SocialIcons'
 import ScrollToTop from './components/ScrollToTop'
-import NewWorkWithUs from './components/NewWorkWithUs'
-import ProjectDetails from './components/ProjectDetails'
-import FiveService from './components/FiveService'
-import FirstService from './components/FirstService'
-import FourService from './components/FourService'
-import ThirdService from './components/ThirdService'
-import SecondService from './components/SecondService'
+const NewWorkWithUs = lazy(() => import('./components/NewWorkWithUs'))
+const ProjectDetails = lazy(() => import('./components/ProjectDetails'))
+const FiveService = lazy(() => import('./components/FiveService'))
+const FirstService = lazy(() => import('./components/FirstService'))
+const FourService = lazy(() => import('./components/FourService'))
+const ThirdService = lazy(() => import('./components/ThirdService'))
+const SecondService = lazy(() => import('./components/SecondService'))
 import SolarLanding from './components/SolarLanding'
-import Career from './components/Career'
-import PrivacySection from './components/PrivacySection'
-import SolarArticle from './components/SolarArticle'
-import SustainableProfitability from './components/SustainableProfitability'
-import BecomeOurIndividualPartner from './components/BecomeOurIndividualPartner'
-import AddOurServices from './components/AddOurServices'
+const Career = lazy(() => import('./components/Career'))
+const PrivacySection = lazy(() => import('./components/PrivacySection'))
+const SolarArticle = lazy(() => import('./components/SolarArticle'))
+const SustainableProfitability = lazy(() => import('./components/SustainableProfitability'))
+const BecomeOurIndividualPartner = lazy(() => import('./components/BecomeOurIndividualPartner'))
+const AddOurServices = lazy(() => import('./components/AddOurServices'))
 import WhatsAppButton from './components/WhatsAppButton'
 
 
@@ -50,6 +50,7 @@ function App() {
 
       <ScrollToTop />
 
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-600">Loading...</div>}>
       <Routes>
 
         <Route path="/" element={<Home />} />
@@ -78,6 +79,7 @@ function App() {
          <Route path="/become-partner" element={<BecomeOurIndividualPartner />} />
         <Route path="/add-our-services" element={<AddOurServices />} />
       </Routes>
+      </Suspense>
 
     </>
   )
