@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import solarg from "../Images/SolarChahaFront.webp";
 import axios from "axios";
 import Loader from "../Loader";
@@ -45,12 +45,22 @@ const ContactForm = () => {
     }
   };
 
+  const handleEmailClick = () => {
+    const gmailUrl =
+      "https://mail.google.com/mail/?view=cm&fs=1&to=sales@divypower.com";
+    window.open(gmailUrl, "_blank");
+  };
+
   return (
-    <main className="bg-gray-900 px-4 sm:px-8 md:px-16 py-20 -mt-16 About max-h-auto">
+    <main
+      className="relative -top-[200px] sm:top-0 bg-gray-900 py-20 About max-h-auto w-screen sm:-mt-[200px] md:-mt-[200px] lg:-mt-[170px]"
+      style={{ transform: "translateY(-100px)" }}
+    >
       <ToastContainer position="top-right" autoClose={3000} />
 
       {/* Heading */}
-      <div className="text-center max-w-4xl mx-auto mb-12 -mt-[50px] px-4">
+      <div className="text-center max-w-4xl mx-auto mb-12 -mt-[50px] px-4 w-full">
+        {" "}
         <h2 className="text-xl md:text-3xl About text-white leading-snug About1">
           Bijli ka bill bhejiye and Solar Chacha se jaaniye <br />
           apne rooftop ke liye Best Solar Solution
@@ -58,8 +68,8 @@ const ContactForm = () => {
       </div>
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 px-4">
-        {/* Form Section */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 px-4 w-full">
+        {" "}
         <form
           onSubmit={handelSubmit}
           className="bg-white w-full md:w-2/3 lg:w-1/2 rounded-2xl p-6 sm:p-8 flex flex-col gap-5 shadow"
@@ -127,7 +137,6 @@ const ContactForm = () => {
             <i className="fas fa-arrow-right"></i>
           </button>
         </form>
-
         {/* Contact Info Section */}
         <section className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start gap-6 text-center md:text-left">
           <div className="flex flex-col gap-4 text-lg text-white">
@@ -141,14 +150,15 @@ const ContactForm = () => {
               Nai Basti Dundaher Ghaziabad, <br />
               Uttar Pradesh 201001
             </p>
+            {/* ✅ Fixed Email Section with Gmail login */}
             <p className="flex items-center justify-center md:justify-start gap-3">
-              <i className="fas fa-envelope text-green-800"></i>
-              <a
-                className="font-semibold hover:text-[#3a8e3a]"
-                href="mailto:sales@divypower.com"
+              <span className="text-green-800">📧</span>
+              <button
+                onClick={handleEmailClick}
+                className="font-semibold hover:text-[#3a8e3a] underline"
               >
                 sales@divypower.com
-              </a>
+              </button>
             </p>
           </div>
 

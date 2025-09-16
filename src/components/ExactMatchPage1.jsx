@@ -1,5 +1,3 @@
-import React from "react";
-
 import L1 from "../Images/P1.webp";
 import L2 from "../Images/P2.webp";
 import L3 from "../Images/P3.webp";
@@ -13,12 +11,11 @@ const logos = [L1, L2, L3, L4, L5, L6, L7, L8];
 
 export default function ExactMatchPage1() {
   return (
-    <div className="min-h-screen About1 -mt-24">
+    <div className="relative -top-[30px] sm:top-0 min-h-screen About1 translate-y-[-150px] sm:-mt-[50px] lg:-mt-[50px]">
       {/* Heading */}
       <h2 className="lg:text-[30px] xl:text-[30px] 2xl:text-[30px] text-2xl font-bold text-center pt-10 text-green-800 mb-10">
         Our Clients
       </h2>
-
       {/* Animated Logos */}
       <div className="overflow-hidden py-10 sm:py-16 -mt-16">
         <div
